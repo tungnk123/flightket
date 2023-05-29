@@ -52,10 +52,37 @@
     <Compile Include="FormDangNhap.Designer.cs">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms-Admin\FormHomeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-Admin\FormHomeAdmin.Designer.cs">
+      <DependentUpon>FormHomeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormHomeNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormHomeNhanVien.Designer.cs">
+      <DependentUpon>FormHomeNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormHomeQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormHomeQuanLy.Designer.cs">
+      <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-Admin\FormHomeAdmin.resx">
+      <DependentUpon>FormHomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-NhanVien\FormHomeNhanVien.resx">
+      <DependentUpon>FormHomeNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormHomeQuanLy.resx">
+      <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -80,11 +107,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms-Admin\" />
-    <Folder Include="Forms-NhanVien\" />
-    <Folder Include="Forms-QuanLy\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\350248398_786598096329880_2111811280162483567_n %281%29.png" />
   </ItemGroup>

@@ -66,6 +66,7 @@ namespace flightket
             this.btn_dangNhap.TabIndex = 6;
             this.btn_dangNhap.Text = "Đăng nhập";
             this.btn_dangNhap.UseVisualStyleBackColor = false;
+            this.btn_dangNhap.Click += new System.EventHandler(this.btn_dangNhap_Click);
             // 
             // tb_password
             // 
