@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33328.57
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "flightket", "flightket\flightket.csproj", "{23484DED-F2BB-4A5A-A757-B0DFF5C8F1A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23484DED-F2BB-4A5A-A757-B0DFF5C8F1A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23484DED-F2BB-4A5A-A757-B0DFF5C8F1A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23484DED-F2BB-4A5A-A757-B0DFF5C8F1A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23484DED-F2BB-4A5A-A757-B0DFF5C8F1A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3818FFB9-8AE2-4C9A-81BD-8AE8A1E4992D}
+	EndGlobalSection
+EndGlobal
