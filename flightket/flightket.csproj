@@ -192,6 +192,10 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\image-removebg-preview %281%29.png" />
+    <None Include="Resources\350361348_206044632301251_2266599988871672436_n.png" />
+    <None Include="Resources\2-removebg-preview %281%29.png" />
+    <None Include="Resources\2-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\350248398_786598096329880_2111811280162483567_n %281%29.png" />
