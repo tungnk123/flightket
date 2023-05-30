@@ -85,6 +85,12 @@
     <Compile Include="Forms-Admin\FormHomeAdmin.Designer.cs">
       <DependentUpon>FormHomeAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms-NhanVien\FormDatChoChuyenBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormDatChoChuyenBay.Designer.cs">
+      <DependentUpon>FormDatChoChuyenBay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms-NhanVien\FormHomeNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     <EmbeddedResource Include="Forms-Admin\FormHomeAdmin.resx">
       <DependentUpon>FormHomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms-NhanVien\FormDatChoChuyenBay.resx">
+      <DependentUpon>FormDatChoChuyenBay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms-NhanVien\FormHomeNhanVien.resx">
       <DependentUpon>FormHomeNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +201,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8-home-50.png" />
+    <None Include="Resources\icons8-back-64.png" />
     <None Include="Resources\icons8-log-out-50.png" />
     <None Include="Resources\icons8-settings-50.png" />
     <None Include="Resources\icons8-report-50.png" />

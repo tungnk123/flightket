@@ -51,6 +51,7 @@ namespace flightket.Forms_NhanVien
             this.btn_datChoChuyenBay.TabIndex = 0;
             this.btn_datChoChuyenBay.Text = "Đặt chỗ chuyến bay";
             this.btn_datChoChuyenBay.UseVisualStyleBackColor = true;
+            this.btn_datChoChuyenBay.Click += new System.EventHandler(this.btn_datChoChuyenBay_Click);
             // 
             // btn_kiemTraDatCho
             // 
@@ -64,6 +65,7 @@ namespace flightket.Forms_NhanVien
             this.btn_kiemTraDatCho.TabIndex = 1;
             this.btn_kiemTraDatCho.Text = "Kiểm tra đặt chỗ";
             this.btn_kiemTraDatCho.UseVisualStyleBackColor = true;
+            this.btn_kiemTraDatCho.Click += new System.EventHandler(this.btn_kiemTraDatCho_Click);
             // 
             // btn_traCuuChuyenBay
             // 
@@ -77,6 +79,7 @@ namespace flightket.Forms_NhanVien
             this.btn_traCuuChuyenBay.TabIndex = 2;
             this.btn_traCuuChuyenBay.Text = "Tra cứu chuyến bay";
             this.btn_traCuuChuyenBay.UseVisualStyleBackColor = true;
+            this.btn_traCuuChuyenBay.Click += new System.EventHandler(this.btn_traCuuChuyenBay_Click);
             // 
             // btn_lapBaoCao
             // 
@@ -90,6 +93,7 @@ namespace flightket.Forms_NhanVien
             this.btn_lapBaoCao.TabIndex = 3;
             this.btn_lapBaoCao.Text = "Lập báo cáo";
             this.btn_lapBaoCao.UseVisualStyleBackColor = true;
+            this.btn_lapBaoCao.Click += new System.EventHandler(this.btn_lapBaoCao_Click);
             // 
             // btn_banVe
             // 
@@ -103,6 +107,7 @@ namespace flightket.Forms_NhanVien
             this.btn_banVe.TabIndex = 4;
             this.btn_banVe.Text = "Bán vé";
             this.btn_banVe.UseVisualStyleBackColor = true;
+            this.btn_banVe.Click += new System.EventHandler(this.btn_banVe_Click);
             // 
             // btn_caiDat
             // 
@@ -116,6 +121,7 @@ namespace flightket.Forms_NhanVien
             this.btn_caiDat.TabIndex = 5;
             this.btn_caiDat.Text = "Cài đặt";
             this.btn_caiDat.UseVisualStyleBackColor = true;
+            this.btn_caiDat.Click += new System.EventHandler(this.btn_caiDat_Click);
             // 
             // btn_dangXuat
             // 
