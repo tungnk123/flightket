@@ -10,18 +10,21 @@ using System.Windows.Forms;
 
 namespace flightket.Forms_QuanLy
 {
-    public partial class FormHomeQuanLy : Form
+    public partial class NhapLichChuyenBay_I : Form
     {
-        public FormHomeQuanLy()
+        public NhapLichChuyenBay_I()
         {
             InitializeComponent();
+
+            updateUI();
         }
 
-        private void btn_nhapLichChuyenBay_Click(object sender, EventArgs e)
+        private void updateUI()
         {
-            this.Hide();
-            NhapLichChuyenBay_I nhapLichChuyenBay_I = new NhapLichChuyenBay_I();
-            nhapLichChuyenBay_I.ShowDialog();
+            panel1.BackColor = Color.FromArgb(128, 255, 0, 0);
+
         }
+
+        
     }
 }

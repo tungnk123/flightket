@@ -83,6 +83,16 @@ namespace flightket.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_back {
+            get {
+                object obj = ResourceManager.GetObject("ic_back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_caiDat {
             get {
                 object obj = ResourceManager.GetObject("ic_caiDat", resourceCulture);
@@ -96,6 +106,26 @@ namespace flightket.Properties {
         internal static System.Drawing.Bitmap ic_dangXuat {
             get {
                 object obj = ResourceManager.GetObject("ic_dangXuat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_home {
+            get {
+                object obj = ResourceManager.GetObject("ic_home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_importFile {
+            get {
+                object obj = ResourceManager.GetObject("ic_importFile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

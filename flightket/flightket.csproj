@@ -97,6 +97,12 @@
     <Compile Include="Forms-QuanLy\FormHomeQuanLy.Designer.cs">
       <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms-QuanLy\NhapLichChuyenBay_I.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\NhapLichChuyenBay_I.Designer.cs">
+      <DependentUpon>NhapLichChuyenBay_I.cs</DependentUpon>
+    </Compile>
     <Compile Include="HANGVE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -150,6 +156,9 @@
     <EmbeddedResource Include="Forms-QuanLy\FormHomeQuanLy.resx">
       <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\NhapLichChuyenBay_I.resx">
+      <DependentUpon>NhapLichChuyenBay_I.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -192,6 +201,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\ic_importFile.png" />
+    <None Include="Resources\ic_home.png" />
+    <None Include="Resources\ic_back.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\350248398_786598096329880_2111811280162483567_n %281%29.png" />

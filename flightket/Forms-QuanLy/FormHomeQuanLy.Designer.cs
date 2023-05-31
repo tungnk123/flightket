@@ -53,6 +53,7 @@ namespace flightket.Forms_QuanLy
             this.btn_nhapLichChuyenBay.Text = "Nhập lịch chuyến bay";
             this.btn_nhapLichChuyenBay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_nhapLichChuyenBay.UseVisualStyleBackColor = false;
+            this.btn_nhapLichChuyenBay.Click += new System.EventHandler(this.btn_nhapLichChuyenBay_Click);
             // 
             // btn_lapBaoCao
             // 
