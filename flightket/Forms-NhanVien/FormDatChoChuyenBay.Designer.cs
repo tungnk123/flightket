@@ -43,6 +43,12 @@ namespace flightket.Forms_NhanVien
             this.cb_sanBayDen = new System.Windows.Forms.ComboBox();
             this.lb_sanBayDen = new System.Windows.Forms.Label();
             this.lv_chuyenBayPhuHop = new System.Windows.Forms.ListView();
+            this.column_stt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.column_maChuyenbay = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.column_gioKhoiHanh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.column_soGheTrong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.column_giaVe = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.column_buttonChon = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lb_danhSachChuyenBayPhuHop = new System.Windows.Forms.Label();
             this.btn_timChuyenBay = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -50,12 +56,6 @@ namespace flightket.Forms_NhanVien
             this.lb_sanBayDi = new System.Windows.Forms.Label();
             this.lb_title2 = new System.Windows.Forms.Label();
             this.lb_title1 = new System.Windows.Forms.Label();
-            this.column_stt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.column_maChuyenbay = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.column_gioKhoiHanh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.column_soGheTrong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.column_giaVe = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.column_buttonChon = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel_main.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -102,10 +102,10 @@ namespace flightket.Forms_NhanVien
             this.panel_main.Controls.Add(this.btn_back);
             this.panel_main.Controls.Add(this.btn_home);
             this.panel_main.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_main.Location = new System.Drawing.Point(93, 218);
+            this.panel_main.Location = new System.Drawing.Point(112, 189);
             this.panel_main.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(1961, 1034);
+            this.panel_main.Size = new System.Drawing.Size(2447, 1241);
             this.panel_main.TabIndex = 2;
             // 
             // panel4
@@ -221,6 +221,36 @@ namespace flightket.Forms_NhanVien
             this.lv_chuyenBayPhuHop.UseCompatibleStateImageBehavior = false;
             this.lv_chuyenBayPhuHop.View = System.Windows.Forms.View.Details;
             // 
+            // column_stt
+            // 
+            this.column_stt.Text = "STT";
+            this.column_stt.Width = 78;
+            // 
+            // column_maChuyenbay
+            // 
+            this.column_maChuyenbay.Text = "Mã chuyến bay";
+            this.column_maChuyenbay.Width = 209;
+            // 
+            // column_gioKhoiHanh
+            // 
+            this.column_gioKhoiHanh.Text = "Giờ khởi hành";
+            this.column_gioKhoiHanh.Width = 204;
+            // 
+            // column_soGheTrong
+            // 
+            this.column_soGheTrong.Text = "Số ghế trống";
+            this.column_soGheTrong.Width = 212;
+            // 
+            // column_giaVe
+            // 
+            this.column_giaVe.Text = "Giá vé";
+            this.column_giaVe.Width = 150;
+            // 
+            // column_buttonChon
+            // 
+            this.column_buttonChon.Text = "";
+            this.column_buttonChon.Width = 172;
+            // 
             // lb_danhSachChuyenBayPhuHop
             // 
             this.lb_danhSachChuyenBayPhuHop.AutoSize = true;
@@ -300,43 +330,13 @@ namespace flightket.Forms_NhanVien
             this.lb_title1.TabIndex = 2;
             this.lb_title1.Text = "Đặt chỗ chuyến bay";
             // 
-            // column_stt
-            // 
-            this.column_stt.Text = "STT";
-            this.column_stt.Width = 78;
-            // 
-            // column_maChuyenbay
-            // 
-            this.column_maChuyenbay.Text = "Mã chuyến bay";
-            this.column_maChuyenbay.Width = 209;
-            // 
-            // column_gioKhoiHanh
-            // 
-            this.column_gioKhoiHanh.Text = "Giờ khởi hành";
-            this.column_gioKhoiHanh.Width = 204;
-            // 
-            // column_soGheTrong
-            // 
-            this.column_soGheTrong.Text = "Số ghế trống";
-            this.column_soGheTrong.Width = 212;
-            // 
-            // column_giaVe
-            // 
-            this.column_giaVe.Text = "Giá vé";
-            this.column_giaVe.Width = 150;
-            // 
-            // column_buttonChon
-            // 
-            this.column_buttonChon.Text = "";
-            this.column_buttonChon.Width = 172;
-            // 
             // FormDatChoChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::flightket.Properties.Resources._350361348_206044632301251_2266599988871672436_n;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(2140, 1266);
+            this.ClientSize = new System.Drawing.Size(2282, 1240);
             this.Controls.Add(this.panel_main);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
