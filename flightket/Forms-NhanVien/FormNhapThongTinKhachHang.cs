@@ -12,9 +12,16 @@ namespace flightket.Forms_NhanVien
 {
     public partial class FormNhapThongTinKhachHang : Form
     {
+        public static FormNhapThongTinKhachHang instance;
         public FormNhapThongTinKhachHang()
         {
+            instance = this;
             InitializeComponent();
+        }
+
+        private void FormNhapThongTinKhachHang_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormDatChoChuyenBay.instance.Show();
         }
     }
 }
