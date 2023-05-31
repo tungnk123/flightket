@@ -117,6 +117,16 @@
           <Property Name="QuocGia" Type="nvarchar(max)" />
           <Property Name="DiaChi" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="THAMSO">
           <Key>
             <PropertyRef Name="ID" />
@@ -331,6 +341,7 @@
           <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PHIEUDATCHO" EntityType="Self.PHIEUDATCHO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SANBAY" EntityType="Self.SANBAY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="THAMSO" EntityType="Self.THAMSO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VECHUYENBAY" EntityType="Self.VECHUYENBAY" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__BAOCAOTHA__MaBCN__7D439ABD" Association="Self.FK__BAOCAOTHA__MaBCN__7D439ABD">
@@ -537,6 +548,16 @@
           <NavigationProperty Name="CHUYENBAYs" Relationship="Self.FK__CHUYENBAY__MaSan__5EBF139D" FromRole="SANBAY" ToRole="CHUYENBAY" />
           <NavigationProperty Name="CHUYENBAYs1" Relationship="Self.FK__CHUYENBAY__MaSan__5FB337D6" FromRole="SANBAY" ToRole="CHUYENBAY" />
           <NavigationProperty Name="CT_CHUYENBAY" Relationship="Self.FK__CT_CHUYEN__MaSan__6383C8BA" FromRole="SANBAY" ToRole="CT_CHUYENBAY" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="THAMSO">
           <Key>
@@ -755,6 +776,7 @@
           <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIEN" />
           <EntitySet Name="PHIEUDATCHOes" EntityType="Self.PHIEUDATCHO" />
           <EntitySet Name="SANBAYs" EntityType="Self.SANBAY" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="THAMSOes" EntityType="Self.THAMSO" />
           <EntitySet Name="VECHUYENBAYs" EntityType="Self.VECHUYENBAY" />
           <AssociationSet Name="FK__BAOCAOTHA__MaBCN__7D439ABD" Association="Self.FK__BAOCAOTHA__MaBCN__7D439ABD">
@@ -942,6 +964,17 @@
                 <ScalarProperty Name="TenSanBay" ColumnName="TenSanBay" />
                 <ScalarProperty Name="QuocGia" ColumnName="QuocGia" />
                 <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="FlightKetDBModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

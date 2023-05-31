@@ -16,6 +16,7 @@
         <EntityTypeShape EntityType="FlightKetDBModel.NHANVIEN" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FlightKetDBModel.PHIEUDATCHO" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FlightKetDBModel.SANBAY" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlightKetDBModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FlightKetDBModel.THAMSO" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FlightKetDBModel.VECHUYENBAY" Width="1.5" PointX="8.25" PointY="3.75" IsExpanded="true" />
         <AssociationConnector Association="FlightKetDBModel.FK__BAOCAOTHA__MaBCN__7D439ABD" ManuallyRouted="false" />
