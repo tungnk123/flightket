@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="960f82bf91044b10af807e344cc7485b" Name="Diagram1">
+        <EntityTypeShape EntityType="FlightKetDBModel.BAOCAONAM" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlightKetDBModel.BAOCAOTHANG" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlightKetDBModel.CHUYENBAY" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlightKetDBModel.CT_BCTHANG" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlightKetDBModel.CT_CHUYENBAY" Width="1.5" PointX="8.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlightKetDBModel.CT_HANGVE" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlightKetDBModel.HANGVE" Width="1.5" PointX="6" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlightKetDBModel.HANHKHACH" Width="1.5" PointX="6" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlightKetDBModel.NHANVIEN" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlightKetDBModel.PHIEUDATCHO" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlightKetDBModel.SANBAY" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlightKetDBModel.THAMSO" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlightKetDBModel.VECHUYENBAY" Width="1.5" PointX="8.25" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="FlightKetDBModel.FK__BAOCAOTHA__MaBCN__7D439ABD" ManuallyRouted="false" />
+        <AssociationConnector Association="FlightKetDBModel.FK__CT_BCTHAN__MaBCT__01142BA1" ManuallyRouted="false" />
+        <AssociationConnector Association="FlightKetDBModel.FK__CHUYENBAY__MaSan__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="FlightKetDBModel.FK__CHUYENBAY__MaSan__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="FlightKetDBModel.FK__CT_BCTHAN__MaChu__02084FDA" ManuallyRouted="false" />
+        <AssociationConnector Association="FlightKetDBModel.FK__CT_CHUYEN__MaChu__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="FlightKetDBModel.FK__CT_HANGVE__MaChu__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="FlightKetDBModel.FK__PHIEUDATC__MaChu__74AE54BC" ManuallyRouted="false" />
+        <AssociationConnector Association="FlightKetDBModel.FK__VECHUYENB__MaChu__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="FlightKetDBModel.FK__CT_CHUYEN__MaSan__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="FlightKetDBModel.FK__CT_HANGVE__MaHan__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="FlightKetDBModel.FK__PHIEUDATC__MaHan__76969D2E" ManuallyRouted="false" />
+        <AssociationConnector Association="FlightKetDBModel.FK__VECHUYENB__MaHan__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="FlightKetDBModel.FK__PHIEUDATC__MaHan__75A278F5" ManuallyRouted="false" />
+        <AssociationConnector Association="FlightKetDBModel.FK__VECHUYENB__MaHan__6D0D32F4" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
