@@ -162,6 +162,9 @@
     <EmbeddedResource Include="Forms-NhanVien\FormHomeNhanVien.resx">
       <DependentUpon>FormHomeNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms-NhanVien\FormNhapThongTinKhachHang.resx">
+      <DependentUpon>FormNhapThongTinKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\FormHomeQuanLy.resx">
       <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
     </EmbeddedResource>
