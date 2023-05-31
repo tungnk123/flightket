@@ -16,5 +16,12 @@ namespace flightket.Forms_QuanLy
         {
             InitializeComponent();
         }
+
+        private void btn_thayDoiQuiDinh_Click(object sender, EventArgs e)
+        {
+            FormThayDoiQuiDinh formThayDoiQuiDinh = new FormThayDoiQuiDinh(this);
+            this.Hide();
+            formThayDoiQuiDinh.ShowDialog();
+        }
     }
 }

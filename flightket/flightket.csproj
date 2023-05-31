@@ -97,6 +97,36 @@
     <Compile Include="Forms-QuanLy\FormHomeQuanLy.Designer.cs">
       <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms-QuanLy\UserControlCapNhatThongTinNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\UserControlCapNhatThongTinNhanVien.Designer.cs">
+      <DependentUpon>UserControlCapNhatThongTinNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\UserControlQuanLyHoSoNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\UserControlQuanLyHoSoNhanVien.Designer.cs">
+      <DependentUpon>UserControlQuanLyHoSoNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\UserControlThayDoiChiTietSoHangVe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\UserControlThayDoiChiTietSoHangVe.Designer.cs">
+      <DependentUpon>UserControlThayDoiChiTietSoHangVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\UserControlThayDoiChiTietSoLuongSanBay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\UserControlThayDoiChiTietSoLuongSanBay.Designer.cs">
+      <DependentUpon>UserControlThayDoiChiTietSoLuongSanBay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\UserControlThayDoiQuiDinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\UserControlThayDoiQuiDinh.Designer.cs">
+      <DependentUpon>UserControlThayDoiQuiDinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="HANGVE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -149,6 +179,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\FormHomeQuanLy.resx">
       <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\UserControlCapNhatThongTinNhanVien.resx">
+      <DependentUpon>UserControlCapNhatThongTinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\UserControlQuanLyHoSoNhanVien.resx">
+      <DependentUpon>UserControlQuanLyHoSoNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\UserControlThayDoiChiTietSoHangVe.resx">
+      <DependentUpon>UserControlThayDoiChiTietSoHangVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\UserControlThayDoiChiTietSoLuongSanBay.resx">
+      <DependentUpon>UserControlThayDoiChiTietSoLuongSanBay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\UserControlThayDoiQuiDinh.resx">
+      <DependentUpon>UserControlThayDoiQuiDinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

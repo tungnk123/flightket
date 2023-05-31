@@ -46,7 +46,7 @@ namespace flightket.Forms_QuanLy
             this.btn_nhapLichChuyenBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_nhapLichChuyenBay.Image = global::flightket.Properties.Resources.ic_nhapLichChuyenBay;
             this.btn_nhapLichChuyenBay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_nhapLichChuyenBay.Location = new System.Drawing.Point(290, 306);
+            this.btn_nhapLichChuyenBay.Location = new System.Drawing.Point(561, 374);
             this.btn_nhapLichChuyenBay.Name = "btn_nhapLichChuyenBay";
             this.btn_nhapLichChuyenBay.Size = new System.Drawing.Size(357, 90);
             this.btn_nhapLichChuyenBay.TabIndex = 0;
@@ -60,7 +60,7 @@ namespace flightket.Forms_QuanLy
             this.btn_lapBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_lapBaoCao.Image = ((System.Drawing.Image)(resources.GetObject("btn_lapBaoCao.Image")));
             this.btn_lapBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_lapBaoCao.Location = new System.Drawing.Point(664, 306);
+            this.btn_lapBaoCao.Location = new System.Drawing.Point(935, 374);
             this.btn_lapBaoCao.Name = "btn_lapBaoCao";
             this.btn_lapBaoCao.Size = new System.Drawing.Size(242, 90);
             this.btn_lapBaoCao.TabIndex = 1;
@@ -74,7 +74,7 @@ namespace flightket.Forms_QuanLy
             this.btn_caiDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_caiDat.Image = ((System.Drawing.Image)(resources.GetObject("btn_caiDat.Image")));
             this.btn_caiDat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_caiDat.Location = new System.Drawing.Point(921, 306);
+            this.btn_caiDat.Location = new System.Drawing.Point(1192, 374);
             this.btn_caiDat.Name = "btn_caiDat";
             this.btn_caiDat.Size = new System.Drawing.Size(185, 90);
             this.btn_caiDat.TabIndex = 2;
@@ -88,13 +88,14 @@ namespace flightket.Forms_QuanLy
             this.btn_thayDoiQuiDinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_thayDoiQuiDinh.Image = global::flightket.Properties.Resources.ic_thayDoiQuiDinh;
             this.btn_thayDoiQuiDinh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_thayDoiQuiDinh.Location = new System.Drawing.Point(290, 438);
+            this.btn_thayDoiQuiDinh.Location = new System.Drawing.Point(561, 506);
             this.btn_thayDoiQuiDinh.Name = "btn_thayDoiQuiDinh";
             this.btn_thayDoiQuiDinh.Size = new System.Drawing.Size(357, 90);
             this.btn_thayDoiQuiDinh.TabIndex = 3;
             this.btn_thayDoiQuiDinh.Text = "Thay đổi qui định";
             this.btn_thayDoiQuiDinh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_thayDoiQuiDinh.UseVisualStyleBackColor = false;
+            this.btn_thayDoiQuiDinh.Click += new System.EventHandler(this.btn_thayDoiQuiDinh_Click);
             // 
             // btn_quanLyHoSo
             // 
@@ -102,7 +103,7 @@ namespace flightket.Forms_QuanLy
             this.btn_quanLyHoSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_quanLyHoSo.Image = global::flightket.Properties.Resources.ic_quanLyHoSo;
             this.btn_quanLyHoSo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_quanLyHoSo.Location = new System.Drawing.Point(664, 438);
+            this.btn_quanLyHoSo.Location = new System.Drawing.Point(935, 506);
             this.btn_quanLyHoSo.Name = "btn_quanLyHoSo";
             this.btn_quanLyHoSo.Size = new System.Drawing.Size(442, 90);
             this.btn_quanLyHoSo.TabIndex = 4;
@@ -116,7 +117,7 @@ namespace flightket.Forms_QuanLy
             this.btn_dangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_dangXuat.Image = ((System.Drawing.Image)(resources.GetObject("btn_dangXuat.Image")));
             this.btn_dangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_dangXuat.Location = new System.Drawing.Point(1047, 701);
+            this.btn_dangXuat.Location = new System.Drawing.Point(1500, 872);
             this.btn_dangXuat.Name = "btn_dangXuat";
             this.btn_dangXuat.Size = new System.Drawing.Size(229, 90);
             this.btn_dangXuat.TabIndex = 5;
@@ -128,9 +129,10 @@ namespace flightket.Forms_QuanLy
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::flightket.Properties.Resources._2_removebg_preview__1__1;
-            this.pictureBox1.Location = new System.Drawing.Point(714, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(1230, 10);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(584, 143);
+            this.pictureBox1.Size = new System.Drawing.Size(584, 123);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
@@ -140,7 +142,7 @@ namespace flightket.Forms_QuanLy
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::flightket.Properties.Resources._350248398_786598096329880_2111811280162483567_n__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1426, 839);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_dangXuat);
             this.Controls.Add(this.btn_quanLyHoSo);
