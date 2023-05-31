@@ -55,7 +55,7 @@
           <Property Name="MaChuyenBay" Type="char" MaxLength="5" />
           <Property Name="MaSanBayTrungGian" Type="char" MaxLength="5" />
           <Property Name="ThoiGianDung" Type="smallint" />
-          <Property Name="GhiChu" Type="nvarchar" MaxLength="1" />
+          <Property Name="GhiChu" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="CT_HANGVE">
           <Key>
@@ -71,7 +71,7 @@
             <PropertyRef Name="MaHangVe" />
           </Key>
           <Property Name="MaHangVe" Type="char" MaxLength="5" Nullable="false" />
-          <Property Name="TenHangVe" Type="nvarchar" MaxLength="1" />
+          <Property Name="TenHangVe" Type="nvarchar(max)" />
           <Property Name="TiLeDonGia" Type="tinyint" />
         </EntityType>
         <EntityType Name="HANHKHACH">
@@ -79,7 +79,7 @@
             <PropertyRef Name="MaHanhKhach" />
           </Key>
           <Property Name="MaHanhKhach" Type="char" MaxLength="5" Nullable="false" />
-          <Property Name="TenHanhKhach" Type="nvarchar" MaxLength="1" />
+          <Property Name="TenHanhKhach" Type="nvarchar(max)" />
           <Property Name="GioiTinh" Type="nchar" MaxLength="1" />
           <Property Name="NgaySinh" Type="smalldatetime" />
           <Property Name="CMND" Type="char" MaxLength="12" />
@@ -90,13 +90,13 @@
             <PropertyRef Name="MaNhanVien" />
           </Key>
           <Property Name="MaNhanVien" Type="char" MaxLength="5" Nullable="false" />
-          <Property Name="HoTen" Type="nvarchar" MaxLength="1" />
+          <Property Name="HoTen" Type="nvarchar(max)" />
           <Property Name="NamSinh" Type="smalldatetime" />
-          <Property Name="DiaChi" Type="nvarchar" MaxLength="1" />
+          <Property Name="DiaChi" Type="nvarchar(max)" />
           <Property Name="SDT" Type="char" MaxLength="10" />
-          <Property Name="UserName" Type="nvarchar" MaxLength="1" />
-          <Property Name="PassWord" Type="nvarchar" MaxLength="1" />
-          <Property Name="Role" Type="nvarchar" MaxLength="1" />
+          <Property Name="UserName" Type="nvarchar(max)" />
+          <Property Name="PassWord" Type="nvarchar(max)" />
+          <Property Name="Role" Type="char" MaxLength="20" />
         </EntityType>
         <EntityType Name="PHIEUDATCHO">
           <Key>
@@ -113,9 +113,9 @@
             <PropertyRef Name="MaSanBay" />
           </Key>
           <Property Name="MaSanBay" Type="char" MaxLength="5" Nullable="false" />
-          <Property Name="TenSanBay" Type="nvarchar" MaxLength="1" />
-          <Property Name="QuocGia" Type="nvarchar" MaxLength="1" />
-          <Property Name="DiaChi" Type="nvarchar" MaxLength="1" />
+          <Property Name="TenSanBay" Type="nvarchar(max)" />
+          <Property Name="QuocGia" Type="nvarchar(max)" />
+          <Property Name="DiaChi" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -131,12 +131,12 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="smallint" Nullable="false" />
           <Property Name="ThoiGianBayToiThieu" Type="smallint" />
           <Property Name="SoSanBayTrungGianToiDa" Type="smallint" />
           <Property Name="ThoiGianDungToiThieu" Type="smallint" />
           <Property Name="ThoiGianDungToiDa" Type="smallint" />
-          <Property Name="SoThoiGianDatVeTruocKhoiHanh" Type="smallint" />
+          <Property Name="SoGioDatVeTruocKhoiHanh" Type="smallint" />
           <Property Name="SoGioHuyPhieuTruocKhoiHanh" Type="smallint" />
         </EntityType>
         <EntityType Name="VECHUYENBAY">
@@ -185,7 +185,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CT_BCTHAN__MaBCT__08B54D69">
+        <Association Name="FK__CT_BCTHAN__MaBCT__01142BA1">
           <End Role="BAOCAOTHANG" Type="Self.BAOCAOTHANG" Multiplicity="1" />
           <End Role="CT_BCTHANG" Type="Self.CT_BCTHANG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -197,7 +197,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CT_BCTHAN__MaChu__09A971A2">
+        <Association Name="FK__CT_BCTHAN__MaChu__02084FDA">
           <End Role="CHUYENBAY" Type="Self.CHUYENBAY" Multiplicity="1" />
           <End Role="CT_BCTHANG" Type="Self.CT_BCTHANG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -356,11 +356,11 @@
             <End Role="SANBAY" EntitySet="SANBAY" />
             <End Role="CHUYENBAY" EntitySet="CHUYENBAY" />
           </AssociationSet>
-          <AssociationSet Name="FK__CT_BCTHAN__MaBCT__08B54D69" Association="Self.FK__CT_BCTHAN__MaBCT__08B54D69">
+          <AssociationSet Name="FK__CT_BCTHAN__MaBCT__01142BA1" Association="Self.FK__CT_BCTHAN__MaBCT__01142BA1">
             <End Role="BAOCAOTHANG" EntitySet="BAOCAOTHANG" />
             <End Role="CT_BCTHANG" EntitySet="CT_BCTHANG" />
           </AssociationSet>
-          <AssociationSet Name="FK__CT_BCTHAN__MaChu__09A971A2" Association="Self.FK__CT_BCTHAN__MaChu__09A971A2">
+          <AssociationSet Name="FK__CT_BCTHAN__MaChu__02084FDA" Association="Self.FK__CT_BCTHAN__MaChu__02084FDA">
             <End Role="CHUYENBAY" EntitySet="CHUYENBAY" />
             <End Role="CT_BCTHANG" EntitySet="CT_BCTHANG" />
           </AssociationSet>
@@ -431,7 +431,7 @@
           <Property Name="TongChuyenBay" Type="Int16" />
           <Property Name="TiLe" Type="Double" />
           <NavigationProperty Name="BAOCAONAM" Relationship="Self.FK__BAOCAOTHA__MaBCN__7D439ABD" FromRole="BAOCAOTHANG" ToRole="BAOCAONAM" />
-          <NavigationProperty Name="CT_BCTHANG" Relationship="Self.FK__CT_BCTHAN__MaBCT__08B54D69" FromRole="BAOCAOTHANG" ToRole="CT_BCTHANG" />
+          <NavigationProperty Name="CT_BCTHANG" Relationship="Self.FK__CT_BCTHAN__MaBCT__01142BA1" FromRole="BAOCAOTHANG" ToRole="CT_BCTHANG" />
         </EntityType>
         <EntityType Name="CHUYENBAY">
           <Key>
@@ -445,7 +445,7 @@
           <Property Name="GiaVe" Type="Double" />
           <NavigationProperty Name="SANBAY" Relationship="Self.FK__CHUYENBAY__MaSan__5EBF139D" FromRole="CHUYENBAY" ToRole="SANBAY" />
           <NavigationProperty Name="SANBAY1" Relationship="Self.FK__CHUYENBAY__MaSan__5FB337D6" FromRole="CHUYENBAY" ToRole="SANBAY" />
-          <NavigationProperty Name="CT_BCTHANG" Relationship="Self.FK__CT_BCTHAN__MaChu__09A971A2" FromRole="CHUYENBAY" ToRole="CT_BCTHANG" />
+          <NavigationProperty Name="CT_BCTHANG" Relationship="Self.FK__CT_BCTHAN__MaChu__02084FDA" FromRole="CHUYENBAY" ToRole="CT_BCTHANG" />
           <NavigationProperty Name="CT_CHUYENBAY" Relationship="Self.FK__CT_CHUYEN__MaChu__628FA481" FromRole="CHUYENBAY" ToRole="CT_CHUYENBAY" />
           <NavigationProperty Name="CT_HANGVE" Relationship="Self.FK__CT_HANGVE__MaChu__70DDC3D8" FromRole="CHUYENBAY" ToRole="CT_HANGVE" />
           <NavigationProperty Name="PHIEUDATCHOes" Relationship="Self.FK__PHIEUDATC__MaChu__74AE54BC" FromRole="CHUYENBAY" ToRole="PHIEUDATCHO" />
@@ -461,8 +461,8 @@
           <Property Name="SoVe" Type="Int16" />
           <Property Name="DoanhThu" Type="Double" />
           <Property Name="TiLe" Type="Double" />
-          <NavigationProperty Name="BAOCAOTHANG" Relationship="Self.FK__CT_BCTHAN__MaBCT__08B54D69" FromRole="CT_BCTHANG" ToRole="BAOCAOTHANG" />
-          <NavigationProperty Name="CHUYENBAY" Relationship="Self.FK__CT_BCTHAN__MaChu__09A971A2" FromRole="CT_BCTHANG" ToRole="CHUYENBAY" />
+          <NavigationProperty Name="BAOCAOTHANG" Relationship="Self.FK__CT_BCTHAN__MaBCT__01142BA1" FromRole="CT_BCTHANG" ToRole="BAOCAOTHANG" />
+          <NavigationProperty Name="CHUYENBAY" Relationship="Self.FK__CT_BCTHAN__MaChu__02084FDA" FromRole="CT_BCTHANG" ToRole="CHUYENBAY" />
         </EntityType>
         <EntityType Name="CT_CHUYENBAY">
           <Key>
@@ -472,7 +472,7 @@
           <Property Name="MaChuyenBay" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
           <Property Name="MaSanBayTrungGian" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
           <Property Name="ThoiGianDung" Type="Int16" />
-          <Property Name="GhiChu" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="GhiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CHUYENBAY" Relationship="Self.FK__CT_CHUYEN__MaChu__628FA481" FromRole="CT_CHUYENBAY" ToRole="CHUYENBAY" />
           <NavigationProperty Name="SANBAY" Relationship="Self.FK__CT_CHUYEN__MaSan__6383C8BA" FromRole="CT_CHUYENBAY" ToRole="SANBAY" />
         </EntityType>
@@ -492,7 +492,7 @@
             <PropertyRef Name="MaHangVe" />
           </Key>
           <Property Name="MaHangVe" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="TenHangVe" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="TenHangVe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="TiLeDonGia" Type="Byte" />
           <NavigationProperty Name="CT_HANGVE" Relationship="Self.FK__CT_HANGVE__MaHan__71D1E811" FromRole="HANGVE" ToRole="CT_HANGVE" />
           <NavigationProperty Name="PHIEUDATCHOes" Relationship="Self.FK__PHIEUDATC__MaHan__76969D2E" FromRole="HANGVE" ToRole="PHIEUDATCHO" />
@@ -503,7 +503,7 @@
             <PropertyRef Name="MaHanhKhach" />
           </Key>
           <Property Name="MaHanhKhach" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="TenHanhKhach" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="TenHanhKhach" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="GioiTinh" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
           <Property Name="NgaySinh" Type="DateTime" Precision="0" />
           <Property Name="CMND" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
@@ -516,13 +516,13 @@
             <PropertyRef Name="MaNhanVien" />
           </Key>
           <Property Name="MaNhanVien" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="HoTen" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="HoTen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="NamSinh" Type="DateTime" Precision="0" />
-          <Property Name="DiaChi" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-          <Property Name="UserName" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-          <Property Name="PassWord" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-          <Property Name="Role" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PassWord" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Role" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
         </EntityType>
         <EntityType Name="PHIEUDATCHO">
           <Key>
@@ -542,9 +542,9 @@
             <PropertyRef Name="MaSanBay" />
           </Key>
           <Property Name="MaSanBay" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="TenSanBay" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-          <Property Name="QuocGia" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-          <Property Name="DiaChi" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="TenSanBay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="QuocGia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CHUYENBAYs" Relationship="Self.FK__CHUYENBAY__MaSan__5EBF139D" FromRole="SANBAY" ToRole="CHUYENBAY" />
           <NavigationProperty Name="CHUYENBAYs1" Relationship="Self.FK__CHUYENBAY__MaSan__5FB337D6" FromRole="SANBAY" ToRole="CHUYENBAY" />
           <NavigationProperty Name="CT_CHUYENBAY" Relationship="Self.FK__CT_CHUYEN__MaSan__6383C8BA" FromRole="SANBAY" ToRole="CT_CHUYENBAY" />
@@ -563,12 +563,12 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int16" Nullable="false" />
           <Property Name="ThoiGianBayToiThieu" Type="Int16" />
           <Property Name="SoSanBayTrungGianToiDa" Type="Int16" />
           <Property Name="ThoiGianDungToiThieu" Type="Int16" />
           <Property Name="ThoiGianDungToiDa" Type="Int16" />
-          <Property Name="SoThoiGianDatVeTruocKhoiHanh" Type="Int16" />
+          <Property Name="SoGioDatVeTruocKhoiHanh" Type="Int16" />
           <Property Name="SoGioHuyPhieuTruocKhoiHanh" Type="Int16" />
         </EntityType>
         <EntityType Name="VECHUYENBAY">
@@ -596,7 +596,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CT_BCTHAN__MaBCT__08B54D69">
+        <Association Name="FK__CT_BCTHAN__MaBCT__01142BA1">
           <End Role="BAOCAOTHANG" Type="Self.BAOCAOTHANG" Multiplicity="1" />
           <End Role="CT_BCTHANG" Type="Self.CT_BCTHANG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -632,7 +632,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CT_BCTHAN__MaChu__09A971A2">
+        <Association Name="FK__CT_BCTHAN__MaChu__02084FDA">
           <End Role="CHUYENBAY" Type="Self.CHUYENBAY" Multiplicity="1" />
           <End Role="CT_BCTHANG" Type="Self.CT_BCTHANG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -783,7 +783,7 @@
             <End Role="BAOCAONAM" EntitySet="BAOCAONAMs" />
             <End Role="BAOCAOTHANG" EntitySet="BAOCAOTHANGs" />
           </AssociationSet>
-          <AssociationSet Name="FK__CT_BCTHAN__MaBCT__08B54D69" Association="Self.FK__CT_BCTHAN__MaBCT__08B54D69">
+          <AssociationSet Name="FK__CT_BCTHAN__MaBCT__01142BA1" Association="Self.FK__CT_BCTHAN__MaBCT__01142BA1">
             <End Role="BAOCAOTHANG" EntitySet="BAOCAOTHANGs" />
             <End Role="CT_BCTHANG" EntitySet="CT_BCTHANG" />
           </AssociationSet>
@@ -795,7 +795,7 @@
             <End Role="SANBAY" EntitySet="SANBAYs" />
             <End Role="CHUYENBAY" EntitySet="CHUYENBAYs" />
           </AssociationSet>
-          <AssociationSet Name="FK__CT_BCTHAN__MaChu__09A971A2" Association="Self.FK__CT_BCTHAN__MaChu__09A971A2">
+          <AssociationSet Name="FK__CT_BCTHAN__MaChu__02084FDA" Association="Self.FK__CT_BCTHAN__MaChu__02084FDA">
             <End Role="CHUYENBAY" EntitySet="CHUYENBAYs" />
             <End Role="CT_BCTHANG" EntitySet="CT_BCTHANG" />
           </AssociationSet>
@@ -986,7 +986,7 @@
                 <ScalarProperty Name="SoSanBayTrungGianToiDa" ColumnName="SoSanBayTrungGianToiDa" />
                 <ScalarProperty Name="ThoiGianDungToiThieu" ColumnName="ThoiGianDungToiThieu" />
                 <ScalarProperty Name="ThoiGianDungToiDa" ColumnName="ThoiGianDungToiDa" />
-                <ScalarProperty Name="SoThoiGianDatVeTruocKhoiHanh" ColumnName="SoThoiGianDatVeTruocKhoiHanh" />
+                <ScalarProperty Name="SoGioDatVeTruocKhoiHanh" ColumnName="SoGioDatVeTruocKhoiHanh" />
                 <ScalarProperty Name="SoGioHuyPhieuTruocKhoiHanh" ColumnName="SoGioHuyPhieuTruocKhoiHanh" />
               </MappingFragment>
             </EntityTypeMapping>

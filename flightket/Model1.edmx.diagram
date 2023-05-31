@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f8355e8cca62470783e95913d5bc0c31" Name="Diagram1">
+      <Diagram DiagramId="960f82bf91044b10af807e344cc7485b" Name="Diagram1">
         <EntityTypeShape EntityType="FlightKetDBModel.BAOCAONAM" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="FlightKetDBModel.BAOCAOTHANG" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="FlightKetDBModel.CHUYENBAY" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
@@ -20,10 +20,10 @@
         <EntityTypeShape EntityType="FlightKetDBModel.THAMSO" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FlightKetDBModel.VECHUYENBAY" Width="1.5" PointX="8.25" PointY="3.75" IsExpanded="true" />
         <AssociationConnector Association="FlightKetDBModel.FK__BAOCAOTHA__MaBCN__7D439ABD" ManuallyRouted="false" />
-        <AssociationConnector Association="FlightKetDBModel.FK__CT_BCTHAN__MaBCT__08B54D69" ManuallyRouted="false" />
+        <AssociationConnector Association="FlightKetDBModel.FK__CT_BCTHAN__MaBCT__01142BA1" ManuallyRouted="false" />
         <AssociationConnector Association="FlightKetDBModel.FK__CHUYENBAY__MaSan__5EBF139D" ManuallyRouted="false" />
         <AssociationConnector Association="FlightKetDBModel.FK__CHUYENBAY__MaSan__5FB337D6" ManuallyRouted="false" />
-        <AssociationConnector Association="FlightKetDBModel.FK__CT_BCTHAN__MaChu__09A971A2" ManuallyRouted="false" />
+        <AssociationConnector Association="FlightKetDBModel.FK__CT_BCTHAN__MaChu__02084FDA" ManuallyRouted="false" />
         <AssociationConnector Association="FlightKetDBModel.FK__CT_CHUYEN__MaChu__628FA481" ManuallyRouted="false" />
         <AssociationConnector Association="FlightKetDBModel.FK__CT_HANGVE__MaChu__70DDC3D8" ManuallyRouted="false" />
         <AssociationConnector Association="FlightKetDBModel.FK__PHIEUDATC__MaChu__74AE54BC" ManuallyRouted="false" />
