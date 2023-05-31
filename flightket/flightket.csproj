@@ -97,11 +97,23 @@
     <Compile Include="Forms-QuanLy\FormHomeQuanLy.Designer.cs">
       <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms-QuanLy\NhapLichChuyenBay_I.cs">
+    <Compile Include="Forms-QuanLy\LapBaoCao_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms-QuanLy\NhapLichChuyenBay_I.Designer.cs">
-      <DependentUpon>NhapLichChuyenBay_I.cs</DependentUpon>
+    <Compile Include="Forms-QuanLy\LapBaoCao_Main.Designer.cs">
+      <DependentUpon>LapBaoCao_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\NhapLichChuyenBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\NhapLichChuyenBay.Designer.cs">
+      <DependentUpon>NhapLichChuyenBay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\NhapLichChuyenBay_File.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\NhapLichChuyenBay_File.Designer.cs">
+      <DependentUpon>NhapLichChuyenBay_File.cs</DependentUpon>
     </Compile>
     <Compile Include="HANGVE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -156,8 +168,14 @@
     <EmbeddedResource Include="Forms-QuanLy\FormHomeQuanLy.resx">
       <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms-QuanLy\NhapLichChuyenBay_I.resx">
-      <DependentUpon>NhapLichChuyenBay_I.cs</DependentUpon>
+    <EmbeddedResource Include="Forms-QuanLy\LapBaoCao_Main.resx">
+      <DependentUpon>LapBaoCao_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\NhapLichChuyenBay.resx">
+      <DependentUpon>NhapLichChuyenBay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\NhapLichChuyenBay_File.resx">
+      <DependentUpon>NhapLichChuyenBay_File.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -201,6 +219,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\ic_upload.png" />
     <None Include="Resources\ic_importFile.png" />
     <None Include="Resources\ic_home.png" />
     <None Include="Resources\ic_back.png" />

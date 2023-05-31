@@ -20,7 +20,7 @@ namespace flightket.Forms_QuanLy
         private void btn_nhapLichChuyenBay_Click(object sender, EventArgs e)
         {
             this.Hide();
-            NhapLichChuyenBay_I nhapLichChuyenBay_I = new NhapLichChuyenBay_I();
+            NhapLichChuyenBay nhapLichChuyenBay_I = new NhapLichChuyenBay();
             nhapLichChuyenBay_I.ShowDialog();
         }
     }

@@ -17,7 +17,7 @@ namespace flightket
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NhapLichChuyenBay_I());
+            Application.Run(new NhapLichChuyenBay());
         }
     }
 }
