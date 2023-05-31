@@ -14,12 +14,12 @@ namespace flightket
     
     public partial class THAMSO
     {
-        public int ID { get; set; }
+        public short ID { get; set; }
         public Nullable<short> ThoiGianBayToiThieu { get; set; }
         public Nullable<short> SoSanBayTrungGianToiDa { get; set; }
         public Nullable<short> ThoiGianDungToiThieu { get; set; }
         public Nullable<short> ThoiGianDungToiDa { get; set; }
-        public Nullable<short> SoThoiGianDatVeTruocKhoiHanh { get; set; }
+        public Nullable<short> SoGioDatVeTruocKhoiHanh { get; set; }
         public Nullable<short> SoGioHuyPhieuTruocKhoiHanh { get; set; }
     }
 }
