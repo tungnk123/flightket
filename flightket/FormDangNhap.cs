@@ -19,6 +19,9 @@ namespace flightket
         {
             InitializeComponent();
             //cmt
+            FlightKetDBEntities db = new FlightKetDBEntities();
+            var a = db.HANHKHACHes.ToList();
+            MessageBox.Show(a.Count.ToString());
         }
 
         private void btn_dangNhap_Click(object sender, EventArgs e)
