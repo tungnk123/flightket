@@ -19,9 +19,6 @@ namespace flightket
         {
             InitializeComponent();
             //cmt
-            FlightKetDBEntities db = new FlightKetDBEntities();
-            var list = db.SANBAYs.ToList();
-            MessageBox.Show(list.First().TenSanBay);
         }
 
         private void btn_dangNhap_Click(object sender, EventArgs e)
