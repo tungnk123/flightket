@@ -24,7 +24,6 @@ namespace flightket.Forms_NhanVien
         {
             try
             {
-                isFormNhapThongTinKhOn = FormNhapThongTinKhachHang.instance.IsDisposed;
                 if (!isFormNhapThongTinKhOn)
                 {
                     FormHomeNhanVien.instance.Show();
