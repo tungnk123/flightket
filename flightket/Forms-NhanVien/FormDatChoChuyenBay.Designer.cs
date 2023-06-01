@@ -236,11 +236,11 @@ namespace flightket.Forms_NhanVien
             // column_giaVe
             // 
             this.column_giaVe.Text = "Giá vé";
-            this.column_giaVe.Width = 150;
+            this.column_giaVe.Width = 172;
             // 
             // column_buttonChon
             // 
-            this.column_buttonChon.Text = "";
+            this.column_buttonChon.Text = "      ";
             this.column_buttonChon.Width = 172;
             // 
             // lb_danhSachChuyenBayPhuHop

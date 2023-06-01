@@ -28,7 +28,9 @@ namespace flightket.Forms_NhanVien
 
         private void btn_kiemTraDatCho_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FormKiemTraDatCho formKiemTraDatCho = new FormKiemTraDatCho(); ;
+            formKiemTraDatCho.ShowDialog();
         }
 
         private void btn_banVe_Click(object sender, EventArgs e)
