@@ -38,7 +38,6 @@ namespace flightket.Forms_QuanLy
             this.btn_quanLyHoSo = new System.Windows.Forms.Button();
             this.btn_dangXuat = new System.Windows.Forms.Button();
             this.panelControl = new System.Windows.Forms.Panel();
-            this.panelUserControl = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelControl.SuspendLayout();
             this.SuspendLayout();
@@ -47,9 +46,9 @@ namespace flightket.Forms_QuanLy
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::flightket.Properties.Resources._2_removebg_preview__1__1;
-            this.pictureBox1.Location = new System.Drawing.Point(1276, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(1361, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(689, 99);
+            this.pictureBox1.Size = new System.Drawing.Size(531, 108);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -154,13 +153,6 @@ namespace flightket.Forms_QuanLy
             this.panelControl.Size = new System.Drawing.Size(1189, 650);
             this.panelControl.TabIndex = 7;
             // 
-            // panelUserControl
-            // 
-            this.panelUserControl.Location = new System.Drawing.Point(179, 121);
-            this.panelUserControl.Name = "panelUserControl";
-            this.panelUserControl.Size = new System.Drawing.Size(1583, 841);
-            this.panelUserControl.TabIndex = 8;
-            // 
             // FormHomeQuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,14 +162,12 @@ namespace flightket.Forms_QuanLy
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelControl);
-            this.Controls.Add(this.panelUserControl);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormHomeQuanLy";
             this.Text = "Flightket - Home Quản lý";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FormHomeQuanLy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelControl.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -193,6 +183,5 @@ namespace flightket.Forms_QuanLy
         private System.Windows.Forms.Button btn_quanLyHoSo;
         private System.Windows.Forms.Button btn_dangXuat;
         private System.Windows.Forms.Panel panelControl;
-        private System.Windows.Forms.Panel panelUserControl;
     }
 }
