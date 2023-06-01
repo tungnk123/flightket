@@ -103,12 +103,6 @@
     <Compile Include="Forms-QuanLy\FormChiTietThayDoiSoSanBay.Designer.cs">
       <DependentUpon>FormChiTietThayDoiSoSanBay.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms-NhanVien\FormTraCuuChuyenBay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms-NhanVien\FormTraCuuChuyenBay.Designer.cs">
-      <DependentUpon>FormTraCuuChuyenBay.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms-QuanLy\FormHomeQuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,9 +183,6 @@
     <EmbeddedResource Include="Forms-QuanLy\FormChiTietThayDoiSoSanBay.resx">
       <DependentUpon>FormChiTietThayDoiSoSanBay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms-NhanVien\FormTraCuuChuyenBay.resx">
-      <DependentUpon>FormTraCuuChuyenBay.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\FormHomeQuanLy.resx">
       <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,24 +237,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\icons8-export-64.png" />
-    <None Include="Resources\icons8-home-50.png" />
-    <None Include="Resources\icons8-back-64.png" />
-    <None Include="Resources\icons8-log-out-50.png" />
-    <None Include="Resources\icons8-settings-50.png" />
-    <None Include="Resources\icons8-report-50.png" />
-    <None Include="Resources\icons8-ticket-50.png" />
-    <None Include="Resources\icons8-confirm-50.png" />
-    <None Include="Resources\icons8-flight-seat-50.png" />
-    <None Include="Resources\icons8-search-50.png" />
-    <None Include="Resources\crop-ghe-removebg-preview %281%29.png" />
-    <None Include="Resources\crop-ghe-removebg-preview.png" />
-    <None Include="Resources\crop-ghe1.png" />
-    <None Include="Resources\crop-ghe.png" />
-    <None Include="Resources\image-removebg-preview %281%29.png" />
-    <None Include="Resources\350361348_206044632301251_2266599988871672436_n.png" />
-    <None Include="Resources\2-removebg-preview %281%29.png" />
-    <None Include="Resources\2-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\350248398_786598096329880_2111811280162483567_n %281%29.png" />
