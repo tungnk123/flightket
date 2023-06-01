@@ -16,7 +16,6 @@ namespace flightket.Forms_QuanLy
         {
             InitializeComponent();
             panel1.BackColor = Color.FromArgb(150, Color.White);
-
         }
     }
 }
