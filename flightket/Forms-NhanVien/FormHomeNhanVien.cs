@@ -16,5 +16,39 @@ namespace flightket.Forms_NhanVien
         {
             InitializeComponent();
         }
+
+        private void btn_datChoChuyenBay_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormDatChoChuyenBay formDatChoChuyenBay = new FormDatChoChuyenBay();
+            formDatChoChuyenBay.ShowDialog();
+        }
+
+        private void btn_kiemTraDatCho_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_banVe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_traCuuChuyenBay_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormTraCuuChuyenBay formTraCuuChuyenBay = new FormTraCuuChuyenBay();
+            formTraCuuChuyenBay.ShowDialog();
+        }
+
+        private void btn_lapBaoCao_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_caiDat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
