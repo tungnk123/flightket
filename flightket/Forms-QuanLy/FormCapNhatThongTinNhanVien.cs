@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace flightket.Forms_NhanVien
+namespace flightket.Forms_QuanLy
 {
-    public partial class FormTraCuuChuyenBay : Form
+    public partial class FormCapNhatThongTinNhanVien : Form
     {
-        public FormTraCuuChuyenBay()
+        public FormCapNhatThongTinNhanVien()
         {
             InitializeComponent();
+            panel1.BackColor = Color.FromArgb(150, Color.White);
         }
     }
 }

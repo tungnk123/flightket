@@ -22,16 +22,10 @@ namespace flightket.Forms_NhanVien
 
         private void FormDatChoChuyenBay_FormClosed(object sender, FormClosedEventArgs e)
         {
-            try
+            FormDatChoChuyenBay.instance.Close();
+            if (!isFormNhapThongTinKhOn)
             {
-                if (!isFormNhapThongTinKhOn)
-                {
-                    FormHomeNhanVien.instance.Show();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Error!");
+                FormHomeNhanVien.instance.Show();
             }
         }
 
