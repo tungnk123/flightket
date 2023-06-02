@@ -85,35 +85,47 @@
     <Compile Include="Forms-Admin\FormHomeAdmin.Designer.cs">
       <DependentUpon>FormHomeAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms-NhanVien\FormDatChoChuyenBay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms-NhanVien\FormDatChoChuyenBay.Designer.cs">
-      <DependentUpon>FormDatChoChuyenBay.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms-NhanVien\FormHomeNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms-NhanVien\FormHomeNhanVien.Designer.cs">
       <DependentUpon>FormHomeNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms-NhanVien\FormNhapThongTinKhachHang.cs">
+    <Compile Include="Forms-QuanLy\FormCapNhatThongTinNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms-NhanVien\FormNhapThongTinKhachHang.Designer.cs">
-      <DependentUpon>FormNhapThongTinKhachHang.cs</DependentUpon>
+    <Compile Include="Forms-QuanLy\FormCapNhatThongTinNhanVien.Designer.cs">
+      <DependentUpon>FormCapNhatThongTinNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms-NhanVien\FormTraCuuChuyenBay.cs">
+    <Compile Include="Forms-QuanLy\FormChiTietThayDoiSoSanBay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms-NhanVien\FormTraCuuChuyenBay.Designer.cs">
-      <DependentUpon>FormTraCuuChuyenBay.cs</DependentUpon>
+    <Compile Include="Forms-QuanLy\FormChiTietThayDoiSoSanBay.Designer.cs">
+      <DependentUpon>FormChiTietThayDoiSoSanBay.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms-QuanLy\FormHomeQuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms-QuanLy\FormHomeQuanLy.Designer.cs">
       <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormQuanLyHoSoNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormQuanLyHoSoNhanVien.Designer.cs">
+      <DependentUpon>FormQuanLyHoSoNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormThayDoiChiTietSoHangVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormThayDoiChiTietSoHangVe.Designer.cs">
+      <DependentUpon>FormThayDoiChiTietSoHangVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormThayDoiQuiDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormThayDoiQuiDinh.Designer.cs">
+      <DependentUpon>FormThayDoiQuiDinh.cs</DependentUpon>
     </Compile>
     <Compile Include="HANGVE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -147,6 +159,9 @@
     <Compile Include="SANBAY.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="THAMSO.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -159,20 +174,26 @@
     <EmbeddedResource Include="Forms-Admin\FormHomeAdmin.resx">
       <DependentUpon>FormHomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms-NhanVien\FormDatChoChuyenBay.resx">
-      <DependentUpon>FormDatChoChuyenBay.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms-NhanVien\FormHomeNhanVien.resx">
       <DependentUpon>FormHomeNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms-NhanVien\FormNhapThongTinKhachHang.resx">
-      <DependentUpon>FormNhapThongTinKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="Forms-QuanLy\FormCapNhatThongTinNhanVien.resx">
+      <DependentUpon>FormCapNhatThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms-NhanVien\FormTraCuuChuyenBay.resx">
-      <DependentUpon>FormTraCuuChuyenBay.cs</DependentUpon>
+    <EmbeddedResource Include="Forms-QuanLy\FormChiTietThayDoiSoSanBay.resx">
+      <DependentUpon>FormChiTietThayDoiSoSanBay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\FormHomeQuanLy.resx">
       <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormQuanLyHoSoNhanVien.resx">
+      <DependentUpon>FormQuanLyHoSoNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormThayDoiChiTietSoHangVe.resx">
+      <DependentUpon>FormThayDoiChiTietSoHangVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormThayDoiQuiDinh.resx">
+      <DependentUpon>FormThayDoiQuiDinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -216,24 +237,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\icons8-export-64.png" />
-    <None Include="Resources\icons8-home-50.png" />
-    <None Include="Resources\icons8-back-64.png" />
-    <None Include="Resources\icons8-log-out-50.png" />
-    <None Include="Resources\icons8-settings-50.png" />
-    <None Include="Resources\icons8-report-50.png" />
-    <None Include="Resources\icons8-ticket-50.png" />
-    <None Include="Resources\icons8-confirm-50.png" />
-    <None Include="Resources\icons8-flight-seat-50.png" />
-    <None Include="Resources\icons8-search-50.png" />
-    <None Include="Resources\crop-ghe-removebg-preview %281%29.png" />
-    <None Include="Resources\crop-ghe-removebg-preview.png" />
-    <None Include="Resources\crop-ghe1.png" />
-    <None Include="Resources\crop-ghe.png" />
-    <None Include="Resources\image-removebg-preview %281%29.png" />
-    <None Include="Resources\350361348_206044632301251_2266599988871672436_n.png" />
-    <None Include="Resources\2-removebg-preview %281%29.png" />
-    <None Include="Resources\2-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\350248398_786598096329880_2111811280162483567_n %281%29.png" />

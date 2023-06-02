@@ -19,7 +19,7 @@ namespace flightket.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -63,19 +63,9 @@ namespace flightket.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _2_removebg_preview {
+        internal static System.Drawing.Bitmap _2_removebg_preview__1__1 {
             get {
-                object obj = ResourceManager.GetObject("2-removebg-preview", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _2_removebg_preview__1_ {
-            get {
-                object obj = ResourceManager.GetObject("2-removebg-preview (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("2-removebg-preview (1) 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +83,9 @@ namespace flightket.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _350361348_206044632301251_2266599988871672436_n {
+        internal static System.Drawing.Bitmap ic_caiDat {
             get {
-                object obj = ResourceManager.GetObject("350361348_206044632301251_2266599988871672436_n", resourceCulture);
+                object obj = ResourceManager.GetObject("ic_caiDat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +93,9 @@ namespace flightket.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap crop_ghe {
+        internal static System.Drawing.Bitmap ic_dangXuat {
             get {
-                object obj = ResourceManager.GetObject("crop-ghe", resourceCulture);
+                object obj = ResourceManager.GetObject("ic_dangXuat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +103,9 @@ namespace flightket.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap crop_ghe_removebg_preview {
+        internal static System.Drawing.Bitmap ic_lapBaoCao {
             get {
-                object obj = ResourceManager.GetObject("crop-ghe-removebg-preview", resourceCulture);
+                object obj = ResourceManager.GetObject("ic_lapBaoCao", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +113,9 @@ namespace flightket.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap crop_ghe_removebg_preview__1_ {
+        internal static System.Drawing.Bitmap ic_nhapLichChuyenBay {
             get {
-                object obj = ResourceManager.GetObject("crop-ghe-removebg-preview (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("ic_nhapLichChuyenBay", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +123,9 @@ namespace flightket.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap crop_ghe1 {
+        internal static System.Drawing.Bitmap ic_quanLyHoSo {
             get {
-                object obj = ResourceManager.GetObject("crop-ghe1", resourceCulture);
+                object obj = ResourceManager.GetObject("ic_quanLyHoSo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,109 +133,9 @@ namespace flightket.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_back_64 {
+        internal static System.Drawing.Bitmap ic_thayDoiQuiDinh {
             get {
-                object obj = ResourceManager.GetObject("icons8-back-64", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_confirm_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-confirm-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_export_64 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-export-64", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_flight_seat_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-flight-seat-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_home_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-home-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_log_out_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-log-out-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_report_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-report-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_search_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-search-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_settings_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-settings-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_ticket_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-ticket-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap image_removebg_preview__1_ {
-            get {
-                object obj = ResourceManager.GetObject("image-removebg-preview (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("ic_thayDoiQuiDinh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -12,14 +12,12 @@ namespace flightket
     using System;
     using System.Collections.Generic;
     
-    public partial class THAMSO
+    public partial class sysdiagram
     {
-        public int ID { get; set; }
-        public Nullable<short> ThoiGianBayToiThieu { get; set; }
-        public Nullable<short> SoSanBayTrungGianToiDa { get; set; }
-        public Nullable<short> ThoiGianDungToiThieu { get; set; }
-        public Nullable<short> ThoiGianDungToiDa { get; set; }
-        public Nullable<short> SoThoiGianDatVeTruocKhoiHanh { get; set; }
-        public Nullable<short> SoGioHuyPhieuTruocKhoiHanh { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

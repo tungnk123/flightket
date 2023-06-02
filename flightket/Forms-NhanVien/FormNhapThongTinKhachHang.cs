@@ -22,7 +22,6 @@ namespace flightket.Forms_NhanVien
         private void FormNhapThongTinKhachHang_FormClosed(object sender, FormClosedEventArgs e)
         {
             FormDatChoChuyenBay.instance.Show();
-            
         }
     }
 }
