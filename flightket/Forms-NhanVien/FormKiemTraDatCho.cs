@@ -13,7 +13,7 @@ namespace flightket.Forms_NhanVien
     public partial class FormKiemTraDatCho : Form
     {
         private int maDatChoID;
-        private string maHanhKhach, maChuyenBay;
+        private string maHanhKhach, maChuyenBay, maHangVe;
         public FormKiemTraDatCho()
         {
             InitializeComponent();
@@ -81,7 +81,7 @@ namespace flightket.Forms_NhanVien
                                  from sanbay in db.SANBAYs
                                  where hanhkhach.MaHanhKhach.Equals(phieudatcho.MaHanhKhach) && hangve.MaHangVe.Equals(phieudatcho.MaHangVe) && phieudatcho.MaChuyenBay.Equals(chuyenbay.MaChuyenBay) &&
                                  hanhkhach.TenHanhKhach.Equals(tb_hoVaTen.Text) && hanhkhach.CMND.Equals(tb_CMND.Text) && hanhkhach.SDT.Equals(tb_soDienThoai.Text) && phieudatcho.MaPhieuDatCho.Equals(maDatChoID)
-                                 select new { phieudatcho.MaPhieuDatCho, chuyenbay.MaChuyenBay, hanhkhach.TenHanhKhach, hanhkhach.CMND, hanhkhach.NgaySinh, hanhkhach.SDT, chuyenbay.NgayGioKhoiHanh, hangve.TenHangVe, phieudatcho.GiaTien, hanhkhach.MaHanhKhach};
+                                 select new { phieudatcho.MaPhieuDatCho, chuyenbay.MaChuyenBay, hanhkhach.TenHanhKhach, hanhkhach.CMND, hanhkhach.NgaySinh, hanhkhach.SDT, chuyenbay.NgayGioKhoiHanh, hangve.TenHangVe, phieudatcho.GiaTien, hanhkhach.MaHanhKhach, hangve.MaHangVe};
 
                     var resultList = result.ToList();
                     var item = resultList.FirstOrDefault();
@@ -98,6 +98,7 @@ namespace flightket.Forms_NhanVien
                     {
                         maHanhKhach = item.MaHanhKhach;
                         maChuyenBay = item.MaChuyenBay;
+                        maHangVe = item.MaHangVe;
 
                         lb_maDatCho.Text = item.MaPhieuDatCho.ToString();
                         lb_maChuyenBay.Text = item.MaChuyenBay;
@@ -121,18 +122,23 @@ namespace flightket.Forms_NhanVien
 
         private void btn_banVe_Click(object sender, EventArgs e)
         {
-            using (var db = new FlightKetDBEntities())
+            DialogResult dialogResult = MessageBox.Show("Xác nhận bán vé", "FlightKet - Bán vé", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.OK)
             {
-                PHIEUDATCHO pHIEUDATCHO = db.PHIEUDATCHOes.Find(maDatChoID);
-                if (pHIEUDATCHO == null) return;
-                VECHUYENBAY vECHUYENBAY = new VECHUYENBAY() { MaChuyenBay = pHIEUDATCHO.MaChuyenBay, MaHangVe = pHIEUDATCHO.MaHangVe, MaHanhKhach = pHIEUDATCHO.MaHanhKhach, GiaTien = pHIEUDATCHO.GiaTien };
-                db.PHIEUDATCHOes.Remove(pHIEUDATCHO);
-                db.VECHUYENBAYs.Add(vECHUYENBAY);
-                db.SaveChanges();
-                panelChiTietPhieuDatCho.Visible = false;
-                panelDanhSachPhieuDatCho.Visible = false;
-                MessageBox.Show("Bán vé thành công");
+                using (var db = new FlightKetDBEntities())
+                {
+                    PHIEUDATCHO pHIEUDATCHO = db.PHIEUDATCHOes.Find(maDatChoID);
+                    if (pHIEUDATCHO == null) return;
+                    VECHUYENBAY vECHUYENBAY = new VECHUYENBAY() { MaChuyenBay = pHIEUDATCHO.MaChuyenBay, MaHangVe = pHIEUDATCHO.MaHangVe, MaHanhKhach = pHIEUDATCHO.MaHanhKhach, GiaTien = pHIEUDATCHO.GiaTien };
+                    db.PHIEUDATCHOes.Remove(pHIEUDATCHO);
+                    db.VECHUYENBAYs.Add(vECHUYENBAY);
+                    db.SaveChanges();
+                    panelChiTietPhieuDatCho.Visible = false;
+                    panelDanhSachPhieuDatCho.Visible = false;
+                    MessageBox.Show("Bán vé thành công");
+                }
             }
+            
 
         }
 
@@ -153,7 +159,7 @@ namespace flightket.Forms_NhanVien
 
         private void btn_capNhat_Click(object sender, EventArgs e)
         {
-            FormCapNhatThongTinPhieuDatCho formCapNhatThongTinPhieuDatCho = new FormCapNhatThongTinPhieuDatCho(maDatChoID, maChuyenBay, maHanhKhach);
+            FormCapNhatThongTinPhieuDatCho formCapNhatThongTinPhieuDatCho = new FormCapNhatThongTinPhieuDatCho(maDatChoID, maChuyenBay, maHanhKhach, maHangVe);
             this.Hide();
             formCapNhatThongTinPhieuDatCho.ShowDialog();
             if(formCapNhatThongTinPhieuDatCho.IsAccessible == false)

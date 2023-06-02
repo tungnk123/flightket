@@ -16,7 +16,7 @@ namespace flightket.Forms_NhanVien
         {
             InitializeComponent();
         }
-        public FormCapNhatThongTinPhieuDatCho(int maPhieuDatCho, string maChuyenBay, string maHanhKhach)
+        public FormCapNhatThongTinPhieuDatCho(int maPhieuDatCho, string maChuyenBay, string maHanhKhach, string maHangVe)
         {
             InitializeComponent();
             
@@ -25,10 +25,12 @@ namespace flightket.Forms_NhanVien
                 PHIEUDATCHO pHIEUDATCHO = db.PHIEUDATCHOes.Find(maPhieuDatCho);
                 HANHKHACH hANHKHACH = db.HANHKHACHes.Find(maHanhKhach);
                 CHUYENBAY cHUYENBAY = db.CHUYENBAYs.Find(maChuyenBay);
+                HANGVE hANGVE = db.HANGVEs.Find(maHangVe);
 
                 tb_hoVaTen.Text = hANHKHACH.TenHanhKhach;
                 tb_soDienThoai.Text = hANHKHACH.SDT;
                 tb_CMND.Text = hANHKHACH.CMND;
+                cb_gioiTinh.Text = hANHKHACH.GioiTinh;
                 dateTimePicker1.Value = hANHKHACH.NgaySinh.Value;
 
                 var querry = from cb in db.CHUYENBAYs
@@ -37,11 +39,12 @@ namespace flightket.Forms_NhanVien
                              where cb.MaChuyenBay.Equals(cthv.MaChuyenBay) && cthv.MaHangVe.Equals(hv.MaHangVe) && cb.MaChuyenBay.Equals(maChuyenBay)
                              select new { hv.TenHangVe };
                 var list = querry.ToList();
-                cb_hangGhe.Items.Clear();
+                cb_hangVe.Items.Clear();
                 foreach ( var item in list)
                 {
-                    cb_hangGhe.Items.Add(item.TenHangVe);
+                    cb_hangVe.Items.Add(item.TenHangVe);
                 }
+                cb_hangVe.Text = hANGVE.TenHangVe;
             }
 
         }
