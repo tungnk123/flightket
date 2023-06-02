@@ -56,6 +56,7 @@ namespace flightket.Forms_NhanVien
                     dataGridView1.Rows[i].Cells[4].Value = "Chọn";
                     dataGridView1.Rows[i].Height = 30;
 
+                    //
                     DataGridViewCellStyle dataGridViewCellStyle = new DataGridViewCellStyle();
                     dataGridViewCellStyle.ForeColor = Color.White;
                     dataGridViewCellStyle.BackColor = Color.SkyBlue;
@@ -108,7 +109,7 @@ namespace flightket.Forms_NhanVien
                         lb_soDienThoai.Text = item.SDT.ToString();
                         lb_ngayDi.Text = item.NgayGioKhoiHanh.Value.Date.ToShortDateString();
                         lb_gioKhoiHanh.Text = item.NgayGioKhoiHanh.Value.TimeOfDay.ToString();
-                        lb_hangGhe.Text = item.TenHangVe.ToString();
+                        lb_hangVe.Text = item.TenHangVe.ToString();
                         lb_giaVe.Text = item.GiaTien.ToString();
                         lb_sanBayDi.Text = item2.TenSanBayDi.ToString();
                         lb_sanBayDen.Text = item2.TenSanBayDen.ToString();
@@ -148,7 +149,7 @@ namespace flightket.Forms_NhanVien
             {
                 PHIEUDATCHO pHIEUDATCHO = db.PHIEUDATCHOes.Find(maDatChoID);
                 if (pHIEUDATCHO == null) return;
-                VECHUYENBAY vECHUYENBAY = new VECHUYENBAY() { MaChuyenBay = pHIEUDATCHO.MaChuyenBay, MaHangVe = pHIEUDATCHO.MaHangVe, MaHanhKhach = pHIEUDATCHO.MaHanhKhach, GiaTien = pHIEUDATCHO.GiaTien };
+                //VECHUYENBAY vECHUYENBAY = new VECHUYENBAY() { MaChuyenBay = pHIEUDATCHO.MaChuyenBay, MaHangVe = pHIEUDATCHO.MaHangVe, MaHanhKhach = pHIEUDATCHO.MaHanhKhach, GiaTien = pHIEUDATCHO.GiaTien };
                 db.PHIEUDATCHOes.Remove(pHIEUDATCHO);
                 db.SaveChanges();
                 panelChiTietPhieuDatCho.Visible = false;
@@ -164,6 +165,28 @@ namespace flightket.Forms_NhanVien
             formCapNhatThongTinPhieuDatCho.ShowDialog();
             if(formCapNhatThongTinPhieuDatCho.IsAccessible == false)
             {
+                using(var db = new FlightKetDBEntities())
+                {
+                    HANHKHACH hANHKHACH = db.HANHKHACHes.Find(this.maHanhKhach);
+                    PHIEUDATCHO pHIEUDATCHO = db.PHIEUDATCHOes.Find(this.maDatChoID);
+
+                    lb_hoVaTen.Text = hANHKHACH.TenHanhKhach;
+                    lb_CMND.Text = hANHKHACH.CMND;
+                    lb_ngaySinh.Text = hANHKHACH.NgaySinh.Value.ToShortDateString();
+                    lb_soDienThoai.Text = hANHKHACH.SDT;
+                    lb_giaVe.Text = pHIEUDATCHO.GiaTien.ToString();
+
+                    tb_hoVaTen.Text = hANHKHACH.TenHanhKhach;
+                    tb_CMND.Text = hANHKHACH.CMND;
+                    tb_soDienThoai.Text = hANHKHACH.SDT;
+
+                    var querry = from pdc in db.PHIEUDATCHOes
+                                 from hv in db.HANGVEs
+                                 where pdc.MaHangVe.Equals(hv.MaHangVe)
+                                 select new { hv.TenHangVe };
+                    var result = querry.ToList().FirstOrDefault();
+                    lb_hangVe.Text = result.TenHangVe;
+                }
                 this.Show();
             }
         }

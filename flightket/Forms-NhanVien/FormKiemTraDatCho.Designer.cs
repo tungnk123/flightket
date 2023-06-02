@@ -46,7 +46,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lb_maChuyenBay = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.lb_hangGhe = new System.Windows.Forms.Label();
+            this.lb_hangVe = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lb_sanBayDi = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -128,7 +128,7 @@
             this.panelChiTietPhieuDatCho.Controls.Add(this.label10);
             this.panelChiTietPhieuDatCho.Controls.Add(this.lb_maChuyenBay);
             this.panelChiTietPhieuDatCho.Controls.Add(this.label8);
-            this.panelChiTietPhieuDatCho.Controls.Add(this.lb_hangGhe);
+            this.panelChiTietPhieuDatCho.Controls.Add(this.lb_hangVe);
             this.panelChiTietPhieuDatCho.Controls.Add(this.label9);
             this.panelChiTietPhieuDatCho.Controls.Add(this.lb_sanBayDi);
             this.panelChiTietPhieuDatCho.Controls.Add(this.label12);
@@ -150,6 +150,7 @@
             // 
             this.btn_capNhat.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btn_capNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_capNhat.ForeColor = System.Drawing.Color.White;
             this.btn_capNhat.Location = new System.Drawing.Point(1069, 211);
             this.btn_capNhat.Name = "btn_capNhat";
             this.btn_capNhat.Size = new System.Drawing.Size(163, 48);
@@ -296,14 +297,14 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Mã chuyến bay:";
             // 
-            // lb_hangGhe
+            // lb_hangVe
             // 
-            this.lb_hangGhe.AutoSize = true;
-            this.lb_hangGhe.Location = new System.Drawing.Point(247, 252);
-            this.lb_hangGhe.Name = "lb_hangGhe";
-            this.lb_hangGhe.Size = new System.Drawing.Size(139, 26);
-            this.lb_hangGhe.TabIndex = 11;
-            this.lb_hangGhe.Text = "Hang Ghe a";
+            this.lb_hangVe.AutoSize = true;
+            this.lb_hangVe.Location = new System.Drawing.Point(247, 252);
+            this.lb_hangVe.Name = "lb_hangVe";
+            this.lb_hangVe.Size = new System.Drawing.Size(120, 26);
+            this.lb_hangVe.TabIndex = 11;
+            this.lb_hangVe.Text = "Hạng vé a";
             // 
             // label9
             // 
@@ -311,9 +312,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(77, 252);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 26);
+            this.label9.Size = new System.Drawing.Size(93, 26);
             this.label9.TabIndex = 10;
-            this.label9.Text = "Hạng ghế:";
+            this.label9.Text = "Hạng vé";
             // 
             // lb_sanBayDi
             // 
@@ -687,7 +688,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnChon;
         private System.Windows.Forms.Panel panelDanhSachPhieuDatCho;
         private System.Windows.Forms.Panel panelChiTietPhieuDatCho;
-        private System.Windows.Forms.Label lb_hangGhe;
+        private System.Windows.Forms.Label lb_hangVe;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lb_sanBayDi;
         private System.Windows.Forms.Label label12;

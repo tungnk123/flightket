@@ -52,6 +52,7 @@
             this.lb_title1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
+            this.btn_capNhat = new System.Windows.Forms.Button();
             this.panel_main.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -66,6 +67,7 @@
             this.panel_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel_main.Controls.Add(this.btn_capNhat);
             this.panel_main.Controls.Add(this.panel6);
             this.panel_main.Controls.Add(this.panel5);
             this.panel_main.Controls.Add(this.panel3);
@@ -305,6 +307,19 @@
             this.btn_home.TabIndex = 1;
             this.btn_home.UseVisualStyleBackColor = true;
             // 
+            // btn_capNhat
+            // 
+            this.btn_capNhat.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_capNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_capNhat.ForeColor = System.Drawing.Color.White;
+            this.btn_capNhat.Location = new System.Drawing.Point(802, 709);
+            this.btn_capNhat.Name = "btn_capNhat";
+            this.btn_capNhat.Size = new System.Drawing.Size(163, 48);
+            this.btn_capNhat.TabIndex = 27;
+            this.btn_capNhat.Text = "Cập nhật";
+            this.btn_capNhat.UseVisualStyleBackColor = false;
+            this.btn_capNhat.Click += new System.EventHandler(this.btn_capNhat_Click);
+            // 
             // FormCapNhatThongTinPhieuDatCho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -361,5 +376,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox tb_soDienThoai;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_capNhat;
     }
 }
