@@ -29,6 +29,22 @@
         private void InitializeComponent()
         {
             this.panel_main = new System.Windows.Forms.Panel();
+            this.panel_sanbaytrunggian = new System.Windows.Forms.Panel();
+            this.lv_danhSachSanBayTrungGian = new System.Windows.Forms.DataGridView();
+            this.ColumnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSanBayTrungGian = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnThoigiandung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cb_tenSanBay = new System.Windows.Forms.ComboBox();
+            this.tb_ghiChu = new System.Windows.Forms.TextBox();
+            this.tb_thoiGianDung = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Them = new System.Windows.Forms.Button();
             this.btnCB_dungOSanBay = new System.Windows.Forms.CheckBox();
             this.dp_ngayKhoiHanh = new System.Windows.Forms.DateTimePicker();
             this.cb_sanBayDen = new System.Windows.Forms.ComboBox();
@@ -57,26 +73,10 @@
             this.btn_back = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel_sanbaytrunggian = new System.Windows.Forms.Panel();
-            this.lv_danhSachSanBayTrungGian = new System.Windows.Forms.DataGridView();
-            this.ColumnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSanBayTrungGian = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnThoigiandung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cb_tenSanBay = new System.Windows.Forms.ComboBox();
-            this.tb_ghiChu = new System.Windows.Forms.TextBox();
-            this.tb_thoiGianDung = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_Them = new System.Windows.Forms.Button();
             this.panel_main.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_sanbaytrunggian.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lv_danhSachSanBayTrungGian)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_main
@@ -112,293 +112,8 @@
             this.panel_main.Controls.Add(this.label1);
             this.panel_main.Location = new System.Drawing.Point(49, 49);
             this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(1327, 906);
+            this.panel_main.Size = new System.Drawing.Size(1805, 953);
             this.panel_main.TabIndex = 0;
-            // 
-            // btnCB_dungOSanBay
-            // 
-            this.btnCB_dungOSanBay.AutoSize = true;
-            this.btnCB_dungOSanBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCB_dungOSanBay.Location = new System.Drawing.Point(862, 477);
-            this.btnCB_dungOSanBay.Name = "btnCB_dungOSanBay";
-            this.btnCB_dungOSanBay.Size = new System.Drawing.Size(15, 14);
-            this.btnCB_dungOSanBay.TabIndex = 18;
-            this.btnCB_dungOSanBay.UseVisualStyleBackColor = true;
-            this.btnCB_dungOSanBay.CheckedChanged += new System.EventHandler(this.btnCB_dungOSanBay_CheckedChanged);
-            // 
-            // dp_ngayKhoiHanh
-            // 
-            this.dp_ngayKhoiHanh.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dp_ngayKhoiHanh.Location = new System.Drawing.Point(36, 298);
-            this.dp_ngayKhoiHanh.Name = "dp_ngayKhoiHanh";
-            this.dp_ngayKhoiHanh.Size = new System.Drawing.Size(277, 27);
-            this.dp_ngayKhoiHanh.TabIndex = 16;
-            // 
-            // cb_sanBayDen
-            // 
-            this.cb_sanBayDen.Font = new System.Drawing.Font("Inter", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_sanBayDen.FormattingEnabled = true;
-            this.cb_sanBayDen.Location = new System.Drawing.Point(951, 188);
-            this.cb_sanBayDen.Name = "cb_sanBayDen";
-            this.cb_sanBayDen.Size = new System.Drawing.Size(202, 41);
-            this.cb_sanBayDen.TabIndex = 15;
-            // 
-            // cb_phutThoiGianBay
-            // 
-            this.cb_phutThoiGianBay.Font = new System.Drawing.Font("Inter", 20.25F);
-            this.cb_phutThoiGianBay.FormattingEnabled = true;
-            this.cb_phutThoiGianBay.Location = new System.Drawing.Point(1040, 298);
-            this.cb_phutThoiGianBay.Name = "cb_phutThoiGianBay";
-            this.cb_phutThoiGianBay.Size = new System.Drawing.Size(80, 41);
-            this.cb_phutThoiGianBay.TabIndex = 14;
-            // 
-            // cb_phutKhoiHanh
-            // 
-            this.cb_phutKhoiHanh.Font = new System.Drawing.Font("Inter", 20.25F);
-            this.cb_phutKhoiHanh.FormattingEnabled = true;
-            this.cb_phutKhoiHanh.Location = new System.Drawing.Point(609, 298);
-            this.cb_phutKhoiHanh.Name = "cb_phutKhoiHanh";
-            this.cb_phutKhoiHanh.Size = new System.Drawing.Size(80, 41);
-            this.cb_phutKhoiHanh.TabIndex = 14;
-            // 
-            // cb_gioThoiGianBay
-            // 
-            this.cb_gioThoiGianBay.Font = new System.Drawing.Font("Inter", 20.25F);
-            this.cb_gioThoiGianBay.FormattingEnabled = true;
-            this.cb_gioThoiGianBay.Location = new System.Drawing.Point(951, 298);
-            this.cb_gioThoiGianBay.Name = "cb_gioThoiGianBay";
-            this.cb_gioThoiGianBay.Size = new System.Drawing.Size(83, 41);
-            this.cb_gioThoiGianBay.TabIndex = 14;
-            // 
-            // cb_hangGhe
-            // 
-            this.cb_hangGhe.Font = new System.Drawing.Font("Inter", 20.25F);
-            this.cb_hangGhe.FormattingEnabled = true;
-            this.cb_hangGhe.Location = new System.Drawing.Point(36, 410);
-            this.cb_hangGhe.Name = "cb_hangGhe";
-            this.cb_hangGhe.Size = new System.Drawing.Size(114, 41);
-            this.cb_hangGhe.TabIndex = 14;
-            // 
-            // cb_gioKhoiHanh
-            // 
-            this.cb_gioKhoiHanh.Font = new System.Drawing.Font("Inter", 20.25F);
-            this.cb_gioKhoiHanh.FormattingEnabled = true;
-            this.cb_gioKhoiHanh.Location = new System.Drawing.Point(520, 298);
-            this.cb_gioKhoiHanh.Name = "cb_gioKhoiHanh";
-            this.cb_gioKhoiHanh.Size = new System.Drawing.Size(83, 41);
-            this.cb_gioKhoiHanh.TabIndex = 14;
-            // 
-            // cb_sanBayDi
-            // 
-            this.cb_sanBayDi.Font = new System.Drawing.Font("Inter", 20.25F);
-            this.cb_sanBayDi.FormattingEnabled = true;
-            this.cb_sanBayDi.Location = new System.Drawing.Point(520, 188);
-            this.cb_sanBayDi.Name = "cb_sanBayDi";
-            this.cb_sanBayDi.Size = new System.Drawing.Size(169, 41);
-            this.cb_sanBayDi.TabIndex = 14;
-            // 
-            // tb_soLuong
-            // 
-            this.tb_soLuong.Font = new System.Drawing.Font("Inter", 20.25F);
-            this.tb_soLuong.Location = new System.Drawing.Point(175, 411);
-            this.tb_soLuong.Name = "tb_soLuong";
-            this.tb_soLuong.Size = new System.Drawing.Size(94, 40);
-            this.tb_soLuong.TabIndex = 13;
-            // 
-            // tb_giaVe
-            // 
-            this.tb_giaVe.Font = new System.Drawing.Font("Inter", 20.25F);
-            this.tb_giaVe.Location = new System.Drawing.Point(520, 410);
-            this.tb_giaVe.Name = "tb_giaVe";
-            this.tb_giaVe.Size = new System.Drawing.Size(182, 40);
-            this.tb_giaVe.TabIndex = 13;
-            // 
-            // tb_maChuyenBay
-            // 
-            this.tb_maChuyenBay.Font = new System.Drawing.Font("Inter", 20.25F);
-            this.tb_maChuyenBay.Location = new System.Drawing.Point(36, 188);
-            this.tb_maChuyenBay.Name = "tb_maChuyenBay";
-            this.tb_maChuyenBay.Size = new System.Drawing.Size(210, 40);
-            this.tb_maChuyenBay.TabIndex = 13;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(513, 132);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(179, 39);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "Sân Bay Đi";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(944, 132);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(209, 39);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Sân Bay Đến";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(944, 246);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(222, 39);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Thời gian bay";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(513, 353);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(113, 39);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Giá vé";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(513, 246);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(225, 39);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Giờ khởi hành";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(29, 353);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(332, 39);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Hạng ghế - Số lượng";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(29, 246);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(252, 39);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Ngày khởi hành";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(720, 408);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 39);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Đồng";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 128);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(296, 39);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Mã chuyến bay (*)";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Inter", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(390, 467);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(443, 39);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Dừng ở sân bay trung gian?";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(168, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(856, 39);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Nhập đầy đủ các mục thông tin dưới đây hoặc chọn file";
-            // 
-            // btn_nhapFile
-            // 
-            this.btn_nhapFile.BackColor = System.Drawing.Color.Lime;
-            this.btn_nhapFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_nhapFile.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nhapFile.Image = global::flightket.Properties.Resources.ic_importFile;
-            this.btn_nhapFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_nhapFile.Location = new System.Drawing.Point(1077, 48);
-            this.btn_nhapFile.Name = "btn_nhapFile";
-            this.btn_nhapFile.Size = new System.Drawing.Size(132, 66);
-            this.btn_nhapFile.TabIndex = 6;
-            this.btn_nhapFile.Text = "Nhập File";
-            this.btn_nhapFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_nhapFile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_nhapFile.UseVisualStyleBackColor = false;
-            // 
-            // btn_home
-            // 
-            this.btn_home.BackgroundImage = global::flightket.Properties.Resources.ic_home;
-            this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_home.Location = new System.Drawing.Point(73, 8);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(59, 51);
-            this.btn_home.TabIndex = 7;
-            this.btn_home.UseVisualStyleBackColor = true;
-            // 
-            // btn_back
-            // 
-            this.btn_back.BackgroundImage = global::flightket.Properties.Resources.ic_back;
-            this.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_back.Location = new System.Drawing.Point(8, 8);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(59, 51);
-            this.btn_back.TabIndex = 8;
-            this.btn_back.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Inter", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(369, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(605, 64);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Nhập Lịch Chuyến Bay";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::flightket.Properties.Resources._2_removebg_preview__1__1;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(935, -6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(486, 97);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // panel_sanbaytrunggian
             // 
@@ -413,7 +128,7 @@
             this.panel_sanbaytrunggian.Controls.Add(this.label17);
             this.panel_sanbaytrunggian.Controls.Add(this.button1);
             this.panel_sanbaytrunggian.Controls.Add(this.btn_Them);
-            this.panel_sanbaytrunggian.Location = new System.Drawing.Point(3, 509);
+            this.panel_sanbaytrunggian.Location = new System.Drawing.Point(211, 518);
             this.panel_sanbaytrunggian.Name = "panel_sanbaytrunggian";
             this.panel_sanbaytrunggian.Size = new System.Drawing.Size(1321, 394);
             this.panel_sanbaytrunggian.TabIndex = 19;
@@ -568,13 +283,298 @@
             this.btn_Them.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Them.UseVisualStyleBackColor = false;
             // 
+            // btnCB_dungOSanBay
+            // 
+            this.btnCB_dungOSanBay.AutoSize = true;
+            this.btnCB_dungOSanBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCB_dungOSanBay.Location = new System.Drawing.Point(1070, 486);
+            this.btnCB_dungOSanBay.Name = "btnCB_dungOSanBay";
+            this.btnCB_dungOSanBay.Size = new System.Drawing.Size(15, 14);
+            this.btnCB_dungOSanBay.TabIndex = 18;
+            this.btnCB_dungOSanBay.UseVisualStyleBackColor = true;
+            this.btnCB_dungOSanBay.CheckedChanged += new System.EventHandler(this.btnCB_dungOSanBay_CheckedChanged);
+            // 
+            // dp_ngayKhoiHanh
+            // 
+            this.dp_ngayKhoiHanh.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dp_ngayKhoiHanh.Location = new System.Drawing.Point(244, 307);
+            this.dp_ngayKhoiHanh.Name = "dp_ngayKhoiHanh";
+            this.dp_ngayKhoiHanh.Size = new System.Drawing.Size(277, 27);
+            this.dp_ngayKhoiHanh.TabIndex = 16;
+            // 
+            // cb_sanBayDen
+            // 
+            this.cb_sanBayDen.Font = new System.Drawing.Font("Inter", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_sanBayDen.FormattingEnabled = true;
+            this.cb_sanBayDen.Location = new System.Drawing.Point(1159, 197);
+            this.cb_sanBayDen.Name = "cb_sanBayDen";
+            this.cb_sanBayDen.Size = new System.Drawing.Size(202, 41);
+            this.cb_sanBayDen.TabIndex = 15;
+            // 
+            // cb_phutThoiGianBay
+            // 
+            this.cb_phutThoiGianBay.Font = new System.Drawing.Font("Inter", 20.25F);
+            this.cb_phutThoiGianBay.FormattingEnabled = true;
+            this.cb_phutThoiGianBay.Location = new System.Drawing.Point(1248, 307);
+            this.cb_phutThoiGianBay.Name = "cb_phutThoiGianBay";
+            this.cb_phutThoiGianBay.Size = new System.Drawing.Size(80, 41);
+            this.cb_phutThoiGianBay.TabIndex = 14;
+            // 
+            // cb_phutKhoiHanh
+            // 
+            this.cb_phutKhoiHanh.Font = new System.Drawing.Font("Inter", 20.25F);
+            this.cb_phutKhoiHanh.FormattingEnabled = true;
+            this.cb_phutKhoiHanh.Location = new System.Drawing.Point(817, 307);
+            this.cb_phutKhoiHanh.Name = "cb_phutKhoiHanh";
+            this.cb_phutKhoiHanh.Size = new System.Drawing.Size(80, 41);
+            this.cb_phutKhoiHanh.TabIndex = 14;
+            // 
+            // cb_gioThoiGianBay
+            // 
+            this.cb_gioThoiGianBay.Font = new System.Drawing.Font("Inter", 20.25F);
+            this.cb_gioThoiGianBay.FormattingEnabled = true;
+            this.cb_gioThoiGianBay.Location = new System.Drawing.Point(1159, 307);
+            this.cb_gioThoiGianBay.Name = "cb_gioThoiGianBay";
+            this.cb_gioThoiGianBay.Size = new System.Drawing.Size(83, 41);
+            this.cb_gioThoiGianBay.TabIndex = 14;
+            // 
+            // cb_hangGhe
+            // 
+            this.cb_hangGhe.Font = new System.Drawing.Font("Inter", 20.25F);
+            this.cb_hangGhe.FormattingEnabled = true;
+            this.cb_hangGhe.Location = new System.Drawing.Point(244, 419);
+            this.cb_hangGhe.Name = "cb_hangGhe";
+            this.cb_hangGhe.Size = new System.Drawing.Size(114, 41);
+            this.cb_hangGhe.TabIndex = 14;
+            // 
+            // cb_gioKhoiHanh
+            // 
+            this.cb_gioKhoiHanh.Font = new System.Drawing.Font("Inter", 20.25F);
+            this.cb_gioKhoiHanh.FormattingEnabled = true;
+            this.cb_gioKhoiHanh.Location = new System.Drawing.Point(728, 307);
+            this.cb_gioKhoiHanh.Name = "cb_gioKhoiHanh";
+            this.cb_gioKhoiHanh.Size = new System.Drawing.Size(83, 41);
+            this.cb_gioKhoiHanh.TabIndex = 14;
+            // 
+            // cb_sanBayDi
+            // 
+            this.cb_sanBayDi.Font = new System.Drawing.Font("Inter", 20.25F);
+            this.cb_sanBayDi.FormattingEnabled = true;
+            this.cb_sanBayDi.Location = new System.Drawing.Point(728, 197);
+            this.cb_sanBayDi.Name = "cb_sanBayDi";
+            this.cb_sanBayDi.Size = new System.Drawing.Size(169, 41);
+            this.cb_sanBayDi.TabIndex = 14;
+            // 
+            // tb_soLuong
+            // 
+            this.tb_soLuong.Font = new System.Drawing.Font("Inter", 20.25F);
+            this.tb_soLuong.Location = new System.Drawing.Point(383, 420);
+            this.tb_soLuong.Name = "tb_soLuong";
+            this.tb_soLuong.Size = new System.Drawing.Size(94, 40);
+            this.tb_soLuong.TabIndex = 13;
+            // 
+            // tb_giaVe
+            // 
+            this.tb_giaVe.Font = new System.Drawing.Font("Inter", 20.25F);
+            this.tb_giaVe.Location = new System.Drawing.Point(728, 419);
+            this.tb_giaVe.Name = "tb_giaVe";
+            this.tb_giaVe.Size = new System.Drawing.Size(182, 40);
+            this.tb_giaVe.TabIndex = 13;
+            // 
+            // tb_maChuyenBay
+            // 
+            this.tb_maChuyenBay.Font = new System.Drawing.Font("Inter", 20.25F);
+            this.tb_maChuyenBay.Location = new System.Drawing.Point(244, 197);
+            this.tb_maChuyenBay.Name = "tb_maChuyenBay";
+            this.tb_maChuyenBay.Size = new System.Drawing.Size(210, 40);
+            this.tb_maChuyenBay.TabIndex = 13;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(721, 141);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(179, 39);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Sân Bay Đi";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1152, 141);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(209, 39);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Sân Bay Đến";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(1152, 255);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(222, 39);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Thời gian bay";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(721, 362);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(113, 39);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Giá vé";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(721, 255);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(225, 39);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Giờ khởi hành";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(237, 362);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(332, 39);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Hạng ghế - Số lượng";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(237, 255);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(252, 39);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Ngày khởi hành";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(928, 417);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 39);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Đồng";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(237, 137);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(296, 39);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Mã chuyến bay (*)";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Inter", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(598, 476);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(443, 39);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Dừng ở sân bay trung gian?";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(438, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(856, 39);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Nhập đầy đủ các mục thông tin dưới đây hoặc chọn file";
+            // 
+            // btn_nhapFile
+            // 
+            this.btn_nhapFile.BackColor = System.Drawing.Color.Lime;
+            this.btn_nhapFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_nhapFile.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nhapFile.Image = global::flightket.Properties.Resources.ic_importFile;
+            this.btn_nhapFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_nhapFile.Location = new System.Drawing.Point(1417, 67);
+            this.btn_nhapFile.Name = "btn_nhapFile";
+            this.btn_nhapFile.Size = new System.Drawing.Size(132, 66);
+            this.btn_nhapFile.TabIndex = 6;
+            this.btn_nhapFile.Text = "Nhập File";
+            this.btn_nhapFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_nhapFile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_nhapFile.UseVisualStyleBackColor = false;
+            // 
+            // btn_home
+            // 
+            this.btn_home.BackgroundImage = global::flightket.Properties.Resources.ic_home;
+            this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_home.Location = new System.Drawing.Point(73, 8);
+            this.btn_home.Name = "btn_home";
+            this.btn_home.Size = new System.Drawing.Size(59, 51);
+            this.btn_home.TabIndex = 7;
+            this.btn_home.UseVisualStyleBackColor = true;
+            // 
+            // btn_back
+            // 
+            this.btn_back.BackgroundImage = global::flightket.Properties.Resources.ic_back;
+            this.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_back.Location = new System.Drawing.Point(8, 8);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(59, 51);
+            this.btn_back.TabIndex = 8;
+            this.btn_back.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Inter", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(598, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(605, 64);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Nhập Lịch Chuyến Bay";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::flightket.Properties.Resources._2_removebg_preview__1__1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(1381, -18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(486, 126);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // NhapLichChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::flightket.Properties.Resources._350248398_786598096329880_2111811280162483567_n__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1424, 985);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.panel_main);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
@@ -582,10 +582,10 @@
             this.Text = "NhapLichChuyenBay_I";
             this.panel_main.ResumeLayout(false);
             this.panel_main.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_sanbaytrunggian.ResumeLayout(false);
             this.panel_sanbaytrunggian.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lv_danhSachSanBayTrungGian)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

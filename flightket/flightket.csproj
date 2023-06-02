@@ -103,6 +103,18 @@
     <Compile Include="Forms-QuanLy\LapBaoCao_Main.Designer.cs">
       <DependentUpon>LapBaoCao_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms-QuanLy\LapBaoCao_Nam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\LapBaoCao_Nam.Designer.cs">
+      <DependentUpon>LapBaoCao_Nam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\LapBaoCao_Thang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\LapBaoCao_Thang.Designer.cs">
+      <DependentUpon>LapBaoCao_Thang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms-QuanLy\NhapLichChuyenBay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +179,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\LapBaoCao_Main.resx">
       <DependentUpon>LapBaoCao_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\LapBaoCao_Nam.resx">
+      <DependentUpon>LapBaoCao_Nam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\LapBaoCao_Thang.resx">
+      <DependentUpon>LapBaoCao_Thang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\NhapLichChuyenBay.resx">
       <DependentUpon>NhapLichChuyenBay.cs</DependentUpon>
