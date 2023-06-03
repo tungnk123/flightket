@@ -35,7 +35,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_luuThayDoi = new System.Windows.Forms.Button();
             this.btn_thayDoiSoLuongHangVeMoi = new System.Windows.Forms.Button();
             this.btn_thayDoiSoLuongSanBayMoi = new System.Windows.Forms.Button();
             this.tb_thoiGianTruocHuyVeSlowestMoi = new System.Windows.Forms.TextBox();
@@ -79,7 +79,7 @@
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_luuThayDoi);
             this.panel1.Controls.Add(this.btn_thayDoiSoLuongHangVeMoi);
             this.panel1.Controls.Add(this.btn_thayDoiSoLuongSanBayMoi);
             this.panel1.Controls.Add(this.tb_thoiGianTruocHuyVeSlowestMoi);
@@ -170,17 +170,18 @@
             this.label13.TabIndex = 31;
             this.label13.Text = "(phút)";
             // 
-            // button1
+            // btn_luuThayDoi
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(935, 766);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 52);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Lưu thay đổi";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_luuThayDoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+            this.btn_luuThayDoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_luuThayDoi.ForeColor = System.Drawing.Color.White;
+            this.btn_luuThayDoi.Location = new System.Drawing.Point(935, 766);
+            this.btn_luuThayDoi.Name = "btn_luuThayDoi";
+            this.btn_luuThayDoi.Size = new System.Drawing.Size(225, 52);
+            this.btn_luuThayDoi.TabIndex = 30;
+            this.btn_luuThayDoi.Text = "Lưu thay đổi";
+            this.btn_luuThayDoi.UseVisualStyleBackColor = false;
+            this.btn_luuThayDoi.Click += new System.EventHandler(this.btn_luuThayDoi_Click);
             // 
             // btn_thayDoiSoLuongHangVeMoi
             // 
@@ -217,6 +218,7 @@
             this.tb_thoiGianTruocHuyVeSlowestMoi.Size = new System.Drawing.Size(180, 60);
             this.tb_thoiGianTruocHuyVeSlowestMoi.TabIndex = 27;
             this.tb_thoiGianTruocHuyVeSlowestMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_thoiGianTruocHuyVeSlowestMoi.Leave += new System.EventHandler(this.tb_thoiGianTruocHuyVeSlowestMoi_Leave);
             // 
             // tb_thoiGianTruocDatVeSlowestMoi
             // 
@@ -229,6 +231,7 @@
             this.tb_thoiGianTruocDatVeSlowestMoi.Size = new System.Drawing.Size(180, 60);
             this.tb_thoiGianTruocDatVeSlowestMoi.TabIndex = 26;
             this.tb_thoiGianTruocDatVeSlowestMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_thoiGianTruocDatVeSlowestMoi.Leave += new System.EventHandler(this.tb_thoiGianTruocDatVeSlowestMoi_Leave);
             // 
             // tb_thoiGianDungMaxMoi
             // 
@@ -241,6 +244,7 @@
             this.tb_thoiGianDungMaxMoi.Size = new System.Drawing.Size(180, 60);
             this.tb_thoiGianDungMaxMoi.TabIndex = 25;
             this.tb_thoiGianDungMaxMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_thoiGianDungMaxMoi.Leave += new System.EventHandler(this.tb_thoiGianDungMaxMoi_Leave);
             // 
             // tb_thoiGianDungMinMoi
             // 
@@ -253,6 +257,7 @@
             this.tb_thoiGianDungMinMoi.Size = new System.Drawing.Size(180, 60);
             this.tb_thoiGianDungMinMoi.TabIndex = 24;
             this.tb_thoiGianDungMinMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_thoiGianDungMinMoi.Leave += new System.EventHandler(this.tb_thoiGianDungMinMoi_Leave);
             // 
             // tb_sanBayTrungChuyenMaxMoi
             // 
@@ -265,6 +270,7 @@
             this.tb_sanBayTrungChuyenMaxMoi.Size = new System.Drawing.Size(180, 60);
             this.tb_sanBayTrungChuyenMaxMoi.TabIndex = 23;
             this.tb_sanBayTrungChuyenMaxMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_sanBayTrungChuyenMaxMoi.Leave += new System.EventHandler(this.tb_sanBayTrungChuyenMaxMoi_Leave);
             // 
             // tb_thoiGianBayMinMoi
             // 
@@ -277,6 +283,7 @@
             this.tb_thoiGianBayMinMoi.Size = new System.Drawing.Size(180, 60);
             this.tb_thoiGianBayMinMoi.TabIndex = 22;
             this.tb_thoiGianBayMinMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_thoiGianBayMinMoi.Leave += new System.EventHandler(this.tb_thoiGianBayMinMoi_Leave);
             // 
             // tb_thayDoiSoLuongHangVeCu
             // 
@@ -555,7 +562,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::flightket.Properties.Resources._2_removebg_preview__1__1;
             this.pictureBox1.Location = new System.Drawing.Point(1361, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(531, 108);
@@ -575,6 +581,7 @@
             this.DoubleBuffered = true;
             this.Name = "FormThayDoiQuiDinh";
             this.Text = "FormThayDoiQuiDinh";
+            this.Load += new System.EventHandler(this.FormThayDoiQuiDinh_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -590,7 +597,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_luuThayDoi;
         private System.Windows.Forms.Button btn_thayDoiSoLuongHangVeMoi;
         private System.Windows.Forms.Button btn_thayDoiSoLuongSanBayMoi;
         private System.Windows.Forms.TextBox tb_thoiGianTruocHuyVeSlowestMoi;

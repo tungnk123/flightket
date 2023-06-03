@@ -53,7 +53,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::flightket.Properties.Resources._2_removebg_preview__1__1;
             this.pictureBox1.Location = new System.Drawing.Point(1361, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(531, 108);
@@ -113,6 +112,7 @@
             this.lv_danhSachNhanVien.RowHeadersVisible = false;
             this.lv_danhSachNhanVien.Size = new System.Drawing.Size(1349, 316);
             this.lv_danhSachNhanVien.TabIndex = 31;
+            this.lv_danhSachNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lv_danhSachNhanVien_CellContentClick);
             // 
             // columnSTT
             // 
@@ -221,6 +221,7 @@
             this.DoubleBuffered = true;
             this.Name = "FormQuanLyHoSoNhanVien";
             this.Text = "FormQuanLyHoSoNhanVien";
+            this.Load += new System.EventHandler(this.FormQuanLyHoSoNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

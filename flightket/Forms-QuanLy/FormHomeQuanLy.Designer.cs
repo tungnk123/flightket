@@ -45,7 +45,6 @@ namespace flightket.Forms_QuanLy
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::flightket.Properties.Resources._2_removebg_preview__1__1;
             this.pictureBox1.Location = new System.Drawing.Point(1361, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(531, 108);
@@ -85,7 +84,6 @@ namespace flightket.Forms_QuanLy
             // 
             this.btn_thayDoiQuiDinh.BackColor = System.Drawing.Color.White;
             this.btn_thayDoiQuiDinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thayDoiQuiDinh.Image = global::flightket.Properties.Resources.ic_thayDoiQuiDinh;
             this.btn_thayDoiQuiDinh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_thayDoiQuiDinh.Location = new System.Drawing.Point(11, 194);
             this.btn_thayDoiQuiDinh.Name = "btn_thayDoiQuiDinh";
@@ -100,7 +98,6 @@ namespace flightket.Forms_QuanLy
             // 
             this.btn_nhapLichChuyenBay.BackColor = System.Drawing.Color.White;
             this.btn_nhapLichChuyenBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nhapLichChuyenBay.Image = global::flightket.Properties.Resources.ic_nhapLichChuyenBay;
             this.btn_nhapLichChuyenBay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_nhapLichChuyenBay.Location = new System.Drawing.Point(11, 62);
             this.btn_nhapLichChuyenBay.Name = "btn_nhapLichChuyenBay";
@@ -114,7 +111,6 @@ namespace flightket.Forms_QuanLy
             // 
             this.btn_quanLyHoSo.BackColor = System.Drawing.Color.White;
             this.btn_quanLyHoSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_quanLyHoSo.Image = global::flightket.Properties.Resources.ic_quanLyHoSo;
             this.btn_quanLyHoSo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_quanLyHoSo.Location = new System.Drawing.Point(374, 194);
             this.btn_quanLyHoSo.Name = "btn_quanLyHoSo";
