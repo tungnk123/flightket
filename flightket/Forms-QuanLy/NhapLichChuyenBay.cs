@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Metadata.Edm;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -24,15 +26,25 @@ namespace flightket.Forms_QuanLy
         private String[] listThoiGianBay_Phut;
         private String[] listHangGhe;
         private String[] listTenSanBay;
-
+        int soLuongHangVe1 = 0;
+        int soLuongHangVe2 = 0;
+        List<CT_HANGVE> listHangVe;
         public NhapLichChuyenBay()
         {
+            listHangVe = new List<CT_HANGVE>();
             InitializeComponent();
+
+
+
+            
+
 
             updateUI();
 
             mirrorData();
         }
+
+
 
         private void updateUI()
         {
@@ -94,6 +106,9 @@ namespace flightket.Forms_QuanLy
 
             tb_maChuyenBay.Text = RandomStringGenerator.GenerateRandomString().ToString().ToUpper();
 
+            cb_hangGhe.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb_hangGhe.SelectedIndex = 0;
+
         }
 
         private void mirrorData()
@@ -147,6 +162,19 @@ namespace flightket.Forms_QuanLy
                             };
             cb_tenSanBay.DataSource = tenSanBay.Select(x => x.TenSanBay).ToList();
 
+
+
+
+            var dsHangVe = from c in db.HANGVEs
+                           select new
+                           {
+                               MaHangVe = c.MaHangVe,
+                               TenHangVe = c.TenHangVe,
+                               TiLeDonGia = c.TiLeDonGia
+                           };
+            cb_hangGhe.DataSource = dsHangVe.ToList();
+            cb_hangGhe.DisplayMember = "TenHangVe";
+            cb_hangGhe.ValueMember = "MaHangVe";
         }
 
         private void btnCB_dungOSanBay_CheckedChanged(object sender, EventArgs e)
@@ -213,59 +241,104 @@ namespace flightket.Forms_QuanLy
                         else
                         {
                             DateTime dateTime;
-
                             if (DateTime.TryParseExact(formattedDate + " " + $"{cb_gioKhoiHanh.Text}:{cb_phutKhoiHanh.Text}", "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out dateTime))
                             {
-                                // Conversion succeeded, and 'dateTime' variable contains the parsed DateTime value
-                                // Continue processing here
-
-                                //MessageBox.Show(dateTime.ToString("dd/MM/yyyy HH:mm"));
-                                //var selectedAirportBegin = cb_sanBayDi.SelectedItem as SANBAY;
-                                //MessageBox.Show(cb_sanBayDi.SelectedValue.ToString());
-
-
                                 if (!String.IsNullOrEmpty(tb_giaVe.Text))
                                 {
-                                    double giaVe;
-                                    if (double.TryParse(tb_giaVe.Text, out giaVe))
+                                    if(cb_hangGhe.Items.Count == listHangVe.Count)
                                     {
-                                        CHUYENBAY data = new CHUYENBAY()
+                                        // them vao database
+
+                                        double giaVe;
+                                        if (double.TryParse(tb_giaVe.Text, out giaVe))
                                         {
-                                            MaChuyenBay = tb_maChuyenBay.Text.ToString(),
-                                            MaSanBayDi = cb_sanBayDi.SelectedValue.ToString(),
-                                            MaSanBayDen = cb_sanBayDen.SelectedValue.ToString(),
-                                            NgayGioKhoiHanh = dateTime,
-                                            ThoiGianBay = Convert.ToInt16(cb_ThoiGianBay.Text),
-                                            GiaVe = giaVe,
-                                        };
-                                        try
-                                        {
-                                            db.CHUYENBAYs.Add(data);
-                                            db.SaveChanges();
-                                            MessageBox.Show("Thêm dữ liệu thành công");
+                                            CHUYENBAY data = new CHUYENBAY()
+                                            {
+                                                MaChuyenBay = tb_maChuyenBay.Text.ToString(),
+                                                MaSanBayDi = cb_sanBayDi.SelectedValue.ToString(),
+                                                MaSanBayDen = cb_sanBayDen.SelectedValue.ToString(),
+                                                NgayGioKhoiHanh = dateTime,
+                                                ThoiGianBay = Convert.ToInt16(cb_ThoiGianBay.Text),
+                                                GiaVe = giaVe,
+                                            };
+                                            try
+                                            {
+                                                // Your code to parse the input and create the 'CHUYENBAY' object
+
+                                                // Check if the record with the same 'MaChuyenBay' already exists
+                                                if (db.CHUYENBAYs.Any(c => c.MaChuyenBay == data.MaChuyenBay))
+                                                {
+                                                    MessageBox.Show("Error: Duplicate key 'MaChuyenBay'.");
+                                                    // Handle the duplicate key situation (e.g., display an error message)
+                                                }
+                                                else
+                                                {
+                                                    // The record with 'MaChuyenBay' doesn't exist, proceed with insertion
+                                                    db.CHUYENBAYs.Add(data);
+                                                    db.SaveChanges();
+                                                    MessageBox.Show("Thêm dữ liệu thành công");
+                                                }
+                                            }
+                                            catch (Exception ex)
+                                            {
+                                                MessageBox.Show(ex.Message);
+                                            }
+
+
+                                            try
+                                            {
+                                                foreach (var hangVe in listHangVe)
+                                                {
+                                                    // Check if a record with the same combination of primary key values already exists
+                                                    if (db.CT_HANGVE.Any(ct => ct.MaHangVe == hangVe.MaHangVe && ct.MaHangVe == hangVe.MaHangVe))
+                                                    {
+                                                        MessageBox.Show("Error: Duplicate key values (MaVe, MaHangVe).");
+                                                        // Handle the duplicate key situation (e.g., display an error message)
+                                                    }
+                                                    else
+                                                    {
+                                                        // The record with the combination of primary key values doesn't exist, proceed with insertion
+                                                        db.CT_HANGVE.Add(hangVe);
+                                                    }
+                                                }
+
+                                                db.SaveChanges();
+                                                MessageBox.Show("Thêm dữ liệu thành công");
+                                            }
+                                            catch (Exception ex)
+                                            {
+                                                MessageBox.Show(ex.Message);
+                                            }
+
+
+
+                                            MessageBox.Show("Click");
+                                            /*CT_HANGVE cT_HANGVE = new CT_HANGVE()
+                                            {
+                                                MaChuyenBay = tb_maChuyenBay.Text.ToString(),
+                                                MaHangVe = cb_hangGhe.SelectedValue.ToString(),
+                                                SoLuongGhe = Convert.ToInt16(soLuongHangVe1)
+                                            };
+
+                                            db.CT_HANGVE.Add(cT_HANGVE);
+                                            db.SaveChanges();*/
+
                                         }
-                                        catch (Exception)
+                                        else
                                         {
-                                            throw;
+                                            MessageBox.Show("Lỗi định dạng nhập giá vé!");
                                         }
-                                    }
-                                    else
+                                    } else
                                     {
-                                        MessageBox.Show("Lỗi định dạng nhập giá vé!");
+                                        MessageBox.Show("Hãy điền số lượng ghế cho tất cả các vé");
                                     }
+                                    
+                                    
                                 }
                                 else
                                 {
-                                    // Conversion failed, input string is not a valid number
-                                    // Handle the error here
                                     MessageBox.Show("Vui lòng điền giá vé!");
                                 }
-                            }
-                            else
-                            {
-                                // Conversion failed, input string is not in the correct format
-                                // Handle the error here
-                                MessageBox.Show("Loix");
                             }
                         }
                     }
@@ -273,5 +346,65 @@ namespace flightket.Forms_QuanLy
             }
         }
 
+        private void tb_soLuong_TextChanged(object sender, EventArgs e)
+        {
+            if (cb_hangGhe.Text.ToString().Trim().Equals("1"))
+            {
+                bool isNumeric = int.TryParse(tb_soLuong.Text.ToString().Trim(), out int soLuongHangVe1);
+                if (!isNumeric)
+                {
+                    MessageBox.Show("Sai định dạng số lượng ghế!");
+                }
+                else
+                {
+                    soLuongHangVe1 = Convert.ToInt16(tb_soLuong.Text);
+                }
+            }
+            else if (cb_hangGhe.Text.ToString().Trim().Equals("2"))
+            {
+                bool isNumeric = int.TryParse(tb_soLuong.Text.ToString().Trim(), out int soLuongHangVe2);
+                if (!isNumeric)
+                {
+                    MessageBox.Show("Sai định dạng số lượng ghế!");
+                }
+                else
+                {
+                    soLuongHangVe2 = Convert.ToInt16(tb_soLuong.Text);
+                }
+            }
+        }
+
+        private void cb_hangGhe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cb_hangGhe.SelectedValue != null)
+            {
+                if (String.IsNullOrEmpty(tb_soLuong.Text))
+                {
+                    listHangVe.Add(new CT_HANGVE()
+                    {
+                        MaChuyenBay = tb_maChuyenBay.Text,
+                        MaHangVe = cb_hangGhe.SelectedValue?.ToString(),
+                        SoLuongGhe = 0
+                    });
+                    // QUA HẠNG VÉ MỚI
+                    tb_soLuong.Text = String.Empty;
+                    tb_soLuong.Focus();
+                }
+                else
+                {
+                    listHangVe.Add(new CT_HANGVE()
+                    {
+                        MaChuyenBay = tb_maChuyenBay.Text,
+                        MaHangVe = cb_hangGhe.SelectedValue?.ToString(),
+                        SoLuongGhe = Convert.ToInt16(soLuongHangVe1)
+                    });
+
+                    tb_soLuong.Text = String.Empty;
+                    tb_soLuong.Focus();
+                }
+            }
+            
+
+        }
     }
 }

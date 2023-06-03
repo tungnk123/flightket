@@ -40,7 +40,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.btn_xacNhan = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
             this.btnCB_dungOSanBay = new System.Windows.Forms.CheckBox();
             this.dp_ngayKhoiHanh = new System.Windows.Forms.DateTimePicker();
@@ -48,6 +47,7 @@
             this.cb_phutKhoiHanh = new System.Windows.Forms.ComboBox();
             this.cb_ThoiGianBay = new System.Windows.Forms.ComboBox();
             this.cb_hangGhe = new System.Windows.Forms.ComboBox();
+            this.btn_xacNhan = new System.Windows.Forms.Button();
             this.cb_gioKhoiHanh = new System.Windows.Forms.ComboBox();
             this.cb_sanBayDi = new System.Windows.Forms.ComboBox();
             this.tb_soLuong = new System.Windows.Forms.TextBox();
@@ -236,20 +236,6 @@
             this.label17.TabIndex = 24;
             this.label17.Text = "Danh sách sân bay trung gian sẽ dừng";
             // 
-            // btn_xacNhan
-            // 
-            this.btn_xacNhan.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_xacNhan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_xacNhan.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xacNhan.Location = new System.Drawing.Point(765, 907);
-            this.btn_xacNhan.Name = "btn_xacNhan";
-            this.btn_xacNhan.Size = new System.Drawing.Size(132, 43);
-            this.btn_xacNhan.TabIndex = 18;
-            this.btn_xacNhan.Text = "Xác nhận";
-            this.btn_xacNhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_xacNhan.UseVisualStyleBackColor = false;
-            this.btn_xacNhan.Click += new System.EventHandler(this.btn_xacNhan_Click);
-            // 
             // btn_Them
             // 
             this.btn_Them.BackColor = System.Drawing.Color.Lime;
@@ -316,8 +302,23 @@
             this.cb_hangGhe.FormattingEnabled = true;
             this.cb_hangGhe.Location = new System.Drawing.Point(244, 419);
             this.cb_hangGhe.Name = "cb_hangGhe";
-            this.cb_hangGhe.Size = new System.Drawing.Size(114, 41);
+            this.cb_hangGhe.Size = new System.Drawing.Size(169, 41);
             this.cb_hangGhe.TabIndex = 14;
+            this.cb_hangGhe.SelectedIndexChanged += new System.EventHandler(this.cb_hangGhe_SelectedIndexChanged);
+            // 
+            // btn_xacNhan
+            // 
+            this.btn_xacNhan.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_xacNhan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_xacNhan.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xacNhan.Location = new System.Drawing.Point(765, 907);
+            this.btn_xacNhan.Name = "btn_xacNhan";
+            this.btn_xacNhan.Size = new System.Drawing.Size(132, 43);
+            this.btn_xacNhan.TabIndex = 18;
+            this.btn_xacNhan.Text = "Xác nhận";
+            this.btn_xacNhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_xacNhan.UseVisualStyleBackColor = false;
+            this.btn_xacNhan.Click += new System.EventHandler(this.btn_xacNhan_Click);
             // 
             // cb_gioKhoiHanh
             // 
@@ -334,16 +335,17 @@
             this.cb_sanBayDi.FormattingEnabled = true;
             this.cb_sanBayDi.Location = new System.Drawing.Point(728, 197);
             this.cb_sanBayDi.Name = "cb_sanBayDi";
-            this.cb_sanBayDi.Size = new System.Drawing.Size(169, 41);
+            this.cb_sanBayDi.Size = new System.Drawing.Size(202, 41);
             this.cb_sanBayDi.TabIndex = 14;
             // 
             // tb_soLuong
             // 
             this.tb_soLuong.Font = new System.Drawing.Font("Inter", 20.25F);
-            this.tb_soLuong.Location = new System.Drawing.Point(383, 420);
+            this.tb_soLuong.Location = new System.Drawing.Point(445, 420);
             this.tb_soLuong.Name = "tb_soLuong";
             this.tb_soLuong.Size = new System.Drawing.Size(94, 40);
             this.tb_soLuong.TabIndex = 13;
+            this.tb_soLuong.TextChanged += new System.EventHandler(this.tb_soLuong_TextChanged);
             // 
             // tb_giaVe
             // 
