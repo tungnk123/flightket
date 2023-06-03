@@ -78,11 +78,12 @@ namespace flightket.Forms_NhanVien
                     hANHKHACH1.NgaySinh = dateTimePicker1.Value;
                     hANHKHACH1.SDT = tb_soDienThoai.Text;
 
-                    var querry = from pdc in db.PHIEUDATCHOes
-                                 from hv in db.HANGVEs
-                                 where pdc.MaHangVe.Equals(hv.MaHangVe) && hv.TenHangVe.Equals(cb_hangVe.Text)
-                                 select new { hv.MaHangVe, hv.TiLeDonGia };
-                    var result = querry.ToList().FirstOrDefault();
+                    //var querry = from pdc in db.PHIEUDATCHOes
+                    //             from hv in db.HANGVEs
+                    //             where pdc.MaHangVe.Equals(hv.MaHangVe) && hv.TenHangVe.Equals(cb_hangVe.Text)
+                    //             select new { hv.MaHangVe, hv.TiLeDonGia };
+                    var result1 = db.HANGVEs.Where(c => c.TenHangVe == cb_hangVe.Text).ToList();
+                    var result = result1.ToList().FirstOrDefault();
                     pHIEUDATCHO1.MaHangVe = result.MaHangVe;
                     pHIEUDATCHO1.GiaTien = (cHUYENBAY.GiaVe * result.TiLeDonGia) / 100;
                     db.SaveChanges();

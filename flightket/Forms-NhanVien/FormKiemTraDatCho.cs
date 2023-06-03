@@ -180,11 +180,13 @@ namespace flightket.Forms_NhanVien
                     tb_CMND.Text = hANHKHACH.CMND;
                     tb_soDienThoai.Text = hANHKHACH.SDT;
 
-                    var querry = from pdc in db.PHIEUDATCHOes
-                                 from hv in db.HANGVEs
-                                 where pdc.MaHangVe.Equals(hv.MaHangVe)
-                                 select new { hv.TenHangVe };
+                    //var querry = from pdc in db.PHIEUDATCHOes
+                    //             from hv in db.HANGVEs
+                    //             where pdc.MaHangVe.Equals(hv.MaHangVe)
+                    //             select new { hv.TenHangVe };
+                    var querry = db.HANGVEs.Where(c => c.MaHangVe == pHIEUDATCHO.MaHangVe);
                     var result = querry.ToList().FirstOrDefault();
+                    this.maHangVe = pHIEUDATCHO.MaHangVe;
                     lb_hangVe.Text = result.TenHangVe;
                 }
                 this.Show();
