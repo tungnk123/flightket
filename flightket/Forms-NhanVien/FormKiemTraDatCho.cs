@@ -26,9 +26,22 @@ namespace flightket.Forms_NhanVien
                 var result = from hanhkhach in db.HANHKHACHes
                              from phieudatcho in db.PHIEUDATCHOes
                              from hangve in db.HANGVEs
-                             where hanhkhach.MaHanhKhach.Equals(phieudatcho.MaHanhKhach) && hangve.MaHangVe.Equals(phieudatcho.MaHangVe) &&
-                             hanhkhach.TenHanhKhach.Equals(tb_hoVaTen.Text) && hanhkhach.CMND.Equals(tb_CMND.Text) && hanhkhach.SDT.Equals(tb_soDienThoai.Text)
-                             select new { phieudatcho.MaChuyenBay, phieudatcho.MaPhieuDatCho, hangve.TenHangVe };
+                             where hanhkhach.MaHanhKhach.Equals(phieudatcho.MaHanhKhach) && hangve.MaHangVe.Equals(phieudatcho.MaHangVe) //&&
+                             //hanhkhach.TenHanhKhach.Equals(tb_hoVaTen.Text) && hanhkhach.CMND.Equals(tb_CMND.Text) && hanhkhach.SDT.Equals(tb_soDienThoai.Text)
+                             select new { phieudatcho.MaChuyenBay, phieudatcho.MaPhieuDatCho, hangve.TenHangVe, hanhkhach.TenHanhKhach, hanhkhach.CMND, hanhkhach.SDT };
+
+                if(tb_hoVaTen.Text.Length > 0)
+                {
+                    result = result.Where(c => c.TenHanhKhach.Equals(tb_hoVaTen.Text));
+                }
+                if(tb_CMND.Text.Length > 0)
+                {
+                    result = result.Where(c => c.CMND.Equals(tb_CMND.Text));
+                }
+                if(tb_soDienThoai.Text.Length > 0)
+                {
+                    result = result.Where(c => c.SDT.Equals(tb_soDienThoai.Text));
+                }
 
                 var resultList = result.ToList();
 
@@ -188,6 +201,9 @@ namespace flightket.Forms_NhanVien
                     var result = querry.ToList().FirstOrDefault();
                     this.maHangVe = pHIEUDATCHO.MaHangVe;
                     lb_hangVe.Text = result.TenHangVe;
+
+                
+
                 }
                 this.Show();
             }
