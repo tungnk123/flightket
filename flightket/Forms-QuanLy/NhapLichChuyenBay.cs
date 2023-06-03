@@ -92,41 +92,53 @@ namespace flightket.Forms_QuanLy
             cb_tenSanBay.SelectedIndex = 0;
 
 
-            tb_maChuyenBay.Text = RandomStringGenerator.GenerateRandomString();
+            tb_maChuyenBay.Text = RandomStringGenerator.GenerateRandomString().ToString().ToUpper();
 
         }
 
         private void mirrorData()
         {
-
-
-            var result = from c in db.CT_CHUYENBAY
+            var SANBAY = from c in db.SANBAYs
                          select new
                          {
-                             MaCTCB = c.MaCTCB,
-                             MaChuyenBay = c.MaChuyenBay,
-                             MaSanBayTrungGian = c.MaSanBayTrungGian,
-                             ThoiGianDung = c.ThoiGianDung,
-                             GhiChu = c.GhiChu,
-                             CHUYENBAY = c.CHUYENBAY.MaChuyenBay,
-                             SANBAY = c.SANBAY.TenSanBay,
 
                          };
-            lv_danhSachSanBayTrungGian.DataSource = result.ToList();
 
-            var dsSanBayDi = from c in db.CT_CHUYENBAY
+
+            var lvDanhSachSanBayTrungGian = from c in db.CT_CHUYENBAY
+                                            select new
+                                            {
+                                                MaCTCB = c.MaCTCB,
+                                                MaChuyenBay = c.MaChuyenBay,
+                                                MaSanBayTrungGian = c.MaSanBayTrungGian,
+                                                ThoiGianDung = c.ThoiGianDung,
+                                                GhiChu = c.GhiChu,
+                                                CHUYENBAY = c.CHUYENBAY.MaChuyenBay,
+                                                SANBAY = c.SANBAY.TenSanBay,
+
+                                            };
+            lv_danhSachSanBayTrungGian.DataSource = lvDanhSachSanBayTrungGian.ToList();
+
+            var dsSanBayDi = from c in db.SANBAYs
                              select new
                              {
-                                 MaChuyenBay = c.MaChuyenBay
+                                 MaSanBay = c.MaSanBay,
+                                 TenSanBay = c.TenSanBay,
                              };
-            var dsSanBayDen = from c in db.CT_CHUYENBAY
+            var dsSanBayDen = from c in db.SANBAYs
                               select new
                               {
-                                  MaChuyenBay = c.MaChuyenBay,
+                                  MaSanBay = c.MaSanBay,
+                                  TenSanBay = c.TenSanBay,
                               };
 
-            cb_sanBayDi.DataSource = dsSanBayDi.Select(x => x.MaChuyenBay).ToList();
-            cb_sanBayDen.DataSource = dsSanBayDi.Select(x => x.MaChuyenBay).ToList();
+            cb_sanBayDi.DataSource = dsSanBayDi.ToList();
+            cb_sanBayDi.DisplayMember = "TenSanBay";
+            cb_sanBayDi.ValueMember = "MaSanBay";
+
+            cb_sanBayDen.DataSource = dsSanBayDen.ToList();
+            cb_sanBayDen.DisplayMember = "TenSanBay";
+            cb_sanBayDen.ValueMember = "MaSanBay";
 
             var tenSanBay = from c in db.SANBAYs
                             select new
@@ -158,7 +170,7 @@ namespace flightket.Forms_QuanLy
         private void pic_rndMaChuyenBay_Click(object sender, EventArgs e)
 
         {
-            tb_maChuyenBay.Text = RandomStringGenerator.GenerateRandomString();
+            tb_maChuyenBay.Text = RandomStringGenerator.GenerateRandomString().ToString().ToUpper();
         }
 
         private void tb_maChuyenBay_TextChanged(object sender, EventArgs e)
@@ -206,36 +218,47 @@ namespace flightket.Forms_QuanLy
                             {
                                 // Conversion succeeded, and 'dateTime' variable contains the parsed DateTime value
                                 // Continue processing here
-                                MessageBox.Show(dateTime.ToString("dd/MM/yyyy HH:mm"));
-                                double giaVe;
-                                if (double.TryParse(tb_giaVe.Text, out giaVe))
-                                {
-                                    CHUYENBAY data = new CHUYENBAY()
-                                    {
-                                        MaChuyenBay = tb_maChuyenBay.Text.ToString(),
-                                        MaSanBayDi = cb_sanBayDi.Text.ToString(),
-                                        MaSanBayDen = cb_sanBayDen.Text.ToString(),
-                                        NgayGioKhoiHanh = dateTime,
-                                        ThoiGianBay = Convert.ToInt16(cb_ThoiGianBay.Text),
-                                        GiaVe = giaVe,
-                                    };
-                                    try
-                                    {
-                                        db.CHUYENBAYs.Add(data);
-                                        db.SaveChanges();
-                                    }
-                                    catch (Exception)
-                                    {
 
-                                        throw;
+                                //MessageBox.Show(dateTime.ToString("dd/MM/yyyy HH:mm"));
+                                //var selectedAirportBegin = cb_sanBayDi.SelectedItem as SANBAY;
+                                //MessageBox.Show(cb_sanBayDi.SelectedValue.ToString());
+
+
+                                if (!String.IsNullOrEmpty(tb_giaVe.Text))
+                                {
+                                    double giaVe;
+                                    if (double.TryParse(tb_giaVe.Text, out giaVe))
+                                    {
+                                        CHUYENBAY data = new CHUYENBAY()
+                                        {
+                                            MaChuyenBay = tb_maChuyenBay.Text.ToString(),
+                                            MaSanBayDi = cb_sanBayDi.SelectedValue.ToString(),
+                                            MaSanBayDen = cb_sanBayDen.SelectedValue.ToString(),
+                                            NgayGioKhoiHanh = dateTime,
+                                            ThoiGianBay = Convert.ToInt16(cb_ThoiGianBay.Text),
+                                            GiaVe = giaVe,
+                                        };
+                                        try
+                                        {
+                                            db.CHUYENBAYs.Add(data);
+                                            db.SaveChanges();
+                                            MessageBox.Show("Thêm dữ liệu thành công");
+                                        }
+                                        catch (Exception)
+                                        {
+                                            throw;
+                                        }
                                     }
-                                    
+                                    else
+                                    {
+                                        MessageBox.Show("Lỗi định dạng nhập giá vé!");
+                                    }
                                 }
                                 else
                                 {
                                     // Conversion failed, input string is not a valid number
                                     // Handle the error here
-                                    MessageBox.Show("Invalid input for GiaVe");
+                                    MessageBox.Show("Vui lòng điền giá vé!");
                                 }
                             }
                             else
