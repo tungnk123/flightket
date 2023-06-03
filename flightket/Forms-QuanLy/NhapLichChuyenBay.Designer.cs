@@ -69,6 +69,7 @@
             this.btn_back = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_themHangGhe = new System.Windows.Forms.Button();
             this.panel_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_rndMaChuyenBay)).BeginInit();
             this.panel_sanbaytrunggian.SuspendLayout();
@@ -79,6 +80,7 @@
             // panel_main
             // 
             this.panel_main.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel_main.Controls.Add(this.btn_themHangGhe);
             this.panel_main.Controls.Add(this.pic_rndMaChuyenBay);
             this.panel_main.Controls.Add(this.panel_sanbaytrunggian);
             this.panel_main.Controls.Add(this.btnCB_dungOSanBay);
@@ -162,7 +164,7 @@
             this.cb_tenSanBay.FormattingEnabled = true;
             this.cb_tenSanBay.Location = new System.Drawing.Point(96, 70);
             this.cb_tenSanBay.Name = "cb_tenSanBay";
-            this.cb_tenSanBay.Size = new System.Drawing.Size(193, 41);
+            this.cb_tenSanBay.Size = new System.Drawing.Size(263, 41);
             this.cb_tenSanBay.TabIndex = 27;
             // 
             // tb_ghiChu
@@ -275,7 +277,7 @@
             this.cb_sanBayDen.FormattingEnabled = true;
             this.cb_sanBayDen.Location = new System.Drawing.Point(1159, 197);
             this.cb_sanBayDen.Name = "cb_sanBayDen";
-            this.cb_sanBayDen.Size = new System.Drawing.Size(202, 41);
+            this.cb_sanBayDen.Size = new System.Drawing.Size(263, 41);
             this.cb_sanBayDen.TabIndex = 15;
             // 
             // cb_phutKhoiHanh
@@ -335,7 +337,7 @@
             this.cb_sanBayDi.FormattingEnabled = true;
             this.cb_sanBayDi.Location = new System.Drawing.Point(728, 197);
             this.cb_sanBayDi.Name = "cb_sanBayDi";
-            this.cb_sanBayDi.Size = new System.Drawing.Size(202, 41);
+            this.cb_sanBayDi.Size = new System.Drawing.Size(263, 41);
             this.cb_sanBayDi.TabIndex = 14;
             // 
             // tb_soLuong
@@ -543,6 +545,20 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // btn_themHangGhe
+            // 
+            this.btn_themHangGhe.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_themHangGhe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_themHangGhe.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_themHangGhe.Location = new System.Drawing.Point(558, 419);
+            this.btn_themHangGhe.Name = "btn_themHangGhe";
+            this.btn_themHangGhe.Size = new System.Drawing.Size(65, 43);
+            this.btn_themHangGhe.TabIndex = 21;
+            this.btn_themHangGhe.Text = "Thêm";
+            this.btn_themHangGhe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_themHangGhe.UseVisualStyleBackColor = false;
+            this.btn_themHangGhe.Click += new System.EventHandler(this.btn_themHangGhe_Click);
+            // 
             // NhapLichChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -609,5 +625,6 @@
         private System.Windows.Forms.Button btn_xacNhan;
         private System.Windows.Forms.Button btn_Them;
         private System.Windows.Forms.PictureBox pic_rndMaChuyenBay;
+        private System.Windows.Forms.Button btn_themHangGhe;
     }
 }
