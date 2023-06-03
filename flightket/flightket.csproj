@@ -127,6 +127,7 @@
     <Compile Include="Forms-QuanLy\NhapLichChuyenBay_File.Designer.cs">
       <DependentUpon>NhapLichChuyenBay_File.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms-QuanLy\RandomStringGenerator.cs" />
     <Compile Include="HANGVE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -234,6 +235,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\ic_convert.png" />
     <None Include="Resources\ic_upload.png" />
     <None Include="Resources\ic_importFile.png" />
     <None Include="Resources\ic_home.png" />

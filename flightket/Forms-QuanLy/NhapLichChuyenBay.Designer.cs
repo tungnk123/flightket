@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             this.panel_main = new System.Windows.Forms.Panel();
+            this.pic_rndMaChuyenBay = new System.Windows.Forms.PictureBox();
             this.panel_sanbaytrunggian = new System.Windows.Forms.Panel();
             this.lv_danhSachSanBayTrungGian = new System.Windows.Forms.DataGridView();
-            this.ColumnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSanBayTrungGian = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnThoigiandung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cb_tenSanBay = new System.Windows.Forms.ComboBox();
             this.tb_ghiChu = new System.Windows.Forms.TextBox();
             this.tb_thoiGianDung = new System.Windows.Forms.TextBox();
@@ -43,14 +40,13 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_xacNhan = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
             this.btnCB_dungOSanBay = new System.Windows.Forms.CheckBox();
             this.dp_ngayKhoiHanh = new System.Windows.Forms.DateTimePicker();
             this.cb_sanBayDen = new System.Windows.Forms.ComboBox();
-            this.cb_phutThoiGianBay = new System.Windows.Forms.ComboBox();
             this.cb_phutKhoiHanh = new System.Windows.Forms.ComboBox();
-            this.cb_gioThoiGianBay = new System.Windows.Forms.ComboBox();
+            this.cb_ThoiGianBay = new System.Windows.Forms.ComboBox();
             this.cb_hangGhe = new System.Windows.Forms.ComboBox();
             this.cb_gioKhoiHanh = new System.Windows.Forms.ComboBox();
             this.cb_sanBayDi = new System.Windows.Forms.ComboBox();
@@ -74,6 +70,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_main.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_rndMaChuyenBay)).BeginInit();
             this.panel_sanbaytrunggian.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lv_danhSachSanBayTrungGian)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,14 +79,15 @@
             // panel_main
             // 
             this.panel_main.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel_main.Controls.Add(this.pic_rndMaChuyenBay);
             this.panel_main.Controls.Add(this.panel_sanbaytrunggian);
             this.panel_main.Controls.Add(this.btnCB_dungOSanBay);
             this.panel_main.Controls.Add(this.dp_ngayKhoiHanh);
             this.panel_main.Controls.Add(this.cb_sanBayDen);
-            this.panel_main.Controls.Add(this.cb_phutThoiGianBay);
             this.panel_main.Controls.Add(this.cb_phutKhoiHanh);
-            this.panel_main.Controls.Add(this.cb_gioThoiGianBay);
+            this.panel_main.Controls.Add(this.cb_ThoiGianBay);
             this.panel_main.Controls.Add(this.cb_hangGhe);
+            this.panel_main.Controls.Add(this.btn_xacNhan);
             this.panel_main.Controls.Add(this.cb_gioKhoiHanh);
             this.panel_main.Controls.Add(this.cb_sanBayDi);
             this.panel_main.Controls.Add(this.tb_soLuong);
@@ -110,10 +108,21 @@
             this.panel_main.Controls.Add(this.btn_home);
             this.panel_main.Controls.Add(this.btn_back);
             this.panel_main.Controls.Add(this.label1);
-            this.panel_main.Location = new System.Drawing.Point(49, 49);
+            this.panel_main.Location = new System.Drawing.Point(46, 49);
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(1805, 953);
             this.panel_main.TabIndex = 0;
+            // 
+            // pic_rndMaChuyenBay
+            // 
+            this.pic_rndMaChuyenBay.BackgroundImage = global::flightket.Properties.Resources.ic_convert;
+            this.pic_rndMaChuyenBay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_rndMaChuyenBay.Location = new System.Drawing.Point(460, 197);
+            this.pic_rndMaChuyenBay.Name = "pic_rndMaChuyenBay";
+            this.pic_rndMaChuyenBay.Size = new System.Drawing.Size(48, 41);
+            this.pic_rndMaChuyenBay.TabIndex = 20;
+            this.pic_rndMaChuyenBay.TabStop = false;
+            this.pic_rndMaChuyenBay.Click += new System.EventHandler(this.pic_rndMaChuyenBay_Click);
             // 
             // panel_sanbaytrunggian
             // 
@@ -126,11 +135,10 @@
             this.panel_sanbaytrunggian.Controls.Add(this.label12);
             this.panel_sanbaytrunggian.Controls.Add(this.label16);
             this.panel_sanbaytrunggian.Controls.Add(this.label17);
-            this.panel_sanbaytrunggian.Controls.Add(this.button1);
             this.panel_sanbaytrunggian.Controls.Add(this.btn_Them);
             this.panel_sanbaytrunggian.Location = new System.Drawing.Point(211, 518);
             this.panel_sanbaytrunggian.Name = "panel_sanbaytrunggian";
-            this.panel_sanbaytrunggian.Size = new System.Drawing.Size(1321, 394);
+            this.panel_sanbaytrunggian.Size = new System.Drawing.Size(1321, 375);
             this.panel_sanbaytrunggian.TabIndex = 19;
             // 
             // lv_danhSachSanBayTrungGian
@@ -141,41 +149,12 @@
             this.lv_danhSachSanBayTrungGian.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.lv_danhSachSanBayTrungGian.ColumnHeadersHeight = 40;
             this.lv_danhSachSanBayTrungGian.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.lv_danhSachSanBayTrungGian.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnSTT,
-            this.ColumnSanBayTrungGian,
-            this.ColumnThoigiandung,
-            this.ColumnGhiChu});
-            this.lv_danhSachSanBayTrungGian.Location = new System.Drawing.Point(244, 192);
+            this.lv_danhSachSanBayTrungGian.Location = new System.Drawing.Point(3, 174);
             this.lv_danhSachSanBayTrungGian.Name = "lv_danhSachSanBayTrungGian";
             this.lv_danhSachSanBayTrungGian.ReadOnly = true;
-            this.lv_danhSachSanBayTrungGian.Size = new System.Drawing.Size(936, 150);
+            this.lv_danhSachSanBayTrungGian.RowHeadersVisible = false;
+            this.lv_danhSachSanBayTrungGian.Size = new System.Drawing.Size(1315, 198);
             this.lv_danhSachSanBayTrungGian.TabIndex = 28;
-            // 
-            // ColumnSTT
-            // 
-            this.ColumnSTT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnSTT.HeaderText = "STT";
-            this.ColumnSTT.Name = "ColumnSTT";
-            this.ColumnSTT.ReadOnly = true;
-            // 
-            // ColumnSanBayTrungGian
-            // 
-            this.ColumnSanBayTrungGian.HeaderText = "Sân bay trung gian";
-            this.ColumnSanBayTrungGian.Name = "ColumnSanBayTrungGian";
-            this.ColumnSanBayTrungGian.ReadOnly = true;
-            // 
-            // ColumnThoigiandung
-            // 
-            this.ColumnThoigiandung.HeaderText = "Thời gian dừng";
-            this.ColumnThoigiandung.Name = "ColumnThoigiandung";
-            this.ColumnThoigiandung.ReadOnly = true;
-            // 
-            // ColumnGhiChu
-            // 
-            this.ColumnGhiChu.HeaderText = "Ghi chú";
-            this.ColumnGhiChu.Name = "ColumnGhiChu";
-            this.ColumnGhiChu.ReadOnly = true;
             // 
             // cb_tenSanBay
             // 
@@ -183,7 +162,7 @@
             this.cb_tenSanBay.FormattingEnabled = true;
             this.cb_tenSanBay.Location = new System.Drawing.Point(96, 70);
             this.cb_tenSanBay.Name = "cb_tenSanBay";
-            this.cb_tenSanBay.Size = new System.Drawing.Size(169, 41);
+            this.cb_tenSanBay.Size = new System.Drawing.Size(193, 41);
             this.cb_tenSanBay.TabIndex = 27;
             // 
             // tb_ghiChu
@@ -257,18 +236,19 @@
             this.label17.TabIndex = 24;
             this.label17.Text = "Danh sách sân bay trung gian sẽ dừng";
             // 
-            // button1
+            // btn_xacNhan
             // 
-            this.button1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(653, 346);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 43);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Xác nhận";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_xacNhan.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_xacNhan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_xacNhan.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xacNhan.Location = new System.Drawing.Point(765, 907);
+            this.btn_xacNhan.Name = "btn_xacNhan";
+            this.btn_xacNhan.Size = new System.Drawing.Size(132, 43);
+            this.btn_xacNhan.TabIndex = 18;
+            this.btn_xacNhan.Text = "Xác nhận";
+            this.btn_xacNhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_xacNhan.UseVisualStyleBackColor = false;
+            this.btn_xacNhan.Click += new System.EventHandler(this.btn_xacNhan_Click);
             // 
             // btn_Them
             // 
@@ -282,6 +262,7 @@
             this.btn_Them.Text = "Thêm";
             this.btn_Them.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Them.UseVisualStyleBackColor = false;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // btnCB_dungOSanBay
             // 
@@ -311,15 +292,6 @@
             this.cb_sanBayDen.Size = new System.Drawing.Size(202, 41);
             this.cb_sanBayDen.TabIndex = 15;
             // 
-            // cb_phutThoiGianBay
-            // 
-            this.cb_phutThoiGianBay.Font = new System.Drawing.Font("Inter", 20.25F);
-            this.cb_phutThoiGianBay.FormattingEnabled = true;
-            this.cb_phutThoiGianBay.Location = new System.Drawing.Point(1248, 307);
-            this.cb_phutThoiGianBay.Name = "cb_phutThoiGianBay";
-            this.cb_phutThoiGianBay.Size = new System.Drawing.Size(80, 41);
-            this.cb_phutThoiGianBay.TabIndex = 14;
-            // 
             // cb_phutKhoiHanh
             // 
             this.cb_phutKhoiHanh.Font = new System.Drawing.Font("Inter", 20.25F);
@@ -329,14 +301,14 @@
             this.cb_phutKhoiHanh.Size = new System.Drawing.Size(80, 41);
             this.cb_phutKhoiHanh.TabIndex = 14;
             // 
-            // cb_gioThoiGianBay
+            // cb_ThoiGianBay
             // 
-            this.cb_gioThoiGianBay.Font = new System.Drawing.Font("Inter", 20.25F);
-            this.cb_gioThoiGianBay.FormattingEnabled = true;
-            this.cb_gioThoiGianBay.Location = new System.Drawing.Point(1159, 307);
-            this.cb_gioThoiGianBay.Name = "cb_gioThoiGianBay";
-            this.cb_gioThoiGianBay.Size = new System.Drawing.Size(83, 41);
-            this.cb_gioThoiGianBay.TabIndex = 14;
+            this.cb_ThoiGianBay.Font = new System.Drawing.Font("Inter", 20.25F);
+            this.cb_ThoiGianBay.FormattingEnabled = true;
+            this.cb_ThoiGianBay.Location = new System.Drawing.Point(1159, 307);
+            this.cb_ThoiGianBay.Name = "cb_ThoiGianBay";
+            this.cb_ThoiGianBay.Size = new System.Drawing.Size(83, 41);
+            this.cb_ThoiGianBay.TabIndex = 14;
             // 
             // cb_hangGhe
             // 
@@ -388,6 +360,7 @@
             this.tb_maChuyenBay.Name = "tb_maChuyenBay";
             this.tb_maChuyenBay.Size = new System.Drawing.Size(210, 40);
             this.tb_maChuyenBay.TabIndex = 13;
+            this.tb_maChuyenBay.TextChanged += new System.EventHandler(this.tb_maChuyenBay_TextChanged);
             // 
             // label13
             // 
@@ -582,6 +555,7 @@
             this.Text = "NhapLichChuyenBay_I";
             this.panel_main.ResumeLayout(false);
             this.panel_main.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_rndMaChuyenBay)).EndInit();
             this.panel_sanbaytrunggian.ResumeLayout(false);
             this.panel_sanbaytrunggian.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lv_danhSachSanBayTrungGian)).EndInit();
@@ -605,9 +579,8 @@
         private System.Windows.Forms.TextBox tb_maChuyenBay;
         private System.Windows.Forms.DateTimePicker dp_ngayKhoiHanh;
         private System.Windows.Forms.ComboBox cb_sanBayDen;
-        private System.Windows.Forms.ComboBox cb_phutThoiGianBay;
         private System.Windows.Forms.ComboBox cb_phutKhoiHanh;
-        private System.Windows.Forms.ComboBox cb_gioThoiGianBay;
+        private System.Windows.Forms.ComboBox cb_ThoiGianBay;
         private System.Windows.Forms.ComboBox cb_hangGhe;
         private System.Windows.Forms.ComboBox cb_gioKhoiHanh;
         private System.Windows.Forms.ComboBox cb_sanBayDi;
@@ -623,10 +596,6 @@
         private System.Windows.Forms.CheckBox btnCB_dungOSanBay;
         private System.Windows.Forms.Panel panel_sanbaytrunggian;
         private System.Windows.Forms.DataGridView lv_danhSachSanBayTrungGian;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSTT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSanBayTrungGian;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnThoigiandung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGhiChu;
         private System.Windows.Forms.ComboBox cb_tenSanBay;
         private System.Windows.Forms.TextBox tb_ghiChu;
         private System.Windows.Forms.TextBox tb_thoiGianDung;
@@ -635,7 +604,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_xacNhan;
         private System.Windows.Forms.Button btn_Them;
+        private System.Windows.Forms.PictureBox pic_rndMaChuyenBay;
     }
 }

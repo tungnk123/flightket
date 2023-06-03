@@ -121,8 +121,14 @@
   <data name="2-removebg-preview (1) 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2-removebg-preview (1) 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ic_caiDat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vector2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ic_quanLyHoSo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_upload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_upload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ic_nhapLichChuyenBay" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,16 +148,13 @@
   <data name="350248398_786598096329880_2111811280162483567_n (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\350248398_786598096329880_2111811280162483567_n (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_home" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ic_thayDoiQuiDinh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_caiDat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Vector2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_upload" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_upload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_convert" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_convert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
