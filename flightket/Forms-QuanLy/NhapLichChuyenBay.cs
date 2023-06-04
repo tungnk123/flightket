@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -113,12 +114,18 @@ namespace flightket.Forms_QuanLy
 
         private void mirrorData()
         {
-            var SANBAY = from c in db.SANBAYs
-                         select new
-                         {
+            //var lvDanhSachSanBayTrungGian = from c in db.CT_CHUYENBAY
+            //                                select new
+            //                                {
+            //                                    MaCTCB = c.MaCTCB,
+            //                                    MaChuyenBay = c.MaChuyenBay,
+            //                                    MaSanBayTrungGian = c.MaSanBayTrungGian,
+            //                                    ThoiGianDung = c.ThoiGianDung,
+            //                                    GhiChu = c.GhiChu,
+            //                                    CHUYENBAY = c.CHUYENBAY.MaChuyenBay,
+            //                                    SANBAY = c.SANBAY.TenSanBay,
 
-                         };
-
+            //                                };
 
             var lvDanhSachSanBayTrungGian = from c in db.CT_CHUYENBAY
                                             select new
@@ -128,9 +135,9 @@ namespace flightket.Forms_QuanLy
                                                 MaSanBayTrungGian = c.MaSanBayTrungGian,
                                                 ThoiGianDung = c.ThoiGianDung,
                                                 GhiChu = c.GhiChu,
-                                                CHUYENBAY = c.CHUYENBAY.MaChuyenBay,
-                                                SANBAY = c.SANBAY.TenSanBay,
-
+                                                TenSanBay = c.SANBAY.TenSanBay,
+                                                QuocGia = c.SANBAY.QuocGia,
+                                                DiaChi = c.SANBAY.DiaChi
                                             };
             lv_danhSachSanBayTrungGian.DataSource = lvDanhSachSanBayTrungGian.ToList();
 
@@ -195,44 +202,91 @@ namespace flightket.Forms_QuanLy
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            double thoiGianDung;
-            if (double.TryParse(tb_thoiGianDung.Text, out thoiGianDung))
+            if (!String.IsNullOrEmpty(tb_thoiGianDung.Text))
             {
-                string maChuyenBay = tb_maChuyenBay.Text.ToString();
-                CHUYENBAY existingChuyenBay = db.CHUYENBAYs.FirstOrDefault(c => c.MaChuyenBay == maChuyenBay);
-
-                if (existingChuyenBay != null)
+                double thoiGianDung;
+                if (double.TryParse(tb_thoiGianDung.Text, out thoiGianDung))
                 {
-                    CT_CHUYENBAY cT_CHUYENBAY = new CT_CHUYENBAY()
+                    string maChuyenBay = tb_maChuyenBay.Text.ToString();
+
+                    // KIỂM TRA ĐÃ TỒN TẠI CHUYẾN BAY CHÍNH THỨC TRONG DB HAY CHƯA, NẾU CHƯA CÓ KHÔNG CÓ PHÉP ĐIỀN SÂN BAY TRUNG GIAN
+
+                    CHUYENBAY existingChuyenBay = db.CHUYENBAYs.FirstOrDefault(c => c.MaChuyenBay == maChuyenBay);
+
+                    // TRẢ VỀ NULL ~ CHƯA CÓ CHUYẾN BAY CHÍNH
+
+                    if (existingChuyenBay != null)
                     {
-                        MaChuyenBay = maChuyenBay,
-                        MaSanBayTrungGian = cb_tenSanBay.SelectedValue.ToString(),
-                        ThoiGianDung = Convert.ToInt16(tb_thoiGianDung.Text),
-                        GhiChu = tb_ghiChu.Text?.ToString(),
-                    };
-                    db.CT_CHUYENBAY.Add(cT_CHUYENBAY);
-                    db.SaveChanges();
+
+                        
+                        CT_CHUYENBAY cT_CHUYENBAY = new CT_CHUYENBAY()
+                        {
+                            MaChuyenBay = maChuyenBay,
+                            MaSanBayTrungGian = cb_tenSanBay.SelectedValue.ToString(),
+                            ThoiGianDung = Convert.ToInt16(tb_thoiGianDung.Text),
+                            GhiChu = tb_ghiChu.Text?.ToString(),
+                        };
+                        MessageBox.Show(cT_CHUYENBAY.MaSanBayTrungGian);
+                        // SÂN BAY TRUNG GIAN KHÔNG ĐƯỢC TRÙNG VỚI SÂN BAY ĐI VÀ SÂN BAY ĐẾN
+
+                        if (db.CHUYENBAYs.Any(ct =>ct.MaChuyenBay == cT_CHUYENBAY.MaChuyenBay && ct.MaSanBayDi == cT_CHUYENBAY.MaSanBayTrungGian && ct.MaChuyenBay == cT_CHUYENBAY.MaChuyenBay))
+                        {
+                            MessageBox.Show("Sân bay TRUNG GIAN không được trùng với SÂN BAY ĐI");                                                     
+                        } else
+                        {
+                            if (db.CHUYENBAYs.Any(ct => ct.MaChuyenBay == cT_CHUYENBAY.MaChuyenBay && ct.MaSanBayDen == cT_CHUYENBAY.MaSanBayTrungGian))
+                            {
+                                MessageBox.Show("Sân bay TRUNG GIAN không được trùng với SÂN BAY ĐẾN");                                
+                            }
+                            else
+                            {
+                                if (db.CT_CHUYENBAY.Any(ct => ct.MaChuyenBay == cT_CHUYENBAY.MaChuyenBay && ct.MaSanBayTrungGian == cT_CHUYENBAY.MaSanBayTrungGian))
+                                {
+                                    MessageBox.Show("Error: Duplicate key values (MaChuyenBay, MaSanBayTrungGian).");
+                                    // Handle the duplicate key situation (e.g., display an error message)
+                                }
+                                else
+                                {
+                                    // The record with the combination of primary key values doesn't exist, proceed with insertion
+                                    db.CT_CHUYENBAY.Add(cT_CHUYENBAY);
+                                    db.SaveChanges();
+                                    var lvDanhSachSanBayTrungGian = from c in db.CT_CHUYENBAY
+                                                                    select new
+                                                                    {
+                                                                        MaCTCB = c.MaCTCB,
+                                                                        MaChuyenBay = c.MaChuyenBay,
+                                                                        MaSanBayTrungGian = c.MaSanBayTrungGian,
+                                                                        ThoiGianDung = c.ThoiGianDung,
+                                                                        GhiChu = c.GhiChu,
+                                                                        CHUYENBAY = c.CHUYENBAY.MaChuyenBay,
+                                                                        SANBAY = c.SANBAY.TenSanBay,
+
+                                                                    };
+
+                                    lv_danhSachSanBayTrungGian.DataSource = lvDanhSachSanBayTrungGian.ToList();
+                                }
+                            }
+                        }
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy dữ liệu chuyến bay, vui lòng nhập dữ liệu chuyến bay trước khi nhập CHUYẾN BAY TRUNG GIAN");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Invalid MaChuyenBay value. Please provide a valid MaChuyenBay.");
+                    MessageBox.Show("Lỗi định dạng thời gian dừng chuyến bay");
+                    tb_thoiGianDung.Text = String.Empty;
                 }
+
+
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng điền thời gian dừng chuyến bay");
             }
 
-            var lvDanhSachSanBayTrungGian = from c in db.CT_CHUYENBAY
-                                            select new
-                                            {
-                                                MaCTCB = c.MaCTCB,
-                                                MaChuyenBay = c.MaChuyenBay,
-                                                MaSanBayTrungGian = c.MaSanBayTrungGian,
-                                                ThoiGianDung = c.ThoiGianDung,
-                                                GhiChu = c.GhiChu,
-                                                CHUYENBAY = c.CHUYENBAY.MaChuyenBay,
-                                                SANBAY = c.SANBAY.TenSanBay,
-
-                                            };
-            
-            lv_danhSachSanBayTrungGian.DataSource = lvDanhSachSanBayTrungGian.ToList();
         }
 
         private void pic_rndMaChuyenBay_Click(object sender, EventArgs e)
@@ -291,7 +345,7 @@ namespace flightket.Forms_QuanLy
                                         if (double.TryParse(tb_giaVe.Text, out giaVe))
                                         {
                                             //if (!btnCB_dungOSanBay.Checked)
-                                            if(true)
+                                            if (true)
                                             {
                                                 CHUYENBAY data = new CHUYENBAY()
                                                 {
@@ -316,49 +370,17 @@ namespace flightket.Forms_QuanLy
                                                     {
                                                         // The record with 'MaChuyenBay' doesn't exist, proceed with insertion
                                                         db.CHUYENBAYs.Add(data);
+                                                        db.CT_HANGVE.AddRange(listHangVe);
                                                         //db.SaveChanges();
                                                         MessageBox.Show("Thêm dữ liệu CHUYENBAY thành công");
                                                     }
+                                                    db.SaveChanges();
                                                 }
                                                 catch (Exception ex)
                                                 {
                                                     MessageBox.Show(ex.Message);
                                                 }
-
-
-                                                try
-                                                {
-                                                    bool exist = false;
-                                                    foreach (var hangVe in listHangVe)
-                                                    {
-                                                        // Check if a record with the same combination of primary key values already exists
-                                                        if (db.CT_HANGVE.Any(ct => ct.MaChuyenBay == hangVe.MaChuyenBay))
-                                                        {
-                                                            MessageBox.Show("Error: Duplicate key values (MaVe, MaHangVe).");
-                                                            // Handle the duplicate key situation (e.g., display an error message)
-                                                            exist = true;
-                                                            break;
-                                                        }
-                                                        else
-                                                        {
-                                                            // The record with the combination of primary key values doesn't exist, proceed with insertion
-
-                                                        }
-                                                    }
-                                                    if (!exist)
-                                                    {
-                                                        db.CT_HANGVE.AddRange(listHangVe);
-                                                    }
-
-                                                    //db.SaveChanges();
-                                                    MessageBox.Show("Thêm dữ liệu HANGVE thành công");
-                                                }
-                                                catch (Exception ex)
-                                                {
-                                                    MessageBox.Show(ex.Message);
-                                                }
-
-                                                db.SaveChanges();
+                                                
 
                                                 /*CT_HANGVE cT_HANGVE = new CT_HANGVE()
                                                 {
@@ -459,7 +481,7 @@ namespace flightket.Forms_QuanLy
                                                     db.CT_HANGVE.Add(cT_HANGVE);
                                                     db.SaveChanges();*//*
                                                 }*/
-                                            }                                           
+                                            }
                                         }
                                         else
                                         {
@@ -586,6 +608,15 @@ namespace flightket.Forms_QuanLy
             if (existingPair == null)
             {
                 listHangVe.Add(newPair);
+
+                if (cb_hangGhe.SelectedIndex == cb_hangGhe.Items.Count - 1)
+                {
+                    cb_hangGhe.SelectedIndex = 0;
+                }
+                else
+                {
+                    cb_hangGhe.SelectedIndex = cb_hangGhe.SelectedIndex + 1;
+                }
             }
             else
             {
@@ -594,5 +625,15 @@ namespace flightket.Forms_QuanLy
             }
         }
 
+        private void cb_tenSanBay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox cb = sender as ComboBox;
+            if (cb.SelectedValue != null)
+            {
+                tb_thoiGianDung.Text = String.Empty;
+                tb_ghiChu.Text = String.Empty;
+            }
+
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel_main = new System.Windows.Forms.Panel();
+            this.btn_themHangGhe = new System.Windows.Forms.Button();
             this.pic_rndMaChuyenBay = new System.Windows.Forms.PictureBox();
             this.panel_sanbaytrunggian = new System.Windows.Forms.Panel();
             this.lv_danhSachSanBayTrungGian = new System.Windows.Forms.DataGridView();
@@ -69,7 +70,6 @@
             this.btn_back = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_themHangGhe = new System.Windows.Forms.Button();
             this.panel_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_rndMaChuyenBay)).BeginInit();
             this.panel_sanbaytrunggian.SuspendLayout();
@@ -114,6 +114,20 @@
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(1805, 953);
             this.panel_main.TabIndex = 0;
+            // 
+            // btn_themHangGhe
+            // 
+            this.btn_themHangGhe.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_themHangGhe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_themHangGhe.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_themHangGhe.Location = new System.Drawing.Point(558, 419);
+            this.btn_themHangGhe.Name = "btn_themHangGhe";
+            this.btn_themHangGhe.Size = new System.Drawing.Size(65, 43);
+            this.btn_themHangGhe.TabIndex = 21;
+            this.btn_themHangGhe.Text = "Thêm";
+            this.btn_themHangGhe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_themHangGhe.UseVisualStyleBackColor = false;
+            this.btn_themHangGhe.Click += new System.EventHandler(this.btn_themHangGhe_Click);
             // 
             // pic_rndMaChuyenBay
             // 
@@ -166,6 +180,7 @@
             this.cb_tenSanBay.Name = "cb_tenSanBay";
             this.cb_tenSanBay.Size = new System.Drawing.Size(263, 41);
             this.cb_tenSanBay.TabIndex = 27;
+            this.cb_tenSanBay.SelectedIndexChanged += new System.EventHandler(this.cb_tenSanBay_SelectedIndexChanged);
             // 
             // tb_ghiChu
             // 
@@ -544,20 +559,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(486, 126);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // btn_themHangGhe
-            // 
-            this.btn_themHangGhe.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_themHangGhe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_themHangGhe.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_themHangGhe.Location = new System.Drawing.Point(558, 419);
-            this.btn_themHangGhe.Name = "btn_themHangGhe";
-            this.btn_themHangGhe.Size = new System.Drawing.Size(65, 43);
-            this.btn_themHangGhe.TabIndex = 21;
-            this.btn_themHangGhe.Text = "Thêm";
-            this.btn_themHangGhe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_themHangGhe.UseVisualStyleBackColor = false;
-            this.btn_themHangGhe.Click += new System.EventHandler(this.btn_themHangGhe_Click);
             // 
             // NhapLichChuyenBay
             // 
