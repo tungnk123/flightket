@@ -68,6 +68,7 @@ namespace flightket.Forms_QuanLy
             this.btn_lapBaoCao.Text = "Lập báo cáo";
             this.btn_lapBaoCao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_lapBaoCao.UseVisualStyleBackColor = false;
+            this.btn_lapBaoCao.Click += new System.EventHandler(this.btn_lapBaoCao_Click);
             // 
             // btn_caiDat
             // 

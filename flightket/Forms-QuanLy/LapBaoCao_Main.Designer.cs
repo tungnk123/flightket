@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_Them = new System.Windows.Forms.Button();
+            this.btn_baoCaoNam = new System.Windows.Forms.Button();
+            this.btn_baoCaoThang = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_home = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
@@ -41,8 +41,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btn_Them);
+            this.panel1.Controls.Add(this.btn_baoCaoNam);
+            this.panel1.Controls.Add(this.btn_baoCaoThang);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btn_home);
             this.panel1.Controls.Add(this.btn_back);
@@ -51,33 +51,35 @@
             this.panel1.Size = new System.Drawing.Size(1701, 515);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // btn_baoCaoNam
             // 
-            this.button1.AutoEllipsis = true;
-            this.button1.BackColor = System.Drawing.Color.Cyan;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Font = new System.Drawing.Font("Inter", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(871, 179);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(216, 141);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Báo cáo doanh thu theo năm";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_baoCaoNam.AutoEllipsis = true;
+            this.btn_baoCaoNam.BackColor = System.Drawing.Color.Cyan;
+            this.btn_baoCaoNam.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_baoCaoNam.Font = new System.Drawing.Font("Inter", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_baoCaoNam.Location = new System.Drawing.Point(871, 179);
+            this.btn_baoCaoNam.Name = "btn_baoCaoNam";
+            this.btn_baoCaoNam.Size = new System.Drawing.Size(216, 141);
+            this.btn_baoCaoNam.TabIndex = 20;
+            this.btn_baoCaoNam.Text = "Báo cáo doanh thu theo năm";
+            this.btn_baoCaoNam.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btn_baoCaoNam.UseVisualStyleBackColor = false;
+            this.btn_baoCaoNam.Click += new System.EventHandler(this.btn_baoCaoNam_Click);
             // 
-            // btn_Them
+            // btn_baoCaoThang
             // 
-            this.btn_Them.AutoEllipsis = true;
-            this.btn_Them.BackColor = System.Drawing.Color.Lime;
-            this.btn_Them.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_Them.Font = new System.Drawing.Font("Inter", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Them.Location = new System.Drawing.Point(573, 179);
-            this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(216, 141);
-            this.btn_Them.TabIndex = 20;
-            this.btn_Them.Text = "Báo cáo doanh thu theo tháng";
-            this.btn_Them.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btn_Them.UseVisualStyleBackColor = false;
+            this.btn_baoCaoThang.AutoEllipsis = true;
+            this.btn_baoCaoThang.BackColor = System.Drawing.Color.Lime;
+            this.btn_baoCaoThang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_baoCaoThang.Font = new System.Drawing.Font("Inter", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_baoCaoThang.Location = new System.Drawing.Point(573, 179);
+            this.btn_baoCaoThang.Name = "btn_baoCaoThang";
+            this.btn_baoCaoThang.Size = new System.Drawing.Size(216, 141);
+            this.btn_baoCaoThang.TabIndex = 20;
+            this.btn_baoCaoThang.Text = "Báo cáo doanh thu theo tháng";
+            this.btn_baoCaoThang.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btn_baoCaoThang.UseVisualStyleBackColor = false;
+            this.btn_baoCaoThang.Click += new System.EventHandler(this.btn_baoCaoThang_Click);
             // 
             // label1
             // 
@@ -99,6 +101,7 @@
             this.btn_home.Size = new System.Drawing.Size(59, 51);
             this.btn_home.TabIndex = 9;
             this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // btn_back
             // 
@@ -109,6 +112,7 @@
             this.btn_back.Size = new System.Drawing.Size(59, 51);
             this.btn_back.TabIndex = 10;
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // pictureBox1
             // 
@@ -146,8 +150,8 @@
         private System.Windows.Forms.Button btn_home;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btn_Them;
+        private System.Windows.Forms.Button btn_baoCaoNam;
+        private System.Windows.Forms.Button btn_baoCaoThang;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

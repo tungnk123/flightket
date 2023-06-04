@@ -33,12 +33,13 @@
             this.lb_fileDaChon = new System.Windows.Forms.LinkLabel();
             this.btn_xacNhan = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.llb_chonFile = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_home = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lb_progress = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_xacNhan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,7 +48,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.panel_xacNhan);
-            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Controls.Add(this.llb_chonFile);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btn_home);
             this.panel1.Controls.Add(this.btn_back);
@@ -95,6 +96,7 @@
             this.btn_xacNhan.Text = "Xác nhận";
             this.btn_xacNhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_xacNhan.UseVisualStyleBackColor = false;
+            this.btn_xacNhan.Click += new System.EventHandler(this.btn_xacNhan_Click_1);
             // 
             // label3
             // 
@@ -107,22 +109,23 @@
             this.label3.TabIndex = 21;
             this.label3.Text = "File đã chọn :";
             // 
-            // linkLabel1
+            // llb_chonFile
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.linkLabel1.BackColor = System.Drawing.Color.Chartreuse;
-            this.linkLabel1.Font = new System.Drawing.Font("Inter", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Image = global::flightket.Properties.Resources.ic_upload;
-            this.linkLabel1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(704, 162);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Padding = new System.Windows.Forms.Padding(10);
-            this.linkLabel1.Size = new System.Drawing.Size(455, 77);
-            this.linkLabel1.TabIndex = 20;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Chọn từ máy tính của bạn";
-            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.llb_chonFile.ActiveLinkColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.llb_chonFile.BackColor = System.Drawing.Color.Chartreuse;
+            this.llb_chonFile.Font = new System.Drawing.Font("Inter", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llb_chonFile.Image = global::flightket.Properties.Resources.ic_upload;
+            this.llb_chonFile.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.llb_chonFile.LinkColor = System.Drawing.Color.Black;
+            this.llb_chonFile.Location = new System.Drawing.Point(704, 162);
+            this.llb_chonFile.Name = "llb_chonFile";
+            this.llb_chonFile.Padding = new System.Windows.Forms.Padding(10);
+            this.llb_chonFile.Size = new System.Drawing.Size(455, 77);
+            this.llb_chonFile.TabIndex = 20;
+            this.llb_chonFile.TabStop = true;
+            this.llb_chonFile.Text = "Chọn từ máy tính của bạn";
+            this.llb_chonFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.llb_chonFile.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llb_chonFile_LinkClicked);
             // 
             // label2
             // 
@@ -144,6 +147,7 @@
             this.btn_home.Size = new System.Drawing.Size(59, 51);
             this.btn_home.TabIndex = 15;
             this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // btn_back
             // 
@@ -154,6 +158,7 @@
             this.btn_back.Size = new System.Drawing.Size(59, 51);
             this.btn_back.TabIndex = 16;
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // label1
             // 
@@ -177,6 +182,18 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // lb_progress
+            // 
+            this.lb_progress.BackColor = System.Drawing.Color.Transparent;
+            this.lb_progress.Font = new System.Drawing.Font("Inter", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_progress.ForeColor = System.Drawing.Color.Red;
+            this.lb_progress.Location = new System.Drawing.Point(1592, 1012);
+            this.lb_progress.Name = "lb_progress";
+            this.lb_progress.Size = new System.Drawing.Size(269, 35);
+            this.lb_progress.TabIndex = 18;
+            this.lb_progress.Text = "Tiến Trình";
+            this.lb_progress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // NhapLichChuyenBay_File
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +201,7 @@
             this.BackgroundImage = global::flightket.Properties.Resources._350248398_786598096329880_2111811280162483567_n__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.lb_progress);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -209,7 +227,8 @@
         private System.Windows.Forms.LinkLabel lb_fileDaChon;
         private System.Windows.Forms.Button btn_xacNhan;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel llb_chonFile;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lb_progress;
     }
 }
