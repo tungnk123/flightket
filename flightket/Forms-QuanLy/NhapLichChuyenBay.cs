@@ -41,9 +41,6 @@ namespace flightket.Forms_QuanLy
         }
         private void updateUI()
         {
-            float opacityLevel = 0.1f;
-            Color panelColor = Color.FromArgb((int)(opacityLevel * 255), Color.Red);
-            panel_main.BackColor = panelColor;
             panel_sanbaytrunggian.Visible = false;
 
             cb_sanBayDi.DropDownStyle = ComboBoxStyle.DropDownList;

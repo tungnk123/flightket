@@ -54,6 +54,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.btn_xuatBaoCao);
             this.panel1.Controls.Add(this.lb_tongDoanhThu);
             this.panel1.Controls.Add(this.lv_doanhThu);

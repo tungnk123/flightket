@@ -79,7 +79,7 @@
             // 
             // panel_main
             // 
-            this.panel_main.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel_main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel_main.Controls.Add(this.btn_themHangGhe);
             this.panel_main.Controls.Add(this.pic_rndMaChuyenBay);
             this.panel_main.Controls.Add(this.panel_sanbaytrunggian);

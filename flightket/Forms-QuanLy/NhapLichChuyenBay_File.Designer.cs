@@ -47,6 +47,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.panel_xacNhan);
             this.panel1.Controls.Add(this.llb_chonFile);
             this.panel1.Controls.Add(this.label2);
