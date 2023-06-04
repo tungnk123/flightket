@@ -226,11 +226,14 @@ namespace flightket.Forms_QuanLy
             catch (System.Runtime.InteropServices.COMException ex)
             {
                 Console.WriteLine(ex.Message);
-                MessageBox.Show("Không tìm thấy File do có thể bị xóa, hoặc di chuyển");
+                CustomDialogForm customDialogForm = new CustomDialogForm("Không tìm thấy File do có thể bị xóa, hoặc di chuyển");
+                customDialogForm.ShowDialog();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error importing data from Excel: " + ex.Message);
+                CustomDialogForm customDialogForm = new CustomDialogForm(ex.Message);
+                customDialogForm.ShowDialog();
+                //MessageBox.Show("Error importing data from Excel: " + ex.Message);
             }
             finally
             {
