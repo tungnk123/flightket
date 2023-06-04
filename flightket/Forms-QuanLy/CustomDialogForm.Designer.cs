@@ -72,7 +72,7 @@
             this.Controls.Add(this.btnOK);
             this.Name = "CustomDialogForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CustomDialogForm";
+            this.Text = "Thông Báo";
             this.ResumeLayout(false);
             this.PerformLayout();
 

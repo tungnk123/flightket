@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_xuatBaoCao = new System.Windows.Forms.LinkLabel();
@@ -40,11 +40,11 @@
             this.cb_nam = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_xemTatCa = new System.Windows.Forms.Button();
             this.btn_xemBaoCao = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_home = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
-            this.btn_xemTatCa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lv_doanhThu)).BeginInit();
@@ -55,7 +55,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::flightket.Properties.Resources._2_removebg_preview__1__1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(1396, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(1406, -2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(486, 126);
             this.pictureBox1.TabIndex = 7;
@@ -114,23 +114,23 @@
             this.lv_doanhThu.AllowUserToAddRows = false;
             this.lv_doanhThu.AllowUserToDeleteRows = false;
             this.lv_doanhThu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.lv_doanhThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.lv_doanhThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.lv_doanhThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.lv_doanhThu.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.lv_doanhThu.DefaultCellStyle = dataGridViewCellStyle2;
             this.lv_doanhThu.Location = new System.Drawing.Point(187, 396);
             this.lv_doanhThu.Name = "lv_doanhThu";
             this.lv_doanhThu.ReadOnly = true;
@@ -192,6 +192,21 @@
             this.label2.TabIndex = 21;
             this.label2.Text = "Báo cáo doanh thu theo năm";
             // 
+            // btn_xemTatCa
+            // 
+            this.btn_xemTatCa.AutoEllipsis = true;
+            this.btn_xemTatCa.BackColor = System.Drawing.Color.Lime;
+            this.btn_xemTatCa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_xemTatCa.Font = new System.Drawing.Font("Inter", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xemTatCa.Location = new System.Drawing.Point(948, 218);
+            this.btn_xemTatCa.Name = "btn_xemTatCa";
+            this.btn_xemTatCa.Size = new System.Drawing.Size(216, 52);
+            this.btn_xemTatCa.TabIndex = 20;
+            this.btn_xemTatCa.Text = "Xem Tất Cả";
+            this.btn_xemTatCa.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btn_xemTatCa.UseVisualStyleBackColor = false;
+            this.btn_xemTatCa.Click += new System.EventHandler(this.btn_xemTatCa_Click);
+            // 
             // btn_xemBaoCao
             // 
             this.btn_xemBaoCao.AutoEllipsis = true;
@@ -240,21 +255,6 @@
             this.btn_back.UseVisualStyleBackColor = true;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
-            // btn_xemTatCa
-            // 
-            this.btn_xemTatCa.AutoEllipsis = true;
-            this.btn_xemTatCa.BackColor = System.Drawing.Color.Lime;
-            this.btn_xemTatCa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_xemTatCa.Font = new System.Drawing.Font("Inter", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xemTatCa.Location = new System.Drawing.Point(948, 218);
-            this.btn_xemTatCa.Name = "btn_xemTatCa";
-            this.btn_xemTatCa.Size = new System.Drawing.Size(216, 52);
-            this.btn_xemTatCa.TabIndex = 20;
-            this.btn_xemTatCa.Text = "Xem Tất Cả";
-            this.btn_xemTatCa.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btn_xemTatCa.UseVisualStyleBackColor = false;
-            this.btn_xemTatCa.Click += new System.EventHandler(this.btn_xemTatCa_Click);
-            // 
             // LapBaoCao_Nam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -266,6 +266,7 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Name = "LapBaoCao_Nam";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LapBaoCao_Nam";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

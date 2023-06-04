@@ -39,9 +39,6 @@ namespace flightket.Forms_QuanLy
 
             mirrorData();
         }
-
-
-
         private void updateUI()
         {
             float opacityLevel = 0.1f;
@@ -63,8 +60,6 @@ namespace flightket.Forms_QuanLy
             cb_hangGhe.Items.Add("1");
             cb_hangGhe.Items.Add("2");
             cb_hangGhe.SelectedIndex = 0;
-
-
 
             listGioKhoiHanh_Gio = new string[24];
             listThoiGianBay_Gio = new string[24];
@@ -104,7 +99,6 @@ namespace flightket.Forms_QuanLy
 
             cb_hangGhe.DropDownStyle = ComboBoxStyle.DropDownList;
             cb_hangGhe.SelectedIndex = 0;
-
         }
 
         private void mirrorData()

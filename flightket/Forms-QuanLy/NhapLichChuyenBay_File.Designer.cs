@@ -206,6 +206,7 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Name = "NhapLichChuyenBay_File";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NhapLichChuyenBay_File";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

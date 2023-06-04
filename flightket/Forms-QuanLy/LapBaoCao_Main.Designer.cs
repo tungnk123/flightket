@@ -136,6 +136,7 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Name = "LapBaoCao_Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LapBaoCao_Main";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

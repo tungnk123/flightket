@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel_main = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.btn_themHangGhe = new System.Windows.Forms.Button();
             this.pic_rndMaChuyenBay = new System.Windows.Forms.PictureBox();
             this.panel_sanbaytrunggian = new System.Windows.Forms.Panel();
@@ -81,7 +80,6 @@
             // panel_main
             // 
             this.panel_main.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel_main.Controls.Add(this.button1);
             this.panel_main.Controls.Add(this.btn_themHangGhe);
             this.panel_main.Controls.Add(this.pic_rndMaChuyenBay);
             this.panel_main.Controls.Add(this.panel_sanbaytrunggian);
@@ -116,15 +114,6 @@
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(1805, 953);
             this.panel_main.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1559, 322);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // btn_themHangGhe
             // 
@@ -642,6 +631,5 @@
         private System.Windows.Forms.Button btn_Them;
         private System.Windows.Forms.PictureBox pic_rndMaChuyenBay;
         private System.Windows.Forms.Button btn_themHangGhe;
-        private System.Windows.Forms.Button button1;
     }
 }
