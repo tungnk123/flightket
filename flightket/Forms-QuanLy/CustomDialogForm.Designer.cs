@@ -70,6 +70,7 @@
             this.Controls.Add(this.lb_codeError);
             this.Controls.Add(this.linkLabelTemplate);
             this.Controls.Add(this.btnOK);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomDialogForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông Báo";

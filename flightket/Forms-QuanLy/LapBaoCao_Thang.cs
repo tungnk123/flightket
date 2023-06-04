@@ -39,6 +39,7 @@ namespace flightket.Forms_QuanLy
             cb_nam.SelectedIndex = 0;
 
             lb_tongDoanhThu.Text = "0.000";
+            label5.Text = $"Báo cáo doanh thu theo THÁNG- NĂM";
 
         }
 
@@ -65,6 +66,16 @@ namespace flightket.Forms_QuanLy
             cb_nam.ValueMember = "MaBCNam";
 
             lv_doanhThu.DataSource = dsBaoCaoThang.ToList();
+            double? sumTongDoanhThu = dsBaoCaoThang.Sum(item => (double?)item.TongDoangThuThang);
+
+            if (sumTongDoanhThu.HasValue)
+            {
+                lb_tongDoanhThu.Text = sumTongDoanhThu.Value.ToString("0.000");
+            }
+            else
+            {
+                lb_tongDoanhThu.Text = "0.000";
+            }
         }
 
         private void cb_thang_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,15 +87,15 @@ namespace flightket.Forms_QuanLy
         {
             UpdateDataGridView();
         }
-        private void UpdateDataGridView()
+        private void btn_xemBaoCao_Click(object sender, EventArgs e)
         {
-            if (cb_thang.SelectedIndex != 0 && cb_nam.SelectedIndex != 0)
+            if (cb_thang.SelectedIndex != -1 && cb_nam.SelectedIndex != -1)
             {
-                int selectedThang = Convert.ToInt32(cb_thang.SelectedItem);
-                int selectedNam = Convert.ToInt32(cb_nam.SelectedItem);
+                string selectedThang = cb_thang.SelectedValue.ToString();
+                string selectedNam = cb_nam.SelectedValue.ToString();
 
                 var dsBaoCaoThang = from c in db.BAOCAOTHANGs
-                                    where c.Thang == selectedThang && c.Nam == selectedNam
+                                    where c.MaBCThang == selectedThang && c.MaBCNam == selectedNam
                                     select new
                                     {
                                         MaBCThang = c.MaBCThang,
@@ -113,14 +124,50 @@ namespace flightket.Forms_QuanLy
                 // Show all data when "Chọn" is selected in either ComboBox
                 // lv_doanhThu.DataSource = dsBaoCaoThang.ToList();
             }
+        }
+        private void UpdateDataGridView()
+        {
+            if (cb_thang.SelectedValue != null && cb_nam.SelectedValue != null)
+            {
+                string selectedThang = cb_thang.SelectedValue.ToString();
+                string selectedNam = cb_nam.SelectedValue.ToString();
+
+                var dsBaoCaoThang = from c in db.BAOCAOTHANGs
+                                    where c.MaBCThang == selectedThang && c.MaBCNam == selectedNam
+                                    select new
+                                    {
+                                        MaBCThang = c.MaBCThang,
+                                        MaBCNam = c.MaBCNam,
+                                        Thang = c.Thang,
+                                        Nam = c.Nam,
+                                        TongDoangThuThang = c.TongDoanhThuThang ?? 0,
+                                        TongChuyenbay = c.TongChuyenBay ?? 0,
+                                        Tile = c.TiLe ?? 0
+                                    };
+
+                lv_doanhThu.DataSource = dsBaoCaoThang.ToList();
+                double? sumTongDoanhThu = dsBaoCaoThang.Sum(item => (double?)item.TongDoangThuThang);
+
+                if (sumTongDoanhThu.HasValue)
+                {
+                    lb_tongDoanhThu.Text = sumTongDoanhThu.Value.ToString("0.000");
+                }
+                else
+                {
+                    lb_tongDoanhThu.Text = "0.000";
+                }
+                label5.Text = $"Báo cáo doanh thu theo THÁNG {cb_thang.Text}- NĂM {cb_nam.Text}";
+            }
+            else
+            {
+                // Show all data when "Chọn" is selected in either ComboBox
+                // lv_doanhThu.DataSource = dsBaoCaoThang.ToList();
+            }
 
         }
 
         private void btn_xemTatCa_Click(object sender, EventArgs e)
         {
-            int selectedThang = Convert.ToInt32(cb_thang.SelectedItem);
-            int selectedNam = Convert.ToInt32(cb_nam.SelectedItem);
-
             var dsBaoCaoThang = from c in db.BAOCAOTHANGs
                                 select new
                                 {
@@ -144,7 +191,7 @@ namespace flightket.Forms_QuanLy
             {
                 lb_tongDoanhThu.Text = "0.000";
             }
-
+            label5.Text = $"Báo cáo doanh thu theo THÁNG - NĂM ";
         }
 
         private void btn_xuatBaoCao_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -173,7 +220,7 @@ namespace flightket.Forms_QuanLy
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "CSV (*.csv)|*.csv";
             saveFileDialog.Title = "Export to CSV";
-            saveFileDialog.FileName = "ExportedData.csv"; // Set default file name
+            saveFileDialog.FileName = $"{label5.Text}.csv"; // Set default file name
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 // Create a StringBuilder to store the CSV data
@@ -213,7 +260,7 @@ namespace flightket.Forms_QuanLy
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Excel (*.xlsx)|*.xlsx";
             saveFileDialog.Title = "Export to Excel";
-            saveFileDialog.FileName = "ExportedData.xlsx"; // Set default file name
+            saveFileDialog.FileName = $"{label5.Text}.xlsx"; // Set default file name
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 // Create a new Excel package
@@ -261,35 +308,6 @@ namespace flightket.Forms_QuanLy
             formHomeQuanLy.ShowDialog();
         }
 
-        private void btn_xemBaoCao_Click(object sender, EventArgs e)
-        {
-            int selectedThang = Convert.ToInt32(cb_thang.SelectedItem);
-            int selectedNam = Convert.ToInt32(cb_nam.SelectedItem);
 
-            var dsBaoCaoThang = from c in db.BAOCAOTHANGs
-                                where c.Thang == selectedThang && c.Nam == selectedNam
-                                select new
-                                {
-                                    MaBCThang = c.MaBCThang,
-                                    MaBCNam = c.MaBCNam,
-                                    Thang = c.Thang,
-                                    Nam = c.Nam,
-                                    TongDoangThuThang = c.TongDoanhThuThang ?? 0,
-                                    TongChuyenbay = c.TongChuyenBay ?? 0,
-                                    Tile = c.TiLe ?? 0
-                                };
-
-            lv_doanhThu.DataSource = dsBaoCaoThang.ToList();
-            double? sumTongDoanhThu = dsBaoCaoThang.Sum(item => (double?)item.TongDoangThuThang);
-
-            if (sumTongDoanhThu.HasValue)
-            {
-                lb_tongDoanhThu.Text = sumTongDoanhThu.Value.ToString("0.000");
-            }
-            else
-            {
-                lb_tongDoanhThu.Text = "0.000";
-            }
-        }
     }
 }

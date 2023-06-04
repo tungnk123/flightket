@@ -34,6 +34,7 @@ namespace flightket.Forms_QuanLy
             cb_nam.SelectedIndex = 0;
 
             lb_tongDoanhThu.Text = "0.0000";
+            label5.Text = $"Báo cáo doanh thu theo năm TẤT CẢ";
         }
 
         private void mirrorData()
@@ -51,6 +52,17 @@ namespace flightket.Forms_QuanLy
             cb_nam.ValueMember = "MaBCNam";
 
             lv_doanhThu.DataSource = dsBaoCaoNam.ToList();
+            double? sumTongDoanhThu = dsBaoCaoNam.Sum(item => (double?)item.TongDoanhThu);
+
+            if (sumTongDoanhThu.HasValue)
+            {
+                lb_tongDoanhThu.Text = sumTongDoanhThu.Value.ToString("0.000");
+            }
+            else
+            {
+                lb_tongDoanhThu.Text = "0.000";
+            }
+
         }
         private void btn_back_Click(object sender, EventArgs e)
         {
@@ -67,17 +79,20 @@ namespace flightket.Forms_QuanLy
 
         private void cb_nam_SelectedIndexChanged(object sender, EventArgs e)
         {
-            UpdateDataGridView();
-            label5.Text = $"Báo cáo doanh thu theo năm {cb_nam.SelectedValue}";
+            if (cb_nam.SelectedValue != null)
+            {
+                UpdateDataGridView();
+                label5.Text = $"Báo cáo doanh thu theo năm {cb_nam.Text}";
+            }            
         }
         private void UpdateDataGridView()
         {
-            if (cb_nam.SelectedIndex != 0)
+            if (cb_nam.SelectedValue != null)
             {
-                int selectedNam = Convert.ToInt32(cb_nam.SelectedItem);
+                string selectedNam = cb_nam.SelectedValue.ToString();
 
                 var dsBaoCaoNam = from c in db.BAOCAONAMs
-                                  where c.Nam == selectedNam
+                                  where c.MaBCNam == selectedNam
                                   select new
                                   {
                                       MaBCNam = c.MaBCNam,
@@ -126,31 +141,15 @@ namespace flightket.Forms_QuanLy
             {
                 lb_tongDoanhThu.Text = "0.000";
             }
+            label5.Text = $"Báo cáo doanh thu theo năm TẤT CẢ";
         }
 
         private void btn_xemBaoCao_Click(object sender, EventArgs e)
         {
-            int selectedNam = Convert.ToInt32(cb_nam.SelectedItem);
-
-            var dsBaoCaoNam = from c in db.BAOCAONAMs
-                              where c.Nam == selectedNam
-                              select new
-                              {
-                                  MaBCNam = c.MaBCNam,
-                                  Nam = c.Nam,
-                                  TongDoanhThu = c.TongDoanhThu,
-                              };
-
-            lv_doanhThu.DataSource = dsBaoCaoNam.ToList();
-            double? sumTongDoanhThu = dsBaoCaoNam.Sum(item => (double?)item.TongDoanhThu);
-
-            if (sumTongDoanhThu.HasValue)
+            if (cb_nam.SelectedValue != null)
             {
-                lb_tongDoanhThu.Text = sumTongDoanhThu.Value.ToString("0.000");
-            }
-            else
-            {
-                lb_tongDoanhThu.Text = "0.000";
+                UpdateDataGridView();
+                label5.Text = $"Báo cáo doanh thu theo năm {cb_nam.Text}";
             }
         }
 
@@ -180,7 +179,7 @@ namespace flightket.Forms_QuanLy
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "CSV (*.csv)|*.csv";
             saveFileDialog.Title = "Export to CSV";
-            saveFileDialog.FileName = "ExportedData.csv"; // Set default file name
+            saveFileDialog.FileName = $"{label5.Text}.csv"; // Set default file name
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 // Create a StringBuilder to store the CSV data
@@ -220,7 +219,7 @@ namespace flightket.Forms_QuanLy
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Excel (*.xlsx)|*.xlsx";
             saveFileDialog.Title = "Export to Excel";
-            saveFileDialog.FileName = "ExportedData.xlsx"; // Set default file name
+            saveFileDialog.FileName = $"{label5.Text}.xlsx"; // Set default file name
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 // Create a new Excel package

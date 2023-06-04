@@ -101,6 +101,7 @@
             this.lb_tongDoanhThu.Size = new System.Drawing.Size(256, 39);
             this.lb_tongDoanhThu.TabIndex = 28;
             this.lb_tongDoanhThu.Text = "100.0000";
+            this.lb_tongDoanhThu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lv_doanhThu
             // 
@@ -290,6 +291,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LapBaoCao_Thang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LapBaoCao_Thang";
