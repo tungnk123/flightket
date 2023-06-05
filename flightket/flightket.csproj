@@ -85,6 +85,24 @@
     <Compile Include="Forms-Admin\FormHomeAdmin.Designer.cs">
       <DependentUpon>FormHomeAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms-Admin\FormPhanQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-Admin\FormPhanQuyen.Designer.cs">
+      <DependentUpon>FormPhanQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-Admin\FormQuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-Admin\FormQuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>FormQuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-Admin\FormTaoNhomNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-Admin\FormTaoNhomNguoiDung.Designer.cs">
+      <DependentUpon>FormTaoNhomNguoiDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms-NhanVien\FormDatChoChuyenBay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +176,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-Admin\FormHomeAdmin.resx">
       <DependentUpon>FormHomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-Admin\FormPhanQuyen.resx">
+      <DependentUpon>FormPhanQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-Admin\FormQuanLyTaiKhoan.resx">
+      <DependentUpon>FormQuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-Admin\FormTaoNhomNguoiDung.resx">
+      <DependentUpon>FormTaoNhomNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-NhanVien\FormDatChoChuyenBay.resx">
       <DependentUpon>FormDatChoChuyenBay.cs</DependentUpon>
