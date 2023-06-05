@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Reflection;
 
 namespace flightket.Forms_NhanVien
 {
@@ -185,5 +187,59 @@ namespace flightket.Forms_NhanVien
         {
             ngayKhoiHanh = dp_ngayKhoiHanh.Value;
         }
+
+        private void btn_xuatThongTin_Click(object sender, EventArgs e)
+        {
+            ExportToExcel(dgv_chuyenBayPhuHop);
+
+        }
+        private void ExportToExcel(DataGridView dgv)
+        {
+            // Create a SaveFileDialog instance
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Excel Files|*.xlsx";
+            saveFileDialog.Title = "Save Excel File";
+
+            // Display the file dialog and check if the user clicked the "OK" button
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = saveFileDialog.FileName;
+
+                // Creating Excel Application
+                Excel.Application excelApp = new Excel.Application();
+                excelApp.Visible = true;
+
+                // Creating Excel Workbook
+                Excel.Workbook excelWorkbook = excelApp.Workbooks.Add(Missing.Value);
+
+                // Creating Excel Worksheet
+                Excel.Worksheet excelWorksheet = (Excel.Worksheet)excelWorkbook.ActiveSheet;
+
+                // Set column headers from DataGridView
+                for (int j = 1; j <= dgv.Columns.Count; j++)
+                {
+                    excelWorksheet.Cells[1, j] = dgv.Columns[j - 1].HeaderText;
+                }
+
+                // Writing DataGridView data to Excel Worksheet
+                for (int i = 2; i <= dgv.Rows.Count + 1; i++)
+                {
+                    for (int j = 1; j <= dgv.Columns.Count; j++)
+                    {
+                        excelWorksheet.Cells[i, j] = dgv.Rows[i - 2].Cells[j - 1].Value.ToString();
+                    }
+                }
+
+                // Save the Excel file at the chosen location
+                excelWorkbook.SaveAs(filePath);
+
+                // Close the workbook and the Excel application
+                excelWorkbook.Close();
+                excelApp.Quit();
+            }
+        }
+
+
+
     }
 }

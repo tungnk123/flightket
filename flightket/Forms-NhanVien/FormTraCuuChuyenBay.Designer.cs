@@ -253,8 +253,9 @@ namespace flightket.Forms_NhanVien
             this.btn_xuatThongTin.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.btn_xuatThongTin.Size = new System.Drawing.Size(317, 65);
             this.btn_xuatThongTin.TabIndex = 22;
-            this.btn_xuatThongTin.Text = "Xuất thông tin";
+            this.btn_xuatThongTin.Text = "Export File";
             this.btn_xuatThongTin.UseVisualStyleBackColor = false;
+            this.btn_xuatThongTin.Click += new System.EventHandler(this.btn_xuatThongTin_Click);
             // 
             // btn_home
             // 
@@ -320,7 +321,7 @@ namespace flightket.Forms_NhanVien
             this.column_stt.HeaderText = "STT";
             this.column_stt.MinimumWidth = 6;
             this.column_stt.Name = "column_stt";
-            this.column_stt.Width = 75;
+            this.column_stt.Width = 60;
             // 
             // column_maChuyenBay
             // 
@@ -348,14 +349,14 @@ namespace flightket.Forms_NhanVien
             this.column_ngayKhoiHanh.HeaderText = "Ngày khởi hành";
             this.column_ngayKhoiHanh.MinimumWidth = 6;
             this.column_ngayKhoiHanh.Name = "column_ngayKhoiHanh";
-            this.column_ngayKhoiHanh.Width = 150;
+            this.column_ngayKhoiHanh.Width = 125;
             // 
             // column_thoiGianBay
             // 
             this.column_thoiGianBay.HeaderText = "Thời gian bay (phút)";
             this.column_thoiGianBay.MinimumWidth = 6;
             this.column_thoiGianBay.Name = "column_thoiGianBay";
-            this.column_thoiGianBay.Width = 150;
+            this.column_thoiGianBay.Width = 125;
             // 
             // column_soGheTrong
             // 
@@ -421,6 +422,7 @@ namespace flightket.Forms_NhanVien
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgv_chuyenBayPhuHop;
+        private System.Windows.Forms.CheckBox chb_ngayKhoiHanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_stt;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_maChuyenBay;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_sanBayDi;
@@ -429,6 +431,5 @@ namespace flightket.Forms_NhanVien
         private System.Windows.Forms.DataGridViewTextBoxColumn column_thoiGianBay;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_soGheTrong;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_soGheDaDat;
-        private System.Windows.Forms.CheckBox chb_ngayKhoiHanh;
     }
 }
