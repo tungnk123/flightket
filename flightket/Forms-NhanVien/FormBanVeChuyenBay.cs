@@ -145,7 +145,25 @@ namespace flightket.Forms_NhanVien
                     string maChuyenBay = (string)dgv_chuyenBayPhuHop.SelectedCells[0].OwningRow.Cells[1].Value;
                     double giaVe = Convert.ToDouble(dgv_chuyenBayPhuHop.SelectedCells[0].OwningRow.Cells[4].Value);
                     string tenHangVe = cb_hangVe.Text;
-                    
+
+                    using (var db = new FlightKetDBEntities())
+                    {
+                        CHUYENBAY cHUYENBAY = db.CHUYENBAYs.Find(maChuyenBay);
+                        if(cHUYENBAY.NgayGioKhoiHanh.Value < DateTime.Now)
+                        {
+                            MessageBox.Show("Chuyến bay được chọn đã khởi hành");
+                            return;
+                        }
+                        THAMSO tHAMSO = db.THAMSOes.FirstOrDefault();
+                        DateTime now = DateTime.Now;
+                        TimeSpan timeDifference = cHUYENBAY.NgayGioKhoiHanh.Value - now;
+                        TimeSpan soGioDatVeTrcKhoiHanh = new TimeSpan(tHAMSO.SoGioDatVeTruocKhoiHanh.Value, 0, 0);
+                        if(timeDifference < soGioDatVeTrcKhoiHanh)
+                        {
+                            MessageBox.Show("Đã quá hạn để đặt vé chuyến bay này");
+                            return;
+                        }
+                    }
                     FormBanVe formBanVe = new FormBanVe(maChuyenBay, giaVe, tenHangVe);
                     this.Hide();
                     formBanVe.ShowDialog();

@@ -30,69 +30,51 @@ namespace flightket.Forms_NhanVien
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDatChoChuyenBay));
-            this.btn_back = new System.Windows.Forms.Button();
-            this.btn_home = new System.Windows.Forms.Button();
             this.panel_main = new System.Windows.Forms.Panel();
+            this.panelDanhSachPhieuDatCho = new System.Windows.Forms.Panel();
+            this.lb_danhSachChuyenBayPhuHop = new System.Windows.Forms.Label();
+            this.dgv_chuyenBayPhuHop = new System.Windows.Forms.DataGridView();
+            this.ColumnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMaChuyenBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnGioKhoiHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSoGheTrong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnGiaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnChon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.cb_hangGhe = new System.Windows.Forms.ComboBox();
-            this.lb_chonHangGhe = new System.Windows.Forms.Label();
+            this.cb_hangVe = new System.Windows.Forms.ComboBox();
+            this.lb_chonHangVe = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dp_ngayKhoiHanh = new System.Windows.Forms.DateTimePicker();
             this.lb_ngayKhoiHanh = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cb_sanBayDen = new System.Windows.Forms.ComboBox();
             this.lb_sanBayDen = new System.Windows.Forms.Label();
-            this.lv_chuyenBayPhuHop = new System.Windows.Forms.ListView();
-            this.column_stt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.column_maChuyenbay = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.column_gioKhoiHanh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.column_soGheTrong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.column_giaVe = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.column_buttonChon = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lb_danhSachChuyenBayPhuHop = new System.Windows.Forms.Label();
             this.btn_timChuyenBay = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cb_sanBayDi = new System.Windows.Forms.ComboBox();
             this.lb_sanBayDi = new System.Windows.Forms.Label();
             this.lb_title2 = new System.Windows.Forms.Label();
             this.lb_title1 = new System.Windows.Forms.Label();
+            this.btn_back = new System.Windows.Forms.Button();
+            this.btn_home = new System.Windows.Forms.Button();
             this.panel_main.SuspendLayout();
+            this.panelDanhSachPhieuDatCho.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_chuyenBayPhuHop)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btn_back
-            // 
-            this.btn_back.Image = global::flightket.Properties.Resources.icons8_back_64;
-            this.btn_back.Location = new System.Drawing.Point(3, 3);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(70, 70);
-            this.btn_back.TabIndex = 0;
-            this.btn_back.UseVisualStyleBackColor = true;
-            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
-            // 
-            // btn_home
-            // 
-            this.btn_home.Image = global::flightket.Properties.Resources.icons8_home_50;
-            this.btn_home.Location = new System.Drawing.Point(79, 3);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(70, 70);
-            this.btn_home.TabIndex = 1;
-            this.btn_home.UseVisualStyleBackColor = true;
-            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
-            // 
             // panel_main
             // 
             this.panel_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel_main.Controls.Add(this.panelDanhSachPhieuDatCho);
             this.panel_main.Controls.Add(this.panel4);
             this.panel_main.Controls.Add(this.panel3);
             this.panel_main.Controls.Add(this.panel2);
-            this.panel_main.Controls.Add(this.lv_chuyenBayPhuHop);
-            this.panel_main.Controls.Add(this.lb_danhSachChuyenBayPhuHop);
             this.panel_main.Controls.Add(this.btn_timChuyenBay);
             this.panel_main.Controls.Add(this.panel1);
             this.panel_main.Controls.Add(this.lb_title2);
@@ -100,60 +82,145 @@ namespace flightket.Forms_NhanVien
             this.panel_main.Controls.Add(this.btn_back);
             this.panel_main.Controls.Add(this.btn_home);
             this.panel_main.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_main.Location = new System.Drawing.Point(70, 138);
+            this.panel_main.Location = new System.Drawing.Point(100, 114);
             this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(1760, 900);
-            this.panel_main.TabIndex = 2;
+            this.panel_main.Size = new System.Drawing.Size(1701, 852);
+            this.panel_main.TabIndex = 6;
+            // 
+            // panelDanhSachPhieuDatCho
+            // 
+            this.panelDanhSachPhieuDatCho.BackColor = System.Drawing.Color.Transparent;
+            this.panelDanhSachPhieuDatCho.Controls.Add(this.lb_danhSachChuyenBayPhuHop);
+            this.panelDanhSachPhieuDatCho.Controls.Add(this.dgv_chuyenBayPhuHop);
+            this.panelDanhSachPhieuDatCho.Location = new System.Drawing.Point(234, 485);
+            this.panelDanhSachPhieuDatCho.Name = "panelDanhSachPhieuDatCho";
+            this.panelDanhSachPhieuDatCho.Size = new System.Drawing.Size(1373, 224);
+            this.panelDanhSachPhieuDatCho.TabIndex = 14;
+            // 
+            // lb_danhSachChuyenBayPhuHop
+            // 
+            this.lb_danhSachChuyenBayPhuHop.AutoSize = true;
+            this.lb_danhSachChuyenBayPhuHop.BackColor = System.Drawing.Color.Transparent;
+            this.lb_danhSachChuyenBayPhuHop.Location = new System.Drawing.Point(535, 15);
+            this.lb_danhSachChuyenBayPhuHop.Name = "lb_danhSachChuyenBayPhuHop";
+            this.lb_danhSachChuyenBayPhuHop.Size = new System.Drawing.Size(345, 26);
+            this.lb_danhSachChuyenBayPhuHop.TabIndex = 9;
+            this.lb_danhSachChuyenBayPhuHop.Text = "Danh sách chuyến bay phù hợp";
+            // 
+            // dgv_chuyenBayPhuHop
+            // 
+            this.dgv_chuyenBayPhuHop.AllowUserToOrderColumns = true;
+            this.dgv_chuyenBayPhuHop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_chuyenBayPhuHop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnSTT,
+            this.ColumnMaChuyenBay,
+            this.columnGioKhoiHanh,
+            this.ColumnSoGheTrong,
+            this.ColumnGiaVe,
+            this.ColumnChon});
+            this.dgv_chuyenBayPhuHop.Location = new System.Drawing.Point(48, 58);
+            this.dgv_chuyenBayPhuHop.Name = "dgv_chuyenBayPhuHop";
+            this.dgv_chuyenBayPhuHop.ReadOnly = true;
+            this.dgv_chuyenBayPhuHop.RowHeadersWidth = 51;
+            this.dgv_chuyenBayPhuHop.RowTemplate.Height = 24;
+            this.dgv_chuyenBayPhuHop.Size = new System.Drawing.Size(1305, 154);
+            this.dgv_chuyenBayPhuHop.TabIndex = 12;
+            this.dgv_chuyenBayPhuHop.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_chuyenBayPhuHop_CellDoubleClick_1);
+            // 
+            // ColumnSTT
+            // 
+            this.ColumnSTT.HeaderText = "STT";
+            this.ColumnSTT.MinimumWidth = 6;
+            this.ColumnSTT.Name = "ColumnSTT";
+            this.ColumnSTT.Width = 70;
+            // 
+            // ColumnMaChuyenBay
+            // 
+            this.ColumnMaChuyenBay.HeaderText = "Mã Chuyến Bay";
+            this.ColumnMaChuyenBay.MinimumWidth = 6;
+            this.ColumnMaChuyenBay.Name = "ColumnMaChuyenBay";
+            this.ColumnMaChuyenBay.Width = 200;
+            // 
+            // columnGioKhoiHanh
+            // 
+            this.columnGioKhoiHanh.HeaderText = "Giờ khởi hành";
+            this.columnGioKhoiHanh.MinimumWidth = 6;
+            this.columnGioKhoiHanh.Name = "columnGioKhoiHanh";
+            this.columnGioKhoiHanh.Width = 200;
+            // 
+            // ColumnSoGheTrong
+            // 
+            this.ColumnSoGheTrong.HeaderText = "Số ghế trống";
+            this.ColumnSoGheTrong.MinimumWidth = 6;
+            this.ColumnSoGheTrong.Name = "ColumnSoGheTrong";
+            this.ColumnSoGheTrong.Width = 150;
+            // 
+            // ColumnGiaVe
+            // 
+            this.ColumnGiaVe.HeaderText = "Giá vé";
+            this.ColumnGiaVe.MinimumWidth = 6;
+            this.ColumnGiaVe.Name = "ColumnGiaVe";
+            this.ColumnGiaVe.Width = 200;
+            // 
+            // ColumnChon
+            // 
+            this.ColumnChon.HeaderText = "";
+            this.ColumnChon.MinimumWidth = 6;
+            this.ColumnChon.Name = "ColumnChon";
+            this.ColumnChon.Width = 105;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.cb_hangGhe);
-            this.panel4.Controls.Add(this.lb_chonHangGhe);
-            this.panel4.Location = new System.Drawing.Point(1315, 208);
+            this.panel4.Controls.Add(this.cb_hangVe);
+            this.panel4.Controls.Add(this.lb_chonHangVe);
+            this.panel4.Location = new System.Drawing.Point(1311, 173);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(276, 100);
-            this.panel4.TabIndex = 5;
+            this.panel4.TabIndex = 12;
             // 
-            // cb_hangGhe
+            // cb_hangVe
             // 
-            this.cb_hangGhe.BackColor = System.Drawing.Color.Silver;
-            this.cb_hangGhe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_hangGhe.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.cb_hangGhe.FormattingEnabled = true;
-            this.cb_hangGhe.Location = new System.Drawing.Point(31, 58);
-            this.cb_hangGhe.Name = "cb_hangGhe";
-            this.cb_hangGhe.Size = new System.Drawing.Size(176, 37);
-            this.cb_hangGhe.TabIndex = 1;
+            this.cb_hangVe.BackColor = System.Drawing.Color.Silver;
+            this.cb_hangVe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_hangVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_hangVe.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cb_hangVe.FormattingEnabled = true;
+            this.cb_hangVe.Location = new System.Drawing.Point(31, 58);
+            this.cb_hangVe.Name = "cb_hangVe";
+            this.cb_hangVe.Size = new System.Drawing.Size(210, 37);
+            this.cb_hangVe.TabIndex = 1;
             // 
-            // lb_chonHangGhe
+            // lb_chonHangVe
             // 
-            this.lb_chonHangGhe.AutoSize = true;
-            this.lb_chonHangGhe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_chonHangGhe.Location = new System.Drawing.Point(26, 11);
-            this.lb_chonHangGhe.Name = "lb_chonHangGhe";
-            this.lb_chonHangGhe.Size = new System.Drawing.Size(176, 29);
-            this.lb_chonHangGhe.TabIndex = 0;
-            this.lb_chonHangGhe.Text = "Chọn hạng ghế";
+            this.lb_chonHangVe.AutoSize = true;
+            this.lb_chonHangVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_chonHangVe.Location = new System.Drawing.Point(26, 11);
+            this.lb_chonHangVe.Name = "lb_chonHangVe";
+            this.lb_chonHangVe.Size = new System.Drawing.Size(160, 29);
+            this.lb_chonHangVe.TabIndex = 0;
+            this.lb_chonHangVe.Text = "Chọn hạng vé";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.dp_ngayKhoiHanh);
             this.panel3.Controls.Add(this.lb_ngayKhoiHanh);
-            this.panel3.Location = new System.Drawing.Point(926, 208);
+            this.panel3.Location = new System.Drawing.Point(934, 173);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(326, 100);
-            this.panel3.TabIndex = 5;
+            this.panel3.TabIndex = 13;
             // 
             // dp_ngayKhoiHanh
             // 
-            this.dp_ngayKhoiHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dp_ngayKhoiHanh.Location = new System.Drawing.Point(5, 66);
+            this.dp_ngayKhoiHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dp_ngayKhoiHanh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dp_ngayKhoiHanh.Location = new System.Drawing.Point(31, 58);
             this.dp_ngayKhoiHanh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dp_ngayKhoiHanh.Name = "dp_ngayKhoiHanh";
-            this.dp_ngayKhoiHanh.Size = new System.Drawing.Size(310, 26);
+            this.dp_ngayKhoiHanh.Size = new System.Drawing.Size(210, 34);
             this.dp_ngayKhoiHanh.TabIndex = 1;
+            this.dp_ngayKhoiHanh.Value = new System.DateTime(2023, 6, 3, 12, 0, 0, 0);
             // 
             // lb_ngayKhoiHanh
             // 
@@ -170,14 +237,15 @@ namespace flightket.Forms_NhanVien
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.cb_sanBayDen);
             this.panel2.Controls.Add(this.lb_sanBayDen);
-            this.panel2.Location = new System.Drawing.Point(584, 208);
+            this.panel2.Location = new System.Drawing.Point(587, 173);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(284, 100);
-            this.panel2.TabIndex = 5;
+            this.panel2.TabIndex = 14;
             // 
             // cb_sanBayDen
             // 
             this.cb_sanBayDen.BackColor = System.Drawing.Color.Silver;
+            this.cb_sanBayDen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_sanBayDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_sanBayDen.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cb_sanBayDen.FormattingEnabled = true;
@@ -196,88 +264,32 @@ namespace flightket.Forms_NhanVien
             this.lb_sanBayDen.TabIndex = 0;
             this.lb_sanBayDen.Text = "Sân bay đến";
             // 
-            // lv_chuyenBayPhuHop
-            // 
-            this.lv_chuyenBayPhuHop.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.column_stt,
-            this.column_maChuyenbay,
-            this.column_gioKhoiHanh,
-            this.column_soGheTrong,
-            this.column_giaVe,
-            this.column_buttonChon});
-            this.lv_chuyenBayPhuHop.HideSelection = false;
-            this.lv_chuyenBayPhuHop.Location = new System.Drawing.Point(282, 584);
-            this.lv_chuyenBayPhuHop.Name = "lv_chuyenBayPhuHop";
-            this.lv_chuyenBayPhuHop.Size = new System.Drawing.Size(1334, 130);
-            this.lv_chuyenBayPhuHop.TabIndex = 10;
-            this.lv_chuyenBayPhuHop.UseCompatibleStateImageBehavior = false;
-            this.lv_chuyenBayPhuHop.View = System.Windows.Forms.View.Details;
-            // 
-            // column_stt
-            // 
-            this.column_stt.Text = "STT";
-            this.column_stt.Width = 78;
-            // 
-            // column_maChuyenbay
-            // 
-            this.column_maChuyenbay.Text = "Mã chuyến bay";
-            this.column_maChuyenbay.Width = 209;
-            // 
-            // column_gioKhoiHanh
-            // 
-            this.column_gioKhoiHanh.Text = "Giờ khởi hành";
-            this.column_gioKhoiHanh.Width = 204;
-            // 
-            // column_soGheTrong
-            // 
-            this.column_soGheTrong.Text = "Số ghế trống";
-            this.column_soGheTrong.Width = 212;
-            // 
-            // column_giaVe
-            // 
-            this.column_giaVe.Text = "Giá vé";
-            this.column_giaVe.Width = 172;
-            // 
-            // column_buttonChon
-            // 
-            this.column_buttonChon.Text = "      ";
-            this.column_buttonChon.Width = 172;
-            // 
-            // lb_danhSachChuyenBayPhuHop
-            // 
-            this.lb_danhSachChuyenBayPhuHop.AutoSize = true;
-            this.lb_danhSachChuyenBayPhuHop.BackColor = System.Drawing.Color.Transparent;
-            this.lb_danhSachChuyenBayPhuHop.Location = new System.Drawing.Point(766, 541);
-            this.lb_danhSachChuyenBayPhuHop.Name = "lb_danhSachChuyenBayPhuHop";
-            this.lb_danhSachChuyenBayPhuHop.Size = new System.Drawing.Size(345, 26);
-            this.lb_danhSachChuyenBayPhuHop.TabIndex = 9;
-            this.lb_danhSachChuyenBayPhuHop.Text = "Danh sách chuyến bay phù hợp";
-            // 
             // btn_timChuyenBay
             // 
             this.btn_timChuyenBay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(235)))), ((int)(((byte)(144)))));
             this.btn_timChuyenBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_timChuyenBay.Location = new System.Drawing.Point(802, 427);
+            this.btn_timChuyenBay.Location = new System.Drawing.Point(809, 392);
             this.btn_timChuyenBay.Name = "btn_timChuyenBay";
             this.btn_timChuyenBay.Size = new System.Drawing.Size(267, 62);
-            this.btn_timChuyenBay.TabIndex = 8;
+            this.btn_timChuyenBay.TabIndex = 15;
             this.btn_timChuyenBay.Text = "Tìm chuyến bay";
             this.btn_timChuyenBay.UseVisualStyleBackColor = false;
-            this.btn_timChuyenBay.Click += new System.EventHandler(this.btn_timChuyenBay_Click);
+            this.btn_timChuyenBay.Click += new System.EventHandler(this.btn_timChuyenBay_Click_1);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.cb_sanBayDi);
             this.panel1.Controls.Add(this.lb_sanBayDi);
-            this.panel1.Location = new System.Drawing.Point(266, 208);
+            this.panel1.Location = new System.Drawing.Point(262, 173);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(268, 100);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 11;
             // 
             // cb_sanBayDi
             // 
             this.cb_sanBayDi.BackColor = System.Drawing.Color.Silver;
+            this.cb_sanBayDi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_sanBayDi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_sanBayDi.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cb_sanBayDi.FormattingEnabled = true;
@@ -320,6 +332,24 @@ namespace flightket.Forms_NhanVien
             this.lb_title1.TabIndex = 2;
             this.lb_title1.Text = "Đặt chỗ chuyến bay";
             // 
+            // btn_back
+            // 
+            this.btn_back.Image = ((System.Drawing.Image)(resources.GetObject("btn_back.Image")));
+            this.btn_back.Location = new System.Drawing.Point(3, 3);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(70, 70);
+            this.btn_back.TabIndex = 0;
+            this.btn_back.UseVisualStyleBackColor = true;
+            // 
+            // btn_home
+            // 
+            this.btn_home.Image = ((System.Drawing.Image)(resources.GetObject("btn_home.Image")));
+            this.btn_home.Location = new System.Drawing.Point(79, 3);
+            this.btn_home.Name = "btn_home";
+            this.btn_home.Size = new System.Drawing.Size(70, 70);
+            this.btn_home.TabIndex = 1;
+            this.btn_home.UseVisualStyleBackColor = true;
+            // 
             // FormDatChoChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -333,9 +363,11 @@ namespace flightket.Forms_NhanVien
             this.Name = "FormDatChoChuyenBay";
             this.Text = "Flightket - Đặt chỗ chuyến bay";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormDatChoChuyenBay_FormClosed);
             this.panel_main.ResumeLayout(false);
             this.panel_main.PerformLayout();
+            this.panelDanhSachPhieuDatCho.ResumeLayout(false);
+            this.panelDanhSachPhieuDatCho.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_chuyenBayPhuHop)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -350,31 +382,32 @@ namespace flightket.Forms_NhanVien
 
         #endregion
 
-        private System.Windows.Forms.Button btn_back;
-        private System.Windows.Forms.Button btn_home;
         private System.Windows.Forms.Panel panel_main;
-        private System.Windows.Forms.Label lb_title2;
-        private System.Windows.Forms.Label lb_title1;
-        private System.Windows.Forms.ListView lv_chuyenBayPhuHop;
+        private System.Windows.Forms.Panel panelDanhSachPhieuDatCho;
         private System.Windows.Forms.Label lb_danhSachChuyenBayPhuHop;
-        private System.Windows.Forms.Button btn_timChuyenBay;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cb_sanBayDi;
-        private System.Windows.Forms.Label lb_sanBayDi;
+        private System.Windows.Forms.DataGridView dgv_chuyenBayPhuHop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSTT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMaChuyenBay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnGioKhoiHanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSoGheTrong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGiaVe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnChon;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ComboBox cb_hangGhe;
-        private System.Windows.Forms.Label lb_chonHangGhe;
+        private System.Windows.Forms.ComboBox cb_hangVe;
+        private System.Windows.Forms.Label lb_chonHangVe;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DateTimePicker dp_ngayKhoiHanh;
         private System.Windows.Forms.Label lb_ngayKhoiHanh;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox cb_sanBayDen;
         private System.Windows.Forms.Label lb_sanBayDen;
-        private System.Windows.Forms.DateTimePicker dp_ngayKhoiHanh;
-        private System.Windows.Forms.ColumnHeader column_stt;
-        private System.Windows.Forms.ColumnHeader column_maChuyenbay;
-        private System.Windows.Forms.ColumnHeader column_gioKhoiHanh;
-        private System.Windows.Forms.ColumnHeader column_soGheTrong;
-        private System.Windows.Forms.ColumnHeader column_giaVe;
-        private System.Windows.Forms.ColumnHeader column_buttonChon;
+        private System.Windows.Forms.Button btn_timChuyenBay;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox cb_sanBayDi;
+        private System.Windows.Forms.Label lb_sanBayDi;
+        private System.Windows.Forms.Label lb_title2;
+        private System.Windows.Forms.Label lb_title1;
+        private System.Windows.Forms.Button btn_back;
+        private System.Windows.Forms.Button btn_home;
     }
 }

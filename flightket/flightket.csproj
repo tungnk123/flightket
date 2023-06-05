@@ -103,6 +103,12 @@
     <Compile Include="Forms-NhanVien\FormCapNhatThongTinPhieuDatCho.Designer.cs">
       <DependentUpon>FormCapNhatThongTinPhieuDatCho.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms-NhanVien\FormDatCho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormDatCho.Designer.cs">
+      <DependentUpon>FormDatCho.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms-NhanVien\FormDatChoChuyenBay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,12 +126,6 @@
     </Compile>
     <Compile Include="Forms-NhanVien\FormKiemTraDatCho.Designer.cs">
       <DependentUpon>FormKiemTraDatCho.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms-NhanVien\FormNhapThongTinKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms-NhanVien\FormNhapThongTinKhachHang.Designer.cs">
-      <DependentUpon>FormNhapThongTinKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms-QuanLy\FormHomeQuanLy.cs">
       <SubType>Form</SubType>
@@ -186,6 +186,9 @@
     <EmbeddedResource Include="Forms-NhanVien\FormCapNhatThongTinPhieuDatCho.resx">
       <DependentUpon>FormCapNhatThongTinPhieuDatCho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms-NhanVien\FormDatCho.resx">
+      <DependentUpon>FormDatCho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms-NhanVien\FormDatChoChuyenBay.resx">
       <DependentUpon>FormDatChoChuyenBay.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,9 +197,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-NhanVien\FormKiemTraDatCho.resx">
       <DependentUpon>FormKiemTraDatCho.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms-NhanVien\FormNhapThongTinKhachHang.resx">
-      <DependentUpon>FormNhapThongTinKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\FormHomeQuanLy.resx">
       <DependentUpon>FormHomeQuanLy.cs</DependentUpon>

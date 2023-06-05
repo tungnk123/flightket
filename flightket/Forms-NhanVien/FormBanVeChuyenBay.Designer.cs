@@ -119,6 +119,7 @@
             this.ColumnChon});
             this.dgv_chuyenBayPhuHop.Location = new System.Drawing.Point(48, 58);
             this.dgv_chuyenBayPhuHop.Name = "dgv_chuyenBayPhuHop";
+            this.dgv_chuyenBayPhuHop.ReadOnly = true;
             this.dgv_chuyenBayPhuHop.RowHeadersWidth = 51;
             this.dgv_chuyenBayPhuHop.RowTemplate.Height = 24;
             this.dgv_chuyenBayPhuHop.Size = new System.Drawing.Size(1305, 154);
@@ -130,6 +131,7 @@
             this.ColumnSTT.HeaderText = "STT";
             this.ColumnSTT.MinimumWidth = 6;
             this.ColumnSTT.Name = "ColumnSTT";
+            this.ColumnSTT.ReadOnly = true;
             this.ColumnSTT.Width = 70;
             // 
             // ColumnMaChuyenBay
@@ -137,6 +139,7 @@
             this.ColumnMaChuyenBay.HeaderText = "Mã Chuyến Bay";
             this.ColumnMaChuyenBay.MinimumWidth = 6;
             this.ColumnMaChuyenBay.Name = "ColumnMaChuyenBay";
+            this.ColumnMaChuyenBay.ReadOnly = true;
             this.ColumnMaChuyenBay.Width = 200;
             // 
             // columnGioKhoiHanh
@@ -144,6 +147,7 @@
             this.columnGioKhoiHanh.HeaderText = "Giờ khởi hành";
             this.columnGioKhoiHanh.MinimumWidth = 6;
             this.columnGioKhoiHanh.Name = "columnGioKhoiHanh";
+            this.columnGioKhoiHanh.ReadOnly = true;
             this.columnGioKhoiHanh.Width = 200;
             // 
             // ColumnSoGheTrong
@@ -151,6 +155,7 @@
             this.ColumnSoGheTrong.HeaderText = "Số ghế trống";
             this.ColumnSoGheTrong.MinimumWidth = 6;
             this.ColumnSoGheTrong.Name = "ColumnSoGheTrong";
+            this.ColumnSoGheTrong.ReadOnly = true;
             this.ColumnSoGheTrong.Width = 150;
             // 
             // ColumnGiaVe
@@ -158,6 +163,7 @@
             this.ColumnGiaVe.HeaderText = "Giá vé";
             this.ColumnGiaVe.MinimumWidth = 6;
             this.ColumnGiaVe.Name = "ColumnGiaVe";
+            this.ColumnGiaVe.ReadOnly = true;
             this.ColumnGiaVe.Width = 200;
             // 
             // ColumnChon
@@ -165,6 +171,7 @@
             this.ColumnChon.HeaderText = "";
             this.ColumnChon.MinimumWidth = 6;
             this.ColumnChon.Name = "ColumnChon";
+            this.ColumnChon.ReadOnly = true;
             this.ColumnChon.Width = 105;
             // 
             // panel4
