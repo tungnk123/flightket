@@ -16,5 +16,31 @@ namespace flightket.Forms_Admin
         {
             InitializeComponent();
         }
+
+        private void btn_taoNhomNguoiDung_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormTaoNhomNguoiDung formTaoNhomNguoiDung = new FormTaoNhomNguoiDung();
+            formTaoNhomNguoiDung.Show();
+        }
+
+        private void btn_quanLyTaiKhoan_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormQuanLyTaiKhoan formQuanLyTaiKhoan = new FormQuanLyTaiKhoan();
+            formQuanLyTaiKhoan.Show();
+        }
+
+        private void btn_phanQuyen_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormPhanQuyen formPhanQuyen = new FormPhanQuyen();
+            formPhanQuyen.Show();
+        }
+
+        private void btn_caiDat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
