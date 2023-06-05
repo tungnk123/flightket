@@ -40,8 +40,8 @@ namespace flightket.Forms_NhanVien
             this.cb_sanBayDi = new System.Windows.Forms.ComboBox();
             this.lb_sanBayDen = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.chb_ngayKhoiHanh = new System.Windows.Forms.CheckBox();
             this.dp_ngayKhoiHanh = new System.Windows.Forms.DateTimePicker();
-            this.lb_ngayKhoiHanh = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cb_sanBayDen = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -59,7 +59,6 @@ namespace flightket.Forms_NhanVien
             this.column_thoiGianBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column_soGheTrong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column_soGheDaDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.column_chonButton = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -170,12 +169,24 @@ namespace flightket.Forms_NhanVien
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.chb_ngayKhoiHanh);
             this.panel3.Controls.Add(this.dp_ngayKhoiHanh);
-            this.panel3.Controls.Add(this.lb_ngayKhoiHanh);
             this.panel3.Location = new System.Drawing.Point(1341, 233);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(326, 100);
             this.panel3.TabIndex = 15;
+            // 
+            // chb_ngayKhoiHanh
+            // 
+            this.chb_ngayKhoiHanh.AutoSize = true;
+            this.chb_ngayKhoiHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chb_ngayKhoiHanh.Location = new System.Drawing.Point(31, 16);
+            this.chb_ngayKhoiHanh.Name = "chb_ngayKhoiHanh";
+            this.chb_ngayKhoiHanh.Size = new System.Drawing.Size(200, 33);
+            this.chb_ngayKhoiHanh.TabIndex = 2;
+            this.chb_ngayKhoiHanh.Text = "Ngày khởi hành";
+            this.chb_ngayKhoiHanh.UseVisualStyleBackColor = true;
+            this.chb_ngayKhoiHanh.CheckStateChanged += new System.EventHandler(this.cb_ngayKhoiHanh_CheckStateChanged);
             // 
             // dp_ngayKhoiHanh
             // 
@@ -186,16 +197,8 @@ namespace flightket.Forms_NhanVien
             this.dp_ngayKhoiHanh.Name = "dp_ngayKhoiHanh";
             this.dp_ngayKhoiHanh.Size = new System.Drawing.Size(240, 26);
             this.dp_ngayKhoiHanh.TabIndex = 1;
-            // 
-            // lb_ngayKhoiHanh
-            // 
-            this.lb_ngayKhoiHanh.AutoSize = true;
-            this.lb_ngayKhoiHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ngayKhoiHanh.Location = new System.Drawing.Point(26, 16);
-            this.lb_ngayKhoiHanh.Name = "lb_ngayKhoiHanh";
-            this.lb_ngayKhoiHanh.Size = new System.Drawing.Size(178, 29);
-            this.lb_ngayKhoiHanh.TabIndex = 0;
-            this.lb_ngayKhoiHanh.Text = "Ngày khởi hành";
+            this.dp_ngayKhoiHanh.Visible = false;
+            this.dp_ngayKhoiHanh.ValueChanged += new System.EventHandler(this.dp_ngayKhoiHanh_ValueChanged);
             // 
             // panel4
             // 
@@ -304,8 +307,7 @@ namespace flightket.Forms_NhanVien
             this.column_ngayKhoiHanh,
             this.column_thoiGianBay,
             this.column_soGheTrong,
-            this.column_soGheDaDat,
-            this.column_chonButton});
+            this.column_soGheDaDat});
             this.dgv_chuyenBayPhuHop.Location = new System.Drawing.Point(182, 570);
             this.dgv_chuyenBayPhuHop.Name = "dgv_chuyenBayPhuHop";
             this.dgv_chuyenBayPhuHop.RowHeadersWidth = 51;
@@ -369,13 +371,6 @@ namespace flightket.Forms_NhanVien
             this.column_soGheDaDat.Name = "column_soGheDaDat";
             this.column_soGheDaDat.Width = 125;
             // 
-            // column_chonButton
-            // 
-            this.column_chonButton.HeaderText = "";
-            this.column_chonButton.MinimumWidth = 6;
-            this.column_chonButton.Name = "column_chonButton";
-            this.column_chonButton.Width = 85;
-            // 
             // FormTraCuuChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -417,7 +412,6 @@ namespace flightket.Forms_NhanVien
         private System.Windows.Forms.Label lb_sanBayDen;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DateTimePicker dp_ngayKhoiHanh;
-        private System.Windows.Forms.Label lb_ngayKhoiHanh;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox cb_sanBayDen;
         private System.Windows.Forms.Label label1;
@@ -435,6 +429,6 @@ namespace flightket.Forms_NhanVien
         private System.Windows.Forms.DataGridViewTextBoxColumn column_thoiGianBay;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_soGheTrong;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_soGheDaDat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn column_chonButton;
+        private System.Windows.Forms.CheckBox chb_ngayKhoiHanh;
     }
 }
