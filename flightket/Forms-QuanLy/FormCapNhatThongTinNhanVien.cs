@@ -25,18 +25,21 @@ namespace flightket.Forms_QuanLy
             _init();
         }
 
-        private void _init()
+        private String DobAfterHandle()
         {
-            tb_maNhanVien.Text = nhanVien.MaNhanVien;
-            tb_hoTen.Text = nhanVien.HoTen;
-            tb_diaChi.Text = nhanVien.DiaChi;
             String dob = nhanVien.NamSinh.ToString().Substring(0, 10);
             String[] namSinh = dob.Split('/');
             String temp = namSinh[0];
             namSinh[0] = namSinh[1];
             namSinh[1] = temp;
-            String ngayThangNamSinh = String.Join("/", namSinh);
-            tb_namSinh.Text = ngayThangNamSinh;
+            return String.Join("/", namSinh);
+        }
+        private void _init()
+        {
+            tb_maNhanVien.Text = nhanVien.MaNhanVien;
+            tb_hoTen.Text = nhanVien.HoTen;
+            tb_diaChi.Text = nhanVien.DiaChi;
+            tb_namSinh.Text = DobAfterHandle();
             tb_soDienThoai.Text = nhanVien.SDT;
         }
 
@@ -86,18 +89,20 @@ namespace flightket.Forms_QuanLy
 
         private void tb_namSinh_Leave(object sender, EventArgs e)
         {
-            String ngaySinh = tb_namSinh.Text;
+            String ngaySinh = FormatDob(tb_namSinh.Text.Trim());
             DateTime date;
             if (!DateTime.TryParse(ngaySinh, out date))
             {
                 MessageBox.Show("Ngày không hợp lệ");
+                tb_namSinh.Text = DobAfterHandle();
             }
         }
 
+        // Add điều kiện để kiểm tra khi người dùng rời khỏi tb_diaChi
         private void tb_diaChi_Leave(object sender, EventArgs e)
         {
             String diaChi = tb_diaChi.Text;
-            if (diaChi.Trim() == String.Empty)
+            if (String.IsNullOrEmpty(diaChi.Trim()))
             {
                 MessageBox.Show("Không được để trống địa chỉ");
                 tb_diaChi.Text = nhanVien.DiaChi;
@@ -109,10 +114,11 @@ namespace flightket.Forms_QuanLy
             }
         }
 
+        // Add điều kiện để kiểm tra khi người dùng rời khỏi tb_soDienThoai
         private void tb_soDienThoai_Leave(object sender, EventArgs e)
         {
             String sdt = tb_soDienThoai.Text;
-            if (sdt.Trim() == String.Empty)
+            if (String.IsNullOrEmpty(sdt.Trim()))
             {
                 MessageBox.Show("Không được để trống số điện thoại");
                 tb_soDienThoai.Text = nhanVien.SDT;
@@ -131,11 +137,83 @@ namespace flightket.Forms_QuanLy
             }
         }
 
+        // Tạo delegate khi có sự kiện back trở về FormQuanLyHoSoNhanVien
+        public delegate void UpdateNhanVien(NHANVIEN nhanvien);
+        public event UpdateNhanVien UpdateEvent;
+
         private void btn_xacNhanCapNhat_Click(object sender, EventArgs e)
         {
-            string data = "Dữ liệu từ Form2";
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn cập nhật thông tin?", "Confirm", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                if (!ContainTextBoxNullOrEmpty())
+                {
+                    UpdateInfoNhanVien();
+                    UpdateEvent(this.nhanVien);
+                    this.Close();
+                } else
+                {
+                    MessageBox.Show("Không được để trống thông tin!!!");
+                }
+            }
+        }
+
+        // Kiểm tra có tb nào người dùng bỏ trống ?
+        private bool ContainTextBoxNullOrEmpty()
+        {
+            String hoTen = tb_hoTen.Text;
+            String diaChi = tb_diaChi.Text;
+            String namSinh = tb_namSinh.Text;
+            String soDienThoai = tb_soDienThoai.Text;
+
+            if (String.IsNullOrEmpty(hoTen) || String.IsNullOrEmpty(diaChi) 
+                || String.IsNullOrEmpty(namSinh) || String.IsNullOrEmpty(soDienThoai))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        // Định dạng ngày
+        private String FormatDob(String ngaySinh)
+        {
+            String[] dmy = ngaySinh.Split('/');
+            String temp = dmy[0];
+            dmy[0] = dmy[1];
+            dmy[1] = temp;
+            return String.Join("/", dmy);
+        }
+        // Cập nhật lại thông tin của nhân viên đó
+        private void UpdateInfoNhanVien()
+        {
+            try
+            {
+                String hoTen = tb_hoTen.Text;
+                String diaChi = tb_diaChi.Text;
+                DateTime namSinh = DateTime.Parse(FormatDob(tb_namSinh.Text.Trim()));
+                String soDienThoai = tb_soDienThoai.Text;
+
+                this.nhanVien.HoTen = hoTen;
+                this.nhanVien.DiaChi = diaChi;
+                this.nhanVien.NamSinh = namSinh;
+                this.nhanVien.SDT= soDienThoai; 
+            } catch(Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormHomeQuanLy formHomeQuanLy = new FormHomeQuanLy();
+            formHomeQuanLy.ShowDialog();    
+        }
     }
 }

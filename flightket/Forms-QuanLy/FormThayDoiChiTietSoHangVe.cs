@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Data.Entity.Migrations;
+using System.Data.Entity;
+using System.Data.SqlClient;
 
 namespace flightket.Forms_QuanLy
 {
@@ -16,12 +18,19 @@ namespace flightket.Forms_QuanLy
     {
         List<HANGVE> hangVeBanDauList; // Hạng vé ban đầu (dữ liệu ban đầu)
         List<HANGVE> hangVeThayDoiList; // Hạng vé dùng để lưu thay đổi các giá trị thêm xóa Hangve
+        List<int> viTriHangVeConTrong;
+        List<HANGVE> hangVeThem;
+        List<HANGVE> hangVeXoa;
         public FormThayDoiChiTietSoHangVe(List<HANGVE> hangVes)
         {
             InitializeComponent();
             panel1.BackColor = Color.FromArgb(150, Color.White);
             this.hangVeBanDauList = new List<HANGVE>();
-            this.hangVeThayDoiList= new List<HANGVE>();
+            this.hangVeThayDoiList = new List<HANGVE>();
+            this.hangVeThem = new List<HANGVE>();
+            this.hangVeXoa = new List<HANGVE>();
+
+            this.viTriHangVeConTrong = new List<int>();
             this.hangVeThayDoiList = hangVes;
             this.hangVeBanDauList = hangVes;
             Load_Data();
@@ -80,14 +89,70 @@ namespace flightket.Forms_QuanLy
                 DialogResult result = MessageBox.Show("Bạn có chắn chắn muốn xóa hạng vé này không?", "Xóa", MessageBoxButtons.YesNo);
                 if (result.Equals(DialogResult.Yes)) 
                 {
-                    lv_danhSachHangVe.Rows.RemoveAt(e.RowIndex);
-                    hangVeThayDoiList.RemoveAt(e.RowIndex);
-                    tb_giaTriMoi.Text = hangVeThayDoiList.Count().ToString();
-                    Update_DataGridView();
+                    String maHangVe = hangVeThayDoiList[e.RowIndex].MaHangVe.ToString();
+                    if (HasRecordForeignKeyInPhieuDatCho(maHangVe))
+                    {
+                        MessageBox.Show("Hạng vé đã được sử dụng trong PHIEUDATCHO nên không thể xóa");
+                    } else if (HasRecordForeignKeyInVeChuyenBay(maHangVe))
+                    {
+                        MessageBox.Show("Hạng vé đã được sử dụng trong VECHUYENBAY nên không thể xóa");
+                    } else if (HasRecordForeignKeyInCT_HANGVE(maHangVe))
+                    {
+                        MessageBox.Show("Hạng vé đã được sử dụng trong CT_CHUYENBAY nên không thể xóa");
+                    }
+                    else {
+                        lv_danhSachHangVe.Rows.RemoveAt(e.RowIndex);
+                        hangVeXoa.Add(hangVeThayDoiList[e.RowIndex]);
+                        hangVeThayDoiList.RemoveAt(e.RowIndex);
+                        viTriHangVeConTrong.Add(e.RowIndex + 1);
+                        tb_giaTriMoi.Text = hangVeThayDoiList.Count().ToString();
+                        Update_DataGridView();
+                        MessageBox.Show("Xóa hạng vé thành công");
+                    }                
                 }
             }
         }
 
+        // Kiểm tra xem mã hạng vé đó đã được sử dụng trong CT_HANGVE chưa 
+        private bool HasRecordForeignKeyInCT_HANGVE(String maHangVe)
+        {
+            using (var dbContext = new FlightKetDBEntities())
+            {
+                var hangVeInCT_HANGVE = dbContext.CT_HANGVE.Where(ct_hangVe => ct_hangVe.MaHangVe == maHangVe).ToList();
+                if (hangVeInCT_HANGVE.Any())
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+        // Kiểm tra xem mã hạng vé đó đã được sử dụng trong PHIEUDATCHO chưa
+        private bool HasRecordForeignKeyInPhieuDatCho(String maHangVe)
+        {
+            using (var dbContext = new FlightKetDBEntities())
+            {
+                var hangVeInPhieuDatCho = dbContext.PHIEUDATCHOes.Where(phieuDatCho => phieuDatCho.MaHangVe== maHangVe).ToList();   
+                if (hangVeInPhieuDatCho.Any())
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        // Kiểm tra xem mã hạng vé đó đã được sử dụng trong VECHUYENBAY chưa
+        private bool HasRecordForeignKeyInVeChuyenBay(String maHangVe)
+        {
+            using (var dbContext = new FlightKetDBEntities())
+            {
+                var hangVeInPhieuDatCho = dbContext.VECHUYENBAYs.Where(veChuyenBay => veChuyenBay.MaHangVe == maHangVe).ToList();
+                if (hangVeInPhieuDatCho.Any())
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
         private void Update_DataGridView()
         {
             lv_danhSachHangVe.Rows.Clear();
@@ -182,7 +247,6 @@ namespace flightket.Forms_QuanLy
                 try
                 {
                     Add_Rows();
-                    MessageBox.Show("Thêm hàng thành công!");
                 } catch(Exception ex) 
                 {
                     MessageBox.Show("Thêm hàng thất bại");
@@ -190,18 +254,39 @@ namespace flightket.Forms_QuanLy
             }
         }
         
+        // Kiểm tra hạng vé đã tồn tại trong hangVeThayDoiList
+        private bool ContainMaHangVe(String maHangVeNew)
+        {
+            foreach(var hangVe in hangVeThayDoiList)
+            {
+                if (hangVe.MaHangVe.Trim() == maHangVeNew)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         // Thêm hàng mới vào trong datagridview và thêm một đối tượng HANGVE vào trong hangVeThayDoiList
         private void Add_Rows()
         {
             // Tạo đối tượng hangVeNew
-            String soHangVe = (hangVeThayDoiList.Count() + 1 < 10) ? ("0" + (hangVeThayDoiList.Count() + 1).ToString()) : (hangVeThayDoiList.Count().ToString());
-            String maHangVe = "HV" + soHangVe;
+            int soHangVe = 0;
+            String maHangVe;
+            do
+            {
+                soHangVe++;
+                maHangVe = (soHangVe < 10) ? ("HV0" + soHangVe.ToString()) : ("HV" + soHangVe);
+
+            } while (ContainMaHangVe(maHangVe));
+            
             String tenHangVe = tb_tenHangVe.Text;
             byte tiLe = Byte.Parse(tb_tiLe.Text);
             
             // Add đối tượng vào List các hạng vé thay đổi
             HANGVE hangVeNew = new HANGVE { MaHangVe = maHangVe , TenHangVe =  tenHangVe, TiLeDonGia = tiLe};
             hangVeThayDoiList.Add(hangVeNew);
+            hangVeThem.Add(hangVeNew);
             int soLuongHangVe = hangVeThayDoiList.Count();
             tb_giaTriMoi.Text = soLuongHangVe.ToString();
 
@@ -231,10 +316,11 @@ namespace flightket.Forms_QuanLy
                 {
                     Update_Database();
                     MessageBox.Show("Cập nhật hạng vé thành công!");
+                    tb_giaTriCu.Text = hangVeThayDoiList.Count().ToString();
                     tb_giaTriMoi.Clear();
                 } catch (Exception ex)
                 {
-                    MessageBox.Show("Cập nhật thất bại!");
+                    MessageBox.Show(ex.Message);
                 }   
             }
         }
@@ -243,10 +329,28 @@ namespace flightket.Forms_QuanLy
         {
             using (var dbContext = new FlightKetDBEntities())
             {
-                foreach (var hangVe in hangVeThayDoiList)
+                var hangVes = dbContext.HANGVEs;
+
+                // -- Xóa hạng vé --//
+                // Xác định điều kiện xóa
+                var maHangVeXoa = hangVeXoa.Select(h => h.MaHangVe).ToList(); // Lấy danh sách mã hạng vé cần xóa
+
+                foreach(var maHangVe in maHangVeXoa)
                 {
-                    dbContext.HANGVEs.AddOrUpdate(hangVe);
+                    var sql = "DELETE FROM HANGVE WHERE MaHangVe = @MaHangVe";
+                    object[] parameters =
+                    {
+                        new SqlParameter("@MaHangVe", maHangVe)
+                    };
+                    dbContext.Database.ExecuteSqlCommand(sql, parameters);
                 }
+
+                // -- Thêm hạng vé --//
+                foreach(var hangVe in hangVeThem)
+                {
+                    hangVes.AddOrUpdate(hangVe);
+                }
+
                 dbContext.SaveChanges();
             }
         }

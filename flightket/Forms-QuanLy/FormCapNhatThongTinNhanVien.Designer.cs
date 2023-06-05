@@ -180,7 +180,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(756, 388);
+            this.label7.Location = new System.Drawing.Point(744, 388);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 36);
             this.label7.TabIndex = 9;
@@ -224,7 +224,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1176, 377);
+            this.label4.Location = new System.Drawing.Point(1201, 388);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(190, 36);
             this.label4.TabIndex = 5;
@@ -261,6 +261,7 @@
             this.btn_home.Size = new System.Drawing.Size(63, 37);
             this.btn_home.TabIndex = 1;
             this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // btn_back
             // 
@@ -271,6 +272,7 @@
             this.btn_back.Size = new System.Drawing.Size(63, 37);
             this.btn_back.TabIndex = 0;
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // FormCapNhatThongTinNhanVien
             // 
