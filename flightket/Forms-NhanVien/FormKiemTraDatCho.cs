@@ -28,7 +28,7 @@ namespace flightket.Forms_NhanVien
                              from hangve in db.HANGVEs
                              where hanhkhach.MaHanhKhach.Equals(phieudatcho.MaHanhKhach) && hangve.MaHangVe.Equals(phieudatcho.MaHangVe)
                              select new { phieudatcho.MaChuyenBay, phieudatcho.MaPhieuDatCho, hangve.TenHangVe, hanhkhach.TenHanhKhach, hanhkhach.CMND, hanhkhach.SDT };
-
+                
                 if(tb_hoVaTen.Text.Length > 0)
                 {
                     result = result.Where(c => c.TenHanhKhach.Equals(tb_hoVaTen.Text));

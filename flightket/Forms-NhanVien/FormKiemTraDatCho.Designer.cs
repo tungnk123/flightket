@@ -416,7 +416,7 @@
             this.panelDanhSachPhieuDatCho.BackColor = System.Drawing.Color.Transparent;
             this.panelDanhSachPhieuDatCho.Controls.Add(this.lb_danhSachChuyenBayPhuHop);
             this.panelDanhSachPhieuDatCho.Controls.Add(this.dataGridView1);
-            this.panelDanhSachPhieuDatCho.Location = new System.Drawing.Point(234, 464);
+            this.panelDanhSachPhieuDatCho.Location = new System.Drawing.Point(235, 461);
             this.panelDanhSachPhieuDatCho.Name = "panelDanhSachPhieuDatCho";
             this.panelDanhSachPhieuDatCho.Size = new System.Drawing.Size(1373, 224);
             this.panelDanhSachPhieuDatCho.TabIndex = 13;
