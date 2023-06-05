@@ -15,6 +15,7 @@ namespace flightket.Forms_Admin
         public FormHomeAdmin()
         {
             InitializeComponent();
+            //cmt
         }
 
         private void btn_taoNhomNguoiDung_Click(object sender, EventArgs e)
