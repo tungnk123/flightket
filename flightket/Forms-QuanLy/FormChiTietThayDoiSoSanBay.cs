@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Entity.Migrations;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,16 +16,12 @@ namespace flightket.Forms_QuanLy
     {
         List<SANBAY> sanBaysBanDauList;
         List<SANBAY> sanBaysCapNhatList;
-        List<SANBAY> sanBayThem;
-        List<SANBAY> sanBayXoa;
         public FormChiTietThayDoiSoSanBay(List<SANBAY> sanBaysList)
         {
             InitializeComponent();
             panel1.BackColor = Color.FromArgb(150, Color.White);
             this.sanBaysBanDauList = new List<SANBAY>();
-            this.sanBaysCapNhatList= new List<SANBAY>();
-            this.sanBayThem = new List<SANBAY>();
-            this.sanBayXoa = new List<SANBAY>();
+            this.sanBaysCapNhatList= new List<SANBAY>();    
             this.sanBaysBanDauList = sanBaysList;
             this.sanBaysCapNhatList = sanBaysList;
             Load_Data();
@@ -179,29 +174,11 @@ namespace flightket.Forms_QuanLy
             }
         }
 
-        private bool ContainMaSanBay(string maSanBay)
-        {
-            foreach (var sanBay in sanBaysCapNhatList)
-            {
-                if (sanBay.MaSanBay.Trim() == maSanBay)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
         private void Add_Rows()
         {
             // Tạo đối tượng SanBayNew
-            int soSanBay = 0;
-            String maSanBay;
-            do
-            {
-                soSanBay++;
-                maSanBay = (soSanBay < 10) ? ("SBN" + soSanBay.ToString()) : ("SBN" + soSanBay);
-
-            } while (ContainMaSanBay(maSanBay));
+            String soSanBay = (sanBaysCapNhatList.Count() + 1 < 10) ? ("0" + (sanBaysCapNhatList.Count() + 1).ToString()) : (sanBaysCapNhatList.Count().ToString());
+            String maSanBay = "SBN" + soSanBay;
             String tenSanBay = tb_tenSanBay.Text;
             String tenQuocGia = tb_tenQuocGia.Text;
             String diaChi = tb_diaChi.Text;
@@ -209,7 +186,6 @@ namespace flightket.Forms_QuanLy
             // Add đối tượng vào List các sân bay thay đổi
             SANBAY sanBayNew = new SANBAY {MaSanBay = maSanBay, TenSanBay = tenSanBay, QuocGia = tenQuocGia, DiaChi = diaChi };
             sanBaysCapNhatList.Add(sanBayNew);
-            sanBayThem.Add(sanBayNew);
             int soLuongSanBay = sanBaysCapNhatList.Count();
             tb_soLuongSanBayMoi.Text = soLuongSanBay.ToString();
 
@@ -232,57 +208,18 @@ namespace flightket.Forms_QuanLy
             tb_diaChi.Clear();
         }
 
-
-
         private void lv_danhSachSanBay_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == lv_danhSachSanBay.Columns[4].Index && e.RowIndex >= 0)
-            {   
+            {
                 DialogResult result = MessageBox.Show("Bạn có chắn chắn muốn xóa sân bay này không?", "Xóa", MessageBoxButtons.YesNo);
                 if (result.Equals(DialogResult.Yes))
                 {
-                    String maSanBay = sanBaysCapNhatList[e.RowIndex].MaSanBay.ToString();
-                    if(ContainInCHUYENBAY(maSanBay) || ContainInCT_CHUYENBAY(maSanBay))
-                    {
-                        MessageBox.Show("Sân bay đã được sử dụng, không thể xóa");
-                    } else
-                    {
-                        lv_danhSachSanBay.Rows.RemoveAt(e.RowIndex);
-                        sanBayXoa.Add(sanBaysCapNhatList[e.RowIndex]);
-                        sanBaysCapNhatList.RemoveAt(e.RowIndex);
-                        tb_soLuongSanBayMoi.Text = sanBaysCapNhatList.Count().ToString();
-                        Update_DataGridView();
-                    }
+                    lv_danhSachSanBay.Rows.RemoveAt(e.RowIndex);
+                    sanBaysCapNhatList.RemoveAt(e.RowIndex);
+                    tb_soLuongSanBayMoi.Text = sanBaysCapNhatList.Count().ToString();
+                    Update_DataGridView();
                 }
-            }
-        }
-
-        // Kiểm tra xem sân bay đã chứa record trong CT_CHUYENBAY chưa
-        private bool ContainInCT_CHUYENBAY(string maSanBay)
-        {
-            using (var dbContext = new FlightKetDBEntities())
-            {
-                var sanBayInCT_CHUYENBAY = dbContext.CT_CHUYENBAY.Where(ct_chuyenbay => ct_chuyenbay.MaSanBayTrungGian == maSanBay).ToList();
-                if (sanBayInCT_CHUYENBAY.Any())
-                {
-                    return true;
-                }
-                return false;
-            }
-        }
-
-        // Kiểm tra xem sân bay đã chứa record trong CHUYENBAY chưa
-        private bool ContainInCHUYENBAY(string maSanBay)
-        {
-            using (var dbContext = new FlightKetDBEntities())
-            {
-                var sanBayDenInCHUYENBAY = dbContext.CHUYENBAYs.Where(chuyenBay => chuyenBay.MaSanBayDen == maSanBay).ToList();
-                var sanBayDiInCHUYENBAY = dbContext.CHUYENBAYs.Where(chuyenBay => chuyenBay.MaSanBayDi == maSanBay).ToList();
-                if (sanBayDenInCHUYENBAY.Any() || sanBayDiInCHUYENBAY.Any())
-                {
-                    return true;
-                }
-                return false;
             }
         }
 
@@ -314,7 +251,6 @@ namespace flightket.Forms_QuanLy
                 {
                     Update_Database();
                     MessageBox.Show("Cập nhật sân bay thành công!");
-                    tb_soLuongSanBayCu.Text = sanBaysCapNhatList.Count.ToString();  
                     tb_soLuongSanBayMoi.Clear();
                 }
                 catch (Exception ex)
@@ -329,28 +265,10 @@ namespace flightket.Forms_QuanLy
         {
             using (var dbContext = new FlightKetDBEntities())
             {
-                var sanBays = dbContext.SANBAYs;
-
-                // -- Xóa hạng vé --//
-                // Xác định điều kiện xóa
-                var maSanBayXoa = sanBayXoa.Select(h => h.MaSanBay).ToList(); // Lấy danh sách mã hạng vé cần xóa
-
-                foreach (var maSanBay in maSanBayXoa)
+                foreach (var sanBay in sanBaysCapNhatList)
                 {
-                    var sql = "DELETE FROM SANBAY WHERE MaSanBay = @MaSanBay";
-                    object[] parameters =
-                    {
-                        new SqlParameter("@MaSanBay", maSanBay)
-                    };
-                    dbContext.Database.ExecuteSqlCommand(sql, parameters);
+                    dbContext.SANBAYs.AddOrUpdate(sanBay);
                 }
-
-                // -- Thêm hạng vé --//
-                foreach (var sanBay in sanBayThem)
-                {
-                    sanBays.AddOrUpdate(sanBay);
-                }
-
                 dbContext.SaveChanges();
             }
         }

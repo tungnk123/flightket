@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,7 +14,6 @@ namespace flightket.Forms_QuanLy
     {
         public string DataFromForm2 { get; set; }
         List<NHANVIEN> nhanViens;
-        private static int POSITION_UPDATE;
         public FormQuanLyHoSoNhanVien()
         {
             InitializeComponent();
@@ -41,18 +39,6 @@ namespace flightket.Forms_QuanLy
         {
 
         }
-
-        // Format năm sinh
-        private String FormatDob(String dob)
-        {
-            String[] namSinh = dob.Split('/');
-            String temp = namSinh[0];
-            namSinh[0] = namSinh[1];
-            namSinh[1] = temp;
-            return String.Join("/", namSinh);
-        }
-
-        // Load data từ database vào trong lv_danhSachNhanVien
         private void Load_Data()
         {
             using(var dbContext = new FlightKetDBEntities())
@@ -68,8 +54,14 @@ namespace flightket.Forms_QuanLy
                 {
                     lv_danhSachNhanVien.Rows[i].Cells[0].Value = (i + 1).ToString();
                     lv_danhSachNhanVien.Rows[i].Cells[1].Value = nhanViens[i].MaNhanVien.ToString();
-                    lv_danhSachNhanVien.Rows[i].Cells[2].Value = nhanViens[i].HoTen.ToString();            
-                    lv_danhSachNhanVien.Rows[i].Cells[3].Value = FormatDob(nhanViens[i].NamSinh.ToString().Substring(0, 10));
+                    lv_danhSachNhanVien.Rows[i].Cells[2].Value = nhanViens[i].HoTen.ToString();
+                    String dob = nhanViens[i].NamSinh.ToString().Substring(0, 10);
+                    String[] namSinh = dob.Split('/');
+                    String temp = namSinh[0];
+                    namSinh[0] = namSinh[1];
+                    namSinh[1] = temp;
+                    String ngayThangNamSinh = String.Join("/",  namSinh);
+                    lv_danhSachNhanVien.Rows[i].Cells[3].Value = ngayThangNamSinh;
                     lv_danhSachNhanVien.Rows[i].Cells[4].Value = nhanViens[i].DiaChi.ToString();
                     lv_danhSachNhanVien.Rows[i].Cells[5].Value = nhanViens[i].SDT.ToString();
                     lv_danhSachNhanVien.Rows[i].Cells[6].Value = "Cập nhật";
@@ -89,58 +81,11 @@ namespace flightket.Forms_QuanLy
             {
                 int viTri = e.RowIndex;
                 FormCapNhatThongTinNhanVien form = new FormCapNhatThongTinNhanVien(nhanViens[viTri]);
-                form.UpdateEvent += form_UpdateNhanVien;
-                POSITION_UPDATE = viTri;
                 this.Hide();
                 form.ShowDialog();
                 this.Show();
             }
         }
 
-        // Cập nhật lại danh sách nhân viên
-        private void form_UpdateNhanVien(NHANVIEN nhanVien)
-        {
-            try
-            {
-                Update_DataGridView(nhanVien);
-                Update_List_NhanVien(nhanVien);
-                Update_Database(nhanVien);
-                MessageBox.Show("Cập nhật thành công!");
-            }
-            catch
-            {
-                MessageBox.Show("Cập nhật thất bại");
-            }
-        }
-
-        // Cập nhật database
-        private void Update_Database(NHANVIEN nhanVien)
-        {
-            using (var dbContext = new FlightKetDBEntities())
-            {
-                var nhanVienTable = dbContext.NHANVIENs;
-                var nhanVienNeedUpdate = nhanVienTable.FirstOrDefault(c => c.MaNhanVien == nhanVien.MaNhanVien);
-                nhanVienNeedUpdate.SDT = nhanVien.SDT;
-                nhanVienNeedUpdate.DiaChi = nhanVien.DiaChi;
-                nhanVienNeedUpdate.HoTen = nhanVien.HoTen;
-                nhanVienNeedUpdate.NamSinh = nhanVien.NamSinh;
-                dbContext.SaveChanges();
-            }
-        }
-
-        // Cập nhật lại list nhanvien
-        private void Update_List_NhanVien(NHANVIEN nhanVien)
-        {
-            nhanViens[POSITION_UPDATE] = nhanVien;
-        }
-
-        // Cập nhật lại datagridview
-        private void Update_DataGridView(NHANVIEN nhanVien)
-        {
-            lv_danhSachNhanVien.Rows[POSITION_UPDATE].Cells[2].Value = nhanVien.HoTen;
-            lv_danhSachNhanVien.Rows[POSITION_UPDATE].Cells[3].Value = FormatDob(nhanVien.NamSinh.ToString().Substring(0, 10));
-            lv_danhSachNhanVien.Rows[POSITION_UPDATE].Cells[4].Value = nhanVien.DiaChi;
-            lv_danhSachNhanVien.Rows[POSITION_UPDATE].Cells[5].Value = nhanVien.SDT;
-        }
     }
 }
