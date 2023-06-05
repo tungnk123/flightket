@@ -32,9 +32,13 @@ namespace flightket.Forms_NhanVien
                 cb_sanBayDen.DisplayMember = "TenSanBay";
                 cb_sanBayDen.DataSource = sanBayDenList;
 
-            }
                 
-            
+
+            }
+            cb_sanBayDen.SelectedIndex = -1;
+            cb_sanBayDi.SelectedIndex = -1;
+
+
         }
 
         private void btn_traCuu_Click(object sender, EventArgs e)
@@ -48,11 +52,28 @@ namespace flightket.Forms_NhanVien
                 var result = from chuyenbay in db.CHUYENBAYs
                              from sanbaydi in db.SANBAYs
                              from sanbayden in db.SANBAYs
-                             where chuyenbay.MaChuyenBay.Equals(maChuyenBay) && sanbaydi.MaSanBay.Equals(chuyenbay.MaSanBayDi) 
-                             && sanbayden.MaSanBay.Equals(chuyenbay.MaSanBayDen) 
-                             select new { TenSanBayDi = sanbaydi.TenSanBay, TenSanBayDen = sanbayden.TenSanBay, NgayGioKhoiHanh = chuyenbay.NgayGioKhoiHanh
-                             , ThoiGianBay = chuyenbay.ThoiGianBay };
+                             where  chuyenbay.MaSanBayDi == sanbaydi.MaSanBay && chuyenbay.MaSanBayDen == sanbayden.MaSanBay
+                             select new
+                             {
+                                 MaChuyenBay = chuyenbay.MaChuyenBay,
+                                 TenSanBayDi = sanbaydi.TenSanBay,
+                                 TenSanBayDen = sanbayden.TenSanBay,
+                                 NgayGioKhoiHanh = chuyenbay.NgayGioKhoiHanh,
+                                 ThoiGianBay = chuyenbay.ThoiGianBay
+                             };
 
+                if (maChuyenBay.Length > 0)
+                {
+                    result = result.Where(c => c.MaChuyenBay.Equals(maChuyenBay));
+                }
+                if (sanBayDi.Length > 0)
+                {
+                    result = result.Where(c => c.TenSanBayDi.Equals(sanBayDi));
+                }
+                if (sanBayDen.Length > 0)
+                {
+                    result = result.Where(c => c.TenSanBayDen.Equals(sanBayDen));
+                }
 
                 var resultList = result.ToList();
 
@@ -73,14 +94,16 @@ namespace flightket.Forms_NhanVien
                 for (int i = 0; i < resultList.Count; i++)
                 {
                     dgv_chuyenBayPhuHop.Rows[i].Cells[0].Value = (i + 1).ToString();
-                    dgv_chuyenBayPhuHop.Rows[i].Cells[1].Value = resultList[i].TenSanBayDi;
-                    dgv_chuyenBayPhuHop.Rows[i].Cells[2].Value = resultList[i].TenSanBayDen;
-                    dgv_chuyenBayPhuHop.Rows[i].Cells[3].Value = resultList[i].NgayGioKhoiHanh.Value.Date.ToShortDateString();
-                    dgv_chuyenBayPhuHop.Rows[i].Cells[4].Value = resultList[i].ThoiGianBay.ToString();
+                    dgv_chuyenBayPhuHop.Rows[i].Cells[1].Value = resultList[i].MaChuyenBay;
+                    dgv_chuyenBayPhuHop.Rows[i].Cells[2].Value = resultList[i].TenSanBayDi;
+                    dgv_chuyenBayPhuHop.Rows[i].Cells[3].Value = resultList[i].TenSanBayDen;
+                    dgv_chuyenBayPhuHop.Rows[i].Cells[4].Value = resultList[i].NgayGioKhoiHanh.Value.Date.ToShortDateString();
+                    dgv_chuyenBayPhuHop.Rows[i].Cells[5].Value = resultList[i].ThoiGianBay.ToString();
                 }
 
             }
-            
+
+
         }
     }
 }

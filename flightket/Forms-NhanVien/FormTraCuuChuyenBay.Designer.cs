@@ -32,19 +32,19 @@ namespace flightket.Forms_NhanVien
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTraCuuChuyenBay));
             this.lb_title1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lb_sanBayDi = new System.Windows.Forms.Label();
             this.tb_maChuyenBay = new System.Windows.Forms.TextBox();
+            this.lb_sanBayDi = new System.Windows.Forms.Label();
             this.btn_traCuu = new System.Windows.Forms.Button();
             this.lb_danhSachChuyenBayPhuHop = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lb_sanBayDen = new System.Windows.Forms.Label();
             this.cb_sanBayDi = new System.Windows.Forms.ComboBox();
+            this.lb_sanBayDen = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lb_ngayKhoiHanh = new System.Windows.Forms.Label();
             this.dp_ngayKhoiHanh = new System.Windows.Forms.DateTimePicker();
+            this.lb_ngayKhoiHanh = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.cb_sanBayDen = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_xuatThongTin = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
@@ -52,6 +52,7 @@ namespace flightket.Forms_NhanVien
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_chuyenBayPhuHop = new System.Windows.Forms.DataGridView();
             this.column_stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.column_maChuyenBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column_sanBayDi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column_sanBayDen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column_ngayKhoiHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,6 +91,15 @@ namespace flightket.Forms_NhanVien
             this.panel5.Size = new System.Drawing.Size(268, 100);
             this.panel5.TabIndex = 14;
             // 
+            // tb_maChuyenBay
+            // 
+            this.tb_maChuyenBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_maChuyenBay.Location = new System.Drawing.Point(31, 58);
+            this.tb_maChuyenBay.Multiline = true;
+            this.tb_maChuyenBay.Name = "tb_maChuyenBay";
+            this.tb_maChuyenBay.Size = new System.Drawing.Size(180, 32);
+            this.tb_maChuyenBay.TabIndex = 1;
+            // 
             // lb_sanBayDi
             // 
             this.lb_sanBayDi.AutoSize = true;
@@ -99,15 +109,6 @@ namespace flightket.Forms_NhanVien
             this.lb_sanBayDi.Size = new System.Drawing.Size(172, 29);
             this.lb_sanBayDi.TabIndex = 0;
             this.lb_sanBayDi.Text = "Mã chuyến bay";
-            // 
-            // tb_maChuyenBay
-            // 
-            this.tb_maChuyenBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_maChuyenBay.Location = new System.Drawing.Point(31, 58);
-            this.tb_maChuyenBay.Multiline = true;
-            this.tb_maChuyenBay.Name = "tb_maChuyenBay";
-            this.tb_maChuyenBay.Size = new System.Drawing.Size(180, 32);
-            this.tb_maChuyenBay.TabIndex = 1;
             // 
             // btn_traCuu
             // 
@@ -145,16 +146,6 @@ namespace flightket.Forms_NhanVien
             this.panel2.Size = new System.Drawing.Size(284, 100);
             this.panel2.TabIndex = 16;
             // 
-            // lb_sanBayDen
-            // 
-            this.lb_sanBayDen.AutoSize = true;
-            this.lb_sanBayDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_sanBayDen.Location = new System.Drawing.Point(26, 16);
-            this.lb_sanBayDen.Name = "lb_sanBayDen";
-            this.lb_sanBayDen.Size = new System.Drawing.Size(125, 29);
-            this.lb_sanBayDen.TabIndex = 0;
-            this.lb_sanBayDen.Text = "Sân bay đi";
-            // 
             // cb_sanBayDi
             // 
             this.cb_sanBayDi.BackColor = System.Drawing.Color.Silver;
@@ -166,6 +157,16 @@ namespace flightket.Forms_NhanVien
             this.cb_sanBayDi.Size = new System.Drawing.Size(224, 37);
             this.cb_sanBayDi.TabIndex = 1;
             // 
+            // lb_sanBayDen
+            // 
+            this.lb_sanBayDen.AutoSize = true;
+            this.lb_sanBayDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_sanBayDen.Location = new System.Drawing.Point(26, 16);
+            this.lb_sanBayDen.Name = "lb_sanBayDen";
+            this.lb_sanBayDen.Size = new System.Drawing.Size(125, 29);
+            this.lb_sanBayDen.TabIndex = 0;
+            this.lb_sanBayDen.Text = "Sân bay đi";
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
@@ -175,16 +176,6 @@ namespace flightket.Forms_NhanVien
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(326, 100);
             this.panel3.TabIndex = 15;
-            // 
-            // lb_ngayKhoiHanh
-            // 
-            this.lb_ngayKhoiHanh.AutoSize = true;
-            this.lb_ngayKhoiHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ngayKhoiHanh.Location = new System.Drawing.Point(26, 16);
-            this.lb_ngayKhoiHanh.Name = "lb_ngayKhoiHanh";
-            this.lb_ngayKhoiHanh.Size = new System.Drawing.Size(178, 29);
-            this.lb_ngayKhoiHanh.TabIndex = 0;
-            this.lb_ngayKhoiHanh.Text = "Ngày khởi hành";
             // 
             // dp_ngayKhoiHanh
             // 
@@ -196,6 +187,16 @@ namespace flightket.Forms_NhanVien
             this.dp_ngayKhoiHanh.Size = new System.Drawing.Size(240, 26);
             this.dp_ngayKhoiHanh.TabIndex = 1;
             // 
+            // lb_ngayKhoiHanh
+            // 
+            this.lb_ngayKhoiHanh.AutoSize = true;
+            this.lb_ngayKhoiHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ngayKhoiHanh.Location = new System.Drawing.Point(26, 16);
+            this.lb_ngayKhoiHanh.Name = "lb_ngayKhoiHanh";
+            this.lb_ngayKhoiHanh.Size = new System.Drawing.Size(178, 29);
+            this.lb_ngayKhoiHanh.TabIndex = 0;
+            this.lb_ngayKhoiHanh.Text = "Ngày khởi hành";
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
@@ -205,16 +206,6 @@ namespace flightket.Forms_NhanVien
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(284, 100);
             this.panel4.TabIndex = 17;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Sân bay đến";
             // 
             // cb_sanBayDen
             // 
@@ -226,6 +217,16 @@ namespace flightket.Forms_NhanVien
             this.cb_sanBayDen.Name = "cb_sanBayDen";
             this.cb_sanBayDen.Size = new System.Drawing.Size(224, 37);
             this.cb_sanBayDen.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(26, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Sân bay đến";
             // 
             // label2
             // 
@@ -297,6 +298,7 @@ namespace flightket.Forms_NhanVien
             this.dgv_chuyenBayPhuHop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_chuyenBayPhuHop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.column_stt,
+            this.column_maChuyenBay,
             this.column_sanBayDi,
             this.column_sanBayDen,
             this.column_ngayKhoiHanh,
@@ -317,6 +319,13 @@ namespace flightket.Forms_NhanVien
             this.column_stt.MinimumWidth = 6;
             this.column_stt.Name = "column_stt";
             this.column_stt.Width = 75;
+            // 
+            // column_maChuyenBay
+            // 
+            this.column_maChuyenBay.HeaderText = "Mã chuyến bay";
+            this.column_maChuyenBay.MinimumWidth = 6;
+            this.column_maChuyenBay.Name = "column_maChuyenBay";
+            this.column_maChuyenBay.Width = 150;
             // 
             // column_sanBayDi
             // 
@@ -419,6 +428,7 @@ namespace flightket.Forms_NhanVien
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgv_chuyenBayPhuHop;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_stt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn column_maChuyenBay;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_sanBayDi;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_sanBayDen;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_ngayKhoiHanh;
