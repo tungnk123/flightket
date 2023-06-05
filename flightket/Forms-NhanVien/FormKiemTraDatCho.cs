@@ -26,8 +26,7 @@ namespace flightket.Forms_NhanVien
                 var result = from hanhkhach in db.HANHKHACHes
                              from phieudatcho in db.PHIEUDATCHOes
                              from hangve in db.HANGVEs
-                             where hanhkhach.MaHanhKhach.Equals(phieudatcho.MaHanhKhach) && hangve.MaHangVe.Equals(phieudatcho.MaHangVe) //&&
-                             //hanhkhach.TenHanhKhach.Equals(tb_hoVaTen.Text) && hanhkhach.CMND.Equals(tb_CMND.Text) && hanhkhach.SDT.Equals(tb_soDienThoai.Text)
+                             where hanhkhach.MaHanhKhach.Equals(phieudatcho.MaHanhKhach) && hangve.MaHangVe.Equals(phieudatcho.MaHangVe)
                              select new { phieudatcho.MaChuyenBay, phieudatcho.MaPhieuDatCho, hangve.TenHangVe, hanhkhach.TenHanhKhach, hanhkhach.CMND, hanhkhach.SDT };
 
                 if(tb_hoVaTen.Text.Length > 0)
@@ -161,8 +160,17 @@ namespace flightket.Forms_NhanVien
             using (var db = new FlightKetDBEntities())
             {
                 PHIEUDATCHO pHIEUDATCHO = db.PHIEUDATCHOes.Find(maDatChoID);
+                CHUYENBAY cHUYENBAY = db.CHUYENBAYs.Find(maChuyenBay);
                 if (pHIEUDATCHO == null) return;
-                //VECHUYENBAY vECHUYENBAY = new VECHUYENBAY() { MaChuyenBay = pHIEUDATCHO.MaChuyenBay, MaHangVe = pHIEUDATCHO.MaHangVe, MaHanhKhach = pHIEUDATCHO.MaHanhKhach, GiaTien = pHIEUDATCHO.GiaTien };
+                THAMSO tHAMSO = db.THAMSOes.FirstOrDefault();
+                DateTime now = DateTime.Now;
+                TimeSpan timeDifference = cHUYENBAY.NgayGioKhoiHanh.Value - now;
+                TimeSpan soGioHuyVeTruocKhoiHanh = new TimeSpan(tHAMSO.SoGioHuyPhieuTruocKhoiHanh.Value, 0, 0);
+                if(timeDifference < soGioHuyVeTruocKhoiHanh)
+                {
+                    MessageBox.Show("Không thể hủy đặt chỗ vì chuyến bay sắp khởi hành");
+                    return;
+                }
                 db.PHIEUDATCHOes.Remove(pHIEUDATCHO);
                 db.SaveChanges();
                 panelChiTietPhieuDatCho.Visible = false;

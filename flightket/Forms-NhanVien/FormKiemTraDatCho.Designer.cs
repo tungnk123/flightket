@@ -153,7 +153,7 @@
             this.btn_capNhat.ForeColor = System.Drawing.Color.White;
             this.btn_capNhat.Location = new System.Drawing.Point(1069, 211);
             this.btn_capNhat.Name = "btn_capNhat";
-            this.btn_capNhat.Size = new System.Drawing.Size(163, 48);
+            this.btn_capNhat.Size = new System.Drawing.Size(175, 48);
             this.btn_capNhat.TabIndex = 26;
             this.btn_capNhat.Text = "Cập nhật";
             this.btn_capNhat.UseVisualStyleBackColor = false;
@@ -165,7 +165,7 @@
             this.btn_huyDatCho.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_huyDatCho.Location = new System.Drawing.Point(1069, 151);
             this.btn_huyDatCho.Name = "btn_huyDatCho";
-            this.btn_huyDatCho.Size = new System.Drawing.Size(163, 48);
+            this.btn_huyDatCho.Size = new System.Drawing.Size(175, 48);
             this.btn_huyDatCho.TabIndex = 25;
             this.btn_huyDatCho.Text = "Hủy đặt chỗ";
             this.btn_huyDatCho.UseVisualStyleBackColor = false;
@@ -177,7 +177,7 @@
             this.btn_banVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_banVe.Location = new System.Drawing.Point(1069, 92);
             this.btn_banVe.Name = "btn_banVe";
-            this.btn_banVe.Size = new System.Drawing.Size(163, 48);
+            this.btn_banVe.Size = new System.Drawing.Size(175, 48);
             this.btn_banVe.TabIndex = 24;
             this.btn_banVe.Text = "Bán vé";
             this.btn_banVe.UseVisualStyleBackColor = false;
