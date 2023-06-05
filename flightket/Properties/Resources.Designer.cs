@@ -83,6 +83,16 @@ namespace flightket.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2172839 {
+            get {
+                object obj = ResourceManager.GetObject("2172839", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _350248398_786598096329880_2111811280162483567_n__1_ {
             get {
                 object obj = ResourceManager.GetObject("350248398_786598096329880_2111811280162483567_n (1)", resourceCulture);
@@ -136,6 +146,26 @@ namespace flightket.Properties {
         internal static System.Drawing.Bitmap crop_ghe1 {
             get {
                 object obj = ResourceManager.GetObject("crop-ghe1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_account_66 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-account-66", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_male_user_group_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-add-male-user-group-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +276,16 @@ namespace flightket.Properties {
         internal static System.Drawing.Bitmap image_removebg_preview__1_ {
             get {
                 object obj = ResourceManager.GetObject("image-removebg-preview (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap permission {
+            get {
+                object obj = ResourceManager.GetObject("permission", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

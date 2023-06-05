@@ -296,6 +296,10 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\permission.png" />
+    <None Include="Resources\2172839.png" />
+    <None Include="Resources\icons8-account-66.png" />
+    <None Include="Resources\icons8-add-male-user-group-50.png" />
     <None Include="Resources\icons8-export-64.png" />
     <None Include="Resources\icons8-home-50.png" />
     <None Include="Resources\icons8-back-64.png" />
