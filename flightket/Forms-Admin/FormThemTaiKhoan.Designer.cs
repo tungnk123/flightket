@@ -54,12 +54,12 @@ namespace flightket.Forms_Admin
             this.label1 = new System.Windows.Forms.Label();
             this.btn_xacNhanThemTaiKhoan = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dp_ngaySinh = new System.Windows.Forms.DateTimePicker();
             this.lb_sanBayDi = new System.Windows.Forms.Label();
             this.lb_title2 = new System.Windows.Forms.Label();
             this.lb_title1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
-            this.dp_ngaySinh = new System.Windows.Forms.DateTimePicker();
             this.panel_main.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -310,6 +310,16 @@ namespace flightket.Forms_Admin
             this.panel1.Size = new System.Drawing.Size(268, 100);
             this.panel1.TabIndex = 4;
             // 
+            // dp_ngaySinh
+            // 
+            this.dp_ngaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dp_ngaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dp_ngaySinh.Location = new System.Drawing.Point(31, 63);
+            this.dp_ngaySinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dp_ngaySinh.Name = "dp_ngaySinh";
+            this.dp_ngaySinh.Size = new System.Drawing.Size(206, 26);
+            this.dp_ngaySinh.TabIndex = 2;
+            // 
             // lb_sanBayDi
             // 
             this.lb_sanBayDi.AutoSize = true;
@@ -352,6 +362,7 @@ namespace flightket.Forms_Admin
             this.btn_back.Size = new System.Drawing.Size(70, 70);
             this.btn_back.TabIndex = 0;
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // btn_home
             // 
@@ -361,16 +372,7 @@ namespace flightket.Forms_Admin
             this.btn_home.Size = new System.Drawing.Size(70, 70);
             this.btn_home.TabIndex = 1;
             this.btn_home.UseVisualStyleBackColor = true;
-            // 
-            // dp_ngaySinh
-            // 
-            this.dp_ngaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dp_ngaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dp_ngaySinh.Location = new System.Drawing.Point(31, 63);
-            this.dp_ngaySinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dp_ngaySinh.Name = "dp_ngaySinh";
-            this.dp_ngaySinh.Size = new System.Drawing.Size(206, 26);
-            this.dp_ngaySinh.TabIndex = 2;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // FormThemTaiKhoan
             // 
