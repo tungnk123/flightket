@@ -27,8 +27,8 @@ namespace flightket.Forms_QuanLy
 
         private String DobAfterHandle()
         {
-            String dob = nhanVien.NamSinh.ToString().Substring(0, 10);
-            String[] namSinh = dob.Split('/');
+            String[] dob = nhanVien.NamSinh.ToString().Split(' ');
+            String[] namSinh = dob[0].Split('/');
             String temp = namSinh[0];
             namSinh[0] = namSinh[1];
             namSinh[1] = temp;
@@ -123,13 +123,13 @@ namespace flightket.Forms_QuanLy
                 MessageBox.Show("Không được để trống số điện thoại");
                 tb_soDienThoai.Text = nhanVien.SDT;
             }
-            else if (!IsNumeric(sdt))
+            else if (!IsNumeric(sdt.Trim()))
             {
                 MessageBox.Show("Số điện thoại phải toàn số");
                 tb_soDienThoai.Text = nhanVien.SDT;
             } else
             {
-                if (sdt.Length != 10)
+                if (sdt.Trim().Length != 10)
                 {
                     MessageBox.Show("Số điện thoại phải có 10 chữ số");
                     tb_soDienThoai.Text = nhanVien.SDT;
@@ -177,11 +177,13 @@ namespace flightket.Forms_QuanLy
         // Định dạng ngày
         private String FormatDob(String ngaySinh)
         {
-            String[] dmy = ngaySinh.Split('/');
-            String temp = dmy[0];
-            dmy[0] = dmy[1];
-            dmy[1] = temp;
-            return String.Join("/", dmy);
+            String[] ngayFormat = ngaySinh.Split(' ');
+            String[] namSinh = ngayFormat[0].Split('/');
+            String temp = namSinh[0];
+            namSinh[0] = namSinh[1];
+            namSinh[1] = temp;
+            namSinh[2] = namSinh[2].Substring(0, 4);
+            return String.Join("/", namSinh);
         }
         // Cập nhật lại thông tin của nhân viên đó
         private void UpdateInfoNhanVien()

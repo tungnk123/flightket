@@ -244,9 +244,9 @@ namespace flightket.Forms_QuanLy
             try
             {
                 short thoiGianChamNhatTruocKhiDatVeShort = short.Parse(thoiGianChamNhatTruocKhiDatVeString);
-                if (thoiGianChamNhatTruocKhiDatVeShort < 24)
+                if (thoiGianChamNhatTruocKhiDatVeShort < 2)
                 {
-                    MessageBox.Show("Thời gian chậm nhất trước khi đặt vé phải là một số nguyên dương >= 24");
+                    MessageBox.Show("Thời gian chậm nhất trước khi đặt vé phải là một số nguyên dương >= 2");
                     tb_thoiGianTruocDatVeSlowestMoi.Clear();
                 }
             }

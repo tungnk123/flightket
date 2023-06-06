@@ -45,10 +45,12 @@ namespace flightket.Forms_QuanLy
         // Format năm sinh
         private String FormatDob(String dob)
         {
-            String[] namSinh = dob.Split('/');
+            String[] ngayFormat = dob.Split(' ');
+            String[] namSinh = ngayFormat[0].Split('/');
             String temp = namSinh[0];
             namSinh[0] = namSinh[1];
             namSinh[1] = temp;
+            namSinh[2] = namSinh[2].Substring(0, 4);
             return String.Join("/", namSinh);
         }
 
@@ -69,7 +71,7 @@ namespace flightket.Forms_QuanLy
                     lv_danhSachNhanVien.Rows[i].Cells[0].Value = (i + 1).ToString();
                     lv_danhSachNhanVien.Rows[i].Cells[1].Value = nhanViens[i].MaNhanVien.ToString();
                     lv_danhSachNhanVien.Rows[i].Cells[2].Value = nhanViens[i].HoTen.ToString();            
-                    lv_danhSachNhanVien.Rows[i].Cells[3].Value = FormatDob(nhanViens[i].NamSinh.ToString().Substring(0, 10));
+                    lv_danhSachNhanVien.Rows[i].Cells[3].Value = FormatDob(nhanViens[i].NamSinh.ToString());
                     lv_danhSachNhanVien.Rows[i].Cells[4].Value = nhanViens[i].DiaChi.ToString();
                     lv_danhSachNhanVien.Rows[i].Cells[5].Value = nhanViens[i].SDT.ToString();
                     lv_danhSachNhanVien.Rows[i].Cells[6].Value = "Cập nhật";
