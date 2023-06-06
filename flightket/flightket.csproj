@@ -91,9 +91,7 @@
     <Compile Include="Forms-NhanVien\FormHomeNhanVien.Designer.cs">
       <DependentUpon>FormHomeNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms-QuanLy\FormCapNhatThongTinNhanVien.cs"/>
-    <Compile Include="Forms-QuanLy\Combine3Table.cs" />
-    <Compile Include="Forms-QuanLy\CustomDialogForm.cs">
+    <Compile Include="Forms-QuanLy\FormCapNhatThongTinNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms-QuanLy\FormCapNhatThongTinNhanVien.Designer.cs">

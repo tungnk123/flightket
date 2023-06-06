@@ -16,7 +16,7 @@ namespace flightket
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LapBaoCao_Main());
+            Application.Run(new FormDangNhap());
         }
     }
 }
