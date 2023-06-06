@@ -59,6 +59,7 @@ namespace flightket.Forms_NhanVien
             this.column_thoiGianBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column_soGheTrong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column_soGheDaDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lb_title2 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -265,6 +266,7 @@ namespace flightket.Forms_NhanVien
             this.btn_home.Size = new System.Drawing.Size(70, 70);
             this.btn_home.TabIndex = 24;
             this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // btn_back
             // 
@@ -274,12 +276,14 @@ namespace flightket.Forms_NhanVien
             this.btn_back.Size = new System.Drawing.Size(70, 70);
             this.btn_back.TabIndex = 23;
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.lb_title2);
             this.panel1.Controls.Add(this.dgv_chuyenBayPhuHop);
             this.panel1.Controls.Add(this.btn_back);
             this.panel1.Controls.Add(this.btn_home);
@@ -372,6 +376,17 @@ namespace flightket.Forms_NhanVien
             this.column_soGheDaDat.Name = "column_soGheDaDat";
             this.column_soGheDaDat.Width = 125;
             // 
+            // lb_title2
+            // 
+            this.lb_title2.AutoSize = true;
+            this.lb_title2.BackColor = System.Drawing.Color.Transparent;
+            this.lb_title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_title2.Location = new System.Drawing.Point(717, 117);
+            this.lb_title2.Name = "lb_title2";
+            this.lb_title2.Size = new System.Drawing.Size(427, 38);
+            this.lb_title2.TabIndex = 26;
+            this.lb_title2.Text = "Nhập thông tin muốn tra cứu\r\n";
+            // 
             // FormTraCuuChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -385,6 +400,7 @@ namespace flightket.Forms_NhanVien
             this.Name = "FormTraCuuChuyenBay";
             this.Text = "FormTraCuuChuyenBay";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormTraCuuChuyenBay_FormClosed);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -431,5 +447,6 @@ namespace flightket.Forms_NhanVien
         private System.Windows.Forms.DataGridViewTextBoxColumn column_thoiGianBay;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_soGheTrong;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_soGheDaDat;
+        private System.Windows.Forms.Label lb_title2;
     }
 }

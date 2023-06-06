@@ -72,7 +72,6 @@ namespace flightket.Forms_NhanVien
                 if (chb_ngayKhoiHanh.Checked)
                 {
                     result = result.Where(c => DbFunctions.TruncateTime(c.NgayGioKhoiHanh) == ngayKhoiHanh.Date);
-                    MessageBox.Show(ngayKhoiHanh.Date.ToShortDateString());
                 }
 
                 if (maChuyenBay.Length > 0)
@@ -95,6 +94,7 @@ namespace flightket.Forms_NhanVien
                 List<int> listTongSoGhe = new List<int>();
                 if (resultList.Count > 0)
                 {
+                    MessageBox.Show("Tìm kiếm thành công! Loading ...");
                     for (int i = 0; i < resultList.Count; i++)
                     {
                         listSoGheTrong.Add(0);
@@ -239,7 +239,21 @@ namespace flightket.Forms_NhanVien
             }
         }
 
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormHomeNhanVien.instance.Show();
+        }
 
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormHomeNhanVien.instance.Show();
+        }
 
+        private void FormTraCuuChuyenBay_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormHomeNhanVien.instance.Show();
+        }
     }
 }

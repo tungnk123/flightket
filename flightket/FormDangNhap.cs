@@ -15,8 +15,10 @@ namespace flightket
 {
     public partial class FormDangNhap : Form
     {
+        public static FormDangNhap instance;
         public FormDangNhap()
         {
+            instance = this;
             InitializeComponent();
             //cmt
         }

@@ -137,6 +137,7 @@ namespace flightket.Forms_NhanVien
             this.btn_dangXuat.Text = "Đăng xuất";
             this.btn_dangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btn_dangXuat.UseVisualStyleBackColor = true;
+            this.btn_dangXuat.Click += new System.EventHandler(this.btn_dangXuat_Click);
             // 
             // FormHomeNhanVien
             // 
@@ -157,6 +158,7 @@ namespace flightket.Forms_NhanVien
             this.Name = "FormHomeNhanVien";
             this.Text = " Flightket - Home Nhân viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormHomeNhanVien_FormClosed);
             this.ResumeLayout(false);
 
         }

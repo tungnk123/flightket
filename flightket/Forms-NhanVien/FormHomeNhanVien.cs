@@ -52,5 +52,20 @@ namespace flightket.Forms_NhanVien
         {
 
         }
+
+        private void btn_dangXuat_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn có muốn đăng xuất không?", "Đăng xuất", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.OK)
+            {
+                this.Close();
+                FormDangNhap.instance.Show();
+            }
+        }
+
+        private void FormHomeNhanVien_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormDangNhap.instance.Show();
+        }
     }
 }
