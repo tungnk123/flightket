@@ -51,33 +51,6 @@ namespace flightket.Forms_QuanLy
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            this.btn_nhapLichChuyenBay.BackColor = System.Drawing.Color.White;
-            this.btn_nhapLichChuyenBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nhapLichChuyenBay.Image = global::flightket.Properties.Resources.ic_nhapLichChuyenBay;
-            this.btn_nhapLichChuyenBay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_nhapLichChuyenBay.Location = new System.Drawing.Point(290, 306);
-            this.btn_nhapLichChuyenBay.Name = "btn_nhapLichChuyenBay";
-            this.btn_nhapLichChuyenBay.Size = new System.Drawing.Size(357, 90);
-            this.btn_nhapLichChuyenBay.TabIndex = 0;
-            this.btn_nhapLichChuyenBay.Text = "Nhập lịch chuyến bay";
-            this.btn_nhapLichChuyenBay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_nhapLichChuyenBay.UseVisualStyleBackColor = false;
-            this.btn_nhapLichChuyenBay.Click += new System.EventHandler(this.btn_nhapLichChuyenBay_Click);
-            // 
-            // btn_lapBaoCao
-            // 
-            this.btn_lapBaoCao.BackColor = System.Drawing.Color.White;
-            this.btn_lapBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_lapBaoCao.Image = ((System.Drawing.Image)(resources.GetObject("btn_lapBaoCao.Image")));
-            this.btn_lapBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_lapBaoCao.Location = new System.Drawing.Point(664, 306);
-            this.btn_lapBaoCao.Name = "btn_lapBaoCao";
-            this.btn_lapBaoCao.Size = new System.Drawing.Size(242, 90);
-            this.btn_lapBaoCao.TabIndex = 1;
-            this.btn_lapBaoCao.Text = "Lập báo cáo";
-            this.btn_lapBaoCao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_lapBaoCao.UseVisualStyleBackColor = false;
-            this.btn_lapBaoCao.Click += new System.EventHandler(this.btn_lapBaoCao_Click);
             // 
             // btn_caiDat
             // 
@@ -189,7 +162,6 @@ namespace flightket.Forms_QuanLy
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormHomeQuanLy";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Flightket - Home Quản lý";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

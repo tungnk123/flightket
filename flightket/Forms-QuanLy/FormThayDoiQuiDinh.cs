@@ -21,6 +21,7 @@ namespace flightket.Forms_QuanLy
         {
             InitializeComponent();
             panel1.BackColor = Color.FromArgb(150, Color.White);
+            Load_Data_ThamSo();
         }
 
         private void btn_thayDoiSoLuongSanBayMoi_Click(object sender, EventArgs e)
@@ -53,7 +54,6 @@ namespace flightket.Forms_QuanLy
 
         private void FormThayDoiQuiDinh_Load(object sender, EventArgs e)
         {
-            Load_Data_ThamSo();
         }
 
         // Kiểm tra chuỗi toàn số

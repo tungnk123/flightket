@@ -29,17 +29,6 @@ namespace flightket.Forms_QuanLy
             FormQuanLyHoSoNhanVien formQuanLyHoSoNhanVien = new FormQuanLyHoSoNhanVien();
             this.Hide();
             formQuanLyHoSoNhanVien.ShowDialog();
-            NhapLichChuyenBay nhapLichChuyenBay_I = new NhapLichChuyenBay();
-            nhapLichChuyenBay_I.PreviousForm = this;
-            nhapLichChuyenBay_I.ShowDialog();
-        }
-
-        private void btn_lapBaoCao_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            LapBaoCao_Main lapBaoCao_Main = new LapBaoCao_Main();
-            lapBaoCao_Main.PreviousForm = this;
-            lapBaoCao_Main.ShowDialog();
         }
     }
 }
