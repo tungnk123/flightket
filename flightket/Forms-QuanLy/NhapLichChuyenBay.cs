@@ -370,7 +370,7 @@ namespace flightket.Forms_QuanLy
                             DateTime dateTime;
                             if (DateTime.TryParseExact(formattedDate + " " + $"{cb_gioKhoiHanh.Text}:{cb_phutKhoiHanh.Text}", "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out dateTime))
                             {
-                                if (!String.IsNullOrEmpty(tb_giaVe.Text) && Convert.ToInt16(tb_giaVe.Text) > 0)
+                                if (!String.IsNullOrEmpty(tb_giaVe.Text) && Double.TryParse(tb_giaVe.Text, out _))
                                 {
                                     if (cb_hangGhe.Items.Count == listHangVe.Count)
                                     {
