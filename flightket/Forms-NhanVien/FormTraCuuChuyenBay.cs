@@ -16,5 +16,15 @@ namespace flightket.Forms_NhanVien
         {
             InitializeComponent();
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

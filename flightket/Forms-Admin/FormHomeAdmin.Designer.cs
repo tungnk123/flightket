@@ -125,6 +125,7 @@ namespace flightket.Forms_Admin
             this.Name = "FormHomeAdmin";
             this.Text = "Flightket - Home Admin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormHomeAdmin_FormClosed);
             this.ResumeLayout(false);
 
         }

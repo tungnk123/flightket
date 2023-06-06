@@ -50,6 +50,12 @@ namespace flightket.Forms_Admin
             string soDienThoai = tb_soDienThoai.Text;
             string loaiTaiKhoan = cb_loaiTaiKhoan.Text.Equals("Nhân viên sân bay") ? "nhanviensanbay" : "quanly";
 
+            if (hoTen == "" || tenDangNhap == "" || matKhau == "" || diaChi == "" || soDienThoai == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+                return;
+            }
+
             if (!IsLettersOnly(hoTen))
             {
                 MessageBox.Show("Họ và tên chỉ được chứa chữ cái!");
@@ -97,5 +103,22 @@ namespace flightket.Forms_Admin
             tb_soDienThoai.Text = "";
             tb_maNhanVien.Text = "NV" + random.Next(100, 999).ToString();
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormQuanLyTaiKhoan.instance.Close();
+            FormQuanLyTaiKhoan formQuanLyTaiKhoan = new FormQuanLyTaiKhoan();
+            formQuanLyTaiKhoan.Show();
+        }
+
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormQuanLyTaiKhoan.instance.Close();
+            FormHomeAdmin formHomeAdmin = new FormHomeAdmin(); // Create a new instance
+            formHomeAdmin.Show();
+        }
+
     }
 }

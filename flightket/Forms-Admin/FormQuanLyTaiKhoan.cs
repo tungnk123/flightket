@@ -12,8 +12,10 @@ namespace flightket.Forms_Admin
 {
     public partial class FormQuanLyTaiKhoan : Form
     {
+        public static FormQuanLyTaiKhoan instance;
         public FormQuanLyTaiKhoan()
         {
+            instance = this;
             InitializeComponent();
             cb_loaiTaiKhoan.Text = "Nhân viên sân bay";
             loadNhanVien();
@@ -106,6 +108,18 @@ namespace flightket.Forms_Admin
                 this.Show();
 
             }
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormHomeAdmin.instance.Show();
+        }
+
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormHomeAdmin.instance.Show();
         }
     }
 }

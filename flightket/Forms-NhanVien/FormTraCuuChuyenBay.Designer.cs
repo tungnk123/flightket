@@ -31,6 +31,8 @@ namespace flightket.Forms_NhanVien
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTraCuuChuyenBay));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_back = new System.Windows.Forms.Button();
+            this.btn_home = new System.Windows.Forms.Button();
             this.btn_xuatThongTin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -56,8 +58,6 @@ namespace flightket.Forms_NhanVien
             this.tb_maChuyenBay = new System.Windows.Forms.TextBox();
             this.lb_sanBayDi = new System.Windows.Forms.Label();
             this.lb_title1 = new System.Windows.Forms.Label();
-            this.btn_back = new System.Windows.Forms.Button();
-            this.btn_home = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -87,6 +87,26 @@ namespace flightket.Forms_NhanVien
             this.panel1.Size = new System.Drawing.Size(1760, 900);
             this.panel1.TabIndex = 1;
             // 
+            // btn_back
+            // 
+            this.btn_back.Image = global::flightket.Properties.Resources.icons8_back_64;
+            this.btn_back.Location = new System.Drawing.Point(3, 3);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(70, 70);
+            this.btn_back.TabIndex = 23;
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
+            // btn_home
+            // 
+            this.btn_home.Image = global::flightket.Properties.Resources.icons8_home_50;
+            this.btn_home.Location = new System.Drawing.Point(79, 3);
+            this.btn_home.Name = "btn_home";
+            this.btn_home.Size = new System.Drawing.Size(70, 70);
+            this.btn_home.TabIndex = 24;
+            this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
+            // 
             // btn_xuatThongTin
             // 
             this.btn_xuatThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
@@ -108,7 +128,7 @@ namespace flightket.Forms_NhanVien
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(1350, 155);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(332, 29);
+            this.label2.Size = new System.Drawing.Size(306, 26);
             this.label2.TabIndex = 21;
             this.label2.Text = "(*) Cung cấp ít nhất 1 thông tin";
             // 
@@ -264,7 +284,7 @@ namespace flightket.Forms_NhanVien
             this.lb_danhSachChuyenBayPhuHop.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_danhSachChuyenBayPhuHop.Location = new System.Drawing.Point(799, 523);
             this.lb_danhSachChuyenBayPhuHop.Name = "lb_danhSachChuyenBayPhuHop";
-            this.lb_danhSachChuyenBayPhuHop.Size = new System.Drawing.Size(372, 29);
+            this.lb_danhSachChuyenBayPhuHop.Size = new System.Drawing.Size(345, 26);
             this.lb_danhSachChuyenBayPhuHop.TabIndex = 19;
             this.lb_danhSachChuyenBayPhuHop.Text = "Danh sách chuyến bay phù hợp";
             // 
@@ -323,24 +343,6 @@ namespace flightket.Forms_NhanVien
             this.lb_title1.Size = new System.Drawing.Size(570, 69);
             this.lb_title1.TabIndex = 13;
             this.lb_title1.Text = "Tra cứu chuyến bay";
-            // 
-            // btn_back
-            // 
-            this.btn_back.Image = global::flightket.Properties.Resources.icons8_back_64;
-            this.btn_back.Location = new System.Drawing.Point(3, 3);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(70, 70);
-            this.btn_back.TabIndex = 23;
-            this.btn_back.UseVisualStyleBackColor = true;
-            // 
-            // btn_home
-            // 
-            this.btn_home.Image = global::flightket.Properties.Resources.icons8_home_50;
-            this.btn_home.Location = new System.Drawing.Point(79, 3);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(70, 70);
-            this.btn_home.TabIndex = 24;
-            this.btn_home.UseVisualStyleBackColor = true;
             // 
             // FormTraCuuChuyenBay
             // 
