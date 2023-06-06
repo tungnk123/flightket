@@ -31,6 +31,7 @@ namespace flightket.Forms_Admin
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQuanLyTaiKhoan));
             this.panel_main = new System.Windows.Forms.Panel();
+            this.btn_themNhanVien = new System.Windows.Forms.Button();
             this.dgv_danhSachTaiKhoan = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +45,6 @@ namespace flightket.Forms_Admin
             this.lb_title1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
-            this.btn_themNhanVien = new System.Windows.Forms.Button();
             this.panel_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_danhSachTaiKhoan)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +67,18 @@ namespace flightket.Forms_Admin
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(1760, 840);
             this.panel_main.TabIndex = 3;
+            // 
+            // btn_themNhanVien
+            // 
+            this.btn_themNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(235)))), ((int)(((byte)(144)))));
+            this.btn_themNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_themNhanVien.Location = new System.Drawing.Point(847, 723);
+            this.btn_themNhanVien.Name = "btn_themNhanVien";
+            this.btn_themNhanVien.Size = new System.Drawing.Size(267, 62);
+            this.btn_themNhanVien.TabIndex = 14;
+            this.btn_themNhanVien.Text = "Thêm nhân viên";
+            this.btn_themNhanVien.UseVisualStyleBackColor = false;
+            this.btn_themNhanVien.Click += new System.EventHandler(this.btn_themNhanVien_Click);
             // 
             // dgv_danhSachTaiKhoan
             // 
@@ -204,17 +216,6 @@ namespace flightket.Forms_Admin
             this.btn_home.Size = new System.Drawing.Size(70, 70);
             this.btn_home.TabIndex = 1;
             this.btn_home.UseVisualStyleBackColor = true;
-            // 
-            // btn_themNhanVien
-            // 
-            this.btn_themNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(235)))), ((int)(((byte)(144)))));
-            this.btn_themNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_themNhanVien.Location = new System.Drawing.Point(847, 723);
-            this.btn_themNhanVien.Name = "btn_themNhanVien";
-            this.btn_themNhanVien.Size = new System.Drawing.Size(267, 62);
-            this.btn_themNhanVien.TabIndex = 14;
-            this.btn_themNhanVien.Text = "Thêm nhân viên";
-            this.btn_themNhanVien.UseVisualStyleBackColor = false;
             // 
             // FormQuanLyTaiKhoan
             // 
