@@ -47,7 +47,9 @@ namespace flightket.Forms_NhanVien
 
         private void btn_lapBaoCao_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FormLapBaoCao formLapBaoCao = new FormLapBaoCao();
+            formLapBaoCao.ShowDialog();
         }
 
         private void btn_caiDat_Click(object sender, EventArgs e)

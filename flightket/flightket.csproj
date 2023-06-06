@@ -127,6 +127,18 @@
     <Compile Include="Forms-NhanVien\FormKiemTraDatCho.Designer.cs">
       <DependentUpon>FormKiemTraDatCho.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms-NhanVien\FormLapBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormLapBaoCao.Designer.cs">
+      <DependentUpon>FormLapBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormLapBaoCaoThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormLapBaoCaoThang.Designer.cs">
+      <DependentUpon>FormLapBaoCaoThang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms-QuanLy\FormHomeQuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +209,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-NhanVien\FormKiemTraDatCho.resx">
       <DependentUpon>FormKiemTraDatCho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-NhanVien\FormLapBaoCao.resx">
+      <DependentUpon>FormLapBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-NhanVien\FormLapBaoCaoThang.resx">
+      <DependentUpon>FormLapBaoCaoThang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\FormHomeQuanLy.resx">
       <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
