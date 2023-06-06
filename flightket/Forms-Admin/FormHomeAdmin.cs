@@ -15,6 +15,7 @@ namespace flightket.Forms_Admin
         public FormHomeAdmin()
         {
             InitializeComponent();
+            //cmt
         }
 
         private void btn_taoNhomNguoiDung_Click(object sender, EventArgs e)
@@ -23,7 +24,6 @@ namespace flightket.Forms_Admin
             FormTaoNhomNguoiDung formTaoNhomNguoiDung = new FormTaoNhomNguoiDung();
             formTaoNhomNguoiDung.Show();
         }
-
         private void btn_quanLyTaiKhoan_Click(object sender, EventArgs e)
         {
             this.Close();
