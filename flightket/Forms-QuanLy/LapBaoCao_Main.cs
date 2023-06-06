@@ -176,6 +176,7 @@ namespace flightket.Forms_QuanLy
                         }).ToList();
 
 
+            var sumTONGDOANGTHUCHUYENABY = DSCTBCThang.Sum(item => item.TONGDOANGTHUCHUYENABY);
 
 
             int rowCountCTBCThang = DSCTBCThang.Count();
@@ -193,7 +194,7 @@ namespace flightket.Forms_QuanLy
                     MaChuyenBay = DSCTBCThang[i].MaChuyenBay,
                     SoVe = (short)DSCTBCThang[i].TONGSOLUONGGHE,
                     DoanhThu = (double)DSCTBCThang[i].TONGDOANGTHUCHUYENABY,
-                    TiLe = null
+                    TiLe = (double)Math.Round((double)((double)DSCTBCThang[i].TONGDOANGTHUCHUYENABY / sumTONGDOANGTHUCHUYENABY * 100), 1)
                 };
                 /*MessageBox.Show(varTONGDOANHTHUTOANBOCHUYENBAY.ToString());
                 MessageBox.Show(
@@ -204,24 +205,25 @@ namespace flightket.Forms_QuanLy
                     itemCTBCTHang.TiLe);*/
 
 
-                if(!db.CT_BCTHANG.Any(c => c.MaChuyenBay == itemCTBCTHang.MaChuyenBay))
+                if(!db.CT_BCTHANG.Any(c => c.MaChuyenBay == itemCTBCTHang.MaChuyenBay ))
                 {
                     listCTBCThang.Add(itemCTBCTHang);
                     try
                     {
                         db.CT_BCTHANG.Add(itemCTBCTHang);
                         db.SaveChanges();
-                        MessageBox.Show("Lam moi du lieu thanh cong");
+                        
                     } catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
+                        
                     }                                    
                 }
             }
             db.CT_BCTHANG.AddRange(listCTBCThang);
+            MessageBox.Show("Lam moi du lieu thanh cong");
             //db.SaveChanges();
 
-            
+
         }
             
         private void btn_back_Click(object sender, EventArgs e)
