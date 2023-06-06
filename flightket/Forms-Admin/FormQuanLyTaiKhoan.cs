@@ -96,5 +96,16 @@ namespace flightket.Forms_Admin
                 this.loadNhanVien();
             }
         }
+
+        private void btn_themNhanVien_Click(object sender, EventArgs e)
+        {
+            FormThemTaiKhoan formThemTaiKhoan = new FormThemTaiKhoan();
+            formThemTaiKhoan.Show();
+            if (!formThemTaiKhoan.IsAccessible)
+            {
+                this.Show();
+
+            }
+        }
     }
 }
