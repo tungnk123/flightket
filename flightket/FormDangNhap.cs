@@ -37,7 +37,7 @@ namespace flightket
                 FormHomeNhanVien formHomeNhanVien = new FormHomeNhanVien();
                 formHomeNhanVien.ShowDialog();
             }
-            else if (username == "" && password == "")
+            else if (username == "quanly" && password == "quanly")
             {
                 this.Hide();
                 FormHomeQuanLy formHomeQuanLy = new FormHomeQuanLy();

@@ -17,20 +17,18 @@ namespace flightket.Forms_QuanLy
             InitializeComponent();
         }
 
-        private void btn_nhapLichChuyenBay_Click(object sender, EventArgs e)
+        private void btn_thayDoiQuiDinh_Click(object sender, EventArgs e)
         {
+            FormThayDoiQuiDinh formThayDoiQuiDinh = new FormThayDoiQuiDinh();
             this.Hide();
-            NhapLichChuyenBay nhapLichChuyenBay_I = new NhapLichChuyenBay();
-            nhapLichChuyenBay_I.PreviousForm = this;
-            nhapLichChuyenBay_I.ShowDialog();
+            formThayDoiQuiDinh.ShowDialog();
         }
 
-        private void btn_lapBaoCao_Click(object sender, EventArgs e)
+        private void btn_quanLyHoSo_Click(object sender, EventArgs e)
         {
+            FormQuanLyHoSoNhanVien formQuanLyHoSoNhanVien = new FormQuanLyHoSoNhanVien();
             this.Hide();
-            LapBaoCao_Main lapBaoCao_Main = new LapBaoCao_Main();
-            lapBaoCao_Main.PreviousForm = this;
-            lapBaoCao_Main.ShowDialog();
+            formQuanLyHoSoNhanVien.ShowDialog();
         }
     }
 }
