@@ -35,7 +35,9 @@ namespace flightket
         public virtual DbSet<HANHKHACH> HANHKHACHes { get; set; }
         public virtual DbSet<NHANVIEN> NHANVIENs { get; set; }
         public virtual DbSet<PHIEUDATCHO> PHIEUDATCHOes { get; set; }
+        public virtual DbSet<ROLE> ROLEs { get; set; }
         public virtual DbSet<SANBAY> SANBAYs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<THAMSO> THAMSOes { get; set; }
         public virtual DbSet<VECHUYENBAY> VECHUYENBAYs { get; set; }
     }
