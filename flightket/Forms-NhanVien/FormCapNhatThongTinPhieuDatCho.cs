@@ -16,6 +16,7 @@ namespace flightket.Forms_NhanVien
         private HANHKHACH hANHKHACH;
         private CHUYENBAY cHUYENBAY;
         private HANGVE hANGVE;
+        private FormKiemTraDatCho formparent;
 
         private string maHanhKhach;
         private int maPhieuDatCho;
@@ -24,9 +25,10 @@ namespace flightket.Forms_NhanVien
         {
             InitializeComponent();
         }
-        public FormCapNhatThongTinPhieuDatCho(int maPhieuDatCho, string maChuyenBay, string maHanhKhach, string maHangVe)
+        public FormCapNhatThongTinPhieuDatCho(int maPhieuDatCho, string maChuyenBay, string maHanhKhach, string maHangVe, FormKiemTraDatCho formCapNhatThongTinPhieuDatCho)
         {
             InitializeComponent();
+            formparent = formCapNhatThongTinPhieuDatCho;
             
             using(FlightKetDBEntities db = new FlightKetDBEntities())
             {
@@ -92,6 +94,17 @@ namespace flightket.Forms_NhanVien
                 this.Close();
             }
 
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            formparent.Close();
         }
     }
 }

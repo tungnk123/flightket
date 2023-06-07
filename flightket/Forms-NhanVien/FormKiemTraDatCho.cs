@@ -155,6 +155,16 @@ namespace flightket.Forms_NhanVien
 
         }
 
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btn_huyDatCho_Click(object sender, EventArgs e)
         {
             using (var db = new FlightKetDBEntities())
@@ -181,7 +191,7 @@ namespace flightket.Forms_NhanVien
 
         private void btn_capNhat_Click(object sender, EventArgs e)
         {
-            FormCapNhatThongTinPhieuDatCho formCapNhatThongTinPhieuDatCho = new FormCapNhatThongTinPhieuDatCho(maDatChoID, maChuyenBay, maHanhKhach, maHangVe);
+            FormCapNhatThongTinPhieuDatCho formCapNhatThongTinPhieuDatCho = new FormCapNhatThongTinPhieuDatCho(maDatChoID, maChuyenBay, maHanhKhach, maHangVe, this);
             this.Hide();
             formCapNhatThongTinPhieuDatCho.ShowDialog();
             if(formCapNhatThongTinPhieuDatCho.IsAccessible == false)

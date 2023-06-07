@@ -132,6 +132,7 @@ namespace flightket.Forms_NhanVien
             this.ColumnSTT.HeaderText = "STT";
             this.ColumnSTT.MinimumWidth = 6;
             this.ColumnSTT.Name = "ColumnSTT";
+            this.ColumnSTT.ReadOnly = true;
             this.ColumnSTT.Width = 70;
             // 
             // ColumnMaChuyenBay
@@ -139,6 +140,7 @@ namespace flightket.Forms_NhanVien
             this.ColumnMaChuyenBay.HeaderText = "Mã Chuyến Bay";
             this.ColumnMaChuyenBay.MinimumWidth = 6;
             this.ColumnMaChuyenBay.Name = "ColumnMaChuyenBay";
+            this.ColumnMaChuyenBay.ReadOnly = true;
             this.ColumnMaChuyenBay.Width = 200;
             // 
             // columnGioKhoiHanh
@@ -146,6 +148,7 @@ namespace flightket.Forms_NhanVien
             this.columnGioKhoiHanh.HeaderText = "Giờ khởi hành";
             this.columnGioKhoiHanh.MinimumWidth = 6;
             this.columnGioKhoiHanh.Name = "columnGioKhoiHanh";
+            this.columnGioKhoiHanh.ReadOnly = true;
             this.columnGioKhoiHanh.Width = 200;
             // 
             // ColumnSoGheTrong
@@ -153,6 +156,7 @@ namespace flightket.Forms_NhanVien
             this.ColumnSoGheTrong.HeaderText = "Số ghế trống";
             this.ColumnSoGheTrong.MinimumWidth = 6;
             this.ColumnSoGheTrong.Name = "ColumnSoGheTrong";
+            this.ColumnSoGheTrong.ReadOnly = true;
             this.ColumnSoGheTrong.Width = 150;
             // 
             // ColumnGiaVe
@@ -160,6 +164,7 @@ namespace flightket.Forms_NhanVien
             this.ColumnGiaVe.HeaderText = "Giá vé";
             this.ColumnGiaVe.MinimumWidth = 6;
             this.ColumnGiaVe.Name = "ColumnGiaVe";
+            this.ColumnGiaVe.ReadOnly = true;
             this.ColumnGiaVe.Width = 200;
             // 
             // ColumnChon
@@ -167,6 +172,7 @@ namespace flightket.Forms_NhanVien
             this.ColumnChon.HeaderText = "";
             this.ColumnChon.MinimumWidth = 6;
             this.ColumnChon.Name = "ColumnChon";
+            this.ColumnChon.ReadOnly = true;
             this.ColumnChon.Width = 105;
             // 
             // panel4
@@ -340,6 +346,7 @@ namespace flightket.Forms_NhanVien
             this.btn_back.Size = new System.Drawing.Size(70, 70);
             this.btn_back.TabIndex = 0;
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // btn_home
             // 
@@ -349,6 +356,7 @@ namespace flightket.Forms_NhanVien
             this.btn_home.Size = new System.Drawing.Size(70, 70);
             this.btn_home.TabIndex = 1;
             this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // FormDatChoChuyenBay
             // 

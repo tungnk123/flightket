@@ -16,16 +16,18 @@ namespace flightket.Forms_NhanVien
         private string maChuyenBay;
         private double giaVe;
         private string tenHangVe;
+        private FormDatChoChuyenBay formParent;
         public FormDatCho()
         {
             InitializeComponent();
         }
-        public FormDatCho(string maChuyenBay, double giaVe, string tenHangVe)
+        public FormDatCho(string maChuyenBay, double giaVe, string tenHangVe, FormDatChoChuyenBay formDatChoChuyenBay)
         {
             InitializeComponent();
             this.maChuyenBay = maChuyenBay;
             this.giaVe = giaVe;
             this.tenHangVe = tenHangVe;
+            formParent = formDatChoChuyenBay;
 
             tb_maChuyenBay.Text = maChuyenBay;
             tb_giaTien.Text = giaVe.ToString();
@@ -72,6 +74,17 @@ namespace flightket.Forms_NhanVien
                     this.Close();
                 }
             }
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            formParent.Close();
         }
     }
 }

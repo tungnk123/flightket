@@ -164,7 +164,7 @@ namespace flightket.Forms_NhanVien
                             return;
                         }
                     }
-                    FormBanVe formBanVe = new FormBanVe(maChuyenBay, giaVe, tenHangVe);
+                    FormBanVe formBanVe = new FormBanVe(maChuyenBay, giaVe, tenHangVe, this);
                     this.Hide();
                     formBanVe.ShowDialog();
                     if(formBanVe.IsAccessible == false)
@@ -178,6 +178,16 @@ namespace flightket.Forms_NhanVien
                 MessageBox.Show("Chuyến bay đươc chọn đã hết ghế trống");
                 return;
             }
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

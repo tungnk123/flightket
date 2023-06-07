@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCapNhatThongTinPhieuDatCho));
             this.panel_main = new System.Windows.Forms.Panel();
+            this.btn_capNhat = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.cb_hangVe = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.lb_title1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
-            this.btn_capNhat = new System.Windows.Forms.Button();
             this.panel_main.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -83,6 +83,19 @@
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(1701, 852);
             this.panel_main.TabIndex = 4;
+            // 
+            // btn_capNhat
+            // 
+            this.btn_capNhat.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_capNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_capNhat.ForeColor = System.Drawing.Color.White;
+            this.btn_capNhat.Location = new System.Drawing.Point(802, 709);
+            this.btn_capNhat.Name = "btn_capNhat";
+            this.btn_capNhat.Size = new System.Drawing.Size(163, 48);
+            this.btn_capNhat.TabIndex = 27;
+            this.btn_capNhat.Text = "Cập nhật";
+            this.btn_capNhat.UseVisualStyleBackColor = false;
+            this.btn_capNhat.Click += new System.EventHandler(this.btn_capNhat_Click);
             // 
             // panel6
             // 
@@ -297,6 +310,7 @@
             this.btn_back.Size = new System.Drawing.Size(70, 70);
             this.btn_back.TabIndex = 0;
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // btn_home
             // 
@@ -306,19 +320,7 @@
             this.btn_home.Size = new System.Drawing.Size(70, 70);
             this.btn_home.TabIndex = 1;
             this.btn_home.UseVisualStyleBackColor = true;
-            // 
-            // btn_capNhat
-            // 
-            this.btn_capNhat.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_capNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_capNhat.ForeColor = System.Drawing.Color.White;
-            this.btn_capNhat.Location = new System.Drawing.Point(802, 709);
-            this.btn_capNhat.Name = "btn_capNhat";
-            this.btn_capNhat.Size = new System.Drawing.Size(163, 48);
-            this.btn_capNhat.TabIndex = 27;
-            this.btn_capNhat.Text = "Cập nhật";
-            this.btn_capNhat.UseVisualStyleBackColor = false;
-            this.btn_capNhat.Click += new System.EventHandler(this.btn_capNhat_Click);
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // FormCapNhatThongTinPhieuDatCho
             // 
