@@ -22,7 +22,7 @@ namespace flightket.Forms_QuanLy
             
             NhapLichChuyenBay nhapLichChuyenBay_I = new NhapLichChuyenBay();
             nhapLichChuyenBay_I.PreviousForm = this;
-            nhapLichChuyenBay_I.ShowDialog();
+            nhapLichChuyenBay_I.Show();
             this.Hide();
         }
 
