@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace flightket.Forms_NhanVien
@@ -29,8 +24,8 @@ namespace flightket.Forms_NhanVien
         {
             InitializeComponent();
             formparent = formCapNhatThongTinPhieuDatCho;
-            
-            using(FlightKetDBEntities db = new FlightKetDBEntities())
+
+            using (FlightKetDBEntities db = new FlightKetDBEntities())
             {
                 pHIEUDATCHO = db.PHIEUDATCHOes.Find(maPhieuDatCho);
                 hANHKHACH = db.HANHKHACHes.Find(maHanhKhach);
@@ -54,12 +49,12 @@ namespace flightket.Forms_NhanVien
                              select new { hv.TenHangVe };
                 var list = querry.ToList();
                 cb_hangVe.Items.Clear();
-                foreach ( var item in list)
+                foreach (var item in list)
                 {
                     cb_hangVe.Items.Add(item.TenHangVe);
                 }
                 cb_hangVe.Text = hANGVE.TenHangVe;
-              
+
             }
 
         }

@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace flightket.Forms_NhanVien
@@ -26,25 +22,25 @@ namespace flightket.Forms_NhanVien
                 var result = from hanhkhach in db.HANHKHACHes
                              from phieudatcho in db.PHIEUDATCHOes
                              from hangve in db.HANGVEs
-                             where hanhkhach.MaHanhKhach.Equals(phieudatcho.MaHanhKhach) && hangve.MaHangVe.Equals(phieudatcho.MaHangVe) 
+                             where hanhkhach.MaHanhKhach.Equals(phieudatcho.MaHanhKhach) && hangve.MaHangVe.Equals(phieudatcho.MaHangVe)
                              select new { phieudatcho.MaChuyenBay, phieudatcho.MaPhieuDatCho, hangve.TenHangVe, hanhkhach.TenHanhKhach, hanhkhach.CMND, hanhkhach.SDT, phieudatcho.CHUYENBAY.NgayGioKhoiHanh };
                 result = result.Where(a => a.NgayGioKhoiHanh.Value > DateTime.Now);
-                if(tb_hoVaTen.Text.Length > 0)
+                if (tb_hoVaTen.Text.Length > 0)
                 {
                     result = result.Where(c => c.TenHanhKhach.Equals(tb_hoVaTen.Text));
                 }
-                if(tb_CMND.Text.Length > 0)
+                if (tb_CMND.Text.Length > 0)
                 {
                     result = result.Where(c => c.CMND.Equals(tb_CMND.Text));
                 }
-                if(tb_soDienThoai.Text.Length > 0)
+                if (tb_soDienThoai.Text.Length > 0)
                 {
                     result = result.Where(c => c.SDT.Equals(tb_soDienThoai.Text));
                 }
 
                 var resultList = result.ToList();
 
-                if(resultList.Count > 0)
+                if (resultList.Count > 0)
                 {
                     panelDanhSachPhieuDatCho.Visible = true;
                     panelChiTietPhieuDatCho.Visible = false;
@@ -75,7 +71,7 @@ namespace flightket.Forms_NhanVien
                     dataGridViewCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                     dataGridView1.Rows[i].Cells[4].Style = dataGridViewCellStyle;
                 }
-                
+
             }
         }
 
@@ -94,7 +90,7 @@ namespace flightket.Forms_NhanVien
                                  from sanbay in db.SANBAYs
                                  where hanhkhach.MaHanhKhach.Equals(phieudatcho.MaHanhKhach) && hangve.MaHangVe.Equals(phieudatcho.MaHangVe) && phieudatcho.MaChuyenBay.Equals(chuyenbay.MaChuyenBay) &&
                                  hanhkhach.TenHanhKhach.Equals(tb_hoVaTen.Text) && hanhkhach.CMND.Equals(tb_CMND.Text) && hanhkhach.SDT.Equals(tb_soDienThoai.Text) && phieudatcho.MaPhieuDatCho.Equals(maDatChoID)
-                                 select new { phieudatcho.MaPhieuDatCho, chuyenbay.MaChuyenBay, hanhkhach.TenHanhKhach, hanhkhach.CMND, hanhkhach.NgaySinh, hanhkhach.SDT, chuyenbay.NgayGioKhoiHanh, hangve.TenHangVe, phieudatcho.GiaTien, hanhkhach.MaHanhKhach, hangve.MaHangVe};
+                                 select new { phieudatcho.MaPhieuDatCho, chuyenbay.MaChuyenBay, hanhkhach.TenHanhKhach, hanhkhach.CMND, hanhkhach.NgaySinh, hanhkhach.SDT, chuyenbay.NgayGioKhoiHanh, hangve.TenHangVe, phieudatcho.GiaTien, hanhkhach.MaHanhKhach, hangve.MaHangVe };
 
                     var resultList = result.ToList();
                     var item = resultList.FirstOrDefault();
@@ -107,7 +103,7 @@ namespace flightket.Forms_NhanVien
                     var resultList2 = result2.ToList();
                     var item2 = resultList2.FirstOrDefault();
 
-                    if(item != null)
+                    if (item != null)
                     {
                         maHanhKhach = item.MaHanhKhach;
                         maChuyenBay = item.MaChuyenBay;
@@ -151,7 +147,7 @@ namespace flightket.Forms_NhanVien
                     MessageBox.Show("Bán vé thành công");
                 }
             }
-            
+
 
         }
 
@@ -176,7 +172,7 @@ namespace flightket.Forms_NhanVien
                 DateTime now = DateTime.Now;
                 TimeSpan timeDifference = cHUYENBAY.NgayGioKhoiHanh.Value - now;
                 TimeSpan soGioHuyVeTruocKhoiHanh = new TimeSpan(tHAMSO.SoGioHuyPhieuTruocKhoiHanh.Value, 0, 0);
-                if(timeDifference < soGioHuyVeTruocKhoiHanh)
+                if (timeDifference < soGioHuyVeTruocKhoiHanh)
                 {
                     MessageBox.Show("Không thể hủy đặt chỗ vì chuyến bay sắp khởi hành");
                     return;
@@ -194,9 +190,9 @@ namespace flightket.Forms_NhanVien
             FormCapNhatThongTinPhieuDatCho formCapNhatThongTinPhieuDatCho = new FormCapNhatThongTinPhieuDatCho(maDatChoID, maChuyenBay, maHanhKhach, maHangVe, this);
             this.Hide();
             formCapNhatThongTinPhieuDatCho.ShowDialog();
-            if(formCapNhatThongTinPhieuDatCho.IsAccessible == false)
+            if (formCapNhatThongTinPhieuDatCho.IsAccessible == false)
             {
-                using(var db = new FlightKetDBEntities())
+                using (var db = new FlightKetDBEntities())
                 {
                     HANHKHACH hANHKHACH = db.HANHKHACHes.Find(this.maHanhKhach);
                     PHIEUDATCHO pHIEUDATCHO = db.PHIEUDATCHOes.Find(this.maDatChoID);
@@ -220,7 +216,7 @@ namespace flightket.Forms_NhanVien
                     this.maHangVe = pHIEUDATCHO.MaHangVe;
                     lb_hangVe.Text = result.TenHangVe;
 
-                
+
 
                 }
                 this.Show();

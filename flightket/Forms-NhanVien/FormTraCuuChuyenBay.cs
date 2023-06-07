@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
-using System.Reflection;
 
 namespace flightket.Forms_NhanVien
 {
@@ -35,7 +31,7 @@ namespace flightket.Forms_NhanVien
                 cb_sanBayDen.DisplayMember = "TenSanBay";
                 cb_sanBayDen.DataSource = sanBayDenList;
 
-                
+
 
             }
             cb_sanBayDen.SelectedIndex = -1;
@@ -60,7 +56,7 @@ namespace flightket.Forms_NhanVien
                 var result = from chuyenbay in db.CHUYENBAYs
                              from sanbaydi in db.SANBAYs
                              from sanbayden in db.SANBAYs
-                             where  chuyenbay.MaSanBayDi == sanbaydi.MaSanBay && chuyenbay.MaSanBayDen == sanbayden.MaSanBay
+                             where chuyenbay.MaSanBayDi == sanbaydi.MaSanBay && chuyenbay.MaSanBayDen == sanbayden.MaSanBay
                              select new
                              {
                                  MaChuyenBay = chuyenbay.MaChuyenBay,

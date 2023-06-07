@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace flightket.Forms_NhanVien
@@ -24,7 +17,7 @@ namespace flightket.Forms_NhanVien
             this.Hide();
             FormDatChoChuyenBay formDatChoChuyenBay = new FormDatChoChuyenBay();
             formDatChoChuyenBay.ShowDialog();
-            if(formDatChoChuyenBay.IsAccessible == false)
+            if (formDatChoChuyenBay.IsAccessible == false)
             {
                 this.Show();
             }
@@ -35,7 +28,7 @@ namespace flightket.Forms_NhanVien
             this.Hide();
             FormKiemTraDatCho formKiemTraDatCho = new FormKiemTraDatCho(); ;
             formKiemTraDatCho.ShowDialog();
-            if(formKiemTraDatCho.IsAccessible == false)
+            if (formKiemTraDatCho.IsAccessible == false)
             {
                 this.Show();
             }
@@ -46,7 +39,7 @@ namespace flightket.Forms_NhanVien
             this.Hide();
             FormBanVeChuyenBay formBanVeChuyenBay = new FormBanVeChuyenBay();
             formBanVeChuyenBay.ShowDialog();
-            if(formBanVeChuyenBay.IsAccessible == false)
+            if (formBanVeChuyenBay.IsAccessible == false)
             {
                 this.Show();
             }

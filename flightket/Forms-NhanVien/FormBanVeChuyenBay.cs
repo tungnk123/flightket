@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace flightket.Forms_NhanVien
@@ -25,7 +22,7 @@ namespace flightket.Forms_NhanVien
                     cb_hangVe.Items.Add(entity.TenHangVe);
                 }
                 var querry1 = db.SANBAYs.ToList();
-                foreach(var entity in querry1)
+                foreach (var entity in querry1)
                 {
                     cb_sanBayDi.Items.Add(entity.TenSanBay);
                     cb_sanBayDen.Items.Add(entity.TenSanBay);
@@ -36,7 +33,7 @@ namespace flightket.Forms_NhanVien
 
         private void btn_timChuyenBay_Click(object sender, EventArgs e)
         {
-            if(cb_hangVe.Text.Length == 0)
+            if (cb_hangVe.Text.Length == 0)
             {
                 MessageBox.Show("Vui lòng chọn hạng vé trước khi tìm kiếm");
                 return;
@@ -57,14 +54,14 @@ namespace flightket.Forms_NhanVien
                 {
                     querry = querry.Where(a => a.TenSanBayDi == cb_sanBayDi.Text);
                 }
-                if(cb_sanBayDen.Text.Length > 0)
+                if (cb_sanBayDen.Text.Length > 0)
                 {
                     querry = querry.Where(a => a.TenSanBayDen == cb_sanBayDen.Text);
                 }
                 var resultList = querry.ToList();
-                
 
-                if(resultList.Count > 0)
+
+                if (resultList.Count > 0)
                 {
                     List<int> listSoGheTrong = new List<int>();
                     List<double> listgiaVe = new List<double>();
@@ -110,7 +107,7 @@ namespace flightket.Forms_NhanVien
                     }
 
                     dgv_chuyenBayPhuHop.RowCount = resultList.Count;
-                    for(int i = 0; i < resultList.Count; i++)
+                    for (int i = 0; i < resultList.Count; i++)
                     {
                         dgv_chuyenBayPhuHop.Rows[i].Cells[0].Value = (i + 1).ToString();
                         dgv_chuyenBayPhuHop.Rows[i].Cells[1].Value = resultList[i].MaChuyenBay;
@@ -138,7 +135,7 @@ namespace flightket.Forms_NhanVien
 
         private void dgv_chuyenBayPhuHop_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(Convert.ToInt32(dgv_chuyenBayPhuHop.SelectedCells[0].OwningRow.Cells[3].Value) != 0)
+            if (Convert.ToInt32(dgv_chuyenBayPhuHop.SelectedCells[0].OwningRow.Cells[3].Value) != 0)
             {
                 if (e.ColumnIndex == 5 && e.RowIndex >= 0)
                 {
@@ -149,7 +146,7 @@ namespace flightket.Forms_NhanVien
                     using (var db = new FlightKetDBEntities())
                     {
                         CHUYENBAY cHUYENBAY = db.CHUYENBAYs.Find(maChuyenBay);
-                        if(cHUYENBAY.NgayGioKhoiHanh.Value < DateTime.Now)
+                        if (cHUYENBAY.NgayGioKhoiHanh.Value < DateTime.Now)
                         {
                             MessageBox.Show("Chuyến bay được chọn đã khởi hành");
                             return;
@@ -158,7 +155,7 @@ namespace flightket.Forms_NhanVien
                         DateTime now = DateTime.Now;
                         TimeSpan timeDifference = cHUYENBAY.NgayGioKhoiHanh.Value - now;
                         TimeSpan soGioDatVeTrcKhoiHanh = new TimeSpan(tHAMSO.SoGioDatVeTruocKhoiHanh.Value, 0, 0);
-                        if(timeDifference < soGioDatVeTrcKhoiHanh)
+                        if (timeDifference < soGioDatVeTrcKhoiHanh)
                         {
                             MessageBox.Show("Đã quá hạn để đặt vé chuyến bay này");
                             return;
@@ -167,7 +164,7 @@ namespace flightket.Forms_NhanVien
                     FormBanVe formBanVe = new FormBanVe(maChuyenBay, giaVe, tenHangVe, this);
                     this.Hide();
                     formBanVe.ShowDialog();
-                    if(formBanVe.IsAccessible == false)
+                    if (formBanVe.IsAccessible == false)
                     {
                         this.Show();
                     }
