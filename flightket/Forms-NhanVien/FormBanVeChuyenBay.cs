@@ -10,6 +10,8 @@ namespace flightket.Forms_NhanVien
 {
     public partial class FormBanVeChuyenBay : Form
     {
+        private object sender;
+        private EventArgs e;
         public FormBanVeChuyenBay()
         {
             InitializeComponent();
@@ -33,6 +35,8 @@ namespace flightket.Forms_NhanVien
 
         private void btn_timChuyenBay_Click(object sender, EventArgs e)
         {
+            this.sender = sender;
+            this.e = e;
             if (cb_hangVe.Text.Length == 0)
             {
                 MessageBox.Show("Vui lòng chọn hạng vé trước khi tìm kiếm");
@@ -167,6 +171,7 @@ namespace flightket.Forms_NhanVien
                     if (formBanVe.IsAccessible == false)
                     {
                         this.Show();
+                        btn_timChuyenBay_Click(this.sender, this.e);
                     }
                 }
             }

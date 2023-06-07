@@ -52,7 +52,7 @@ namespace flightket.Forms_NhanVien
 
                     db.PHIEUDATCHOes.Add(new PHIEUDATCHO() { MaHanhKhach = result.FirstOrDefault().MaHanhKhach, MaChuyenBay = this.maChuyenBay, MaHangVe = maHangVe, GiaTien = this.giaVe });
                     db.SaveChanges();
-                    MessageBox.Show("Bán vé thành công");
+                    MessageBox.Show("Đặt chỗ thành công");
                     tb_hoVaTen.Text = "";
                     tb_CMND.Text = "";
                     tb_soDienThoai.Text = "";
@@ -73,7 +73,7 @@ namespace flightket.Forms_NhanVien
                     PHIEUDATCHO pHIEUDATCHO = new PHIEUDATCHO() { MaChuyenBay = maChuyenBay, MaHanhKhach = maHanhkhach, MaHangVe = maHangVe, GiaTien = Convert.ToDouble(tb_giaTien.Text) };
                     db.PHIEUDATCHOes.Add(pHIEUDATCHO);
                     db.SaveChanges();
-                    MessageBox.Show("Bán vé thành công");
+                    MessageBox.Show("Đặt chỗ thành công");
                     tb_hoVaTen.Text = "";
                     tb_CMND.Text = "";
                     tb_soDienThoai.Text = "";
