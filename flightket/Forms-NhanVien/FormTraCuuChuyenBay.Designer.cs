@@ -29,6 +29,8 @@ namespace flightket.Forms_NhanVien
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTraCuuChuyenBay));
             this.lb_title1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -50,6 +52,7 @@ namespace flightket.Forms_NhanVien
             this.btn_home = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_title2 = new System.Windows.Forms.Label();
             this.dgv_chuyenBayPhuHop = new System.Windows.Forms.DataGridView();
             this.column_stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column_maChuyenBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,7 +62,6 @@ namespace flightket.Forms_NhanVien
             this.column_thoiGianBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column_soGheTrong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column_soGheDaDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lb_title2 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -296,13 +298,32 @@ namespace flightket.Forms_NhanVien
             this.panel1.Controls.Add(this.btn_traCuu);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.lb_title1);
-            this.panel1.Location = new System.Drawing.Point(74, 86);
+            this.panel1.Location = new System.Drawing.Point(77, 100);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1760, 900);
             this.panel1.TabIndex = 1;
             // 
+            // lb_title2
+            // 
+            this.lb_title2.AutoSize = true;
+            this.lb_title2.BackColor = System.Drawing.Color.Transparent;
+            this.lb_title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_title2.Location = new System.Drawing.Point(717, 117);
+            this.lb_title2.Name = "lb_title2";
+            this.lb_title2.Size = new System.Drawing.Size(427, 38);
+            this.lb_title2.TabIndex = 26;
+            this.lb_title2.Text = "Nhập thông tin muốn tra cứu\r\n";
+            // 
             // dgv_chuyenBayPhuHop
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_chuyenBayPhuHop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_chuyenBayPhuHop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_chuyenBayPhuHop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.column_stt,
@@ -313,12 +334,20 @@ namespace flightket.Forms_NhanVien
             this.column_thoiGianBay,
             this.column_soGheTrong,
             this.column_soGheDaDat});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_chuyenBayPhuHop.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_chuyenBayPhuHop.Location = new System.Drawing.Point(182, 570);
             this.dgv_chuyenBayPhuHop.Name = "dgv_chuyenBayPhuHop";
             this.dgv_chuyenBayPhuHop.RowHeadersWidth = 51;
             this.dgv_chuyenBayPhuHop.RowTemplate.Height = 24;
             this.dgv_chuyenBayPhuHop.Size = new System.Drawing.Size(1501, 182);
-            this.dgv_chuyenBayPhuHop.TabIndex = 25;
+            this.dgv_chuyenBayPhuHop.TabIndex = 12;
             // 
             // column_stt
             // 
@@ -376,17 +405,6 @@ namespace flightket.Forms_NhanVien
             this.column_soGheDaDat.Name = "column_soGheDaDat";
             this.column_soGheDaDat.Width = 125;
             // 
-            // lb_title2
-            // 
-            this.lb_title2.AutoSize = true;
-            this.lb_title2.BackColor = System.Drawing.Color.Transparent;
-            this.lb_title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_title2.Location = new System.Drawing.Point(717, 117);
-            this.lb_title2.Name = "lb_title2";
-            this.lb_title2.Size = new System.Drawing.Size(427, 38);
-            this.lb_title2.TabIndex = 26;
-            this.lb_title2.Text = "Nhập thông tin muốn tra cứu\r\n";
-            // 
             // FormTraCuuChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -398,7 +416,7 @@ namespace flightket.Forms_NhanVien
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTraCuuChuyenBay";
-            this.Text = "FormTraCuuChuyenBay";
+            this.Text = "Flightket - Tra cứu chuyến bay";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormTraCuuChuyenBay_FormClosed);
             this.panel5.ResumeLayout(false);
