@@ -53,7 +53,9 @@ namespace flightket.Forms_NhanVien
                     db.PHIEUDATCHOes.Add(new PHIEUDATCHO() { MaHanhKhach = result.FirstOrDefault().MaHanhKhach, MaChuyenBay = this.maChuyenBay, MaHangVe = maHangVe, GiaTien = this.giaVe });
                     db.SaveChanges();
                     MessageBox.Show("Bán vé thành công");
-                    this.Close();
+                    tb_hoVaTen.Text = "";
+                    tb_CMND.Text = "";
+                    tb_soDienThoai.Text = "";
                 }
                 else if (result.Count == 0)
                 {
@@ -72,7 +74,9 @@ namespace flightket.Forms_NhanVien
                     db.PHIEUDATCHOes.Add(pHIEUDATCHO);
                     db.SaveChanges();
                     MessageBox.Show("Bán vé thành công");
-                    this.Close();
+                    tb_hoVaTen.Text = "";
+                    tb_CMND.Text = "";
+                    tb_soDienThoai.Text = "";
                 }
             }
         }

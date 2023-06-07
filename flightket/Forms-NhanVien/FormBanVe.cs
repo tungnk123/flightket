@@ -52,7 +52,10 @@ namespace flightket.Forms_NhanVien
                     db.VECHUYENBAYs.Add(new VECHUYENBAY() { MaHanhKhach = result.FirstOrDefault().MaHanhKhach, MaChuyenBay = this.maChuyenBay, MaHangVe = maHangVe, GiaTien = this.giaVe });
                     db.SaveChanges();
                     MessageBox.Show("Đặt chỗ thành công");
-                    this.Close();
+                    tb_hoVaTen.Text = "";
+                    tb_CMND.Text = "";
+                    tb_soDienThoai.Text = "";
+
                 }
                 else if (result.Count == 0)
                 {
@@ -70,7 +73,9 @@ namespace flightket.Forms_NhanVien
                     db.VECHUYENBAYs.Add(vECHUYENBAY);
                     db.SaveChanges();
                     MessageBox.Show("Đặt chỗ thành công");
-                    this.Close();
+                    tb_hoVaTen.Text = "";
+                    tb_CMND.Text = "";
+                    tb_soDienThoai.Text = "";
                 }
             }
 

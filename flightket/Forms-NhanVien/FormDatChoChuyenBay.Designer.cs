@@ -251,7 +251,6 @@ namespace flightket.Forms_NhanVien
             // cb_sanBayDen
             // 
             this.cb_sanBayDen.BackColor = System.Drawing.Color.Silver;
-            this.cb_sanBayDen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_sanBayDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_sanBayDen.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cb_sanBayDen.FormattingEnabled = true;
@@ -295,7 +294,6 @@ namespace flightket.Forms_NhanVien
             // cb_sanBayDi
             // 
             this.cb_sanBayDi.BackColor = System.Drawing.Color.Silver;
-            this.cb_sanBayDi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_sanBayDi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_sanBayDi.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cb_sanBayDi.FormattingEnabled = true;
