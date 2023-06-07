@@ -106,7 +106,7 @@ namespace flightket.Forms_QuanLy
                 return;
             } else if (IsNumeric(tenSanBay))
             {
-                MessageBox.Show("Tên sân bay không được chứa toàn chữ cái");
+                MessageBox.Show("Tên sân bay không được chứa toàn chữ số");
                 tb_tenSanBay.Clear();
             } else if (ContainsSpecialCharacters(tenSanBay))
             {
@@ -125,7 +125,7 @@ namespace flightket.Forms_QuanLy
             }
             else if (IsNumeric(tenQuocGia))
             {
-                MessageBox.Show("Tên quốc gia không được chứa toàn chữ cái");
+                MessageBox.Show("Tên quốc gia không được chứa toàn chữ số");
                 tb_tenQuocGia.Clear();
             }
             else if (ContainsSpecialCharacters(tenQuocGia))
@@ -145,7 +145,7 @@ namespace flightket.Forms_QuanLy
             }
             else if (IsNumeric(diaChi))
             {
-                MessageBox.Show("Địa chỉ sân bay không được chứa toàn chữ cái");
+                MessageBox.Show("Địa chỉ sân bay không được chứa toàn chữ số");
                 tb_diaChi.Clear();
             }
             else if (ContainsSpecialCharacters(diaChi))
