@@ -45,7 +45,7 @@ namespace flightket.Forms_QuanLy
         // Format năm sinh
         private String FormatDob(String dob)
         {
-            String[] namSinh = dob.Split('/');
+            String[] namSinh = dob.Split(' ')[0].Split('/');
             String temp = namSinh[0];
             namSinh[0] = namSinh[1];
             namSinh[1] = temp;
@@ -69,9 +69,9 @@ namespace flightket.Forms_QuanLy
                     lv_danhSachNhanVien.Rows[i].Cells[0].Value = (i + 1).ToString();
                     lv_danhSachNhanVien.Rows[i].Cells[1].Value = nhanViens[i].MaNhanVien.ToString();
                     lv_danhSachNhanVien.Rows[i].Cells[2].Value = nhanViens[i].HoTen.ToString();            
-                    lv_danhSachNhanVien.Rows[i].Cells[3].Value = FormatDob(nhanViens[i].NamSinh.ToString().Substring(0, 10));
+                    lv_danhSachNhanVien.Rows[i].Cells[3].Value = FormatDob(nhanViens[i].NgaySinh.ToString());
                     lv_danhSachNhanVien.Rows[i].Cells[4].Value = nhanViens[i].DiaChi.ToString();
-                    lv_danhSachNhanVien.Rows[i].Cells[5].Value = nhanViens[i].SDT.ToString();
+                    lv_danhSachNhanVien.Rows[i].Cells[5].Value = nhanViens[i].SoDienThoai.ToString();
                     lv_danhSachNhanVien.Rows[i].Cells[6].Value = "Cập nhật";
 
                     DataGridViewCellStyle dataGridViewCellStyle = new DataGridViewCellStyle();
@@ -120,10 +120,10 @@ namespace flightket.Forms_QuanLy
             {
                 var nhanVienTable = dbContext.NHANVIENs;
                 var nhanVienNeedUpdate = nhanVienTable.FirstOrDefault(c => c.MaNhanVien == nhanVien.MaNhanVien);
-                nhanVienNeedUpdate.SDT = nhanVien.SDT;
+                nhanVienNeedUpdate.SoDienThoai = nhanVien.SoDienThoai;
                 nhanVienNeedUpdate.DiaChi = nhanVien.DiaChi;
                 nhanVienNeedUpdate.HoTen = nhanVien.HoTen;
-                nhanVienNeedUpdate.NamSinh = nhanVien.NamSinh;
+                nhanVienNeedUpdate.NgaySinh = nhanVien.NgaySinh;
                 dbContext.SaveChanges();
             }
         }
@@ -138,9 +138,9 @@ namespace flightket.Forms_QuanLy
         private void Update_DataGridView(NHANVIEN nhanVien)
         {
             lv_danhSachNhanVien.Rows[POSITION_UPDATE].Cells[2].Value = nhanVien.HoTen;
-            lv_danhSachNhanVien.Rows[POSITION_UPDATE].Cells[3].Value = FormatDob(nhanVien.NamSinh.ToString().Substring(0, 10));
+            lv_danhSachNhanVien.Rows[POSITION_UPDATE].Cells[3].Value = FormatDob(nhanVien.NgaySinh.ToString().Substring(0, 10));
             lv_danhSachNhanVien.Rows[POSITION_UPDATE].Cells[4].Value = nhanVien.DiaChi;
-            lv_danhSachNhanVien.Rows[POSITION_UPDATE].Cells[5].Value = nhanVien.SDT;
+            lv_danhSachNhanVien.Rows[POSITION_UPDATE].Cells[5].Value = nhanVien.SoDienThoai;
         }
     }
 }

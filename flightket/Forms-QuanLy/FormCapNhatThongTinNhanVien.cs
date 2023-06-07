@@ -27,7 +27,7 @@ namespace flightket.Forms_QuanLy
 
         private String DobAfterHandle()
         {
-            String dob = nhanVien.NamSinh.ToString().Substring(0, 10);
+            String dob = nhanVien.NgaySinh.ToString().Split(' ')[0];
             String[] namSinh = dob.Split('/');
             String temp = namSinh[0];
             namSinh[0] = namSinh[1];
@@ -40,7 +40,7 @@ namespace flightket.Forms_QuanLy
             tb_hoTen.Text = nhanVien.HoTen;
             tb_diaChi.Text = nhanVien.DiaChi;
             tb_namSinh.Text = DobAfterHandle();
-            tb_soDienThoai.Text = nhanVien.SDT;
+            tb_soDienThoai.Text = nhanVien.SoDienThoai;
         }
 
         // Kiểm tra chuỗi toàn số
@@ -121,18 +121,18 @@ namespace flightket.Forms_QuanLy
             if (String.IsNullOrEmpty(sdt.Trim()))
             {
                 MessageBox.Show("Không được để trống số điện thoại");
-                tb_soDienThoai.Text = nhanVien.SDT;
+                tb_soDienThoai.Text = nhanVien.SoDienThoai;
             }
-            else if (!IsNumeric(sdt))
+            else if (!IsNumeric(sdt.Trim()))
             {
                 MessageBox.Show("Số điện thoại phải toàn số");
-                tb_soDienThoai.Text = nhanVien.SDT;
+                tb_soDienThoai.Text = nhanVien.SoDienThoai;
             } else
             {
-                if (sdt.Length != 10)
+                if (sdt.Trim().Length != 10)
                 {
                     MessageBox.Show("Số điện thoại phải có 10 chữ số");
-                    tb_soDienThoai.Text = nhanVien.SDT;
+                    tb_soDienThoai.Text = nhanVien.SoDienThoai;
                 }
             }
         }
@@ -195,8 +195,8 @@ namespace flightket.Forms_QuanLy
 
                 this.nhanVien.HoTen = hoTen;
                 this.nhanVien.DiaChi = diaChi;
-                this.nhanVien.NamSinh = namSinh;
-                this.nhanVien.SDT= soDienThoai; 
+                this.nhanVien.NgaySinh = namSinh;
+                this.nhanVien.SoDienThoai = soDienThoai; 
             } catch(Exception ex) 
             {
                 MessageBox.Show(ex.Message);
