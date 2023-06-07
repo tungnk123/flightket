@@ -192,10 +192,11 @@
             // 
             // dp_ngaySinh
             // 
+            this.dp_ngaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dp_ngaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dp_ngaySinh.Location = new System.Drawing.Point(17, 53);
             this.dp_ngaySinh.Name = "dp_ngaySinh";
-            this.dp_ngaySinh.Size = new System.Drawing.Size(200, 32);
+            this.dp_ngaySinh.Size = new System.Drawing.Size(200, 34);
             this.dp_ngaySinh.TabIndex = 1;
             // 
             // label6
@@ -402,7 +403,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::flightket.Properties.Resources._350248398_786598096329880_2111811280162483567_n__1_;
+            this.BackgroundImage = global::flightket.Properties.Resources._350361348_206044632301251_2266599988871672436_n;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.panel_main);

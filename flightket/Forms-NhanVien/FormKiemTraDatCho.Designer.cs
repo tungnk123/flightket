@@ -105,7 +105,7 @@
             this.panel_main.Controls.Add(this.btn_back);
             this.panel_main.Controls.Add(this.btn_home);
             this.panel_main.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_main.Location = new System.Drawing.Point(94, 141);
+            this.panel_main.Location = new System.Drawing.Point(89, 120);
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(1701, 852);
             this.panel_main.TabIndex = 3;
@@ -503,7 +503,7 @@
             // 
             // tb_soDienThoai
             // 
-            this.tb_soDienThoai.BackColor = System.Drawing.Color.Silver;
+            this.tb_soDienThoai.BackColor = System.Drawing.Color.White;
             this.tb_soDienThoai.Location = new System.Drawing.Point(22, 53);
             this.tb_soDienThoai.Multiline = true;
             this.tb_soDienThoai.Name = "tb_soDienThoai";
@@ -527,12 +527,13 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(780, 183);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(298, 100);
+            this.panel1.Size = new System.Drawing.Size(321, 100);
             this.panel1.TabIndex = 6;
             // 
             // tb_CMND
             // 
-            this.tb_CMND.BackColor = System.Drawing.Color.Silver;
+            this.tb_CMND.BackColor = System.Drawing.Color.White;
+            this.tb_CMND.ForeColor = System.Drawing.SystemColors.WindowText;
             this.tb_CMND.Location = new System.Drawing.Point(18, 53);
             this.tb_CMND.Multiline = true;
             this.tb_CMND.Name = "tb_CMND";
@@ -561,7 +562,7 @@
             // 
             // tb_hoVaTen
             // 
-            this.tb_hoVaTen.BackColor = System.Drawing.Color.Silver;
+            this.tb_hoVaTen.BackColor = System.Drawing.Color.White;
             this.tb_hoVaTen.Location = new System.Drawing.Point(17, 53);
             this.tb_hoVaTen.Multiline = true;
             this.tb_hoVaTen.Name = "tb_hoVaTen";
