@@ -12,9 +12,11 @@ namespace flightket.Forms_NhanVien
 {
     public partial class FormLapBaoCaoThang : Form
     {
-        public FormLapBaoCaoThang()
+        public FormLapBaoCao formParent;
+        public FormLapBaoCaoThang(FormLapBaoCao formLapBaoCao)
         {
             InitializeComponent();
+            formParent = formLapBaoCao;
         }
 
         private void btn_xemBaoCao_Click(object sender, EventArgs e)
@@ -264,6 +266,17 @@ namespace flightket.Forms_NhanVien
                 
             }
 
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            formParent.Close();
         }
     }
 }
