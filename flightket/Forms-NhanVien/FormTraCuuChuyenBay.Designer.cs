@@ -99,7 +99,7 @@ namespace flightket.Forms_NhanVien
             this.tb_maChuyenBay.Location = new System.Drawing.Point(31, 58);
             this.tb_maChuyenBay.Multiline = true;
             this.tb_maChuyenBay.Name = "tb_maChuyenBay";
-            this.tb_maChuyenBay.Size = new System.Drawing.Size(180, 32);
+            this.tb_maChuyenBay.Size = new System.Drawing.Size(196, 32);
             this.tb_maChuyenBay.TabIndex = 1;
             // 
             // lb_sanBayDi
@@ -343,7 +343,7 @@ namespace flightket.Forms_NhanVien
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_chuyenBayPhuHop.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_chuyenBayPhuHop.Location = new System.Drawing.Point(182, 570);
+            this.dgv_chuyenBayPhuHop.Location = new System.Drawing.Point(193, 570);
             this.dgv_chuyenBayPhuHop.Name = "dgv_chuyenBayPhuHop";
             this.dgv_chuyenBayPhuHop.RowHeadersWidth = 51;
             this.dgv_chuyenBayPhuHop.RowTemplate.Height = 24;

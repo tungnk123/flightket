@@ -138,7 +138,7 @@
             // btn_xacNhanBanVe
             // 
             this.btn_xacNhanBanVe.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_xacNhanBanVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xacNhanBanVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xacNhanBanVe.ForeColor = System.Drawing.Color.White;
             this.btn_xacNhanBanVe.Location = new System.Drawing.Point(560, 364);
             this.btn_xacNhanBanVe.Name = "btn_xacNhanBanVe";
@@ -153,6 +153,7 @@
             this.panel9.BackColor = System.Drawing.Color.Transparent;
             this.panel9.Controls.Add(this.cb_gioiTinh);
             this.panel9.Controls.Add(this.label7);
+            this.panel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel9.Location = new System.Drawing.Point(791, 225);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(297, 100);
@@ -185,6 +186,7 @@
             this.panel8.BackColor = System.Drawing.Color.Transparent;
             this.panel8.Controls.Add(this.dp_ngaySinh);
             this.panel8.Controls.Add(this.label6);
+            this.panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel8.Location = new System.Drawing.Point(273, 225);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(297, 100);
@@ -192,7 +194,7 @@
             // 
             // dp_ngaySinh
             // 
-            this.dp_ngaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dp_ngaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dp_ngaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dp_ngaySinh.Location = new System.Drawing.Point(17, 53);
             this.dp_ngaySinh.Name = "dp_ngaySinh";
@@ -214,6 +216,7 @@
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Controls.Add(this.tb_CMND);
             this.panel6.Controls.Add(this.label4);
+            this.panel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel6.Location = new System.Drawing.Point(981, 74);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(297, 100);
@@ -221,7 +224,7 @@
             // 
             // tb_CMND
             // 
-            this.tb_CMND.BackColor = System.Drawing.Color.Silver;
+            this.tb_CMND.BackColor = System.Drawing.Color.White;
             this.tb_CMND.Location = new System.Drawing.Point(17, 53);
             this.tb_CMND.Multiline = true;
             this.tb_CMND.Name = "tb_CMND";
@@ -243,6 +246,7 @@
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.tb_soDienThoai);
             this.panel5.Controls.Add(this.label3);
+            this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel5.Location = new System.Drawing.Point(543, 74);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(297, 100);
@@ -250,7 +254,7 @@
             // 
             // tb_soDienThoai
             // 
-            this.tb_soDienThoai.BackColor = System.Drawing.Color.Silver;
+            this.tb_soDienThoai.BackColor = System.Drawing.Color.White;
             this.tb_soDienThoai.Location = new System.Drawing.Point(17, 53);
             this.tb_soDienThoai.Multiline = true;
             this.tb_soDienThoai.Name = "tb_soDienThoai";
@@ -272,6 +276,7 @@
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.tb_hoVaTen);
             this.panel4.Controls.Add(this.lb_chonHangGhe);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(64, 74);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(297, 100);
@@ -279,7 +284,8 @@
             // 
             // tb_hoVaTen
             // 
-            this.tb_hoVaTen.BackColor = System.Drawing.Color.Silver;
+            this.tb_hoVaTen.BackColor = System.Drawing.Color.White;
+            this.tb_hoVaTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_hoVaTen.Location = new System.Drawing.Point(17, 53);
             this.tb_hoVaTen.Multiline = true;
             this.tb_hoVaTen.Name = "tb_hoVaTen";

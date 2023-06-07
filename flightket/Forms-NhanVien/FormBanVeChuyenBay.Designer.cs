@@ -187,7 +187,6 @@
             // cb_hangVe
             // 
             this.cb_hangVe.BackColor = System.Drawing.Color.Silver;
-            this.cb_hangVe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_hangVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_hangVe.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cb_hangVe.FormattingEnabled = true;
