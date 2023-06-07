@@ -12,8 +12,10 @@ namespace flightket.Forms_Admin
 {
     public partial class FormPhanQuyen : Form
     {
+        public static FormPhanQuyen instance;
         public FormPhanQuyen()
         {
+            instance = this;
             InitializeComponent();
         }
 
@@ -21,7 +23,11 @@ namespace flightket.Forms_Admin
         {
             using (var db = new FlightKetDBEntities())
             {
-                //var result = from nhanvien in db.NHANVIENs;
+                var roleResult = from role in db.ROLEs
+                                 select role.RoleName;
+                cmb_chonLoaiNguoiDung.DataSource = roleResult.ToList();
+
+                            
             }
         }
     }

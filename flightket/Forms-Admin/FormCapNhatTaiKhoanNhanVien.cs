@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace flightket.Forms_Admin
@@ -30,20 +26,28 @@ namespace flightket.Forms_Admin
                 tb_hoTen.Text = nHANVIEN.HoTen;
                 tb_tenDangNhap.Text = nHANVIEN.UserName;
                 tb_matKhau.Text = nHANVIEN.PassWord;
-                if(nHANVIEN.Role.Equals("quanly              "))
+                var result = from role in db.ROLEs
+                             select role.RoleName;
+                var resultList = result.ToList();
+                List<string> roleNameList = new List<string>();
+                foreach (string item in resultList)
                 {
-                    cb_loaiTaiKhoan.Text = "Quản lý";
+                    if (item.Equals("Qu?n lý"))
+                    {
+                        roleNameList.Add("Quản lý");
+                    }
+                    else
+                    {
+                        roleNameList.Add(item);
+                    }
                 }
-                else if(nHANVIEN.Role.Equals("nhanviensanbay      "))
-                {
-                    cb_loaiTaiKhoan.Text = "Nhân viên sân bay";
-                }
+                cb_loaiTaiKhoan.DataSource = roleNameList;
             }
         }
 
         private void btn_timChuyenBay_Click(object sender, EventArgs e)
         {
-            using (var db =new FlightKetDBEntities())
+            using (var db = new FlightKetDBEntities())
             {
                 string maNhanvien = this.maNhanVien;
                 string hoTen = tb_hoTen.Text;
@@ -53,20 +57,21 @@ namespace flightket.Forms_Admin
                 NHANVIEN nHANVIEN = db.NHANVIENs.Find(maNhanvien);
                 if (cb_loaiTaiKhoan.Text == "Nhân viên sân bay")
                 {
-                    vaiTro = "nhanviensanbay      ";
+                    vaiTro = "NVSB1";
                 }
                 else
                 {
-                    vaiTro = "quanly              ";
+                    vaiTro = "QULY1";
                 }
-                if(tb_hoTen.Text.Length == 0 || tb_tenDangNhap.Text.Length == 0 || tb_matKhau.Text.Length == 0)
+                if (tb_hoTen.Text.Length == 0 || tb_tenDangNhap.Text.Length == 0 || tb_matKhau.Text.Length == 0)
                 {
                     MessageBox.Show("Vui lòng nhập lại đầy đủ thông tin trước khi cập nhật");
                     return;
                 }
                 var querry = db.NHANVIENs.Where(a => a.UserName.Equals(tb_tenDangNhap.Text));
-                if(querry.ToList().Count() > 0 ) {
-                    if(nHANVIEN.UserName != tb_tenDangNhap.Text)
+                if (querry.ToList().Count() > 0)
+                {
+                    if (nHANVIEN.UserName != tb_tenDangNhap.Text)
                     {
                         MessageBox.Show("Tên đăng nhập đã tồn tại vui lòng nhập tên khác");
                         return;
@@ -74,7 +79,7 @@ namespace flightket.Forms_Admin
                 }
 
                 nHANVIEN.HoTen = hoTen;
-                nHANVIEN.Role = vaiTro;
+                nHANVIEN.RoleID = vaiTro;
                 nHANVIEN.UserName = tenDangNhap;
                 nHANVIEN.PassWord = matKhau;
                 db.SaveChanges();
