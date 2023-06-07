@@ -94,7 +94,7 @@ namespace flightket.Forms_NhanVien
             this.panelDanhSachPhieuDatCho.Controls.Add(this.dgv_chuyenBayPhuHop);
             this.panelDanhSachPhieuDatCho.Location = new System.Drawing.Point(234, 485);
             this.panelDanhSachPhieuDatCho.Name = "panelDanhSachPhieuDatCho";
-            this.panelDanhSachPhieuDatCho.Size = new System.Drawing.Size(1373, 224);
+            this.panelDanhSachPhieuDatCho.Size = new System.Drawing.Size(1389, 224);
             this.panelDanhSachPhieuDatCho.TabIndex = 14;
             // 
             // lb_danhSachChuyenBayPhuHop
@@ -123,7 +123,7 @@ namespace flightket.Forms_NhanVien
             this.dgv_chuyenBayPhuHop.ReadOnly = true;
             this.dgv_chuyenBayPhuHop.RowHeadersWidth = 51;
             this.dgv_chuyenBayPhuHop.RowTemplate.Height = 24;
-            this.dgv_chuyenBayPhuHop.Size = new System.Drawing.Size(1305, 154);
+            this.dgv_chuyenBayPhuHop.Size = new System.Drawing.Size(1322, 154);
             this.dgv_chuyenBayPhuHop.TabIndex = 12;
             this.dgv_chuyenBayPhuHop.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_chuyenBayPhuHop_CellDoubleClick_1);
             // 
@@ -226,7 +226,7 @@ namespace flightket.Forms_NhanVien
             this.dp_ngayKhoiHanh.Name = "dp_ngayKhoiHanh";
             this.dp_ngayKhoiHanh.Size = new System.Drawing.Size(210, 34);
             this.dp_ngayKhoiHanh.TabIndex = 1;
-            this.dp_ngayKhoiHanh.Value = new System.DateTime(2023, 6, 3, 12, 0, 0, 0);
+            this.dp_ngayKhoiHanh.Value = new System.DateTime(2023, 6, 7, 15, 54, 52, 0);
             // 
             // lb_ngayKhoiHanh
             // 
