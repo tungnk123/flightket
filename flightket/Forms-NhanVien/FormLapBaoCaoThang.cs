@@ -34,8 +34,6 @@ namespace flightket.Forms_NhanVien
                 return;
             }
             
-
-
             using (var db = new FlightKetDBEntities())
             {
                 // Kiểm tra báo cáo có sẵn hay không
@@ -186,6 +184,57 @@ namespace flightket.Forms_NhanVien
         {
             this.Close();
             formParent.Close();
+        }
+
+        private void btn_xuatBaoCao_Click(object sender, EventArgs e)
+        {
+            Excel.Application excelApp = new Excel.Application();
+            excelApp.Visible = true;
+
+            // Tạo một workbook mới
+            Excel.Workbook workbook = excelApp.Workbooks.Add();
+            Excel.Worksheet worksheet = workbook.ActiveSheet;
+
+            // Số hàng và số cột trong DataGridView
+            int rowCount = dgv_doanhThuChuyenBay.Rows.Count;
+            int colCount = dgv_doanhThuChuyenBay.Columns.Count;
+
+            // Ghi tiêu đề cột vào worksheet
+            for (int j = 1; j <= colCount; j++)
+            {
+                worksheet.Cells[1, j] = dgv_doanhThuChuyenBay.Columns[j - 1].HeaderText;
+            }
+
+            // Ghi dữ liệu từ DataGridView vào worksheet
+            for (int i = 1; i <= rowCount; i++)
+            {
+                for (int j = 1; j <= colCount; j++)
+                {
+                    worksheet.Cells[i + 1, j] = dgv_doanhThuChuyenBay.Rows[i - 1].Cells[j - 1].Value;
+                }
+            }
+
+            // Hiển thị SaveFileDialog để chọn vị trí và tên tệp Excel
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+            saveFileDialog.RestoreDirectory = true;
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Lưu workbook vào tệp Excel
+                workbook.SaveAs(saveFileDialog.FileName);
+                workbook.Close();
+
+                MessageBox.Show("Dữ liệu đã được xuất ra tệp Excel thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Đóng workbook nếu người dùng không chọn tệp Excel
+                workbook.Close();
+            }
+
+            // Đóng ứng dụng Excel
+            excelApp.Quit();
         }
     }
 }
