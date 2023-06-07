@@ -97,6 +97,7 @@ namespace flightket.Forms_QuanLy
             this.btn_thayDoiQuiDinh.Text = "Thay đổi qui định";
             this.btn_thayDoiQuiDinh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_thayDoiQuiDinh.UseVisualStyleBackColor = false;
+            this.btn_thayDoiQuiDinh.Click += new System.EventHandler(this.btn_thayDoiQuiDinh_Click);
             // 
             // btn_quanLyHoSo
             // 
@@ -111,6 +112,7 @@ namespace flightket.Forms_QuanLy
             this.btn_quanLyHoSo.Text = "Quản lý hồ sơ nhân viên";
             this.btn_quanLyHoSo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_quanLyHoSo.UseVisualStyleBackColor = false;
+            this.btn_quanLyHoSo.Click += new System.EventHandler(this.btn_quanLyHoSo_Click);
             // 
             // btn_dangXuat
             // 

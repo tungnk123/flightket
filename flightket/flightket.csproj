@@ -113,11 +113,41 @@
     <Compile Include="Forms-QuanLy\CustomDialogForm.Designer.cs">
       <DependentUpon>CustomDialogForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms-QuanLy\FormCapNhatThongTinNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormCapNhatThongTinNhanVien.Designer.cs">
+      <DependentUpon>FormCapNhatThongTinNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormChiTietThayDoiSoSanBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormChiTietThayDoiSoSanBay.Designer.cs">
+      <DependentUpon>FormChiTietThayDoiSoSanBay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms-QuanLy\FormHomeQuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms-QuanLy\FormHomeQuanLy.Designer.cs">
       <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormQuanLyHoSoNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormQuanLyHoSoNhanVien.Designer.cs">
+      <DependentUpon>FormQuanLyHoSoNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormThayDoiChiTietSoHangVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormThayDoiChiTietSoHangVe.Designer.cs">
+      <DependentUpon>FormThayDoiChiTietSoHangVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormThayDoiQuiDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormThayDoiQuiDinh.Designer.cs">
+      <DependentUpon>FormThayDoiQuiDinh.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms-QuanLy\LapBaoCao_Main.cs">
       <SubType>Form</SubType>
@@ -200,8 +230,23 @@
     <EmbeddedResource Include="Forms-QuanLy\CustomDialogForm.resx">
       <DependentUpon>CustomDialogForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormCapNhatThongTinNhanVien.resx">
+      <DependentUpon>FormCapNhatThongTinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormChiTietThayDoiSoSanBay.resx">
+      <DependentUpon>FormChiTietThayDoiSoSanBay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\FormHomeQuanLy.resx">
       <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormQuanLyHoSoNhanVien.resx">
+      <DependentUpon>FormQuanLyHoSoNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormThayDoiChiTietSoHangVe.resx">
+      <DependentUpon>FormThayDoiChiTietSoHangVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormThayDoiQuiDinh.resx">
+      <DependentUpon>FormThayDoiQuiDinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\LapBaoCao_Main.resx">
       <DependentUpon>LapBaoCao_Main.cs</DependentUpon>
