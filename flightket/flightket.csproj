@@ -85,6 +85,30 @@
     <Compile Include="Forms-Admin\FormHomeAdmin.Designer.cs">
       <DependentUpon>FormHomeAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms-NhanVien\FormBanVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormBanVe.Designer.cs">
+      <DependentUpon>FormBanVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormBanVeChuyenBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormBanVeChuyenBay.Designer.cs">
+      <DependentUpon>FormBanVeChuyenBay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormCapNhatThongTinPhieuDatCho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormCapNhatThongTinPhieuDatCho.Designer.cs">
+      <DependentUpon>FormCapNhatThongTinPhieuDatCho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormDatCho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormDatCho.Designer.cs">
+      <DependentUpon>FormDatCho.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms-NhanVien\FormDatChoChuyenBay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,11 +121,11 @@
     <Compile Include="Forms-NhanVien\FormHomeNhanVien.Designer.cs">
       <DependentUpon>FormHomeNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms-NhanVien\FormNhapThongTinKhachHang.cs">
+    <Compile Include="Forms-NhanVien\FormKiemTraDatCho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms-NhanVien\FormNhapThongTinKhachHang.Designer.cs">
-      <DependentUpon>FormNhapThongTinKhachHang.cs</DependentUpon>
+    <Compile Include="Forms-NhanVien\FormKiemTraDatCho.Designer.cs">
+      <DependentUpon>FormKiemTraDatCho.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms-NhanVien\FormTraCuuChuyenBay.cs">
       <SubType>Form</SubType>
@@ -165,14 +189,26 @@
     <EmbeddedResource Include="Forms-Admin\FormHomeAdmin.resx">
       <DependentUpon>FormHomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms-NhanVien\FormBanVe.resx">
+      <DependentUpon>FormBanVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-NhanVien\FormBanVeChuyenBay.resx">
+      <DependentUpon>FormBanVeChuyenBay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-NhanVien\FormCapNhatThongTinPhieuDatCho.resx">
+      <DependentUpon>FormCapNhatThongTinPhieuDatCho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-NhanVien\FormDatCho.resx">
+      <DependentUpon>FormDatCho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms-NhanVien\FormDatChoChuyenBay.resx">
       <DependentUpon>FormDatChoChuyenBay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-NhanVien\FormHomeNhanVien.resx">
       <DependentUpon>FormHomeNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms-NhanVien\FormNhapThongTinKhachHang.resx">
-      <DependentUpon>FormNhapThongTinKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="Forms-NhanVien\FormKiemTraDatCho.resx">
+      <DependentUpon>FormKiemTraDatCho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-NhanVien\FormTraCuuChuyenBay.resx">
       <DependentUpon>FormTraCuuChuyenBay.cs</DependentUpon>

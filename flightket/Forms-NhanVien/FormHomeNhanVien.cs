@@ -24,16 +24,32 @@ namespace flightket.Forms_NhanVien
             this.Hide();
             FormDatChoChuyenBay formDatChoChuyenBay = new FormDatChoChuyenBay();
             formDatChoChuyenBay.ShowDialog();
+            if(formDatChoChuyenBay.IsAccessible == false)
+            {
+                this.Show();
+            }
         }
 
         private void btn_kiemTraDatCho_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FormKiemTraDatCho formKiemTraDatCho = new FormKiemTraDatCho(); ;
+            formKiemTraDatCho.ShowDialog();
+            if(formKiemTraDatCho.IsAccessible == false)
+            {
+                this.Show();
+            }
         }
 
         private void btn_banVe_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FormBanVeChuyenBay formBanVeChuyenBay = new FormBanVeChuyenBay();
+            formBanVeChuyenBay.ShowDialog();
+            if(formBanVeChuyenBay.IsAccessible == false)
+            {
+                this.Show();
+            }
         }
 
         private void btn_traCuuChuyenBay_Click(object sender, EventArgs e)
