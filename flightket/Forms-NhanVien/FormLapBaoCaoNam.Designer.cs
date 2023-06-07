@@ -32,7 +32,12 @@
             this.panel_main = new System.Windows.Forms.Panel();
             this.panelDanhSachPhieuDatCho = new System.Windows.Forms.Panel();
             this.lb_doanhThuBanVe = new System.Windows.Forms.Label();
-            this.dgv_doanhThuChuyenBay = new System.Windows.Forms.DataGridView();
+            this.dgv_doanhThuNam = new System.Windows.Forms.DataGridView();
+            this.ColumnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMaChuyenBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cb_nam = new System.Windows.Forms.ComboBox();
             this.lb_sanBayDen = new System.Windows.Forms.Label();
@@ -41,14 +46,11 @@
             this.lb_title1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
-            this.ColumnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMaChuyenBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lb_tongDoanhThu = new System.Windows.Forms.Label();
+            this.btn_xuatBaoCao = new System.Windows.Forms.Button();
             this.panel_main.SuspendLayout();
             this.panelDanhSachPhieuDatCho.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_doanhThuChuyenBay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_doanhThuNam)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +59,7 @@
             this.panel_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel_main.Controls.Add(this.btn_xuatBaoCao);
             this.panel_main.Controls.Add(this.panelDanhSachPhieuDatCho);
             this.panel_main.Controls.Add(this.panel2);
             this.panel_main.Controls.Add(this.btn_xemBaoCao);
@@ -73,8 +76,9 @@
             // panelDanhSachPhieuDatCho
             // 
             this.panelDanhSachPhieuDatCho.BackColor = System.Drawing.Color.Transparent;
+            this.panelDanhSachPhieuDatCho.Controls.Add(this.lb_tongDoanhThu);
             this.panelDanhSachPhieuDatCho.Controls.Add(this.lb_doanhThuBanVe);
-            this.panelDanhSachPhieuDatCho.Controls.Add(this.dgv_doanhThuChuyenBay);
+            this.panelDanhSachPhieuDatCho.Controls.Add(this.dgv_doanhThuNam);
             this.panelDanhSachPhieuDatCho.Location = new System.Drawing.Point(240, 376);
             this.panelDanhSachPhieuDatCho.Name = "panelDanhSachPhieuDatCho";
             this.panelDanhSachPhieuDatCho.Size = new System.Drawing.Size(1373, 383);
@@ -90,23 +94,63 @@
             this.lb_doanhThuBanVe.TabIndex = 9;
             this.lb_doanhThuBanVe.Text = "Doanh thu bán vé năm ...";
             // 
-            // dgv_doanhThuChuyenBay
+            // dgv_doanhThuNam
             // 
-            this.dgv_doanhThuChuyenBay.AllowUserToOrderColumns = true;
-            this.dgv_doanhThuChuyenBay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_doanhThuChuyenBay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_doanhThuNam.AllowUserToOrderColumns = true;
+            this.dgv_doanhThuNam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_doanhThuNam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnSTT,
             this.ColumnMaChuyenBay,
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgv_doanhThuChuyenBay.Location = new System.Drawing.Point(121, 61);
-            this.dgv_doanhThuChuyenBay.Name = "dgv_doanhThuChuyenBay";
-            this.dgv_doanhThuChuyenBay.ReadOnly = true;
-            this.dgv_doanhThuChuyenBay.RowHeadersWidth = 51;
-            this.dgv_doanhThuChuyenBay.RowTemplate.Height = 24;
-            this.dgv_doanhThuChuyenBay.Size = new System.Drawing.Size(1177, 228);
-            this.dgv_doanhThuChuyenBay.TabIndex = 12;
+            this.dgv_doanhThuNam.Location = new System.Drawing.Point(121, 61);
+            this.dgv_doanhThuNam.Name = "dgv_doanhThuNam";
+            this.dgv_doanhThuNam.ReadOnly = true;
+            this.dgv_doanhThuNam.RowHeadersWidth = 51;
+            this.dgv_doanhThuNam.RowTemplate.Height = 24;
+            this.dgv_doanhThuNam.Size = new System.Drawing.Size(1177, 228);
+            this.dgv_doanhThuNam.TabIndex = 12;
+            // 
+            // ColumnSTT
+            // 
+            this.ColumnSTT.HeaderText = "STT";
+            this.ColumnSTT.MinimumWidth = 6;
+            this.ColumnSTT.Name = "ColumnSTT";
+            this.ColumnSTT.ReadOnly = true;
+            this.ColumnSTT.Width = 70;
+            // 
+            // ColumnMaChuyenBay
+            // 
+            this.ColumnMaChuyenBay.HeaderText = "Tháng";
+            this.ColumnMaChuyenBay.MinimumWidth = 6;
+            this.ColumnMaChuyenBay.Name = "ColumnMaChuyenBay";
+            this.ColumnMaChuyenBay.ReadOnly = true;
+            this.ColumnMaChuyenBay.Width = 200;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Số chuyến bay";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 200;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Doanh thu ( Đồng )";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 210;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Tỉ lệ ( % )";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
             // 
             // panel2
             // 
@@ -157,6 +201,7 @@
             this.btn_xemBaoCao.TabIndex = 15;
             this.btn_xemBaoCao.Text = "Xem báo cáo";
             this.btn_xemBaoCao.UseVisualStyleBackColor = false;
+            this.btn_xemBaoCao.Click += new System.EventHandler(this.btn_xemBaoCao_Click);
             // 
             // lb_title2
             // 
@@ -190,6 +235,7 @@
             this.btn_back.Size = new System.Drawing.Size(70, 70);
             this.btn_back.TabIndex = 0;
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // btn_home
             // 
@@ -199,46 +245,34 @@
             this.btn_home.Size = new System.Drawing.Size(70, 70);
             this.btn_home.TabIndex = 1;
             this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
-            // ColumnSTT
+            // lb_tongDoanhThu
             // 
-            this.ColumnSTT.HeaderText = "STT";
-            this.ColumnSTT.MinimumWidth = 6;
-            this.ColumnSTT.Name = "ColumnSTT";
-            this.ColumnSTT.ReadOnly = true;
-            this.ColumnSTT.Width = 70;
+            this.lb_tongDoanhThu.AutoSize = true;
+            this.lb_tongDoanhThu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lb_tongDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tongDoanhThu.Location = new System.Drawing.Point(878, 313);
+            this.lb_tongDoanhThu.Name = "lb_tongDoanhThu";
+            this.lb_tongDoanhThu.Size = new System.Drawing.Size(242, 36);
+            this.lb_tongDoanhThu.TabIndex = 14;
+            this.lb_tongDoanhThu.Text = "Tổng doanh thu :";
             // 
-            // ColumnMaChuyenBay
+            // btn_xuatBaoCao
             // 
-            this.ColumnMaChuyenBay.HeaderText = "Tháng";
-            this.ColumnMaChuyenBay.MinimumWidth = 6;
-            this.ColumnMaChuyenBay.Name = "ColumnMaChuyenBay";
-            this.ColumnMaChuyenBay.ReadOnly = true;
-            this.ColumnMaChuyenBay.Width = 200;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Số chuyến bay";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 200;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Doanh thu ( Đồng )";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 210;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tỉ lệ ( % )";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
+            this.btn_xuatBaoCao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+            this.btn_xuatBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xuatBaoCao.ForeColor = System.Drawing.Color.White;
+            this.btn_xuatBaoCao.Image = global::flightket.Properties.Resources.icons8_export_64;
+            this.btn_xuatBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_xuatBaoCao.Location = new System.Drawing.Point(1181, 765);
+            this.btn_xuatBaoCao.Name = "btn_xuatBaoCao";
+            this.btn_xuatBaoCao.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btn_xuatBaoCao.Size = new System.Drawing.Size(317, 65);
+            this.btn_xuatBaoCao.TabIndex = 24;
+            this.btn_xuatBaoCao.Text = "Xuất báo cáo";
+            this.btn_xuatBaoCao.UseVisualStyleBackColor = false;
+            this.btn_xuatBaoCao.Click += new System.EventHandler(this.btn_xuatBaoCao_Click);
             // 
             // FormLapBaoCaoNam
             // 
@@ -257,7 +291,7 @@
             this.panel_main.PerformLayout();
             this.panelDanhSachPhieuDatCho.ResumeLayout(false);
             this.panelDanhSachPhieuDatCho.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_doanhThuChuyenBay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_doanhThuNam)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -269,7 +303,7 @@
         private System.Windows.Forms.Panel panel_main;
         private System.Windows.Forms.Panel panelDanhSachPhieuDatCho;
         private System.Windows.Forms.Label lb_doanhThuBanVe;
-        private System.Windows.Forms.DataGridView dgv_doanhThuChuyenBay;
+        private System.Windows.Forms.DataGridView dgv_doanhThuNam;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSTT;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMaChuyenBay;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -283,5 +317,7 @@
         private System.Windows.Forms.Label lb_title1;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Button btn_home;
+        private System.Windows.Forms.Label lb_tongDoanhThu;
+        private System.Windows.Forms.Button btn_xuatBaoCao;
     }
 }

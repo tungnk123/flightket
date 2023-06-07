@@ -37,5 +37,16 @@ namespace flightket.Forms_NhanVien
         {
             this.Close();
         }
+
+        private void btn_baoCaoNam_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLapBaoCaoNam formLapBaoCaoNam = new FormLapBaoCaoNam(this);
+            formLapBaoCaoNam.ShowDialog();
+            if(formLapBaoCaoNam.IsAccessible == false)
+            {
+                this.Show() ;
+            }
+        }
     }
 }

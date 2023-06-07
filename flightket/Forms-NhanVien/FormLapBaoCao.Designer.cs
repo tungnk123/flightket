@@ -65,6 +65,7 @@
             this.btn_baoCaoNam.TabIndex = 8;
             this.btn_baoCaoNam.Text = "Báo cáo doanh thu theo năm";
             this.btn_baoCaoNam.UseVisualStyleBackColor = false;
+            this.btn_baoCaoNam.Click += new System.EventHandler(this.btn_baoCaoNam_Click);
             // 
             // btn_baoCaoThang
             // 
