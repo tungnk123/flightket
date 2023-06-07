@@ -96,6 +96,7 @@ namespace flightket.Forms_NhanVien
                     {
                         MessageBox.Show("Đã cập nhật danh sách doanh thu chuyến bay theo tháng");
                         lb_doanhThuBanVe.Text = "Doanh thu bán vé tháng " + thang.ToString() + " năm " + nam.ToString();
+                        lb_tongDoanhThu.Text = "Tổng doanh thu: " + tongDoanhThu.ToString() + " đồng";
                         return;
                     }
 
@@ -145,11 +146,13 @@ namespace flightket.Forms_NhanVien
 
                     MessageBox.Show("Đã cập nhật danh sách doanh thu chuyến bay theo tháng");
                     lb_doanhThuBanVe.Text = "Doanh thu bán vé tháng " + thang.ToString() + " năm " + nam.ToString();
+                    lb_tongDoanhThu.Text = "Tổng doanh thu: " + tongDoanhThu.ToString() + " đồng";
                 }
                 else if(baoCaoThang.Count > 0)
                 {
                     string maBaoCaoThang = baoCaoThang.ToList().First().MaBCThang;
                     var listCTBCThang = db.CT_BCTHANG.Where(a => a.MaBCThang == maBaoCaoThang).ToList();
+                    double tongDoanhThu = 0;
                  
                     // nếu tháng cũ thì chỉ cần load lên
                     dgv_doanhThuChuyenBay.RowCount = listCTBCThang.Count;
@@ -159,13 +162,14 @@ namespace flightket.Forms_NhanVien
                         dgv_doanhThuChuyenBay.Rows[i].Cells[1].Value = listCTBCThang[i].MaChuyenBay;
                         dgv_doanhThuChuyenBay.Rows[i].Cells[2].Value = listCTBCThang[i].SoVe;
                         dgv_doanhThuChuyenBay.Rows[i].Cells[3].Value = listCTBCThang[i].DoanhThu;
+                        tongDoanhThu += (double)listCTBCThang[i].DoanhThu;
                         dgv_doanhThuChuyenBay.Rows[i].Cells[4].Value = listCTBCThang[i].TiLe;
                         dgv_doanhThuChuyenBay.Rows[i].Height = 30;
                     }
                     MessageBox.Show("Đã cập nhật danh sách doanh thu chuyến bay theo tháng");
                     lb_doanhThuBanVe.Text = "Doanh thu bán vé tháng " + thang.ToString() + " năm " + nam.ToString();
-                    
-                    
+                    lb_tongDoanhThu.Text = "Tổng doanh thu: " + tongDoanhThu.ToString() + " đồng";
+
                 }
                 
             }
