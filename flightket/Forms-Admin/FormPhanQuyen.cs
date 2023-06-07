@@ -16,5 +16,13 @@ namespace flightket.Forms_Admin
         {
             InitializeComponent();
         }
+
+        private void FormPhanQuyen_Load(object sender, EventArgs e)
+        {
+            using (var db = new FlightKetDBEntities())
+            {
+                //var result = from nhanvien in db.NHANVIENs;
+            }
+        }
     }
 }

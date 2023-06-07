@@ -210,6 +210,7 @@ namespace flightket.Forms_Admin
             this.Name = "FormPhanQuyen";
             this.Text = "Flightket - Admin - Phân quyền";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormPhanQuyen_Load);
             this.panel_main.ResumeLayout(false);
             this.panel_main.PerformLayout();
             this.ResumeLayout(false);
