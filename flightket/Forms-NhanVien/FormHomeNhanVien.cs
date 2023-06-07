@@ -42,7 +42,9 @@ namespace flightket.Forms_NhanVien
 
         private void btn_traCuuChuyenBay_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FormTraCuuChuyenBay formTraCuuChuyenBay = new FormTraCuuChuyenBay();
+            formTraCuuChuyenBay.ShowDialog();
         }
 
         private void btn_lapBaoCao_Click(object sender, EventArgs e)
