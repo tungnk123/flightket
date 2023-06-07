@@ -19,18 +19,35 @@ namespace flightket.Forms_NhanVien
 
         private void btn_xemBaoCao_Click(object sender, EventArgs e)
         {
-            int thang = Convert.ToInt32(cb_thang.Text);
-            int nam = Convert.ToInt32(cb_nam.Text);
+            int thang, nam;
+            try
+            {
+                thang = Convert.ToInt32(cb_thang.Text);
+                nam = Convert.ToInt32(cb_nam.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Vui lòng điền thông tin tháng và năm hợp lệ");
+                return;
+            }
 
             using (var db = new FlightKetDBEntities())
             {
+                // Lấy ra danh sách chuyến bay theo tháng và năm được chọn
                 var listChuyenBay = db.CHUYENBAYs.Where(a => a.NgayGioKhoiHanh.Value.Month == thang && a.NgayGioKhoiHanh.Value.Year == nam).ToList();
+
+                if(listChuyenBay.Count == 0)
+                {
+                    MessageBox.Show("Không tìm thấy thông tin các chuyến bay trong tháng");
+                    return;
+                }
+
                 double tongDoanhThu = 0;
                 double[] doanhThuTungChuyenBay = new double[listChuyenBay.Count];
                 int[] soVeTungChuyenBay = new int[listChuyenBay.Count];
                 double[] tileTungChuyenBay = new double[listChuyenBay.Count];
-                // tính doanh thu của từng chuyến bay và cộng vào tổng doanh thu
 
+                // tính doanh thu của từng chuyến bay và cộng vào tổng doanh thu
                 for(int i = 0; i < listChuyenBay.Count; i++)
                 {
                     string maChuyenBay = listChuyenBay[i].MaChuyenBay;
@@ -46,6 +63,7 @@ namespace flightket.Forms_NhanVien
                         doanhThuTungChuyenBay[i] += (double)veChuyenBay.GiaTien;
                     }
                 }
+                // tính tỉ lệ doanh thu của từng chuyến bay
                 for(int i = 0;i < listChuyenBay.Count; i++)
                 {
                     tileTungChuyenBay[i] = (doanhThuTungChuyenBay[i] / tongDoanhThu) * 100;
