@@ -1,4 +1,5 @@
-﻿using System;
+﻿using flightket.Forms_QuanLy;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace flightket
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormDangNhap());
+            Application.Run(new LapBaoCao_Main());
         }
     }
 }

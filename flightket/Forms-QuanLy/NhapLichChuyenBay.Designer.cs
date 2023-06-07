@@ -312,6 +312,8 @@
             this.cb_ThoiGianBay.Name = "cb_ThoiGianBay";
             this.cb_ThoiGianBay.Size = new System.Drawing.Size(83, 41);
             this.cb_ThoiGianBay.TabIndex = 14;
+            this.cb_ThoiGianBay.TextChanged += new System.EventHandler(this.cb_ThoiGianBay_TextChanged);
+            this.cb_ThoiGianBay.Leave += new System.EventHandler(this.cb_ThoiGianBay_Leave);
             // 
             // cb_hangGhe
             // 
