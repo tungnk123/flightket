@@ -57,8 +57,14 @@ namespace flightket.Forms_NhanVien
                 }
                 else if (result.Count == 0)
                 {
+                    string gioiTinh = cb_gioiTinh.Text;
                     string maHanhkhach = "HK" + (db.HANHKHACHes.ToList().Count + 1).ToString();
-                    HANHKHACH hANHKHACH = new HANHKHACH() { MaHanhKhach = maHanhkhach, TenHanhKhach = tb_hoVaTen.Text, CMND = tb_CMND.Text, SDT = tb_soDienThoai.Text, NgaySinh = dp_ngaySinh.Value, GioiTinh = cb_gioiTinh.Text };
+                    if (cb_gioiTinh.Text == "Nữ")
+                    {
+                        gioiTinh = "Nu";
+                    }
+
+                    HANHKHACH hANHKHACH = new HANHKHACH() { MaHanhKhach = maHanhkhach, TenHanhKhach = tb_hoVaTen.Text, CMND = tb_CMND.Text, SDT = tb_soDienThoai.Text, NgaySinh = dp_ngaySinh.Value, GioiTinh = gioiTinh };
                     db.HANHKHACHes.Add(hANHKHACH);
                     db.SaveChanges();
                     string maHangVe = db.HANGVEs.Where(a => a.TenHangVe.Equals(tb_hangVe.Text)).ToList().FirstOrDefault().MaHangVe;
