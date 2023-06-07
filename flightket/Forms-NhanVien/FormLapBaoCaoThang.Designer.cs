@@ -33,6 +33,11 @@
             this.panelDanhSachPhieuDatCho = new System.Windows.Forms.Panel();
             this.lb_doanhThuBanVe = new System.Windows.Forms.Label();
             this.dgv_doanhThuChuyenBay = new System.Windows.Forms.DataGridView();
+            this.ColumnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMaChuyenBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cb_nam = new System.Windows.Forms.ComboBox();
             this.lb_sanBayDen = new System.Windows.Forms.Label();
@@ -44,11 +49,6 @@
             this.lb_title1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
-            this.ColumnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMaChuyenBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_main.SuspendLayout();
             this.panelDanhSachPhieuDatCho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_doanhThuChuyenBay)).BeginInit();
@@ -113,6 +113,46 @@
             this.dgv_doanhThuChuyenBay.Size = new System.Drawing.Size(1177, 228);
             this.dgv_doanhThuChuyenBay.TabIndex = 12;
             // 
+            // ColumnSTT
+            // 
+            this.ColumnSTT.HeaderText = "STT";
+            this.ColumnSTT.MinimumWidth = 6;
+            this.ColumnSTT.Name = "ColumnSTT";
+            this.ColumnSTT.ReadOnly = true;
+            this.ColumnSTT.Width = 70;
+            // 
+            // ColumnMaChuyenBay
+            // 
+            this.ColumnMaChuyenBay.HeaderText = "Mã Chuyến Bay";
+            this.ColumnMaChuyenBay.MinimumWidth = 6;
+            this.ColumnMaChuyenBay.Name = "ColumnMaChuyenBay";
+            this.ColumnMaChuyenBay.ReadOnly = true;
+            this.ColumnMaChuyenBay.Width = 200;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Số vé";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 200;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Doanh thu ( Đồng )";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 210;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Tỉ lệ ( % )";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
@@ -129,6 +169,14 @@
             this.cb_nam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_nam.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cb_nam.FormattingEnabled = true;
+            this.cb_nam.Items.AddRange(new object[] {
+            "2023",
+            "2022",
+            "2021",
+            "2020",
+            "2019",
+            "2018",
+            "2017"});
             this.cb_nam.Location = new System.Drawing.Point(31, 58);
             this.cb_nam.Name = "cb_nam";
             this.cb_nam.Size = new System.Drawing.Size(132, 37);
@@ -208,7 +256,7 @@
             this.lb_title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_title2.Location = new System.Drawing.Point(654, 102);
             this.lb_title2.Name = "lb_title2";
-            this.lb_title2.Size = new System.Drawing.Size(499, 39);
+            this.lb_title2.Size = new System.Drawing.Size(480, 38);
             this.lb_title2.TabIndex = 3;
             this.lb_title2.Text = "Báo cáo doanh thu theo tháng";
             // 
@@ -242,46 +290,6 @@
             this.btn_home.Size = new System.Drawing.Size(70, 70);
             this.btn_home.TabIndex = 1;
             this.btn_home.UseVisualStyleBackColor = true;
-            // 
-            // ColumnSTT
-            // 
-            this.ColumnSTT.HeaderText = "STT";
-            this.ColumnSTT.MinimumWidth = 6;
-            this.ColumnSTT.Name = "ColumnSTT";
-            this.ColumnSTT.ReadOnly = true;
-            this.ColumnSTT.Width = 70;
-            // 
-            // ColumnMaChuyenBay
-            // 
-            this.ColumnMaChuyenBay.HeaderText = "Mã Chuyến Bay";
-            this.ColumnMaChuyenBay.MinimumWidth = 6;
-            this.ColumnMaChuyenBay.Name = "ColumnMaChuyenBay";
-            this.ColumnMaChuyenBay.ReadOnly = true;
-            this.ColumnMaChuyenBay.Width = 200;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Số vé";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 200;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Doanh thu ( Đồng )";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 210;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tỉ lệ ( % )";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
             // 
             // FormLapBaoCaoThang
             // 
