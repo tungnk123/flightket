@@ -23,7 +23,31 @@ public partial class FlightKetDBEntities : DbContext
     public FlightKetDBEntities()
         : base("name=FlightKetDBEntities")
     {
-
+        public FlightKetDBEntities()
+            : base("name=FlightKetDBEntities")
+        {
+        }
+    
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            throw new UnintentionalCodeFirstException();
+        }
+    
+        public virtual DbSet<BAOCAONAM> BAOCAONAMs { get; set; }
+        public virtual DbSet<BAOCAOTHANG> BAOCAOTHANGs { get; set; }
+        public virtual DbSet<CHUYENBAY> CHUYENBAYs { get; set; }
+        public virtual DbSet<CT_BCTHANG> CT_BCTHANG { get; set; }
+        public virtual DbSet<CT_CHUYENBAY> CT_CHUYENBAY { get; set; }
+        public virtual DbSet<CT_HANGVE> CT_HANGVE { get; set; }
+        public virtual DbSet<HANGVE> HANGVEs { get; set; }
+        public virtual DbSet<HANHKHACH> HANHKHACHes { get; set; }
+        public virtual DbSet<NHANVIEN> NHANVIENs { get; set; }
+        public virtual DbSet<PHIEUDATCHO> PHIEUDATCHOes { get; set; }
+        public virtual DbSet<ROLE> ROLEs { get; set; }
+        public virtual DbSet<SANBAY> SANBAYs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<THAMSO> THAMSOes { get; set; }
+        public virtual DbSet<VECHUYENBAY> VECHUYENBAYs { get; set; }
     }
 
     protected override void OnModelCreating(DbModelBuilder modelBuilder)

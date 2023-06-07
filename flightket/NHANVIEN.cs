@@ -16,11 +16,13 @@ namespace flightket
     {
         public string MaNhanVien { get; set; }
         public string HoTen { get; set; }
-        public Nullable<System.DateTime> NamSinh { get; set; }
+        public Nullable<System.DateTime> NgaySinh { get; set; }
         public string DiaChi { get; set; }
-        public string SDT { get; set; }
+        public string SoDienThoai { get; set; }
         public string UserName { get; set; }
         public string PassWord { get; set; }
-        public string Role { get; set; }
+        public string RoleID { get; set; }
+    
+        public virtual ROLE ROLE { get; set; }
     }
 }
