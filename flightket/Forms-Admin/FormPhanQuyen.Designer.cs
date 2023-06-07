@@ -38,7 +38,7 @@ namespace flightket.Forms_Admin
             this.cb_traCuuChuyenBay = new System.Windows.Forms.CheckBox();
             this.cb_nhapLichChuyenBay = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmb_chonLoaiNguoiDung = new System.Windows.Forms.ComboBox();
             this.btn_xacNhan = new System.Windows.Forms.Button();
             this.lb_title1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
@@ -58,7 +58,7 @@ namespace flightket.Forms_Admin
             this.panel_main.Controls.Add(this.cb_traCuuChuyenBay);
             this.panel_main.Controls.Add(this.cb_nhapLichChuyenBay);
             this.panel_main.Controls.Add(this.label1);
-            this.panel_main.Controls.Add(this.comboBox1);
+            this.panel_main.Controls.Add(this.cmb_chonLoaiNguoiDung);
             this.panel_main.Controls.Add(this.btn_xacNhan);
             this.panel_main.Controls.Add(this.lb_title1);
             this.panel_main.Controls.Add(this.btn_back);
@@ -145,14 +145,14 @@ namespace flightket.Forms_Admin
             this.label1.TabIndex = 10;
             this.label1.Text = "Chọn loại người dùng";
             // 
-            // comboBox1
+            // cmb_chonLoaiNguoiDung
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.Silver;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(967, 122);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(279, 34);
-            this.comboBox1.TabIndex = 9;
+            this.cmb_chonLoaiNguoiDung.BackColor = System.Drawing.Color.Silver;
+            this.cmb_chonLoaiNguoiDung.FormattingEnabled = true;
+            this.cmb_chonLoaiNguoiDung.Location = new System.Drawing.Point(967, 122);
+            this.cmb_chonLoaiNguoiDung.Name = "cmb_chonLoaiNguoiDung";
+            this.cmb_chonLoaiNguoiDung.Size = new System.Drawing.Size(279, 34);
+            this.cmb_chonLoaiNguoiDung.TabIndex = 9;
             // 
             // btn_xacNhan
             // 
@@ -227,7 +227,7 @@ namespace flightket.Forms_Admin
         private System.Windows.Forms.CheckBox cb_traCuuChuyenBay;
         private System.Windows.Forms.CheckBox cb_nhapLichChuyenBay;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_chonLoaiNguoiDung;
         private System.Windows.Forms.Button btn_xacNhan;
         private System.Windows.Forms.Label lb_title1;
         private System.Windows.Forms.Button btn_back;

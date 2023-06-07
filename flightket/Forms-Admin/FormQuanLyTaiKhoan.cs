@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace flightket.Forms_Admin
@@ -18,6 +15,27 @@ namespace flightket.Forms_Admin
             instance = this;
             InitializeComponent();
             cb_loaiTaiKhoan.Text = "Nhân viên sân bay";
+            using (var db = new FlightKetDBEntities())
+            {
+                var result = from role in db.ROLEs
+                             select role.RoleName;
+                var resultList = result.ToList();
+                List<string> roleNameList = new List<string>();
+                foreach (string item in resultList)
+                {
+                    if (item.Equals("Qu?n lý"))
+                    {
+                        roleNameList.Add("Quản lý");
+                    }
+                    else
+                    {
+                        roleNameList.Add(item);
+                    }
+                }
+                cb_loaiTaiKhoan.DataSource = roleNameList;
+
+            }
+
             loadNhanVien();
         }
 
@@ -26,7 +44,7 @@ namespace flightket.Forms_Admin
             using (var db = new FlightKetDBEntities())
             {
                 lb_danhSachTaiKhoan.Text = "Danh sách tài khoản " + cb_loaiTaiKhoan.Text;
-                var querry = db.NHANVIENs.Where(a => a.Role.Equals("nhanviensanbay"));
+                var querry = db.NHANVIENs.Where(a => a.RoleID.Equals("NVSB1"));
                 var result = querry.ToList();
                 dgv_danhSachTaiKhoan.RowCount = result.Count;
                 for (int i = 0; i < result.Count; i++)
@@ -52,7 +70,7 @@ namespace flightket.Forms_Admin
             using (var db = new FlightKetDBEntities())
             {
                 lb_danhSachTaiKhoan.Text = "Danh sách tài khoản " + cb_loaiTaiKhoan.Text;
-                var querry = db.NHANVIENs.Where(a => a.Role.Equals("quanly"));
+                var querry = db.NHANVIENs.Where(a => a.RoleID.Equals("QULY1"));
                 var result = querry.ToList();
                 dgv_danhSachTaiKhoan.RowCount = result.Count;
                 for (int i = 0; i < result.Count; i++)
@@ -76,7 +94,7 @@ namespace flightket.Forms_Admin
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cb_loaiTaiKhoan.Text == "Nhân viên sân bay")
+            if (cb_loaiTaiKhoan.Text == "Nhân viên sân bay")
             {
                 loadNhanVien();
             }
@@ -92,10 +110,17 @@ namespace flightket.Forms_Admin
             FormCapNhatTaiKhoanNhanVien formCapNhatTaiKhoanNhanVien = new FormCapNhatTaiKhoanNhanVien(maNhanVien);
             this.Hide();
             formCapNhatTaiKhoanNhanVien.ShowDialog();
-            if(formCapNhatTaiKhoanNhanVien.IsAccessible == false)
+            if (formCapNhatTaiKhoanNhanVien.IsAccessible == false)
             {
                 this.Show();
-                this.loadNhanVien();
+                if (cb_loaiTaiKhoan.Text == "Nhân viên sân bay")
+                {
+                    loadNhanVien();
+                }
+                else
+                {
+                    loadQuanLy();
+                }
             }
         }
 

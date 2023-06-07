@@ -1,18 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace flightket.Forms_Admin
 {
     public partial class FormThemTaiKhoan : Form
     {
-        List<String> loaiTaiKhoanList = new List<string> { "Nhân viên sân bay", "Quản lý" };
         Random random = new Random();
         String maNhanvien;
         int number;
@@ -20,11 +15,31 @@ namespace flightket.Forms_Admin
         {
             InitializeComponent();
             DateTime dateTime = DateTime.Now;
-            
-            cb_loaiTaiKhoan.DataSource = loaiTaiKhoanList;
+
             number = random.Next(100, 999);
             maNhanvien = "NV" + number.ToString();
             tb_maNhanVien.Text = maNhanvien;
+
+            using (var db = new FlightKetDBEntities())
+            {
+                var result = from role in db.ROLEs
+                             select role.RoleName;
+                var resultList = result.ToList();
+                List<string> roleNameList = new List<string>();
+                foreach (string item in resultList)
+                {
+                    if (item.Equals("Qu?n lý"))
+                    {
+                        roleNameList.Add("Quản lý");
+                    }
+                    else
+                    {
+                        roleNameList.Add(item);
+                    }
+                }
+                cb_loaiTaiKhoan.DataSource = roleNameList;
+
+            }
 
         }
         private bool IsLettersOnly(string value)
@@ -48,7 +63,7 @@ namespace flightket.Forms_Admin
             DateTime ngaySinh = dp_ngaySinh.Value;
             string diaChi = tb_diaChi.Text;
             string soDienThoai = tb_soDienThoai.Text;
-            string loaiTaiKhoan = cb_loaiTaiKhoan.Text.Equals("Nhân viên sân bay") ? "nhanviensanbay" : "quanly";
+            string loaiTaiKhoan = cb_loaiTaiKhoan.Text.Equals("Nhân viên sân bay") ? "NVSB1" : "QULY1";
 
             if (hoTen == "" || tenDangNhap == "" || matKhau == "" || diaChi == "" || soDienThoai == "")
             {
@@ -83,10 +98,10 @@ namespace flightket.Forms_Admin
                     HoTen = hoTen,
                     UserName = tenDangNhap,
                     PassWord = matKhau,
-                    NamSinh = ngaySinh,
+                    NgaySinh = ngaySinh,
                     DiaChi = diaChi,
-                    SDT = soDienThoai,
-                    Role = loaiTaiKhoan
+                    SoDienThoai = soDienThoai,
+                    RoleID = loaiTaiKhoan
                 };
 
                 db.NHANVIENs.Add(newNhanVien);
