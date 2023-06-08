@@ -225,6 +225,11 @@ namespace flightket.Forms_NhanVien
                     double tongDoanhThu = 0;
                  
                     // nếu tháng cũ thì chỉ cần load lên
+                    if(listCTBCThang.Count == 0)
+                    {
+                        MessageBox.Show("Không có chuyến bay nào trong tháng");
+                        return;
+                    }
                     dgv_doanhThuChuyenBay.RowCount = listCTBCThang.Count;
                     for (int i = 0; i < listCTBCThang.Count; i++)
                     {
