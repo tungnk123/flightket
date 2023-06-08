@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCapNhatThongTinNhanVien));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_xacNhan = new System.Windows.Forms.Button();
+            this.btn_luuThayDoi = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tb_maNhanVien = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.btn_xacNhan);
+            this.panel1.Controls.Add(this.btn_luuThayDoi);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
@@ -76,21 +76,22 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(69, 121);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1760, 900);
+            this.panel1.Size = new System.Drawing.Size(1738, 900);
             this.panel1.TabIndex = 9;
             // 
-            // btn_xacNhan
+            // btn_luuThayDoi
             // 
-            this.btn_xacNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
-            this.btn_xacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xacNhan.ForeColor = System.Drawing.Color.White;
-            this.btn_xacNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_xacNhan.Location = new System.Drawing.Point(859, 690);
-            this.btn_xacNhan.Name = "btn_xacNhan";
-            this.btn_xacNhan.Size = new System.Drawing.Size(253, 65);
-            this.btn_xacNhan.TabIndex = 30;
-            this.btn_xacNhan.Text = "Lưu thay đổi";
-            this.btn_xacNhan.UseVisualStyleBackColor = false;
+            this.btn_luuThayDoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+            this.btn_luuThayDoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_luuThayDoi.ForeColor = System.Drawing.Color.White;
+            this.btn_luuThayDoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_luuThayDoi.Location = new System.Drawing.Point(859, 690);
+            this.btn_luuThayDoi.Name = "btn_luuThayDoi";
+            this.btn_luuThayDoi.Size = new System.Drawing.Size(253, 65);
+            this.btn_luuThayDoi.TabIndex = 30;
+            this.btn_luuThayDoi.Text = "Lưu thay đổi";
+            this.btn_luuThayDoi.UseVisualStyleBackColor = false;
+            this.btn_luuThayDoi.Click += new System.EventHandler(this.btn_luuThayDoi_Click);
             // 
             // panel5
             // 
@@ -108,6 +109,7 @@
             this.tb_maNhanVien.Location = new System.Drawing.Point(31, 58);
             this.tb_maNhanVien.Multiline = true;
             this.tb_maNhanVien.Name = "tb_maNhanVien";
+            this.tb_maNhanVien.ReadOnly = true;
             this.tb_maNhanVien.Size = new System.Drawing.Size(196, 32);
             this.tb_maNhanVien.TabIndex = 1;
             // 
@@ -283,13 +285,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::flightket.Properties.Resources._350361348_206044632301251_2266599988871672436_n;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCapNhatThongTinNhanVien";
             this.Text = "FormCapNhatThongTinNhanVien";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -308,7 +311,7 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_xacNhan;
+        private System.Windows.Forms.Button btn_luuThayDoi;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox tb_maNhanVien;
         private System.Windows.Forms.Label label5;

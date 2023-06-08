@@ -144,5 +144,7 @@ namespace flightket.Forms_QuanLy
             lv_danhSachNhanVien.Rows[POSITION_UPDATE].Cells[4].Value = nhanVien.DiaChi;
             lv_danhSachNhanVien.Rows[POSITION_UPDATE].Cells[5].Value = nhanVien.SoDienThoai;
         }
+
+        
     }
 }

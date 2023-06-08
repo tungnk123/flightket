@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQuanLyHoSoNhanVien));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lv_danhSachNhanVien = new System.Windows.Forms.DataGridView();
             this.columnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnMaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,39 +40,40 @@
             this.columnDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnSdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnCapNhat = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_home = new System.Windows.Forms.Button();
+            this.btn_xacNhan = new System.Windows.Forms.Button();
+            this.lb_title1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btn_home = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lv_danhSachNhanVien)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(1815, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(708, 133);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Controls.Add(this.lv_danhSachNhanVien);
-            this.panel1.Controls.Add(this.label8);
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btn_home);
+            this.panel1.Controls.Add(this.lv_danhSachNhanVien);
+            this.panel1.Controls.Add(this.btn_xacNhan);
+            this.panel1.Controls.Add(this.lb_title1);
             this.panel1.Controls.Add(this.btn_back);
-            this.panel1.Location = new System.Drawing.Point(215, 123);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Controls.Add(this.btn_home);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(72, 110);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2111, 1035);
+            this.panel1.Size = new System.Drawing.Size(1760, 900);
             this.panel1.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(823, 149);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(259, 29);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Danh sách nhân viên ";
             // 
             // lv_danhSachNhanVien
             // 
@@ -84,7 +84,7 @@
             this.lv_danhSachNhanVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -99,23 +99,15 @@
             this.columnDiaChi,
             this.columnSdt,
             this.columnCapNhat});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.lv_danhSachNhanVien.DefaultCellStyle = dataGridViewCellStyle2;
             this.lv_danhSachNhanVien.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lv_danhSachNhanVien.Location = new System.Drawing.Point(172, 302);
-            this.lv_danhSachNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lv_danhSachNhanVien.Location = new System.Drawing.Point(122, 209);
+            this.lv_danhSachNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.lv_danhSachNhanVien.Name = "lv_danhSachNhanVien";
             this.lv_danhSachNhanVien.ReadOnly = true;
             this.lv_danhSachNhanVien.RowHeadersVisible = false;
             this.lv_danhSachNhanVien.RowHeadersWidth = 51;
-            this.lv_danhSachNhanVien.Size = new System.Drawing.Size(1799, 389);
-            this.lv_danhSachNhanVien.TabIndex = 31;
+            this.lv_danhSachNhanVien.Size = new System.Drawing.Size(1677, 400);
+            this.lv_danhSachNhanVien.TabIndex = 32;
             this.lv_danhSachNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lv_danhSachNhanVien_CellContentClick);
             // 
             // columnSTT
@@ -176,71 +168,63 @@
             this.columnCapNhat.Name = "columnCapNhat";
             this.columnCapNhat.ReadOnly = true;
             // 
-            // label8
+            // btn_xacNhan
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(881, 225);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(371, 42);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Danh sách nhân viên";
+            this.btn_xacNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+            this.btn_xacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xacNhan.ForeColor = System.Drawing.Color.White;
+            this.btn_xacNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_xacNhan.Location = new System.Drawing.Point(859, 716);
+            this.btn_xacNhan.Name = "btn_xacNhan";
+            this.btn_xacNhan.Size = new System.Drawing.Size(253, 65);
+            this.btn_xacNhan.TabIndex = 30;
+            this.btn_xacNhan.Text = "Lưu thay đổi";
+            this.btn_xacNhan.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // lb_title1
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 53);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(2107, 95);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Quản lý hồ sơ nhân viên";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_home
-            // 
-            this.btn_home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_home.BackgroundImage")));
-            this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_home.Location = new System.Drawing.Point(92, 4);
-            this.btn_home.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(84, 46);
-            this.btn_home.TabIndex = 1;
-            this.btn_home.UseVisualStyleBackColor = true;
-            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
+            this.lb_title1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_title1.AutoSize = true;
+            this.lb_title1.BackColor = System.Drawing.Color.Transparent;
+            this.lb_title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_title1.Location = new System.Drawing.Point(618, 28);
+            this.lb_title1.Name = "lb_title1";
+            this.lb_title1.Size = new System.Drawing.Size(692, 69);
+            this.lb_title1.TabIndex = 27;
+            this.lb_title1.Text = "Quản lý hồ sơ nhân viên";
             // 
             // btn_back
             // 
-            this.btn_back.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_back.BackgroundImage")));
-            this.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_back.Location = new System.Drawing.Point(15, 4);
-            this.btn_back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_back.Location = new System.Drawing.Point(3, 3);
             this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(84, 46);
-            this.btn_back.TabIndex = 0;
+            this.btn_back.Size = new System.Drawing.Size(70, 70);
+            this.btn_back.TabIndex = 23;
             this.btn_back.UseVisualStyleBackColor = true;
-            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
+            // btn_home
+            // 
+            this.btn_home.Location = new System.Drawing.Point(79, 3);
+            this.btn_home.Name = "btn_home";
+            this.btn_home.Size = new System.Drawing.Size(70, 70);
+            this.btn_home.TabIndex = 24;
+            this.btn_home.UseVisualStyleBackColor = true;
             // 
             // FormQuanLyHoSoNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::flightket.Properties.Resources._350248398_786598096329880_2111811280162483567_n__1_;
+            this.BackgroundImage = global::flightket.Properties.Resources._350361348_206044632301251_2266599988871672436_n;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormQuanLyHoSoNhanVien";
             this.Text = "FormQuanLyHoSoNhanVien";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormQuanLyHoSoNhanVien_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lv_danhSachNhanVien)).EndInit();
@@ -250,13 +234,9 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView lv_danhSachNhanVien;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_home;
-        private System.Windows.Forms.Button btn_back;
+        private System.Windows.Forms.DataGridView lv_danhSachNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnSTT;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnMaNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnHoTen;
@@ -264,5 +244,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnDiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnSdt;
         private System.Windows.Forms.DataGridViewButtonColumn columnCapNhat;
+        private System.Windows.Forms.Button btn_xacNhan;
+        private System.Windows.Forms.Label lb_title1;
+        private System.Windows.Forms.Button btn_back;
+        private System.Windows.Forms.Button btn_home;
     }
 }

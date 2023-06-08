@@ -141,7 +141,7 @@ namespace flightket.Forms_QuanLy
         public delegate void UpdateNhanVien(NHANVIEN nhanvien);
         public event UpdateNhanVien UpdateEvent;
 
-        private void btn_xacNhanCapNhat_Click(object sender, EventArgs e)
+        private void btn_luuThayDoi_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn cập nhật thông tin?", "Confirm", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -217,5 +217,7 @@ namespace flightket.Forms_QuanLy
             FormHomeQuanLy formHomeQuanLy = new FormHomeQuanLy();
             formHomeQuanLy.ShowDialog();    
         }
+
+        
     }
 }
