@@ -6,10 +6,15 @@ namespace flightket.Forms_NhanVien
     public partial class FormHomeNhanVien : Form
     {
         public static FormHomeNhanVien instance;
+        private bool isDatChoChuyenBayShown;
+
         public FormHomeNhanVien()
         {
+            this.KeyPreview = true;
+            this.KeyDown += FormHomeNhanVien_KeyDown;
             instance = this;
             InitializeComponent();
+            
         }
 
         private void btn_datChoChuyenBay_Click(object sender, EventArgs e)
@@ -84,5 +89,105 @@ namespace flightket.Forms_NhanVien
         {
             FormDangNhap.instance.Show();
         }
+
+        private void FormHomeNhanVien_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control)
+            {
+                string pressedKey = e.KeyCode.ToString();
+
+                for (int i = 1; i <= 6; i++)
+                {
+                    string shortcut = Properties.Settings.Default[$"Shortcut{i}"] as string;
+                    string secondStroke = Properties.Settings.Default[$"Shortcut{i}Right"] as string;
+
+                    if ((shortcut == pressedKey.ToUpper() || secondStroke == pressedKey.ToUpper()) && !isDatChoChuyenBayShown)
+                    {
+                        switch (i)
+                        {
+                            //case 1:
+                            //    this.Hide();
+                            //    FormNhapLichChuyenBay formNhapLichChuyenBay = new FormNhapLichChuyenBay();
+                            //    formNhapLichChuyenBay.FormClosed += (s, args) =>
+                            //    {
+                            //        this.Show();
+                            //        isDatChoChuyenBayShown = false;
+                            //    };
+                            //    formNhapLichChuyenBay.Show();
+                            //    isDatChoChuyenBayShown = true;
+                            //    e.Handled = true;
+                            //    break;
+                            case 2:
+                                this.Hide();
+                                FormBanVe formBanVe = new FormBanVe();
+                                formBanVe.FormClosed += (s, args) =>
+                                {
+                                    this.Show();
+                                    isDatChoChuyenBayShown = false;
+                                };
+                                formBanVe.Show();
+                                isDatChoChuyenBayShown = true;
+                                e.Handled = true;
+                                break;
+                            case 3:
+                                this.Hide();
+                                FormDatChoChuyenBay formDatChoChuyenBay = new FormDatChoChuyenBay();
+                                formDatChoChuyenBay.FormClosed += (s, args) =>
+                                {
+                                    this.Show();
+                                    isDatChoChuyenBayShown = false;
+                                };
+                                formDatChoChuyenBay.Show();
+                                isDatChoChuyenBayShown = true;
+                                e.Handled = true;
+                                break;
+                            case 4:
+                                this.Hide();
+                                FormKiemTraDatCho formKiemTraDatCho = new FormKiemTraDatCho();
+                                formKiemTraDatCho.FormClosed += (s, args) =>
+                                {
+                                    this.Show();
+                                    isDatChoChuyenBayShown = false;
+                                };
+                                formKiemTraDatCho.Show();
+                                isDatChoChuyenBayShown = true;
+                                e.Handled = true;
+                                break;
+                            case 5:
+                                this.Hide();
+                                FormTraCuuChuyenBay formTraCuuChuyenBay = new FormTraCuuChuyenBay();
+                                formTraCuuChuyenBay.FormClosed += (s, args) =>
+                                {
+                                    this.Show();
+                                    isDatChoChuyenBayShown = false;
+                                };
+                                formTraCuuChuyenBay.Show();
+                                isDatChoChuyenBayShown = true;
+                                e.Handled = true;
+                                break;
+                            case 6:
+                                this.Hide();
+                                FormLapBaoCao formLapBaoCao = new FormLapBaoCao();
+                                formLapBaoCao.FormClosed += (s, args) =>
+                                {
+                                    this.Show();
+                                    isDatChoChuyenBayShown = false;
+                                };
+                                formLapBaoCao.Show();
+                                isDatChoChuyenBayShown = true;
+                                e.Handled = true;
+                                break;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+
     }
 }

@@ -159,6 +159,7 @@ namespace flightket.Forms_NhanVien
             this.Text = " Flightket - Home Nhân viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormHomeNhanVien_FormClosed);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormHomeNhanVien_KeyDown);
             this.ResumeLayout(false);
 
         }

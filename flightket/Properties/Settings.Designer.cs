@@ -26,72 +26,144 @@ namespace flightket.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ShortcutNhapLichChuyenBay {
+        public string Shortcut1 {
             get {
-                return ((string)(this["ShortcutNhapLichChuyenBay"]));
+                return ((string)(this["Shortcut1"]));
             }
             set {
-                this["ShortcutNhapLichChuyenBay"] = value;
+                this["Shortcut1"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ShortcutBanVe {
+        public string Shortcut1Right {
             get {
-                return ((string)(this["ShortcutBanVe"]));
+                return ((string)(this["Shortcut1Right"]));
             }
             set {
-                this["ShortcutBanVe"] = value;
+                this["Shortcut1Right"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ShortcutXacNhanDatCho {
+        public string Shortcut2 {
             get {
-                return ((string)(this["ShortcutXacNhanDatCho"]));
+                return ((string)(this["Shortcut2"]));
             }
             set {
-                this["ShortcutXacNhanDatCho"] = value;
+                this["Shortcut2"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ShortcutKiemTraDatCho {
+        public string Shortcut2Right {
             get {
-                return ((string)(this["ShortcutKiemTraDatCho"]));
+                return ((string)(this["Shortcut2Right"]));
             }
             set {
-                this["ShortcutKiemTraDatCho"] = value;
+                this["Shortcut2Right"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ShortcutTraCuu {
+        public string Shortcut3 {
             get {
-                return ((string)(this["ShortcutTraCuu"]));
+                return ((string)(this["Shortcut3"]));
             }
             set {
-                this["ShortcutTraCuu"] = value;
+                this["Shortcut3"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ShortcutLapBaoCao {
+        public string Shortcut3Right {
             get {
-                return ((string)(this["ShortcutLapBaoCao"]));
+                return ((string)(this["Shortcut3Right"]));
             }
             set {
-                this["ShortcutLapBaoCao"] = value;
+                this["Shortcut3Right"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Shortcut4 {
+            get {
+                return ((string)(this["Shortcut4"]));
+            }
+            set {
+                this["Shortcut4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Shortcut4Right {
+            get {
+                return ((string)(this["Shortcut4Right"]));
+            }
+            set {
+                this["Shortcut4Right"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Shortcut5 {
+            get {
+                return ((string)(this["Shortcut5"]));
+            }
+            set {
+                this["Shortcut5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Shortcut5Right {
+            get {
+                return ((string)(this["Shortcut5Right"]));
+            }
+            set {
+                this["Shortcut5Right"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Shortcut6 {
+            get {
+                return ((string)(this["Shortcut6"]));
+            }
+            set {
+                this["Shortcut6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Shortcut6Right {
+            get {
+                return ((string)(this["Shortcut6Right"]));
+            }
+            set {
+                this["Shortcut6Right"] = value;
             }
         }
     }

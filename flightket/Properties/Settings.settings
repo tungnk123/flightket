@@ -2,22 +2,40 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="flightket.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="ShortcutNhapLichChuyenBay" Type="System.String" Scope="User">
+    <Setting Name="Shortcut1" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="ShortcutBanVe" Type="System.String" Scope="User">
+    <Setting Name="Shortcut1Right" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="ShortcutXacNhanDatCho" Type="System.String" Scope="User">
+    <Setting Name="Shortcut2" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="ShortcutKiemTraDatCho" Type="System.String" Scope="User">
+    <Setting Name="Shortcut2Right" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="ShortcutTraCuu" Type="System.String" Scope="User">
+    <Setting Name="Shortcut3" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="ShortcutLapBaoCao" Type="System.String" Scope="User">
+    <Setting Name="Shortcut3Right" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Shortcut4" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Shortcut4Right" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Shortcut5" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Shortcut5Right" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Shortcut6" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Shortcut6Right" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>
