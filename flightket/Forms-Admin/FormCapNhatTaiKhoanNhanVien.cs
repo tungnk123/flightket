@@ -26,6 +26,7 @@ namespace flightket.Forms_Admin
                 tb_hoTen.Text = nHANVIEN.HoTen;
                 tb_tenDangNhap.Text = nHANVIEN.UserName;
                 tb_matKhau.Text = nHANVIEN.PassWord;
+                
                 var result = from role in db.ROLEs
                              select role.RoleName;
                 var resultList = result.ToList();
@@ -42,6 +43,7 @@ namespace flightket.Forms_Admin
                     }
                 }
                 cb_loaiTaiKhoan.DataSource = roleNameList;
+                cb_loaiTaiKhoan.Text = nHANVIEN.RoleID.Equals("NVSB1") ? "Nhân viên sân bay" : "Quản lý";
             }
         }
 
@@ -85,6 +87,23 @@ namespace flightket.Forms_Admin
                 db.SaveChanges();
                 MessageBox.Show("Cập nhật thông tin thành công");
                 this.Close();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Bạn có thực sự muốn xóa tài khoản " + tb_maNhanVien.Text + " hay không?", "Xác nhận xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dialog == DialogResult.OK)
+            {
+                using (var db = new FlightKetDBEntities())
+                {
+                    var result = db.NHANVIENs.Find(tb_maNhanVien.Text);
+
+                    db.NHANVIENs.Remove(result);
+                    db.SaveChanges();
+                    MessageBox.Show("Đã xóa nhân viên thành công! ");
+                    this.Close();
+                }
             }
         }
     }
