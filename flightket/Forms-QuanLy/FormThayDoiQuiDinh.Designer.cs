@@ -108,10 +108,10 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btn_home);
             this.panel1.Controls.Add(this.btn_back);
-            this.panel1.Location = new System.Drawing.Point(76, 135);
+            this.panel1.Location = new System.Drawing.Point(67, 37);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1701, 937);
+            this.panel1.Size = new System.Drawing.Size(1701, 972);
             this.panel1.TabIndex = 2;
             // 
             // label17

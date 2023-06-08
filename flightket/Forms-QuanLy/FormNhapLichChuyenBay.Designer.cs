@@ -534,6 +534,7 @@ namespace flightket.Forms_QuanLy
             this.btn_xacNhan.TabIndex = 18;
             this.btn_xacNhan.Text = "Xác nhận";
             this.btn_xacNhan.UseVisualStyleBackColor = false;
+            this.btn_xacNhan.Click += new System.EventHandler(this.btn_xacNhan_Click);
             // 
             // panel5
             // 

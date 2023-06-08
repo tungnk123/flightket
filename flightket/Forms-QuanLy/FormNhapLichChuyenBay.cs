@@ -201,21 +201,11 @@ namespace flightket.Forms_QuanLy
             //                   MaHangVe = c.MaHangVe,
             //                   SoLuongGhe = c.SoLuongGhe
             //               };
+            cb_sanBayDi.Text = "";
 
         }
 
-        private void btnCB_dungOSanBay_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox checkBox = sender as CheckBox;
-            if (checkBox.Checked)
-            {
-                panel_sanbaytrunggian.Visible = true;
-            }
-            else
-            {
-                panel_sanbaytrunggian.Visible = false;
-            }
-        }
+        
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
@@ -613,6 +603,6 @@ namespace flightket.Forms_QuanLy
             }
         }
 
-        
+       
     }
 }
