@@ -20,7 +20,6 @@ namespace flightket.Forms_QuanLy
         public FormThayDoiQuiDinh()
         {
             InitializeComponent();
-            panel1.BackColor = Color.FromArgb(150, Color.White);
             Load_Data_ThamSo();
         }
 
@@ -345,5 +344,7 @@ namespace flightket.Forms_QuanLy
             tb_thoiGianTruocDatVeSlowestMoi.Clear();
             tb_thoiGianTruocHuyVeSlowestMoi.Clear();
         }
+
+       
     }
 }

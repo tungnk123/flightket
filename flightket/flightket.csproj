@@ -143,6 +143,12 @@
     <Compile Include="Forms-QuanLy\FormQuanLyHoSoNhanVien.Designer.cs">
       <DependentUpon>FormQuanLyHoSoNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms-QuanLy\FormTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormTemplate.Designer.cs">
+      <DependentUpon>FormTemplate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms-QuanLy\FormThayDoiChiTietSoHangVe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\FormQuanLyHoSoNhanVien.resx">
       <DependentUpon>FormQuanLyHoSoNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormTemplate.resx">
+      <DependentUpon>FormTemplate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\FormThayDoiChiTietSoHangVe.resx">
       <DependentUpon>FormThayDoiChiTietSoHangVe.cs</DependentUpon>
