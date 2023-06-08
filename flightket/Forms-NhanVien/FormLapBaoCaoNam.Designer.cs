@@ -30,7 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLapBaoCaoNam));
             this.panel_main = new System.Windows.Forms.Panel();
+            this.btn_xuatBaoCao = new System.Windows.Forms.Button();
             this.panelDanhSachPhieuDatCho = new System.Windows.Forms.Panel();
+            this.lb_tongDoanhThu = new System.Windows.Forms.Label();
             this.lb_doanhThuBanVe = new System.Windows.Forms.Label();
             this.dgv_doanhThuNam = new System.Windows.Forms.DataGridView();
             this.ColumnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,8 +48,6 @@
             this.lb_title1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
-            this.lb_tongDoanhThu = new System.Windows.Forms.Label();
-            this.btn_xuatBaoCao = new System.Windows.Forms.Button();
             this.panel_main.SuspendLayout();
             this.panelDanhSachPhieuDatCho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_doanhThuNam)).BeginInit();
@@ -68,10 +68,26 @@
             this.panel_main.Controls.Add(this.btn_back);
             this.panel_main.Controls.Add(this.btn_home);
             this.panel_main.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_main.Location = new System.Drawing.Point(101, 90);
+            this.panel_main.Location = new System.Drawing.Point(94, 125);
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(1701, 852);
             this.panel_main.TabIndex = 7;
+            // 
+            // btn_xuatBaoCao
+            // 
+            this.btn_xuatBaoCao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+            this.btn_xuatBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xuatBaoCao.ForeColor = System.Drawing.Color.White;
+            this.btn_xuatBaoCao.Image = global::flightket.Properties.Resources.icons8_export_64;
+            this.btn_xuatBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_xuatBaoCao.Location = new System.Drawing.Point(1181, 765);
+            this.btn_xuatBaoCao.Name = "btn_xuatBaoCao";
+            this.btn_xuatBaoCao.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btn_xuatBaoCao.Size = new System.Drawing.Size(317, 65);
+            this.btn_xuatBaoCao.TabIndex = 24;
+            this.btn_xuatBaoCao.Text = "Xuất báo cáo";
+            this.btn_xuatBaoCao.UseVisualStyleBackColor = false;
+            this.btn_xuatBaoCao.Click += new System.EventHandler(this.btn_xuatBaoCao_Click);
             // 
             // panelDanhSachPhieuDatCho
             // 
@@ -84,11 +100,22 @@
             this.panelDanhSachPhieuDatCho.Size = new System.Drawing.Size(1373, 383);
             this.panelDanhSachPhieuDatCho.TabIndex = 14;
             // 
+            // lb_tongDoanhThu
+            // 
+            this.lb_tongDoanhThu.AutoSize = true;
+            this.lb_tongDoanhThu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lb_tongDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tongDoanhThu.Location = new System.Drawing.Point(878, 313);
+            this.lb_tongDoanhThu.Name = "lb_tongDoanhThu";
+            this.lb_tongDoanhThu.Size = new System.Drawing.Size(242, 36);
+            this.lb_tongDoanhThu.TabIndex = 14;
+            this.lb_tongDoanhThu.Text = "Tổng doanh thu :";
+            // 
             // lb_doanhThuBanVe
             // 
             this.lb_doanhThuBanVe.AutoSize = true;
             this.lb_doanhThuBanVe.BackColor = System.Drawing.Color.Transparent;
-            this.lb_doanhThuBanVe.Location = new System.Drawing.Point(489, 14);
+            this.lb_doanhThuBanVe.Location = new System.Drawing.Point(567, 22);
             this.lb_doanhThuBanVe.Name = "lb_doanhThuBanVe";
             this.lb_doanhThuBanVe.Size = new System.Drawing.Size(280, 26);
             this.lb_doanhThuBanVe.TabIndex = 9;
@@ -208,7 +235,7 @@
             this.lb_title2.AutoSize = true;
             this.lb_title2.BackColor = System.Drawing.Color.Transparent;
             this.lb_title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_title2.Location = new System.Drawing.Point(654, 102);
+            this.lb_title2.Location = new System.Drawing.Point(699, 102);
             this.lb_title2.Name = "lb_title2";
             this.lb_title2.Size = new System.Drawing.Size(460, 38);
             this.lb_title2.TabIndex = 3;
@@ -221,7 +248,7 @@
             this.lb_title1.AutoSize = true;
             this.lb_title1.BackColor = System.Drawing.Color.Transparent;
             this.lb_title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_title1.Location = new System.Drawing.Point(709, 4);
+            this.lb_title1.Location = new System.Drawing.Point(754, 4);
             this.lb_title1.Name = "lb_title1";
             this.lb_title1.Size = new System.Drawing.Size(367, 69);
             this.lb_title1.TabIndex = 2;
@@ -246,33 +273,6 @@
             this.btn_home.TabIndex = 1;
             this.btn_home.UseVisualStyleBackColor = true;
             this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
-            // 
-            // lb_tongDoanhThu
-            // 
-            this.lb_tongDoanhThu.AutoSize = true;
-            this.lb_tongDoanhThu.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lb_tongDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tongDoanhThu.Location = new System.Drawing.Point(878, 313);
-            this.lb_tongDoanhThu.Name = "lb_tongDoanhThu";
-            this.lb_tongDoanhThu.Size = new System.Drawing.Size(242, 36);
-            this.lb_tongDoanhThu.TabIndex = 14;
-            this.lb_tongDoanhThu.Text = "Tổng doanh thu :";
-            // 
-            // btn_xuatBaoCao
-            // 
-            this.btn_xuatBaoCao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
-            this.btn_xuatBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xuatBaoCao.ForeColor = System.Drawing.Color.White;
-            this.btn_xuatBaoCao.Image = global::flightket.Properties.Resources.icons8_export_64;
-            this.btn_xuatBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_xuatBaoCao.Location = new System.Drawing.Point(1181, 765);
-            this.btn_xuatBaoCao.Name = "btn_xuatBaoCao";
-            this.btn_xuatBaoCao.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.btn_xuatBaoCao.Size = new System.Drawing.Size(317, 65);
-            this.btn_xuatBaoCao.TabIndex = 24;
-            this.btn_xuatBaoCao.Text = "Xuất báo cáo";
-            this.btn_xuatBaoCao.UseVisualStyleBackColor = false;
-            this.btn_xuatBaoCao.Click += new System.EventHandler(this.btn_xuatBaoCao_Click);
             // 
             // FormLapBaoCaoNam
             // 
