@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace flightket.Forms_QuanLy
@@ -19,17 +12,16 @@ namespace flightket.Forms_QuanLy
 
         private void btn_nhapLichChuyenBay_Click(object sender, EventArgs e)
         {
-            
-            NhapLichChuyenBay nhapLichChuyenBay_I = new NhapLichChuyenBay();
-            nhapLichChuyenBay_I.PreviousForm = this;
+
+            FormNhapLichChuyenBay nhapLichChuyenBay_I = new FormNhapLichChuyenBay();
             nhapLichChuyenBay_I.Show();
             this.Hide();
         }
 
         private void btn_lapBaoCao_Click(object sender, EventArgs e)
         {
-            
-            
+
+
         }
 
         private void btn_thayDoiQuiDinh_Click(object sender, EventArgs e)

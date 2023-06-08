@@ -66,9 +66,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_home = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,10 +108,10 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btn_home);
             this.panel1.Controls.Add(this.btn_back);
-            this.panel1.Location = new System.Drawing.Point(215, 123);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(76, 135);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2111, 1035);
+            this.panel1.Size = new System.Drawing.Size(1701, 937);
             this.panel1.TabIndex = 2;
             // 
             // label17
@@ -182,7 +180,7 @@
             this.btn_luuThayDoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_luuThayDoi.ForeColor = System.Drawing.Color.White;
             this.btn_luuThayDoi.Location = new System.Drawing.Point(1247, 943);
-            this.btn_luuThayDoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_luuThayDoi.Margin = new System.Windows.Forms.Padding(4);
             this.btn_luuThayDoi.Name = "btn_luuThayDoi";
             this.btn_luuThayDoi.Size = new System.Drawing.Size(300, 64);
             this.btn_luuThayDoi.TabIndex = 30;
@@ -195,7 +193,7 @@
             this.btn_thayDoiSoLuongHangVeMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(235)))), ((int)(((byte)(144)))));
             this.btn_thayDoiSoLuongHangVeMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_thayDoiSoLuongHangVeMoi.Location = new System.Drawing.Point(1423, 823);
-            this.btn_thayDoiSoLuongHangVeMoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_thayDoiSoLuongHangVeMoi.Margin = new System.Windows.Forms.Padding(4);
             this.btn_thayDoiSoLuongHangVeMoi.Name = "btn_thayDoiSoLuongHangVeMoi";
             this.btn_thayDoiSoLuongHangVeMoi.Size = new System.Drawing.Size(240, 74);
             this.btn_thayDoiSoLuongHangVeMoi.TabIndex = 29;
@@ -208,7 +206,7 @@
             this.btn_thayDoiSoLuongSanBayMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(235)))), ((int)(((byte)(144)))));
             this.btn_thayDoiSoLuongSanBayMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_thayDoiSoLuongSanBayMoi.Location = new System.Drawing.Point(1423, 737);
-            this.btn_thayDoiSoLuongSanBayMoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_thayDoiSoLuongSanBayMoi.Margin = new System.Windows.Forms.Padding(4);
             this.btn_thayDoiSoLuongSanBayMoi.Name = "btn_thayDoiSoLuongSanBayMoi";
             this.btn_thayDoiSoLuongSanBayMoi.Size = new System.Drawing.Size(240, 74);
             this.btn_thayDoiSoLuongSanBayMoi.TabIndex = 28;
@@ -222,7 +220,7 @@
             this.tb_thoiGianTruocHuyVeSlowestMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_thoiGianTruocHuyVeSlowestMoi.ForeColor = System.Drawing.Color.Black;
             this.tb_thoiGianTruocHuyVeSlowestMoi.Location = new System.Drawing.Point(1423, 651);
-            this.tb_thoiGianTruocHuyVeSlowestMoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_thoiGianTruocHuyVeSlowestMoi.Margin = new System.Windows.Forms.Padding(4);
             this.tb_thoiGianTruocHuyVeSlowestMoi.Multiline = true;
             this.tb_thoiGianTruocHuyVeSlowestMoi.Name = "tb_thoiGianTruocHuyVeSlowestMoi";
             this.tb_thoiGianTruocHuyVeSlowestMoi.Size = new System.Drawing.Size(239, 73);
@@ -236,7 +234,7 @@
             this.tb_thoiGianTruocDatVeSlowestMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_thoiGianTruocDatVeSlowestMoi.ForeColor = System.Drawing.Color.Black;
             this.tb_thoiGianTruocDatVeSlowestMoi.Location = new System.Drawing.Point(1423, 565);
-            this.tb_thoiGianTruocDatVeSlowestMoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_thoiGianTruocDatVeSlowestMoi.Margin = new System.Windows.Forms.Padding(4);
             this.tb_thoiGianTruocDatVeSlowestMoi.Multiline = true;
             this.tb_thoiGianTruocDatVeSlowestMoi.Name = "tb_thoiGianTruocDatVeSlowestMoi";
             this.tb_thoiGianTruocDatVeSlowestMoi.Size = new System.Drawing.Size(239, 73);
@@ -250,7 +248,7 @@
             this.tb_thoiGianDungMaxMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_thoiGianDungMaxMoi.ForeColor = System.Drawing.Color.Black;
             this.tb_thoiGianDungMaxMoi.Location = new System.Drawing.Point(1423, 479);
-            this.tb_thoiGianDungMaxMoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_thoiGianDungMaxMoi.Margin = new System.Windows.Forms.Padding(4);
             this.tb_thoiGianDungMaxMoi.Multiline = true;
             this.tb_thoiGianDungMaxMoi.Name = "tb_thoiGianDungMaxMoi";
             this.tb_thoiGianDungMaxMoi.Size = new System.Drawing.Size(239, 73);
@@ -264,7 +262,7 @@
             this.tb_thoiGianDungMinMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_thoiGianDungMinMoi.ForeColor = System.Drawing.Color.Black;
             this.tb_thoiGianDungMinMoi.Location = new System.Drawing.Point(1423, 393);
-            this.tb_thoiGianDungMinMoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_thoiGianDungMinMoi.Margin = new System.Windows.Forms.Padding(4);
             this.tb_thoiGianDungMinMoi.Multiline = true;
             this.tb_thoiGianDungMinMoi.Name = "tb_thoiGianDungMinMoi";
             this.tb_thoiGianDungMinMoi.Size = new System.Drawing.Size(239, 73);
@@ -278,7 +276,7 @@
             this.tb_sanBayTrungChuyenMaxMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_sanBayTrungChuyenMaxMoi.ForeColor = System.Drawing.Color.Black;
             this.tb_sanBayTrungChuyenMaxMoi.Location = new System.Drawing.Point(1423, 306);
-            this.tb_sanBayTrungChuyenMaxMoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_sanBayTrungChuyenMaxMoi.Margin = new System.Windows.Forms.Padding(4);
             this.tb_sanBayTrungChuyenMaxMoi.Multiline = true;
             this.tb_sanBayTrungChuyenMaxMoi.Name = "tb_sanBayTrungChuyenMaxMoi";
             this.tb_sanBayTrungChuyenMaxMoi.Size = new System.Drawing.Size(239, 73);
@@ -292,7 +290,7 @@
             this.tb_thoiGianBayMinMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_thoiGianBayMinMoi.ForeColor = System.Drawing.Color.Black;
             this.tb_thoiGianBayMinMoi.Location = new System.Drawing.Point(1423, 220);
-            this.tb_thoiGianBayMinMoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_thoiGianBayMinMoi.Margin = new System.Windows.Forms.Padding(4);
             this.tb_thoiGianBayMinMoi.Multiline = true;
             this.tb_thoiGianBayMinMoi.Name = "tb_thoiGianBayMinMoi";
             this.tb_thoiGianBayMinMoi.Size = new System.Drawing.Size(239, 73);
@@ -307,7 +305,7 @@
             this.tb_thayDoiSoLuongHangVeCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_thayDoiSoLuongHangVeCu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
             this.tb_thayDoiSoLuongHangVeCu.Location = new System.Drawing.Point(1092, 823);
-            this.tb_thayDoiSoLuongHangVeCu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_thayDoiSoLuongHangVeCu.Margin = new System.Windows.Forms.Padding(4);
             this.tb_thayDoiSoLuongHangVeCu.Multiline = true;
             this.tb_thayDoiSoLuongHangVeCu.Name = "tb_thayDoiSoLuongHangVeCu";
             this.tb_thayDoiSoLuongHangVeCu.ReadOnly = true;
@@ -323,7 +321,7 @@
             this.tb_thayDoiSoLuongSanBayCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_thayDoiSoLuongSanBayCu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
             this.tb_thayDoiSoLuongSanBayCu.Location = new System.Drawing.Point(1092, 737);
-            this.tb_thayDoiSoLuongSanBayCu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_thayDoiSoLuongSanBayCu.Margin = new System.Windows.Forms.Padding(4);
             this.tb_thayDoiSoLuongSanBayCu.Multiline = true;
             this.tb_thayDoiSoLuongSanBayCu.Name = "tb_thayDoiSoLuongSanBayCu";
             this.tb_thayDoiSoLuongSanBayCu.ReadOnly = true;
@@ -339,7 +337,7 @@
             this.tb_thoiGianTruocHuyVeSlowestCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_thoiGianTruocHuyVeSlowestCu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
             this.tb_thoiGianTruocHuyVeSlowestCu.Location = new System.Drawing.Point(1092, 651);
-            this.tb_thoiGianTruocHuyVeSlowestCu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_thoiGianTruocHuyVeSlowestCu.Margin = new System.Windows.Forms.Padding(4);
             this.tb_thoiGianTruocHuyVeSlowestCu.Multiline = true;
             this.tb_thoiGianTruocHuyVeSlowestCu.Name = "tb_thoiGianTruocHuyVeSlowestCu";
             this.tb_thoiGianTruocHuyVeSlowestCu.ReadOnly = true;
@@ -355,7 +353,7 @@
             this.tb_thoiGianTruocDatVeSlowestCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_thoiGianTruocDatVeSlowestCu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
             this.tb_thoiGianTruocDatVeSlowestCu.Location = new System.Drawing.Point(1092, 565);
-            this.tb_thoiGianTruocDatVeSlowestCu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_thoiGianTruocDatVeSlowestCu.Margin = new System.Windows.Forms.Padding(4);
             this.tb_thoiGianTruocDatVeSlowestCu.Multiline = true;
             this.tb_thoiGianTruocDatVeSlowestCu.Name = "tb_thoiGianTruocDatVeSlowestCu";
             this.tb_thoiGianTruocDatVeSlowestCu.ReadOnly = true;
@@ -371,7 +369,7 @@
             this.tb_thoiGianDungMaxCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_thoiGianDungMaxCu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
             this.tb_thoiGianDungMaxCu.Location = new System.Drawing.Point(1092, 479);
-            this.tb_thoiGianDungMaxCu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_thoiGianDungMaxCu.Margin = new System.Windows.Forms.Padding(4);
             this.tb_thoiGianDungMaxCu.Multiline = true;
             this.tb_thoiGianDungMaxCu.Name = "tb_thoiGianDungMaxCu";
             this.tb_thoiGianDungMaxCu.ReadOnly = true;
@@ -387,7 +385,7 @@
             this.tb_thoiGianDungMinCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_thoiGianDungMinCu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
             this.tb_thoiGianDungMinCu.Location = new System.Drawing.Point(1092, 393);
-            this.tb_thoiGianDungMinCu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_thoiGianDungMinCu.Margin = new System.Windows.Forms.Padding(4);
             this.tb_thoiGianDungMinCu.Multiline = true;
             this.tb_thoiGianDungMinCu.Name = "tb_thoiGianDungMinCu";
             this.tb_thoiGianDungMinCu.ReadOnly = true;
@@ -403,7 +401,7 @@
             this.tb_sanBayTrungChuyenMaxCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_sanBayTrungChuyenMaxCu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
             this.tb_sanBayTrungChuyenMaxCu.Location = new System.Drawing.Point(1092, 306);
-            this.tb_sanBayTrungChuyenMaxCu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_sanBayTrungChuyenMaxCu.Margin = new System.Windows.Forms.Padding(4);
             this.tb_sanBayTrungChuyenMaxCu.Multiline = true;
             this.tb_sanBayTrungChuyenMaxCu.Name = "tb_sanBayTrungChuyenMaxCu";
             this.tb_sanBayTrungChuyenMaxCu.ReadOnly = true;
@@ -419,7 +417,7 @@
             this.tb_thoiGianBayMinCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_thoiGianBayMinCu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
             this.tb_thoiGianBayMinCu.Location = new System.Drawing.Point(1092, 220);
-            this.tb_thoiGianBayMinCu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_thoiGianBayMinCu.Margin = new System.Windows.Forms.Padding(4);
             this.tb_thoiGianBayMinCu.Multiline = true;
             this.tb_thoiGianBayMinCu.Name = "tb_thoiGianBayMinCu";
             this.tb_thoiGianBayMinCu.ReadOnly = true;
@@ -577,7 +575,7 @@
             this.btn_home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_home.BackgroundImage")));
             this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_home.Location = new System.Drawing.Point(92, 4);
-            this.btn_home.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_home.Margin = new System.Windows.Forms.Padding(4);
             this.btn_home.Name = "btn_home";
             this.btn_home.Size = new System.Drawing.Size(84, 46);
             this.btn_home.TabIndex = 1;
@@ -589,42 +587,30 @@
             this.btn_back.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_back.BackgroundImage")));
             this.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_back.Location = new System.Drawing.Point(15, 4);
-            this.btn_back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_back.Margin = new System.Windows.Forms.Padding(4);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(84, 46);
             this.btn_back.TabIndex = 0;
             this.btn_back.UseVisualStyleBackColor = true;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(1815, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(708, 133);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
             // FormThayDoiQuiDinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::flightket.Properties.Resources._350248398_786598096329880_2111811280162483567_n__1_;
+            this.BackgroundImage = global::flightket.Properties.Resources._350361348_206044632301251_2266599988871672436_n;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormThayDoiQuiDinh";
             this.Text = "FormThayDoiQuiDinh";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormThayDoiQuiDinh_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -668,6 +654,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_home;
         private System.Windows.Forms.Button btn_back;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

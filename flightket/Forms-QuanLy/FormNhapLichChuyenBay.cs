@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace flightket.Forms_QuanLy
 {
-    public partial class NhapLichChuyenBay : Form
+    public partial class FormNhapLichChuyenBay : Form
     {
-        public NhapLichChuyenBay()
+        public FormNhapLichChuyenBay()
         {
             InitializeComponent();
         }
