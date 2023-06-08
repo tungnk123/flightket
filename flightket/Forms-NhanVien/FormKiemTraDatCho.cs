@@ -17,6 +17,15 @@ namespace flightket.Forms_NhanVien
 
         private void btn_kiemTra_Click(object sender, EventArgs e)
         {
+            string hoten = tb_hoVaTen.Text;
+            string cmnd = tb_CMND.Text;
+            string soDienThoai = tb_soDienThoai.Text;
+
+            if (!IsLegalName(hoten) || !IsJustNumber(soDienThoai) || !IsJustNumber(cmnd))
+            {
+                MessageBox.Show("Thông tin không hợp lệ! Vui lòng nhập lại!");
+                return;
+            }
             using (var db = new FlightKetDBEntities())
             {
                 var result = from hanhkhach in db.HANHKHACHes
@@ -27,15 +36,15 @@ namespace flightket.Forms_NhanVien
                 result = result.Where(a => a.NgayGioKhoiHanh.Value > DateTime.Now);
                 if (tb_hoVaTen.Text.Length > 0)
                 {
-                    result = result.Where(c => c.TenHanhKhach.Equals(tb_hoVaTen.Text));
+                    result = result.Where(c => c.TenHanhKhach.Equals(hoten));
                 }
                 if (tb_CMND.Text.Length > 0)
                 {
-                    result = result.Where(c => c.CMND.Equals(tb_CMND.Text));
+                    result = result.Where(c => c.CMND.Equals(cmnd));
                 }
                 if (tb_soDienThoai.Text.Length > 0)
                 {
-                    result = result.Where(c => c.SDT.Equals(tb_soDienThoai.Text));
+                    result = result.Where(c => c.SDT.Equals(soDienThoai));
                 }
 
                 var resultList = result.ToList();
@@ -233,6 +242,28 @@ namespace flightket.Forms_NhanVien
                 }
                 this.Show();
             }
+        }
+        public static bool IsLegalName(string name)
+        {
+            foreach (char c in name)
+            {
+                if (!char.IsLetter(c) && !char.IsWhiteSpace(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public static bool IsJustNumber(string number)
+        {
+            foreach (char c in number)
+            {
+                if (!char.IsDigit(c))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

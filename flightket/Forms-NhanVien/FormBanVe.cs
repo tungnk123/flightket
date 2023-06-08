@@ -35,6 +35,15 @@ namespace flightket.Forms_NhanVien
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin khách hàng");
                 return;
             }
+            string hoten = tb_hoVaTen.Text;
+            string cmnd = tb_CMND.Text;
+            string soDienThoai = tb_soDienThoai.Text;
+
+            if (!IsLegalName(hoten) || !IsJustNumber(soDienThoai) || !IsJustNumber(cmnd))
+            {
+                MessageBox.Show("Thông tin không hợp lệ! Vui lòng nhập lại!");
+                return;
+            }
             if (dp_ngaySinh.Value.Date > DateTime.Now)
             {
                 MessageBox.Show("Vui lòng chọn ngày sinh hợp lệ");
@@ -42,7 +51,7 @@ namespace flightket.Forms_NhanVien
             }
             using (var db = new FlightKetDBEntities())
             {
-                var querry = db.HANHKHACHes.Where(a => a.TenHanhKhach.Equals(tb_hoVaTen.Text) && a.CMND.Equals(tb_CMND.Text) && a.SDT.Equals(tb_soDienThoai.Text));
+                var querry = db.HANHKHACHes.Where(a => a.TenHanhKhach.Equals(hoten) && a.CMND.Equals(cmnd) && a.SDT.Equals(soDienThoai));
                 var result = querry.ToList();
                 if (result.Count > 0)
                 {
@@ -90,6 +99,28 @@ namespace flightket.Forms_NhanVien
         {
             this.Close();
             formParent.Close();
+        }
+        public static bool IsLegalName(string name)
+        {
+            foreach (char c in name)
+            {
+                if (!char.IsLetter(c) && !char.IsWhiteSpace(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public static bool IsJustNumber(string number)
+        {
+            foreach (char c in number)
+            {
+                if (!char.IsDigit(c))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
