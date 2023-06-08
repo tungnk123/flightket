@@ -283,11 +283,11 @@
             this.lb_title2.AutoSize = true;
             this.lb_title2.BackColor = System.Drawing.Color.Transparent;
             this.lb_title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_title2.Location = new System.Drawing.Point(623, 102);
+            this.lb_title2.Location = new System.Drawing.Point(645, 102);
             this.lb_title2.Name = "lb_title2";
-            this.lb_title2.Size = new System.Drawing.Size(593, 38);
+            this.lb_title2.Size = new System.Drawing.Size(469, 38);
             this.lb_title2.TabIndex = 3;
-            this.lb_title2.Text = "Nhập thông tin khách hàng cần kiểm tra";
+            this.lb_title2.Text = "Cập nhập thông tin khách hàng";
             // 
             // lb_title1
             // 
