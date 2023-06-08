@@ -53,6 +53,7 @@
             this.btn_themHangGhe = new System.Windows.Forms.Button();
             this.lb_title1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.lv_danhSachSanBay)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -181,7 +182,7 @@
             this.btn_luuThayDoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
             this.btn_luuThayDoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_luuThayDoi.ForeColor = System.Drawing.Color.White;
-            this.btn_luuThayDoi.Location = new System.Drawing.Point(768, 782);
+            this.btn_luuThayDoi.Location = new System.Drawing.Point(797, 759);
             this.btn_luuThayDoi.Margin = new System.Windows.Forms.Padding(4);
             this.btn_luuThayDoi.Name = "btn_luuThayDoi";
             this.btn_luuThayDoi.Size = new System.Drawing.Size(300, 65);
@@ -213,7 +214,7 @@
             this.columDiaChi,
             this.columnXoa});
             this.lv_danhSachSanBay.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lv_danhSachSanBay.Location = new System.Drawing.Point(249, 443);
+            this.lv_danhSachSanBay.Location = new System.Drawing.Point(257, 442);
             this.lv_danhSachSanBay.Margin = new System.Windows.Forms.Padding(4);
             this.lv_danhSachSanBay.Name = "lv_danhSachSanBay";
             this.lv_danhSachSanBay.ReadOnly = true;
@@ -321,6 +322,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lb_title1);
             this.panel1.Controls.Add(this.btn_themHangGhe);
             this.panel1.Controls.Add(this.tb_diaChi);
@@ -343,6 +345,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1760, 900);
             this.panel1.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(820, 396);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(277, 29);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "Danh sách các sân bay";
             // 
             // FormChiTietThayDoiSoSanBay
             // 
@@ -391,5 +405,6 @@
         private System.Windows.Forms.Button btn_themHangGhe;
         private System.Windows.Forms.Label lb_title1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }
