@@ -16,5 +16,10 @@ namespace flightket.Forms_QuanLy
         {
             InitializeComponent();
         }
+
+        private void btn_traCuu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
