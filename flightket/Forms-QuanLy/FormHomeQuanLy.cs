@@ -29,10 +29,7 @@ namespace flightket.Forms_QuanLy
         private void btn_lapBaoCao_Click(object sender, EventArgs e)
         {
             
-            LapBaoCao_Main lapBaoCao_Main = new LapBaoCao_Main();
-            lapBaoCao_Main.PreviousForm = this;
-            lapBaoCao_Main.ShowDialog();
-            this.Hide();
+            
         }
 
         private void btn_thayDoiQuiDinh_Click(object sender, EventArgs e)
