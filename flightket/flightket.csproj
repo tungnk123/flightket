@@ -312,6 +312,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\350361348_206044632301251_2266599988871672436_n1.png" />
     <None Include="Resources\ic_convert.png" />
     <None Include="Resources\ic_upload.png" />
     <None Include="Resources\ic_importFile.png" />
