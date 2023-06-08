@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -62,7 +63,7 @@ namespace flightket.Forms_NhanVien
                 }
                 MessageBox.Show("Đã cập nhật danh sách doanh thu chuyến bay theo năm");
                 lb_doanhThuBanVe.Text = "Doanh thu bán vé năm " + nam.ToString() ;
-                lb_tongDoanhThu.Text = "Tổng doanh thu: " + tongDoanhThuNam.ToString() + " đồng";
+                lb_tongDoanhThu.Text = "Tổng doanh thu: " + Regex.Replace(tongDoanhThuNam.ToString(), @"\B(?=(\d{3})+(?!\d))", ".") + " đồng";
             }
         }
 
