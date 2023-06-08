@@ -124,7 +124,7 @@ namespace flightket.Forms_QuanLy
             this.btn_themHangGhe.Location = new System.Drawing.Point(583, 503);
             this.btn_themHangGhe.Margin = new System.Windows.Forms.Padding(4);
             this.btn_themHangGhe.Name = "btn_themHangGhe";
-            this.btn_themHangGhe.Size = new System.Drawing.Size(87, 53);
+            this.btn_themHangGhe.Size = new System.Drawing.Size(98, 66);
             this.btn_themHangGhe.TabIndex = 21;
             this.btn_themHangGhe.Text = "Thêm";
             this.btn_themHangGhe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -137,7 +137,7 @@ namespace flightket.Forms_QuanLy
             this.pic_rndMaChuyenBay.Location = new System.Drawing.Point(452, 229);
             this.pic_rndMaChuyenBay.Margin = new System.Windows.Forms.Padding(4);
             this.pic_rndMaChuyenBay.Name = "pic_rndMaChuyenBay";
-            this.pic_rndMaChuyenBay.Size = new System.Drawing.Size(64, 50);
+            this.pic_rndMaChuyenBay.Size = new System.Drawing.Size(72, 63);
             this.pic_rndMaChuyenBay.TabIndex = 20;
             this.pic_rndMaChuyenBay.TabStop = false;
             // 
@@ -157,7 +157,7 @@ namespace flightket.Forms_QuanLy
             this.panel_sanbaytrunggian.Location = new System.Drawing.Point(120, 625);
             this.panel_sanbaytrunggian.Margin = new System.Windows.Forms.Padding(4);
             this.panel_sanbaytrunggian.Name = "panel_sanbaytrunggian";
-            this.panel_sanbaytrunggian.Size = new System.Drawing.Size(1761, 462);
+            this.panel_sanbaytrunggian.Size = new System.Drawing.Size(1982, 577);
             this.panel_sanbaytrunggian.TabIndex = 19;
             // 
             // lv_danhSachSanBayTrungGian
@@ -174,7 +174,7 @@ namespace flightket.Forms_QuanLy
             this.lv_danhSachSanBayTrungGian.ReadOnly = true;
             this.lv_danhSachSanBayTrungGian.RowHeadersVisible = false;
             this.lv_danhSachSanBayTrungGian.RowHeadersWidth = 51;
-            this.lv_danhSachSanBayTrungGian.Size = new System.Drawing.Size(1753, 244);
+            this.lv_danhSachSanBayTrungGian.Size = new System.Drawing.Size(1972, 300);
             this.lv_danhSachSanBayTrungGian.TabIndex = 28;
             // 
             // cb_tenSanBay
@@ -184,7 +184,7 @@ namespace flightket.Forms_QuanLy
             this.cb_tenSanBay.Location = new System.Drawing.Point(128, 86);
             this.cb_tenSanBay.Margin = new System.Windows.Forms.Padding(4);
             this.cb_tenSanBay.Name = "cb_tenSanBay";
-            this.cb_tenSanBay.Size = new System.Drawing.Size(349, 47);
+            this.cb_tenSanBay.Size = new System.Drawing.Size(392, 58);
             this.cb_tenSanBay.TabIndex = 27;
             // 
             // tb_ghiChu
@@ -193,7 +193,7 @@ namespace flightket.Forms_QuanLy
             this.tb_ghiChu.Location = new System.Drawing.Point(1127, 84);
             this.tb_ghiChu.Margin = new System.Windows.Forms.Padding(4);
             this.tb_ghiChu.Name = "tb_ghiChu";
-            this.tb_ghiChu.Size = new System.Drawing.Size(279, 46);
+            this.tb_ghiChu.Size = new System.Drawing.Size(313, 57);
             this.tb_ghiChu.TabIndex = 25;
             // 
             // tb_thoiGianDung
@@ -202,7 +202,7 @@ namespace flightket.Forms_QuanLy
             this.tb_thoiGianDung.Location = new System.Drawing.Point(635, 84);
             this.tb_thoiGianDung.Margin = new System.Windows.Forms.Padding(4);
             this.tb_thoiGianDung.Name = "tb_thoiGianDung";
-            this.tb_thoiGianDung.Size = new System.Drawing.Size(255, 46);
+            this.tb_thoiGianDung.Size = new System.Drawing.Size(286, 57);
             this.tb_thoiGianDung.TabIndex = 26;
             // 
             // label15
@@ -273,7 +273,7 @@ namespace flightket.Forms_QuanLy
             this.btn_Them.Location = new System.Drawing.Point(1467, 86);
             this.btn_Them.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(176, 53);
+            this.btn_Them.Size = new System.Drawing.Size(198, 66);
             this.btn_Them.TabIndex = 19;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -286,7 +286,7 @@ namespace flightket.Forms_QuanLy
             this.btnCB_dungOSanBay.Location = new System.Drawing.Point(1266, 585);
             this.btnCB_dungOSanBay.Margin = new System.Windows.Forms.Padding(4);
             this.btnCB_dungOSanBay.Name = "btnCB_dungOSanBay";
-            this.btnCB_dungOSanBay.Size = new System.Drawing.Size(18, 17);
+            this.btnCB_dungOSanBay.Size = new System.Drawing.Size(22, 21);
             this.btnCB_dungOSanBay.TabIndex = 18;
             this.btnCB_dungOSanBay.UseVisualStyleBackColor = true;
             // 
@@ -296,7 +296,7 @@ namespace flightket.Forms_QuanLy
             this.dp_ngayKhoiHanh.Location = new System.Drawing.Point(164, 365);
             this.dp_ngayKhoiHanh.Margin = new System.Windows.Forms.Padding(4);
             this.dp_ngayKhoiHanh.Name = "dp_ngayKhoiHanh";
-            this.dp_ngayKhoiHanh.Size = new System.Drawing.Size(368, 30);
+            this.dp_ngayKhoiHanh.Size = new System.Drawing.Size(414, 37);
             this.dp_ngayKhoiHanh.TabIndex = 16;
             // 
             // cb_sanBayDen
@@ -306,7 +306,7 @@ namespace flightket.Forms_QuanLy
             this.cb_sanBayDen.Location = new System.Drawing.Point(1296, 228);
             this.cb_sanBayDen.Margin = new System.Windows.Forms.Padding(4);
             this.cb_sanBayDen.Name = "cb_sanBayDen";
-            this.cb_sanBayDen.Size = new System.Drawing.Size(349, 47);
+            this.cb_sanBayDen.Size = new System.Drawing.Size(392, 58);
             this.cb_sanBayDen.TabIndex = 15;
             // 
             // cb_phutKhoiHanh
@@ -316,7 +316,7 @@ namespace flightket.Forms_QuanLy
             this.cb_phutKhoiHanh.Location = new System.Drawing.Point(928, 365);
             this.cb_phutKhoiHanh.Margin = new System.Windows.Forms.Padding(4);
             this.cb_phutKhoiHanh.Name = "cb_phutKhoiHanh";
-            this.cb_phutKhoiHanh.Size = new System.Drawing.Size(105, 47);
+            this.cb_phutKhoiHanh.Size = new System.Drawing.Size(118, 58);
             this.cb_phutKhoiHanh.TabIndex = 14;
             // 
             // cb_ThoiGianBay
@@ -326,7 +326,7 @@ namespace flightket.Forms_QuanLy
             this.cb_ThoiGianBay.Location = new System.Drawing.Point(1327, 365);
             this.cb_ThoiGianBay.Margin = new System.Windows.Forms.Padding(4);
             this.cb_ThoiGianBay.Name = "cb_ThoiGianBay";
-            this.cb_ThoiGianBay.Size = new System.Drawing.Size(109, 47);
+            this.cb_ThoiGianBay.Size = new System.Drawing.Size(122, 58);
             this.cb_ThoiGianBay.TabIndex = 14;
             // 
             // cb_hangGhe
@@ -336,7 +336,7 @@ namespace flightket.Forms_QuanLy
             this.cb_hangGhe.Location = new System.Drawing.Point(164, 503);
             this.cb_hangGhe.Margin = new System.Windows.Forms.Padding(4);
             this.cb_hangGhe.Name = "cb_hangGhe";
-            this.cb_hangGhe.Size = new System.Drawing.Size(224, 47);
+            this.cb_hangGhe.Size = new System.Drawing.Size(252, 58);
             this.cb_hangGhe.TabIndex = 14;
             // 
             // btn_xacNhan
@@ -347,7 +347,7 @@ namespace flightket.Forms_QuanLy
             this.btn_xacNhan.Location = new System.Drawing.Point(1020, 1116);
             this.btn_xacNhan.Margin = new System.Windows.Forms.Padding(4);
             this.btn_xacNhan.Name = "btn_xacNhan";
-            this.btn_xacNhan.Size = new System.Drawing.Size(176, 53);
+            this.btn_xacNhan.Size = new System.Drawing.Size(198, 66);
             this.btn_xacNhan.TabIndex = 18;
             this.btn_xacNhan.Text = "Xác nhận";
             this.btn_xacNhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -360,7 +360,7 @@ namespace flightket.Forms_QuanLy
             this.cb_gioKhoiHanh.Location = new System.Drawing.Point(810, 365);
             this.cb_gioKhoiHanh.Margin = new System.Windows.Forms.Padding(4);
             this.cb_gioKhoiHanh.Name = "cb_gioKhoiHanh";
-            this.cb_gioKhoiHanh.Size = new System.Drawing.Size(109, 47);
+            this.cb_gioKhoiHanh.Size = new System.Drawing.Size(122, 58);
             this.cb_gioKhoiHanh.TabIndex = 14;
             // 
             // cb_sanBayDi
@@ -379,7 +379,7 @@ namespace flightket.Forms_QuanLy
             this.tb_soLuong.Location = new System.Drawing.Point(432, 504);
             this.tb_soLuong.Margin = new System.Windows.Forms.Padding(4);
             this.tb_soLuong.Name = "tb_soLuong";
-            this.tb_soLuong.Size = new System.Drawing.Size(124, 46);
+            this.tb_soLuong.Size = new System.Drawing.Size(139, 57);
             this.tb_soLuong.TabIndex = 13;
             // 
             // tb_giaVe
@@ -388,7 +388,7 @@ namespace flightket.Forms_QuanLy
             this.tb_giaVe.Location = new System.Drawing.Point(810, 503);
             this.tb_giaVe.Margin = new System.Windows.Forms.Padding(4);
             this.tb_giaVe.Name = "tb_giaVe";
-            this.tb_giaVe.Size = new System.Drawing.Size(241, 46);
+            this.tb_giaVe.Size = new System.Drawing.Size(271, 57);
             this.tb_giaVe.TabIndex = 13;
             // 
             // tb_maChuyenBay
@@ -397,7 +397,7 @@ namespace flightket.Forms_QuanLy
             this.tb_maChuyenBay.Location = new System.Drawing.Point(164, 229);
             this.tb_maChuyenBay.Margin = new System.Windows.Forms.Padding(4);
             this.tb_maChuyenBay.Name = "tb_maChuyenBay";
-            this.tb_maChuyenBay.Size = new System.Drawing.Size(279, 46);
+            this.tb_maChuyenBay.Size = new System.Drawing.Size(313, 57);
             this.tb_maChuyenBay.TabIndex = 13;
             // 
             // label13
@@ -492,7 +492,7 @@ namespace flightket.Forms_QuanLy
             this.label4.Location = new System.Drawing.Point(1076, 500);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 46);
+            this.label4.Size = new System.Drawing.Size(146, 58);
             this.label4.TabIndex = 10;
             this.label4.Text = "Đồng";
             // 
@@ -542,7 +542,7 @@ namespace flightket.Forms_QuanLy
             this.btn_nhapFile.Location = new System.Drawing.Point(1889, 82);
             this.btn_nhapFile.Margin = new System.Windows.Forms.Padding(4);
             this.btn_nhapFile.Name = "btn_nhapFile";
-            this.btn_nhapFile.Size = new System.Drawing.Size(176, 81);
+            this.btn_nhapFile.Size = new System.Drawing.Size(198, 102);
             this.btn_nhapFile.TabIndex = 6;
             this.btn_nhapFile.Text = "Nhập File";
             this.btn_nhapFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -556,7 +556,7 @@ namespace flightket.Forms_QuanLy
             this.btn_home.Location = new System.Drawing.Point(97, 10);
             this.btn_home.Margin = new System.Windows.Forms.Padding(4);
             this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(79, 63);
+            this.btn_home.Size = new System.Drawing.Size(88, 78);
             this.btn_home.TabIndex = 7;
             this.btn_home.UseVisualStyleBackColor = true;
             // 
@@ -567,7 +567,7 @@ namespace flightket.Forms_QuanLy
             this.btn_back.Location = new System.Drawing.Point(11, 10);
             this.btn_back.Margin = new System.Windows.Forms.Padding(4);
             this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(79, 63);
+            this.btn_back.Size = new System.Drawing.Size(88, 78);
             this.btn_back.TabIndex = 8;
             this.btn_back.UseVisualStyleBackColor = true;
             // 
@@ -585,7 +585,7 @@ namespace flightket.Forms_QuanLy
             // 
             // NhapLichChuyenBay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::flightket.Properties.Resources._350361348_206044632301251_2266599988871672436_n;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
