@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -95,7 +96,7 @@ namespace flightket.Forms_NhanVien
                     {
                         MessageBox.Show("Đã cập nhật danh sách doanh thu chuyến bay theo tháng");
                         lb_doanhThuBanVe.Text = "Doanh thu bán vé tháng " + thang.ToString() + " năm " + nam.ToString();
-                        lb_tongDoanhThu.Text = "Tổng doanh thu: " + tongDoanhThu.ToString() + " đồng";
+                        lb_tongDoanhThu.Text = "Tổng doanh thu: " + Regex.Replace(tongDoanhThu.ToString(), @"\B(?=(\d{3})+(?!\d))", ".") + " đồng";
                         return;
                     }
 
@@ -161,7 +162,7 @@ namespace flightket.Forms_NhanVien
 
                     MessageBox.Show("Đã cập nhật danh sách doanh thu chuyến bay theo tháng");
                     lb_doanhThuBanVe.Text = "Doanh thu bán vé tháng " + thang.ToString() + " năm " + nam.ToString();
-                    lb_tongDoanhThu.Text = "Tổng doanh thu: " + tongDoanhThu.ToString() + " đồng";
+                    lb_tongDoanhThu.Text = "Tổng doanh thu: " + Regex.Replace(tongDoanhThu.ToString(), @"\B(?=(\d{3})+(?!\d))", ".") + " đồng";
                 }
                 else if(baoCaoThang.Count > 0 && thang == DateTime.Now.Month)
                 {
@@ -215,7 +216,7 @@ namespace flightket.Forms_NhanVien
                     }
                     MessageBox.Show("Đã cập nhật danh sách doanh thu chuyến bay theo tháng");
                     lb_doanhThuBanVe.Text = "Doanh thu bán vé tháng " + thang.ToString() + " năm " + nam.ToString();
-                    lb_tongDoanhThu.Text = "Tổng doanh thu: " + tongDoanhThu.ToString() + " đồng";
+                    lb_tongDoanhThu.Text = "Tổng doanh thu: " + Regex.Replace(tongDoanhThu.ToString() ,@"\B(?=(\d{3})+(?!\d))", ".") + " đồng";
                 }
                 else
                 {
@@ -237,7 +238,7 @@ namespace flightket.Forms_NhanVien
                     }
                     MessageBox.Show("Đã cập nhật danh sách doanh thu chuyến bay theo tháng");
                     lb_doanhThuBanVe.Text = "Doanh thu bán vé tháng " + thang.ToString() + " năm " + nam.ToString();
-                    lb_tongDoanhThu.Text = "Tổng doanh thu: " + tongDoanhThu.ToString() + " đồng";
+                    lb_tongDoanhThu.Text = "Tổng doanh thu: " + Regex.Replace(tongDoanhThu.ToString(), @"\B(?=(\d{3})+(?!\d))", ".") + " đồng";
 
                 }
                 
@@ -283,6 +284,7 @@ namespace flightket.Forms_NhanVien
                     worksheet.Cells[i + 1, j] = dgv_doanhThuChuyenBay.Rows[i - 1].Cells[j - 1].Value;
                 }
             }
+            worksheet.Cells[rowCount + 2, colCount] = lb_tongDoanhThu.Text;
 
             // Hiển thị SaveFileDialog để chọn vị trí và tên tệp Excel
             SaveFileDialog saveFileDialog = new SaveFileDialog();

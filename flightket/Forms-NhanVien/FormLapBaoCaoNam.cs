@@ -57,7 +57,7 @@ namespace flightket.Forms_NhanVien
                     dgv_doanhThuNam.Rows[i].Cells[1].Value = listBaoCaoThang[i].Thang;
                     dgv_doanhThuNam.Rows[i].Cells[2].Value = listBaoCaoThang[i].TongChuyenBay;
                     dgv_doanhThuNam.Rows[i].Cells[3].Value = listBaoCaoThang[i].TongDoanhThuThang;
-                    dgv_doanhThuNam.Rows[i].Cells[4].Value = tiLeTungThang[i];
+                    dgv_doanhThuNam.Rows[i].Cells[4].Value = Math.Round(tiLeTungThang[i], 2);
                     dgv_doanhThuNam.Rows[i].Height = 30;
                 }
                 MessageBox.Show("Đã cập nhật danh sách doanh thu chuyến bay theo năm");
@@ -241,6 +241,7 @@ namespace flightket.Forms_NhanVien
                     worksheet.Cells[i + 1, j] = dgv_doanhThuNam.Rows[i - 1].Cells[j - 1].Value;
                 }
             }
+            worksheet.Cells[rowCount + 2, colCount] = lb_tongDoanhThu.Text;
 
             // Hiển thị SaveFileDialog để chọn vị trí và tên tệp Excel
             SaveFileDialog saveFileDialog = new SaveFileDialog();
