@@ -88,9 +88,21 @@ namespace flightket.Forms_NhanVien
                                  from hangve in db.HANGVEs
                                  from chuyenbay in db.CHUYENBAYs
                                  from sanbay in db.SANBAYs
-                                 where hanhkhach.MaHanhKhach.Equals(phieudatcho.MaHanhKhach) && hangve.MaHangVe.Equals(phieudatcho.MaHangVe) && phieudatcho.MaChuyenBay.Equals(chuyenbay.MaChuyenBay) &&
-                                 hanhkhach.TenHanhKhach.Equals(tb_hoVaTen.Text) && hanhkhach.CMND.Equals(tb_CMND.Text) && hanhkhach.SDT.Equals(tb_soDienThoai.Text) && phieudatcho.MaPhieuDatCho.Equals(maDatChoID)
+                                 where hanhkhach.MaHanhKhach.Equals(phieudatcho.MaHanhKhach) && hangve.MaHangVe.Equals(phieudatcho.MaHangVe) && phieudatcho.MaChuyenBay.Equals(chuyenbay.MaChuyenBay) && phieudatcho.MaPhieuDatCho.Equals(maDatChoID)//&&
+                                 //hanhkhach.TenHanhKhach.Equals(tb_hoVaTen.Text) && hanhkhach.CMND.Equals(tb_CMND.Text) && hanhkhach.SDT.Equals(tb_soDienThoai.Text) && phieudatcho.MaPhieuDatCho.Equals(maDatChoID)
                                  select new { phieudatcho.MaPhieuDatCho, chuyenbay.MaChuyenBay, hanhkhach.TenHanhKhach, hanhkhach.CMND, hanhkhach.NgaySinh, hanhkhach.SDT, chuyenbay.NgayGioKhoiHanh, hangve.TenHangVe, phieudatcho.GiaTien, hanhkhach.MaHanhKhach, hangve.MaHangVe };
+                    if (tb_hoVaTen.Text.Length > 0)
+                    {
+                        result = result.Where(c => c.TenHanhKhach.Equals(tb_hoVaTen.Text));
+                    }
+                    if (tb_CMND.Text.Length > 0)
+                    {
+                        result = result.Where(c => c.CMND.Equals(tb_CMND.Text));
+                    }
+                    if (tb_soDienThoai.Text.Length > 0)
+                    {
+                        result = result.Where(c => c.SDT.Equals(tb_soDienThoai.Text));
+                    }
 
                     var resultList = result.ToList();
                     var item = resultList.FirstOrDefault();
