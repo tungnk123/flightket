@@ -14,8 +14,12 @@ namespace flightket.Forms_QuanLy
         {
 
             FormNhapLichChuyenBay nhapLichChuyenBay_I = new FormNhapLichChuyenBay();
-            nhapLichChuyenBay_I.Show();
+            nhapLichChuyenBay_I.ShowDialog();
             this.Hide();
+            if(nhapLichChuyenBay_I.IsAccessible == false)
+            {
+                this.Show();
+            }
         }
 
         private void btn_lapBaoCao_Click(object sender, EventArgs e)

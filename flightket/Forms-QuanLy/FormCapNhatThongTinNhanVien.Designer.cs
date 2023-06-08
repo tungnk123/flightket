@@ -41,7 +41,6 @@
             this.tb_diaChi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tb_namSinh = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.tb_hoTen = new System.Windows.Forms.TextBox();
@@ -50,6 +49,7 @@
             this.lb_title1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
+            this.dp_ngaySinh = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -179,26 +179,17 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 29);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Đại chỉ";
+            this.label2.Text = "Địa chỉ";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.tb_namSinh);
+            this.panel2.Controls.Add(this.dp_ngaySinh);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(662, 435);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(268, 100);
             this.panel2.TabIndex = 16;
-            // 
-            // tb_namSinh
-            // 
-            this.tb_namSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_namSinh.Location = new System.Drawing.Point(31, 58);
-            this.tb_namSinh.Multiline = true;
-            this.tb_namSinh.Name = "tb_namSinh";
-            this.tb_namSinh.Size = new System.Drawing.Size(196, 32);
-            this.tb_namSinh.TabIndex = 1;
             // 
             // label1
             // 
@@ -279,6 +270,14 @@
             this.btn_home.TabIndex = 24;
             this.btn_home.UseVisualStyleBackColor = true;
             // 
+            // dp_ngaySinh
+            // 
+            this.dp_ngaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dp_ngaySinh.Location = new System.Drawing.Point(31, 58);
+            this.dp_ngaySinh.Name = "dp_ngaySinh";
+            this.dp_ngaySinh.Size = new System.Drawing.Size(200, 32);
+            this.dp_ngaySinh.TabIndex = 1;
+            // 
             // FormCapNhatThongTinNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -322,7 +321,6 @@
         private System.Windows.Forms.TextBox tb_diaChi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox tb_namSinh;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox tb_hoTen;
@@ -331,5 +329,6 @@
         private System.Windows.Forms.Label lb_title1;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Button btn_home;
+        private System.Windows.Forms.DateTimePicker dp_ngaySinh;
     }
 }

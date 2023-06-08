@@ -61,6 +61,8 @@ namespace flightket.Forms_QuanLy
             this.cb_ThoiGianBay = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.cb_phutKhoiHanh = new System.Windows.Forms.ComboBox();
             this.cb_gioKhoiHanh = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -81,8 +83,6 @@ namespace flightket.Forms_QuanLy
             this.tb_maChuyenBay = new System.Windows.Forms.TextBox();
             this.lb_sanBayDi = new System.Windows.Forms.Label();
             this.lb_title1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_sanbaytrunggian.SuspendLayout();
             this.panelDanhSachPhieuDatCho.SuspendLayout();
@@ -132,6 +132,7 @@ namespace flightket.Forms_QuanLy
             this.btn_home.Size = new System.Drawing.Size(84, 57);
             this.btn_home.TabIndex = 31;
             this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // btn_back
             // 
@@ -143,6 +144,7 @@ namespace flightket.Forms_QuanLy
             this.btn_back.Size = new System.Drawing.Size(84, 57);
             this.btn_back.TabIndex = 30;
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // panel_sanbaytrunggian
             // 
@@ -445,6 +447,26 @@ namespace flightket.Forms_QuanLy
             this.panel6.Size = new System.Drawing.Size(336, 100);
             this.panel6.TabIndex = 17;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(266, 66);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 29);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "phút";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(106, 66);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 29);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "giờ";
+            // 
             // cb_phutKhoiHanh
             // 
             this.cb_phutKhoiHanh.BackColor = System.Drawing.Color.Silver;
@@ -683,26 +705,6 @@ namespace flightket.Forms_QuanLy
             this.lb_title1.Size = new System.Drawing.Size(617, 69);
             this.lb_title1.TabIndex = 13;
             this.lb_title1.Text = "Nhập lịch chuyến bay";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(106, 66);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 29);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "giờ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(266, 66);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 29);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "phút";
             // 
             // FormNhapLichChuyenBay
             // 

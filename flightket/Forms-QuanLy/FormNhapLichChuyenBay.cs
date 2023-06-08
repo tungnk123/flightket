@@ -304,5 +304,15 @@ namespace flightket.Forms_QuanLy
             NhapLichChuyenBay_File nhapLichChuyenBay_File = new NhapLichChuyenBay_File();
             nhapLichChuyenBay_File.Show();
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

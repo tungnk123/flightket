@@ -10,6 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace flightket.Forms_QuanLy
 {
@@ -39,8 +40,8 @@ namespace flightket.Forms_QuanLy
             tb_maNhanVien.Text = nhanVien.MaNhanVien;
             tb_hoTen.Text = nhanVien.HoTen;
             tb_diaChi.Text = nhanVien.DiaChi;
-            tb_namSinh.Text = DobAfterHandle();
             tb_soDienThoai.Text = nhanVien.SoDienThoai;
+            dp_ngaySinh.Value = nhanVien.NgaySinh.Value.Date;
         }
 
         // Kiểm tra chuỗi toàn số
@@ -87,16 +88,6 @@ namespace flightket.Forms_QuanLy
             }
         }
 
-        private void tb_namSinh_Leave(object sender, EventArgs e)
-        {
-            String ngaySinh = FormatDob(tb_namSinh.Text.Trim());
-            DateTime date;
-            if (!DateTime.TryParse(ngaySinh, out date))
-            {
-                MessageBox.Show("Ngày không hợp lệ");
-                tb_namSinh.Text = DobAfterHandle();
-            }
-        }
 
         // Add điều kiện để kiểm tra khi người dùng rời khỏi tb_diaChi
         private void tb_diaChi_Leave(object sender, EventArgs e)
@@ -148,6 +139,20 @@ namespace flightket.Forms_QuanLy
             {
                 if (!ContainTextBoxNullOrEmpty())
                 {
+                    string inputText = tb_soDienThoai.Text;
+                    bool isNumeric = Regex.IsMatch(inputText, @"^\d+$");
+                    if(isNumeric == false)
+                    {
+                        MessageBox.Show("Vui lòng điền số điện thoại ở định dạng số");
+                        return;
+                    }
+                    string inputText1 = tb_hoTen.Text;
+                    bool isAlphabetic1 = Regex.IsMatch(inputText1, @"^[a-zA-Z\s]+$");
+                    if(isAlphabetic1 == false )
+                    {
+                        MessageBox.Show("Vui lòng điền họ tên đúng định dạng");
+                        return;
+                    }
                     UpdateInfoNhanVien();
                     UpdateEvent(this.nhanVien);
                     this.Close();
@@ -163,11 +168,10 @@ namespace flightket.Forms_QuanLy
         {
             String hoTen = tb_hoTen.Text;
             String diaChi = tb_diaChi.Text;
-            String namSinh = tb_namSinh.Text;
             String soDienThoai = tb_soDienThoai.Text;
 
             if (String.IsNullOrEmpty(hoTen) || String.IsNullOrEmpty(diaChi) 
-                || String.IsNullOrEmpty(namSinh) || String.IsNullOrEmpty(soDienThoai))
+                 || String.IsNullOrEmpty(soDienThoai))
             {
                 return true;
             }
@@ -192,12 +196,11 @@ namespace flightket.Forms_QuanLy
             {
                 String hoTen = tb_hoTen.Text;
                 String diaChi = tb_diaChi.Text;
-                DateTime namSinh = DateTime.Parse(FormatDob(tb_namSinh.Text.Trim()));
                 String soDienThoai = tb_soDienThoai.Text;
 
                 this.nhanVien.HoTen = hoTen;
                 this.nhanVien.DiaChi = diaChi;
-                this.nhanVien.NgaySinh = namSinh;
+                this.nhanVien.NgaySinh = dp_ngaySinh.Value.Date;
                 this.nhanVien.SoDienThoai = soDienThoai; 
             } catch(Exception ex) 
             {

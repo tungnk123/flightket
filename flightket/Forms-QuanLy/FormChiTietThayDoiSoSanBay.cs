@@ -157,24 +157,38 @@ namespace flightket.Forms_QuanLy
 
         private void btn_them_Click(object sender, EventArgs e)
         {
+            string inputText1 = tb_tenSanBay.Text;
+            string inputText2 = tb_tenQuocGia.Text;
+            string inputText3 = tb_diaChi.Text;
+            bool isAlphabetic1 = Regex.IsMatch(inputText1, @"^[a-zA-Z\s]+$");
+            bool isAlphabetic2 = Regex.IsMatch(inputText2, @"^[a-zA-Z\s]+$");
+            bool isAlphabetic3 = Regex.IsMatch(inputText3, @"^[a-zA-Z\s]+$");
+            if (isAlphabetic1 == false || isAlphabetic2 == false || false)
+            {
+                MessageBox.Show("Tên sân bay và tên quốc gia và địa chỉ sân bay phải ở định dạng chữ");
+                return;
+            }
             if (tb_tenSanBay.Text.Trim() == String.Empty)
             {
                 MessageBox.Show("Không được để trống tên sân bay");
-            } else if (tb_tenQuocGia.Text.Trim() == String.Empty)
+            } 
+            else if (tb_tenQuocGia.Text.Trim() == String.Empty)
             {
                 MessageBox.Show("Không được để trống tên quốc gia");
-            } else if (tb_diaChi.Text.Trim() == String.Empty)
+            } 
+            else if (tb_diaChi.Text.Trim() == String.Empty)
             {
                 MessageBox.Show("Không được để trống địa chỉ");
-            } else
+            } 
+            else
             {
                 try
                 {
                     Add_Rows();
-                    MessageBox.Show("Thêm hàng thành công!");
+                    MessageBox.Show("Thêm sân bay thành công!");
                 } catch (Exception ex)
                 {
-                    MessageBox.Show("Thêm hàng thất bại!");
+                    MessageBox.Show("Thêm sân bay thất bại!");
                 }
             }
         }
