@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhapLichChuyenBay_File));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_xacNhan = new System.Windows.Forms.Panel();
             this.lb_fileDaChon = new System.Windows.Forms.LinkLabel();
@@ -75,7 +76,7 @@
             // 
             this.lb_fileDaChon.ActiveLinkColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lb_fileDaChon.BackColor = System.Drawing.Color.Transparent;
-            this.lb_fileDaChon.Font = new System.Drawing.Font("Inter", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_fileDaChon.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_fileDaChon.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lb_fileDaChon.LinkColor = System.Drawing.Color.Black;
             this.lb_fileDaChon.Location = new System.Drawing.Point(748, 20);
@@ -119,7 +120,7 @@
             // 
             this.llb_chonFile.ActiveLinkColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.llb_chonFile.BackColor = System.Drawing.Color.Chartreuse;
-            this.llb_chonFile.Font = new System.Drawing.Font("Inter", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llb_chonFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llb_chonFile.Image = global::flightket.Properties.Resources.ic_upload;
             this.llb_chonFile.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.llb_chonFile.LinkColor = System.Drawing.Color.Black;
@@ -197,7 +198,7 @@
             // lb_progress
             // 
             this.lb_progress.BackColor = System.Drawing.Color.Transparent;
-            this.lb_progress.Font = new System.Drawing.Font("Inter", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_progress.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_progress.ForeColor = System.Drawing.Color.Red;
             this.lb_progress.Location = new System.Drawing.Point(2388, 1557);
             this.lb_progress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -211,7 +212,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::flightket.Properties.Resources._350248398_786598096329880_2111811280162483567_n__1_;
+            this.BackgroundImage = global::flightket.Properties.Resources._350361348_206044632301251_2266599988871672436_n;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(2586, 1466);
             this.Controls.Add(this.lb_progress);

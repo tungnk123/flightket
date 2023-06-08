@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhapLichChuyenBay));
             this.panel_main = new System.Windows.Forms.Panel();
             this.btn_themHangGhe = new System.Windows.Forms.Button();
             this.pic_rndMaChuyenBay = new System.Windows.Forms.PictureBox();
@@ -180,7 +181,7 @@
             // 
             // cb_tenSanBay
             // 
-            this.cb_tenSanBay.Font = new System.Drawing.Font("Inter", 20.25F);
+            this.cb_tenSanBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.cb_tenSanBay.FormattingEnabled = true;
             this.cb_tenSanBay.Location = new System.Drawing.Point(144, 108);
             this.cb_tenSanBay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -305,7 +306,7 @@
             // 
             // cb_sanBayDen
             // 
-            this.cb_sanBayDen.Font = new System.Drawing.Font("Inter", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_sanBayDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_sanBayDen.FormattingEnabled = true;
             this.cb_sanBayDen.Location = new System.Drawing.Point(1470, 242);
             this.cb_sanBayDen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -315,7 +316,7 @@
             // 
             // cb_phutKhoiHanh
             // 
-            this.cb_phutKhoiHanh.Font = new System.Drawing.Font("Inter", 20.25F);
+            this.cb_phutKhoiHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.cb_phutKhoiHanh.FormattingEnabled = true;
             this.cb_phutKhoiHanh.Location = new System.Drawing.Point(960, 374);
             this.cb_phutKhoiHanh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -325,7 +326,7 @@
             // 
             // cb_ThoiGianBay
             // 
-            this.cb_ThoiGianBay.Font = new System.Drawing.Font("Inter", 20.25F);
+            this.cb_ThoiGianBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.cb_ThoiGianBay.FormattingEnabled = true;
             this.cb_ThoiGianBay.Location = new System.Drawing.Point(1473, 374);
             this.cb_ThoiGianBay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -337,7 +338,7 @@
             // 
             // cb_hangGhe
             // 
-            this.cb_hangGhe.Font = new System.Drawing.Font("Inter", 20.25F);
+            this.cb_hangGhe.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.cb_hangGhe.FormattingEnabled = true;
             this.cb_hangGhe.Location = new System.Drawing.Point(110, 535);
             this.cb_hangGhe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -363,7 +364,7 @@
             // 
             // cb_gioKhoiHanh
             // 
-            this.cb_gioKhoiHanh.Font = new System.Drawing.Font("Inter", 20.25F);
+            this.cb_gioKhoiHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.cb_gioKhoiHanh.FormattingEnabled = true;
             this.cb_gioKhoiHanh.Location = new System.Drawing.Point(828, 374);
             this.cb_gioKhoiHanh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -373,7 +374,7 @@
             // 
             // cb_sanBayDi
             // 
-            this.cb_sanBayDi.Font = new System.Drawing.Font("Inter", 20.25F);
+            this.cb_sanBayDi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.cb_sanBayDi.FormattingEnabled = true;
             this.cb_sanBayDi.Location = new System.Drawing.Point(825, 242);
             this.cb_sanBayDi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -546,7 +547,7 @@
             // 
             this.btn_nhapFile.BackColor = System.Drawing.Color.Lime;
             this.btn_nhapFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_nhapFile.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nhapFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_nhapFile.Image = global::flightket.Properties.Resources.ic_importFile;
             this.btn_nhapFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_nhapFile.Location = new System.Drawing.Point(1860, 62);
@@ -612,7 +613,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::flightket.Properties.Resources._350248398_786598096329880_2111811280162483567_n__1_;
+            this.BackgroundImage = global::flightket.Properties.Resources._350361348_206044632301251_2266599988871672436_n;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.panel_main);
