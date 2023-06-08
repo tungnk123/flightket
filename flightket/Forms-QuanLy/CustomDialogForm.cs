@@ -62,9 +62,7 @@ namespace flightket.Forms_QuanLy
             worksheet.Cells[1, 10].Value = "MaSanBayTrungGian";
             worksheet.Cells[1, 11].Value = "ThoiGianDung";
             worksheet.Cells[1, 12].Value = "GhiChu";
-            worksheet.Cells[1, 13].Value = "TenSanBay";
-            worksheet.Cells[1, 14].Value = "QuocGia";
-            worksheet.Cells[1, 15].Value = "DiaChi";
+            
 
             // Save the Excel file
             FileInfo excelFile = new FileInfo(filePath);

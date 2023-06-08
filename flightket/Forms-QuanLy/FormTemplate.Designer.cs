@@ -29,23 +29,18 @@ namespace flightket.Forms_QuanLy
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
             this.lb_title1 = new System.Windows.Forms.Label();
-            this.btn_xacNhan = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.lv_danhSachSanBay = new System.Windows.Forms.DataGridView();
-            this.columnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnTenSanBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnQuocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.column_diaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.column_soDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnXoa = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.llb_chonFile = new System.Windows.Forms.LinkLabel();
+            this.panel_xacNhan = new System.Windows.Forms.Panel();
+            this.lb_fileDaChon = new System.Windows.Forms.LinkLabel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btn_xacNhan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lv_danhSachSanBay)).BeginInit();
+            this.panel_xacNhan.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -53,9 +48,10 @@ namespace flightket.Forms_QuanLy
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.lv_danhSachSanBay);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btn_xacNhan);
+            this.panel1.Controls.Add(this.panel_xacNhan);
+            this.panel1.Controls.Add(this.llb_chonFile);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lb_title1);
             this.panel1.Controls.Add(this.btn_back);
             this.panel1.Controls.Add(this.btn_home);
@@ -90,22 +86,9 @@ namespace flightket.Forms_QuanLy
             this.lb_title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_title1.Location = new System.Drawing.Point(593, 28);
             this.lb_title1.Name = "lb_title1";
-            this.lb_title1.Size = new System.Drawing.Size(692, 69);
+            this.lb_title1.Size = new System.Drawing.Size(617, 69);
             this.lb_title1.TabIndex = 27;
-            this.lb_title1.Text = "Quản lý hồ sơ nhân viên";
-            // 
-            // btn_xacNhan
-            // 
-            this.btn_xacNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
-            this.btn_xacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xacNhan.ForeColor = System.Drawing.Color.White;
-            this.btn_xacNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_xacNhan.Location = new System.Drawing.Point(859, 716);
-            this.btn_xacNhan.Name = "btn_xacNhan";
-            this.btn_xacNhan.Size = new System.Drawing.Size(253, 65);
-            this.btn_xacNhan.TabIndex = 30;
-            this.btn_xacNhan.Text = "Lưu thay đổi";
-            this.btn_xacNhan.UseVisualStyleBackColor = false;
+            this.lb_title1.Text = "Nhập lịch chuyến bay";
             // 
             // label1
             // 
@@ -113,99 +96,79 @@ namespace flightket.Forms_QuanLy
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(803, 149);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 29);
+            this.label1.Size = new System.Drawing.Size(229, 29);
             this.label1.TabIndex = 33;
-            this.label1.Text = "Danh sách nhân viên ";
+            this.label1.Text = "Chọn file cần nhập";
             // 
-            // lv_danhSachSanBay
+            // llb_chonFile
             // 
-            this.lv_danhSachSanBay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.lv_danhSachSanBay.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            this.lv_danhSachSanBay.BackgroundColor = System.Drawing.Color.White;
-            this.lv_danhSachSanBay.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lv_danhSachSanBay.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.lv_danhSachSanBay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.lv_danhSachSanBay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.lv_danhSachSanBay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.columnSTT,
-            this.columnTenSanBay,
-            this.columnQuocGia,
-            this.columDiaChi,
-            this.column_diaChi,
-            this.column_soDienThoai,
-            this.columnXoa});
-            this.lv_danhSachSanBay.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lv_danhSachSanBay.Location = new System.Drawing.Point(96, 258);
-            this.lv_danhSachSanBay.Margin = new System.Windows.Forms.Padding(4);
-            this.lv_danhSachSanBay.Name = "lv_danhSachSanBay";
-            this.lv_danhSachSanBay.ReadOnly = true;
-            this.lv_danhSachSanBay.RowHeadersVisible = false;
-            this.lv_danhSachSanBay.RowHeadersWidth = 51;
-            this.lv_danhSachSanBay.Size = new System.Drawing.Size(1565, 249);
-            this.lv_danhSachSanBay.TabIndex = 46;
+            this.llb_chonFile.ActiveLinkColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.llb_chonFile.BackColor = System.Drawing.Color.Chartreuse;
+            this.llb_chonFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llb_chonFile.Image = global::flightket.Properties.Resources.ic_upload;
+            this.llb_chonFile.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.llb_chonFile.LinkColor = System.Drawing.Color.Black;
+            this.llb_chonFile.Location = new System.Drawing.Point(613, 230);
+            this.llb_chonFile.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.llb_chonFile.Name = "llb_chonFile";
+            this.llb_chonFile.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.llb_chonFile.Size = new System.Drawing.Size(606, 94);
+            this.llb_chonFile.TabIndex = 34;
+            this.llb_chonFile.TabStop = true;
+            this.llb_chonFile.Text = "Chọn từ máy tính của bạn";
+            this.llb_chonFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // columnSTT
+            // panel_xacNhan
             // 
-            this.columnSTT.FillWeight = 57.65501F;
-            this.columnSTT.HeaderText = "STT";
-            this.columnSTT.MinimumWidth = 6;
-            this.columnSTT.Name = "columnSTT";
-            this.columnSTT.ReadOnly = true;
+            this.panel_xacNhan.Controls.Add(this.lb_fileDaChon);
+            this.panel_xacNhan.Controls.Add(this.label3);
+            this.panel_xacNhan.Location = new System.Drawing.Point(131, 376);
+            this.panel_xacNhan.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_xacNhan.Name = "panel_xacNhan";
+            this.panel_xacNhan.Size = new System.Drawing.Size(1512, 145);
+            this.panel_xacNhan.TabIndex = 22;
             // 
-            // columnTenSanBay
+            // lb_fileDaChon
             // 
-            this.columnTenSanBay.FillWeight = 2.345845F;
-            this.columnTenSanBay.HeaderText = "Mã nhân viên";
-            this.columnTenSanBay.MinimumWidth = 6;
-            this.columnTenSanBay.Name = "columnTenSanBay";
-            this.columnTenSanBay.ReadOnly = true;
+            this.lb_fileDaChon.ActiveLinkColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lb_fileDaChon.BackColor = System.Drawing.Color.Transparent;
+            this.lb_fileDaChon.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_fileDaChon.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lb_fileDaChon.LinkColor = System.Drawing.Color.Black;
+            this.lb_fileDaChon.Location = new System.Drawing.Point(665, 16);
+            this.lb_fileDaChon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_fileDaChon.Name = "lb_fileDaChon";
+            this.lb_fileDaChon.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.lb_fileDaChon.Size = new System.Drawing.Size(926, 94);
+            this.lb_fileDaChon.TabIndex = 23;
+            this.lb_fileDaChon.TabStop = true;
+            this.lb_fileDaChon.Text = "C://document?fighter/import.csv";
+            this.lb_fileDaChon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // columnQuocGia
+            // label3
             // 
-            this.columnQuocGia.FillWeight = 2.345845F;
-            this.columnQuocGia.HeaderText = "Họ tên";
-            this.columnQuocGia.MinimumWidth = 6;
-            this.columnQuocGia.Name = "columnQuocGia";
-            this.columnQuocGia.ReadOnly = true;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(376, 41);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(242, 42);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "File đã chọn :";
             // 
-            // columDiaChi
+            // btn_xacNhan
             // 
-            this.columDiaChi.FillWeight = 2.345845F;
-            this.columDiaChi.HeaderText = "Năm sinh";
-            this.columDiaChi.MinimumWidth = 6;
-            this.columDiaChi.Name = "columDiaChi";
-            this.columDiaChi.ReadOnly = true;
-            // 
-            // column_diaChi
-            // 
-            this.column_diaChi.FillWeight = 29.32306F;
-            this.column_diaChi.HeaderText = "Địa chỉ";
-            this.column_diaChi.MinimumWidth = 6;
-            this.column_diaChi.Name = "column_diaChi";
-            this.column_diaChi.ReadOnly = true;
-            // 
-            // column_soDienThoai
-            // 
-            this.column_soDienThoai.FillWeight = 29.32306F;
-            this.column_soDienThoai.HeaderText = "Số điện thoại";
-            this.column_soDienThoai.MinimumWidth = 6;
-            this.column_soDienThoai.Name = "column_soDienThoai";
-            this.column_soDienThoai.ReadOnly = true;
-            // 
-            // columnXoa
-            // 
-            this.columnXoa.FillWeight = 0.5864612F;
-            this.columnXoa.HeaderText = "Cập nhập";
-            this.columnXoa.MinimumWidth = 6;
-            this.columnXoa.Name = "columnXoa";
-            this.columnXoa.ReadOnly = true;
+            this.btn_xacNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+            this.btn_xacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xacNhan.ForeColor = System.Drawing.Color.White;
+            this.btn_xacNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_xacNhan.Location = new System.Drawing.Point(774, 572);
+            this.btn_xacNhan.Name = "btn_xacNhan";
+            this.btn_xacNhan.Size = new System.Drawing.Size(230, 65);
+            this.btn_xacNhan.TabIndex = 24;
+            this.btn_xacNhan.Text = "Xác nhận";
+            this.btn_xacNhan.UseVisualStyleBackColor = false;
             // 
             // FormTemplate
             // 
@@ -217,7 +180,8 @@ namespace flightket.Forms_QuanLy
             this.Text = "FormTemplate";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lv_danhSachSanBay)).EndInit();
+            this.panel_xacNhan.ResumeLayout(false);
+            this.panel_xacNhan.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -228,15 +192,11 @@ namespace flightket.Forms_QuanLy
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Button btn_home;
         private System.Windows.Forms.Label lb_title1;
-        private System.Windows.Forms.Button btn_xacNhan;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView lv_danhSachSanBay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnSTT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnTenSanBay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnQuocGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columDiaChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn column_diaChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn column_soDienThoai;
-        private System.Windows.Forms.DataGridViewButtonColumn columnXoa;
+        private System.Windows.Forms.LinkLabel llb_chonFile;
+        private System.Windows.Forms.Panel panel_xacNhan;
+        private System.Windows.Forms.LinkLabel lb_fileDaChon;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btn_xacNhan;
     }
 }

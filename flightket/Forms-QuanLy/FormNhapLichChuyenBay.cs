@@ -298,5 +298,11 @@ namespace flightket.Forms_QuanLy
 
             }
         }
+
+        private void btn_xuatThongTin_Click(object sender, EventArgs e)
+        {
+            NhapLichChuyenBay_File nhapLichChuyenBay_File = new NhapLichChuyenBay_File();
+            nhapLichChuyenBay_File.Show();
+        }
     }
 }
