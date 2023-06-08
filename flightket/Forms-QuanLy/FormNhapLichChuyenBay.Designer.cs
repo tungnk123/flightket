@@ -31,6 +31,7 @@ namespace flightket.Forms_QuanLy
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNhapLichChuyenBay));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgv_danhSachSanBayTrungGian = new System.Windows.Forms.DataGridView();
             this.panel_sanbaytrunggian = new System.Windows.Forms.Panel();
             this.btn_Them = new System.Windows.Forms.Button();
             this.tb_ghiChu = new System.Windows.Forms.TextBox();
@@ -46,7 +47,7 @@ namespace flightket.Forms_QuanLy
             this.cb_hangGhe = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_giaVe = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.cb_ThoiGianBay = new System.Windows.Forms.ComboBox();
@@ -70,11 +71,12 @@ namespace flightket.Forms_QuanLy
             this.lb_sanBayDen = new System.Windows.Forms.Label();
             this.btn_xacNhan = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pic_rndMaChuyenBay = new System.Windows.Forms.Button();
             this.tb_maChuyenBay = new System.Windows.Forms.TextBox();
             this.lb_sanBayDi = new System.Windows.Forms.Label();
             this.lb_title1 = new System.Windows.Forms.Label();
-            this.dgv_danhSachSanBayTrungGian = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_danhSachSanBayTrungGian)).BeginInit();
             this.panel_sanbaytrunggian.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -84,7 +86,6 @@ namespace flightket.Forms_QuanLy
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_danhSachSanBayTrungGian)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -114,6 +115,17 @@ namespace flightket.Forms_QuanLy
             this.panel1.Size = new System.Drawing.Size(1760, 900);
             this.panel1.TabIndex = 2;
             // 
+            // dgv_danhSachSanBayTrungGian
+            // 
+            this.dgv_danhSachSanBayTrungGian.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_danhSachSanBayTrungGian.Location = new System.Drawing.Point(218, 632);
+            this.dgv_danhSachSanBayTrungGian.Name = "dgv_danhSachSanBayTrungGian";
+            this.dgv_danhSachSanBayTrungGian.RowHeadersWidth = 51;
+            this.dgv_danhSachSanBayTrungGian.RowTemplate.Height = 24;
+            this.dgv_danhSachSanBayTrungGian.Size = new System.Drawing.Size(1485, 119);
+            this.dgv_danhSachSanBayTrungGian.TabIndex = 29;
+            this.dgv_danhSachSanBayTrungGian.Visible = false;
+            // 
             // panel_sanbaytrunggian
             // 
             this.panel_sanbaytrunggian.Controls.Add(this.btn_Them);
@@ -129,6 +141,7 @@ namespace flightket.Forms_QuanLy
             this.panel_sanbaytrunggian.Name = "panel_sanbaytrunggian";
             this.panel_sanbaytrunggian.Size = new System.Drawing.Size(1485, 105);
             this.panel_sanbaytrunggian.TabIndex = 28;
+            this.panel_sanbaytrunggian.Visible = false;
             // 
             // btn_Them
             // 
@@ -217,6 +230,7 @@ namespace flightket.Forms_QuanLy
             this.chb_dungOSanBayTrungGian.TabIndex = 27;
             this.chb_dungOSanBayTrungGian.Text = "Dừng ở sân bay trung gian";
             this.chb_dungOSanBayTrungGian.UseVisualStyleBackColor = true;
+            this.chb_dungOSanBayTrungGian.CheckedChanged += new System.EventHandler(this.chb_dungOSanBayTrungGian_CheckedChanged);
             // 
             // panel9
             // 
@@ -257,16 +271,16 @@ namespace flightket.Forms_QuanLy
             this.cb_hangGhe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_hangGhe.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cb_hangGhe.FormattingEnabled = true;
-            this.cb_hangGhe.Location = new System.Drawing.Point(31, 58);
+            this.cb_hangGhe.Location = new System.Drawing.Point(3, 58);
             this.cb_hangGhe.Name = "cb_hangGhe";
-            this.cb_hangGhe.Size = new System.Drawing.Size(117, 37);
+            this.cb_hangGhe.Size = new System.Drawing.Size(149, 37);
             this.cb_hangGhe.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(26, 16);
+            this.label5.Location = new System.Drawing.Point(3, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(233, 29);
             this.label5.TabIndex = 0;
@@ -275,21 +289,21 @@ namespace flightket.Forms_QuanLy
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.Controls.Add(this.textBox1);
+            this.panel8.Controls.Add(this.tb_giaVe);
             this.panel8.Controls.Add(this.label4);
             this.panel8.Location = new System.Drawing.Point(1332, 309);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(268, 100);
             this.panel8.TabIndex = 15;
             // 
-            // textBox1
+            // tb_giaVe
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(31, 58);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 32);
-            this.textBox1.TabIndex = 1;
+            this.tb_giaVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_giaVe.Location = new System.Drawing.Point(31, 58);
+            this.tb_giaVe.Multiline = true;
+            this.tb_giaVe.Name = "tb_giaVe";
+            this.tb_giaVe.Size = new System.Drawing.Size(196, 32);
+            this.tb_giaVe.TabIndex = 1;
             // 
             // label4
             // 
@@ -475,7 +489,7 @@ namespace flightket.Forms_QuanLy
             this.dp_ngayKhoiHanh.Name = "dp_ngayKhoiHanh";
             this.dp_ngayKhoiHanh.Size = new System.Drawing.Size(240, 34);
             this.dp_ngayKhoiHanh.TabIndex = 1;
-            this.dp_ngayKhoiHanh.Value = new System.DateTime(2023, 6, 7, 15, 53, 6, 0);
+            this.dp_ngayKhoiHanh.Value = new System.DateTime(2023, 6, 8, 12, 7, 35, 0);
             // 
             // panel2
             // 
@@ -520,11 +534,11 @@ namespace flightket.Forms_QuanLy
             this.btn_xacNhan.TabIndex = 18;
             this.btn_xacNhan.Text = "Xác nhận";
             this.btn_xacNhan.UseVisualStyleBackColor = false;
-            this.btn_xacNhan.Click += new System.EventHandler(this.btn_traCuu_Click);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.Controls.Add(this.pic_rndMaChuyenBay);
             this.panel5.Controls.Add(this.tb_maChuyenBay);
             this.panel5.Controls.Add(this.lb_sanBayDi);
             this.panel5.Location = new System.Drawing.Point(271, 190);
@@ -532,13 +546,23 @@ namespace flightket.Forms_QuanLy
             this.panel5.Size = new System.Drawing.Size(268, 100);
             this.panel5.TabIndex = 14;
             // 
+            // pic_rndMaChuyenBay
+            // 
+            this.pic_rndMaChuyenBay.Location = new System.Drawing.Point(204, 58);
+            this.pic_rndMaChuyenBay.Name = "pic_rndMaChuyenBay";
+            this.pic_rndMaChuyenBay.Size = new System.Drawing.Size(41, 32);
+            this.pic_rndMaChuyenBay.TabIndex = 2;
+            this.pic_rndMaChuyenBay.Text = "rese";
+            this.pic_rndMaChuyenBay.UseVisualStyleBackColor = true;
+            this.pic_rndMaChuyenBay.Click += new System.EventHandler(this.pic_rndMaChuyenBay_Click);
+            // 
             // tb_maChuyenBay
             // 
             this.tb_maChuyenBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_maChuyenBay.Location = new System.Drawing.Point(31, 58);
             this.tb_maChuyenBay.Multiline = true;
             this.tb_maChuyenBay.Name = "tb_maChuyenBay";
-            this.tb_maChuyenBay.Size = new System.Drawing.Size(196, 32);
+            this.tb_maChuyenBay.Size = new System.Drawing.Size(167, 32);
             this.tb_maChuyenBay.TabIndex = 1;
             // 
             // lb_sanBayDi
@@ -564,16 +588,6 @@ namespace flightket.Forms_QuanLy
             this.lb_title1.TabIndex = 13;
             this.lb_title1.Text = "Nhập lịch chuyến bay";
             // 
-            // dgv_danhSachSanBayTrungGian
-            // 
-            this.dgv_danhSachSanBayTrungGian.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_danhSachSanBayTrungGian.Location = new System.Drawing.Point(218, 632);
-            this.dgv_danhSachSanBayTrungGian.Name = "dgv_danhSachSanBayTrungGian";
-            this.dgv_danhSachSanBayTrungGian.RowHeadersWidth = 51;
-            this.dgv_danhSachSanBayTrungGian.RowTemplate.Height = 24;
-            this.dgv_danhSachSanBayTrungGian.Size = new System.Drawing.Size(1485, 119);
-            this.dgv_danhSachSanBayTrungGian.TabIndex = 29;
-            // 
             // FormNhapLichChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -589,6 +603,7 @@ namespace flightket.Forms_QuanLy
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_danhSachSanBayTrungGian)).EndInit();
             this.panel_sanbaytrunggian.ResumeLayout(false);
             this.panel_sanbaytrunggian.PerformLayout();
             this.panel9.ResumeLayout(false);
@@ -607,7 +622,6 @@ namespace flightket.Forms_QuanLy
             this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_danhSachSanBayTrungGian)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -645,7 +659,7 @@ namespace flightket.Forms_QuanLy
         private System.Windows.Forms.ComboBox cb_hangGhe;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_giaVe;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox chb_dungOSanBayTrungGian;
@@ -658,5 +672,6 @@ namespace flightket.Forms_QuanLy
         private System.Windows.Forms.TextBox tb_ghiChu;
         private System.Windows.Forms.TextBox tb_thoiGianDung;
         private System.Windows.Forms.DataGridView dgv_danhSachSanBayTrungGian;
+        private System.Windows.Forms.Button pic_rndMaChuyenBay;
     }
 }

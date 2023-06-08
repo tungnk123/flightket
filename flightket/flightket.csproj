@@ -155,12 +155,6 @@
     <Compile Include="Forms-QuanLy\FormThayDoiQuiDinh.Designer.cs">
       <DependentUpon>FormThayDoiQuiDinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms-QuanLy\NhapLichChuyenBay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms-QuanLy\NhapLichChuyenBay.Designer.cs">
-      <DependentUpon>NhapLichChuyenBay.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms-QuanLy\NhapLichChuyenBay_File.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,9 +238,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\FormThayDoiQuiDinh.resx">
       <DependentUpon>FormThayDoiQuiDinh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms-QuanLy\NhapLichChuyenBay.resx">
-      <DependentUpon>NhapLichChuyenBay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\NhapLichChuyenBay_File.resx">
       <DependentUpon>NhapLichChuyenBay_File.cs</DependentUpon>
