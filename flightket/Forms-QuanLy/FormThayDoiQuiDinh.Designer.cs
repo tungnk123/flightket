@@ -136,7 +136,7 @@
             this.lb_title1.AutoSize = true;
             this.lb_title1.BackColor = System.Drawing.Color.Transparent;
             this.lb_title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_title1.Location = new System.Drawing.Point(624, 33);
+            this.lb_title1.Location = new System.Drawing.Point(652, 30);
             this.lb_title1.Name = "lb_title1";
             this.lb_title1.Size = new System.Drawing.Size(515, 69);
             this.lb_title1.TabIndex = 69;
