@@ -106,5 +106,18 @@ namespace flightket.Forms_Admin
                 }
             }
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormQuanLyTaiKhoan.instance.Close();
+            FormHomeAdmin formHomeAdmin = new FormHomeAdmin();
+            formHomeAdmin.Show();
+        }
     }
 }

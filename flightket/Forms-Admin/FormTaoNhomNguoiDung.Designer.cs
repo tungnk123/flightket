@@ -31,21 +31,21 @@ namespace flightket.Forms_Admin
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTaoNhomNguoiDung));
             this.panel_main = new System.Windows.Forms.Panel();
-            this.btn_timChuyenBay = new System.Windows.Forms.Button();
-            this.lb_title2 = new System.Windows.Forms.Label();
-            this.lb_title1 = new System.Windows.Forms.Label();
-            this.btn_back = new System.Windows.Forms.Button();
-            this.btn_home = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tb_nameGroupUser = new System.Windows.Forms.TextBox();
+            this.tb_description = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.cb_thayDoiQuiDinh = new System.Windows.Forms.CheckBox();
             this.cb_ghiNhanDatVe = new System.Windows.Forms.CheckBox();
             this.cb_lapBaoCao = new System.Windows.Forms.CheckBox();
             this.cb_banVe = new System.Windows.Forms.CheckBox();
             this.cb_traCuuChuyenBay = new System.Windows.Forms.CheckBox();
             this.cb_nhapLichChuyenBay = new System.Windows.Forms.CheckBox();
-            this.tb_description = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.tb_nameGroupUser = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_timChuyenBay = new System.Windows.Forms.Button();
+            this.lb_title2 = new System.Windows.Forms.Label();
+            this.lb_title1 = new System.Windows.Forms.Label();
+            this.btn_back = new System.Windows.Forms.Button();
+            this.btn_home = new System.Windows.Forms.Button();
             this.panel_main.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,77 +75,23 @@ namespace flightket.Forms_Admin
             this.panel_main.Size = new System.Drawing.Size(1760, 900);
             this.panel_main.TabIndex = 3;
             // 
-            // btn_timChuyenBay
+            // tb_description
             // 
-            this.btn_timChuyenBay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
-            this.btn_timChuyenBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_timChuyenBay.ForeColor = System.Drawing.Color.White;
-            this.btn_timChuyenBay.Location = new System.Drawing.Point(848, 786);
-            this.btn_timChuyenBay.Name = "btn_timChuyenBay";
-            this.btn_timChuyenBay.Size = new System.Drawing.Size(267, 62);
-            this.btn_timChuyenBay.TabIndex = 8;
-            this.btn_timChuyenBay.Text = "Xác nhận";
-            this.btn_timChuyenBay.UseVisualStyleBackColor = false;
-            this.btn_timChuyenBay.Click += new System.EventHandler(this.btn_timChuyenBay_Click);
+            this.tb_description.Location = new System.Drawing.Point(945, 273);
+            this.tb_description.Multiline = true;
+            this.tb_description.Name = "tb_description";
+            this.tb_description.Size = new System.Drawing.Size(502, 32);
+            this.tb_description.TabIndex = 24;
             // 
-            // lb_title2
+            // label2
             // 
-            this.lb_title2.AutoSize = true;
-            this.lb_title2.BackColor = System.Drawing.Color.Transparent;
-            this.lb_title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_title2.Location = new System.Drawing.Point(586, 101);
-            this.lb_title2.Name = "lb_title2";
-            this.lb_title2.Size = new System.Drawing.Size(832, 38);
-            this.lb_title2.TabIndex = 3;
-            this.lb_title2.Text = "Nhập thông tin và chọn quyền của nhóm người dùng mới";
-            // 
-            // lb_title1
-            // 
-            this.lb_title1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_title1.AutoSize = true;
-            this.lb_title1.BackColor = System.Drawing.Color.Transparent;
-            this.lb_title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_title1.Location = new System.Drawing.Point(640, 4);
-            this.lb_title1.Name = "lb_title1";
-            this.lb_title1.Size = new System.Drawing.Size(742, 69);
-            this.lb_title1.TabIndex = 2;
-            this.lb_title1.Text = "Tạo nhóm người dùng mới";
-            // 
-            // btn_back
-            // 
-            this.btn_back.Image = global::flightket.Properties.Resources.icons8_back_64;
-            this.btn_back.Location = new System.Drawing.Point(3, 3);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(70, 70);
-            this.btn_back.TabIndex = 0;
-            this.btn_back.UseVisualStyleBackColor = true;
-            // 
-            // btn_home
-            // 
-            this.btn_home.Image = global::flightket.Properties.Resources.icons8_home_50;
-            this.btn_home.Location = new System.Drawing.Point(79, 3);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(70, 70);
-            this.btn_home.TabIndex = 1;
-            this.btn_home.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(470, 207);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(287, 26);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Tên nhóm người dùng mới";
-            // 
-            // tb_nameGroupUser
-            // 
-            this.tb_nameGroupUser.Location = new System.Drawing.Point(945, 201);
-            this.tb_nameGroupUser.Name = "tb_nameGroupUser";
-            this.tb_nameGroupUser.Size = new System.Drawing.Size(351, 32);
-            this.tb_nameGroupUser.TabIndex = 11;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(470, 279);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 26);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Mô tả";
             // 
             // cb_thayDoiQuiDinh
             // 
@@ -219,23 +165,79 @@ namespace flightket.Forms_Admin
             this.cb_nhapLichChuyenBay.Text = "Nhập lịch chuyến nay";
             this.cb_nhapLichChuyenBay.UseVisualStyleBackColor = false;
             // 
-            // tb_description
+            // tb_nameGroupUser
             // 
-            this.tb_description.Location = new System.Drawing.Point(945, 273);
-            this.tb_description.Multiline = true;
-            this.tb_description.Name = "tb_description";
-            this.tb_description.Size = new System.Drawing.Size(502, 32);
-            this.tb_description.TabIndex = 24;
+            this.tb_nameGroupUser.Location = new System.Drawing.Point(945, 201);
+            this.tb_nameGroupUser.Name = "tb_nameGroupUser";
+            this.tb_nameGroupUser.Size = new System.Drawing.Size(351, 32);
+            this.tb_nameGroupUser.TabIndex = 11;
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(470, 279);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 26);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Mô tả";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(470, 207);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(287, 26);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Tên nhóm người dùng mới";
+            // 
+            // btn_timChuyenBay
+            // 
+            this.btn_timChuyenBay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+            this.btn_timChuyenBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_timChuyenBay.ForeColor = System.Drawing.Color.White;
+            this.btn_timChuyenBay.Location = new System.Drawing.Point(848, 786);
+            this.btn_timChuyenBay.Name = "btn_timChuyenBay";
+            this.btn_timChuyenBay.Size = new System.Drawing.Size(267, 62);
+            this.btn_timChuyenBay.TabIndex = 8;
+            this.btn_timChuyenBay.Text = "Xác nhận";
+            this.btn_timChuyenBay.UseVisualStyleBackColor = false;
+            this.btn_timChuyenBay.Click += new System.EventHandler(this.btn_timChuyenBay_Click);
+            // 
+            // lb_title2
+            // 
+            this.lb_title2.AutoSize = true;
+            this.lb_title2.BackColor = System.Drawing.Color.Transparent;
+            this.lb_title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_title2.Location = new System.Drawing.Point(586, 101);
+            this.lb_title2.Name = "lb_title2";
+            this.lb_title2.Size = new System.Drawing.Size(832, 38);
+            this.lb_title2.TabIndex = 3;
+            this.lb_title2.Text = "Nhập thông tin và chọn quyền của nhóm người dùng mới";
+            // 
+            // lb_title1
+            // 
+            this.lb_title1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_title1.AutoSize = true;
+            this.lb_title1.BackColor = System.Drawing.Color.Transparent;
+            this.lb_title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_title1.Location = new System.Drawing.Point(640, 4);
+            this.lb_title1.Name = "lb_title1";
+            this.lb_title1.Size = new System.Drawing.Size(742, 69);
+            this.lb_title1.TabIndex = 2;
+            this.lb_title1.Text = "Tạo nhóm người dùng mới";
+            // 
+            // btn_back
+            // 
+            this.btn_back.Image = global::flightket.Properties.Resources.icons8_back_64;
+            this.btn_back.Location = new System.Drawing.Point(3, 3);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(70, 70);
+            this.btn_back.TabIndex = 0;
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
+            // btn_home
+            // 
+            this.btn_home.Image = global::flightket.Properties.Resources.icons8_home_50;
+            this.btn_home.Location = new System.Drawing.Point(79, 3);
+            this.btn_home.Name = "btn_home";
+            this.btn_home.Size = new System.Drawing.Size(70, 70);
+            this.btn_home.TabIndex = 1;
+            this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // FormTaoNhomNguoiDung
             // 
