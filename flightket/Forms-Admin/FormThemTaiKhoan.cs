@@ -122,17 +122,14 @@ namespace flightket.Forms_Admin
         private void btn_back_Click(object sender, EventArgs e)
         {
             this.Close();
-            FormQuanLyTaiKhoan.instance.Close();
-            FormQuanLyTaiKhoan formQuanLyTaiKhoan = new FormQuanLyTaiKhoan();
-            formQuanLyTaiKhoan.Show();
+            FormQuanLyTaiKhoan.instance.Show();
+            
         }
 
         private void btn_home_Click(object sender, EventArgs e)
         {
             this.Close();
-            FormQuanLyTaiKhoan.instance.Close();
-            FormHomeAdmin formHomeAdmin = new FormHomeAdmin(); // Create a new instance
-            formHomeAdmin.Show();
+            
         }
 
     }

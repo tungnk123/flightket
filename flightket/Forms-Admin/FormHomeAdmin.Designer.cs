@@ -107,6 +107,7 @@ namespace flightket.Forms_Admin
             this.btn_dangXuat.Text = "Đăng xuất";
             this.btn_dangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btn_dangXuat.UseVisualStyleBackColor = true;
+            this.btn_dangXuat.Click += new System.EventHandler(this.btn_dangXuat_Click);
             // 
             // FormHomeAdmin
             // 

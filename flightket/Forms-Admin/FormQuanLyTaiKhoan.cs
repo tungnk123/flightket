@@ -110,9 +110,19 @@ namespace flightket.Forms_Admin
             FormCapNhatTaiKhoanNhanVien formCapNhatTaiKhoanNhanVien = new FormCapNhatTaiKhoanNhanVien(maNhanVien);
             this.Hide();
             formCapNhatTaiKhoanNhanVien.ShowDialog();
-            if (formCapNhatTaiKhoanNhanVien.IsAccessible == false)
+
+
+            if (!formCapNhatTaiKhoanNhanVien.IsAccessible)
             {
-                this.Show();
+                try
+                {
+                    FormQuanLyTaiKhoan.instance.Show();
+                }
+                catch
+                {
+                    return;
+                }
+
                 if (cb_loaiTaiKhoan.Text == "Nhân viên sân bay")
                 {
                     loadNhanVien();
@@ -123,6 +133,7 @@ namespace flightket.Forms_Admin
                 }
             }
         }
+
 
         private void btn_themNhanVien_Click(object sender, EventArgs e)
         {
@@ -138,13 +149,17 @@ namespace flightket.Forms_Admin
         private void btn_back_Click(object sender, EventArgs e)
         {
             this.Close();
-            FormHomeAdmin.instance.Show();
         }
 
         private void btn_home_Click(object sender, EventArgs e)
         {
             this.Close();
-            FormHomeAdmin.instance.Show();
+        }
+
+        private void FormQuanLyTaiKhoan_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormHomeAdmin formHomeAdmin = new FormHomeAdmin();
+            formHomeAdmin.Show();
         }
     }
 }

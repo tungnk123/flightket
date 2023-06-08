@@ -232,6 +232,7 @@ namespace flightket.Forms_Admin
             this.Name = "FormQuanLyTaiKhoan";
             this.Text = "Flightket - Admin - Quản lý tài khoản";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormQuanLyTaiKhoan_FormClosed);
             this.panel_main.ResumeLayout(false);
             this.panel_main.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_danhSachTaiKhoan)).EndInit();
