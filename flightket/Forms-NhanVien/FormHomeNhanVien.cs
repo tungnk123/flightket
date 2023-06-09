@@ -82,7 +82,6 @@ namespace flightket.Forms_NhanVien
                 this.Close();
                 FormDangNhap.instance.Show();
             }
-            FormDangNhap.mediaPlayer.Stop();
         }
 
         private void FormHomeNhanVien_FormClosed(object sender, FormClosedEventArgs e)
