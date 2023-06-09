@@ -22,6 +22,7 @@ namespace flightket
         {
             instance = this;
             InitializeComponent();
+            cb_hienMatKhau.Checked = false;
             //cmt
             ////cmt
             try
@@ -45,32 +46,88 @@ namespace flightket
             mediaPlayer.Play();
         }
 
+        
         private void btn_dangNhap_Click(object sender, EventArgs e)
         {
             string username = tb_username.Text;
             string password = tb_password.Text;
+            if (username == "" || password == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin xác thực!");
+                return;
+            }
             if (username == "admin" && password == "admin")
             {
                 this.Hide();
                 FormHomeAdmin formHomeAdmin = new FormHomeAdmin();
                 formHomeAdmin.ShowDialog();
+                return;
             }
             else if (username == "nhanvien" && password == "nhanvien")
             {
                 this.Hide();
+                cb_hienMatKhau.Checked = false;
+                tb_username.Text = "";
+                tb_password.Text = "";
                 FormHomeNhanVien formHomeNhanVien = new FormHomeNhanVien();
                 formHomeNhanVien.ShowDialog();
+                return;
             }
-            else if (username == "" && password == "")
+            else if (username == "quanly" && password == "quanly")
             {
                 this.Hide();
+                cb_hienMatKhau.Checked = false;
+                tb_username.Text = "";
+                tb_password.Text = "";
                 FormHomeQuanLy formHomeQuanLy = new FormHomeQuanLy();
                 formHomeQuanLy.ShowDialog();
+                return;
             }
-            else
+            using (var db = new FlightKetDBEntities())
             {
-                MessageBox.Show("Wrong username or password!");
+                var result = db.NHANVIENs.ToList();
+                for (int i = 0; i < result.Count; i++)
+                {
+                    if (result[i].UserName.Equals(username))
+                    {
+                        if (result[i].PassWord.Equals(password))
+                        {
+                            if (result[i].RoleID.Equals("NVSB1"))
+                            {
+                                this.Hide();
+                                cb_hienMatKhau.Checked = false;
+                                tb_username.Text = "";
+                                tb_password.Text = "";
+                                FormHomeNhanVien formHomeNhanVien = new FormHomeNhanVien();
+                                formHomeNhanVien.ShowDialog();
+                                return;
+                            }
+                            else if (result[i].RoleID.Equals("QULY1"))
+                            {
+                                this.Hide();
+                                cb_hienMatKhau.Checked = false;
+                                tb_username.Text = "";
+                                tb_password.Text = "";
+                                FormHomeQuanLy formHomeQuanLy = new FormHomeQuanLy();
+                                formHomeQuanLy.ShowDialog();
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sai mật khẩu! Vui lòng thử lại");
+                            return;
+                        }
+                    }
+                    
+                }
+
+                MessageBox.Show("Không tồn tại tài khoản! Vui lòng thử lại");
+                return;
             }
+
+            
+            
         }
 
         private void lb_quenMatKhau_Click(object sender, EventArgs e)
@@ -89,5 +146,14 @@ namespace flightket
                 tb_password.UseSystemPasswordChar = false;
             }
         }
+
+        private void FormDangNhap_Shown(object sender, EventArgs e)
+        {
+            cb_hienMatKhau.Checked = false;
+            tb_username.Text = "";
+            tb_password.Text = "";
+        }
+
+        
     }
 }

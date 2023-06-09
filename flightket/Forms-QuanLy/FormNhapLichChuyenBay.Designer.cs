@@ -536,7 +536,7 @@ namespace flightket.Forms_QuanLy
             this.btn_xuatThongTin.ForeColor = System.Drawing.Color.White;
             this.btn_xuatThongTin.Image = global::flightket.Properties.Resources.icons8_import_csv_40;
             this.btn_xuatThongTin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_xuatThongTin.Location = new System.Drawing.Point(1525, 90);
+            this.btn_xuatThongTin.Location = new System.Drawing.Point(1398, 90);
             this.btn_xuatThongTin.Name = "btn_xuatThongTin";
             this.btn_xuatThongTin.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.btn_xuatThongTin.Size = new System.Drawing.Size(317, 65);
