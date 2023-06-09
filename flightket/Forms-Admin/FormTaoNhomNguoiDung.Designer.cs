@@ -69,7 +69,7 @@
             this.panel_main.Controls.Add(this.btn_back);
             this.panel_main.Controls.Add(this.btn_home);
             this.panel_main.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_main.Location = new System.Drawing.Point(71, 66);
+            this.panel_main.Location = new System.Drawing.Point(59, 101);
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(1760, 900);
             this.panel_main.TabIndex = 4;
@@ -192,6 +192,7 @@
             this.btn_timChuyenBay.TabIndex = 8;
             this.btn_timChuyenBay.Text = "Xác nhận";
             this.btn_timChuyenBay.UseVisualStyleBackColor = false;
+            this.btn_timChuyenBay.Click += new System.EventHandler(this.btn_timChuyenBay_Click);
             // 
             // lb_title2
             // 
@@ -225,6 +226,7 @@
             this.btn_back.Size = new System.Drawing.Size(70, 70);
             this.btn_back.TabIndex = 0;
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // btn_home
             // 
@@ -234,6 +236,7 @@
             this.btn_home.Size = new System.Drawing.Size(70, 70);
             this.btn_home.TabIndex = 1;
             this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // FormTaoNhomNguoiDung
             // 
