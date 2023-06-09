@@ -118,7 +118,7 @@ namespace flightket
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.tb_scNhapLieu_right);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(468, 303);
+            this.groupBox1.Location = new System.Drawing.Point(439, 300);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(902, 359);
             this.groupBox1.TabIndex = 16;
@@ -327,9 +327,9 @@ namespace flightket
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.cb_nhacNen);
-            this.panel1.Location = new System.Drawing.Point(1009, 165);
+            this.panel1.Location = new System.Drawing.Point(978, 165);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(311, 100);
+            this.panel1.Size = new System.Drawing.Size(397, 100);
             this.panel1.TabIndex = 15;
             // 
             // cb_nhacNen
@@ -346,7 +346,7 @@ namespace flightket
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.cb_amThanh);
-            this.panel2.Location = new System.Drawing.Point(522, 165);
+            this.panel2.Location = new System.Drawing.Point(500, 165);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(377, 100);
             this.panel2.TabIndex = 14;
@@ -367,7 +367,7 @@ namespace flightket
             this.btn_xacNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
             this.btn_xacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xacNhan.ForeColor = System.Drawing.Color.White;
-            this.btn_xacNhan.Location = new System.Drawing.Point(804, 721);
+            this.btn_xacNhan.Location = new System.Drawing.Point(784, 720);
             this.btn_xacNhan.Name = "btn_xacNhan";
             this.btn_xacNhan.Size = new System.Drawing.Size(267, 62);
             this.btn_xacNhan.TabIndex = 15;

@@ -34,12 +34,6 @@ namespace flightket.Forms_NhanVien
             this.panelDanhSachPhieuDatCho = new System.Windows.Forms.Panel();
             this.lb_danhSachChuyenBayPhuHop = new System.Windows.Forms.Label();
             this.dgv_chuyenBayPhuHop = new System.Windows.Forms.DataGridView();
-            this.ColumnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMaChuyenBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnGioKhoiHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSoGheTrong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnGiaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnChon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cb_hangVe = new System.Windows.Forms.ComboBox();
             this.lb_chonHangVe = new System.Windows.Forms.Label();
@@ -57,6 +51,12 @@ namespace flightket.Forms_NhanVien
             this.lb_title1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
+            this.ColumnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMaChuyenBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnGioKhoiHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSoGheTrong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnGiaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnChon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_main.SuspendLayout();
             this.panelDanhSachPhieuDatCho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_chuyenBayPhuHop)).BeginInit();
@@ -118,62 +118,14 @@ namespace flightket.Forms_NhanVien
             this.ColumnSoGheTrong,
             this.ColumnGiaVe,
             this.ColumnChon});
-            this.dgv_chuyenBayPhuHop.Location = new System.Drawing.Point(48, 58);
+            this.dgv_chuyenBayPhuHop.Location = new System.Drawing.Point(80, 44);
             this.dgv_chuyenBayPhuHop.Name = "dgv_chuyenBayPhuHop";
             this.dgv_chuyenBayPhuHop.ReadOnly = true;
             this.dgv_chuyenBayPhuHop.RowHeadersWidth = 51;
             this.dgv_chuyenBayPhuHop.RowTemplate.Height = 24;
-            this.dgv_chuyenBayPhuHop.Size = new System.Drawing.Size(1322, 154);
-            this.dgv_chuyenBayPhuHop.TabIndex = 12;
+            this.dgv_chuyenBayPhuHop.Size = new System.Drawing.Size(1183, 165);
+            this.dgv_chuyenBayPhuHop.TabIndex = 6;
             this.dgv_chuyenBayPhuHop.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_chuyenBayPhuHop_CellDoubleClick_1);
-            // 
-            // ColumnSTT
-            // 
-            this.ColumnSTT.HeaderText = "STT";
-            this.ColumnSTT.MinimumWidth = 6;
-            this.ColumnSTT.Name = "ColumnSTT";
-            this.ColumnSTT.ReadOnly = true;
-            this.ColumnSTT.Width = 70;
-            // 
-            // ColumnMaChuyenBay
-            // 
-            this.ColumnMaChuyenBay.HeaderText = "Mã Chuyến Bay";
-            this.ColumnMaChuyenBay.MinimumWidth = 6;
-            this.ColumnMaChuyenBay.Name = "ColumnMaChuyenBay";
-            this.ColumnMaChuyenBay.ReadOnly = true;
-            this.ColumnMaChuyenBay.Width = 200;
-            // 
-            // columnGioKhoiHanh
-            // 
-            this.columnGioKhoiHanh.HeaderText = "Giờ khởi hành";
-            this.columnGioKhoiHanh.MinimumWidth = 6;
-            this.columnGioKhoiHanh.Name = "columnGioKhoiHanh";
-            this.columnGioKhoiHanh.ReadOnly = true;
-            this.columnGioKhoiHanh.Width = 200;
-            // 
-            // ColumnSoGheTrong
-            // 
-            this.ColumnSoGheTrong.HeaderText = "Số ghế trống";
-            this.ColumnSoGheTrong.MinimumWidth = 6;
-            this.ColumnSoGheTrong.Name = "ColumnSoGheTrong";
-            this.ColumnSoGheTrong.ReadOnly = true;
-            this.ColumnSoGheTrong.Width = 150;
-            // 
-            // ColumnGiaVe
-            // 
-            this.ColumnGiaVe.HeaderText = "Giá vé";
-            this.ColumnGiaVe.MinimumWidth = 6;
-            this.ColumnGiaVe.Name = "ColumnGiaVe";
-            this.ColumnGiaVe.ReadOnly = true;
-            this.ColumnGiaVe.Width = 200;
-            // 
-            // ColumnChon
-            // 
-            this.ColumnChon.HeaderText = "";
-            this.ColumnChon.MinimumWidth = 6;
-            this.ColumnChon.Name = "ColumnChon";
-            this.ColumnChon.ReadOnly = true;
-            this.ColumnChon.Width = 105;
             // 
             // panel4
             // 
@@ -355,6 +307,54 @@ namespace flightket.Forms_NhanVien
             this.btn_home.UseVisualStyleBackColor = true;
             this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
+            // ColumnSTT
+            // 
+            this.ColumnSTT.HeaderText = "STT";
+            this.ColumnSTT.MinimumWidth = 6;
+            this.ColumnSTT.Name = "ColumnSTT";
+            this.ColumnSTT.ReadOnly = true;
+            this.ColumnSTT.Width = 70;
+            // 
+            // ColumnMaChuyenBay
+            // 
+            this.ColumnMaChuyenBay.HeaderText = "Mã Chuyến Bay";
+            this.ColumnMaChuyenBay.MinimumWidth = 6;
+            this.ColumnMaChuyenBay.Name = "ColumnMaChuyenBay";
+            this.ColumnMaChuyenBay.ReadOnly = true;
+            this.ColumnMaChuyenBay.Width = 300;
+            // 
+            // columnGioKhoiHanh
+            // 
+            this.columnGioKhoiHanh.HeaderText = "Giờ khởi hành";
+            this.columnGioKhoiHanh.MinimumWidth = 6;
+            this.columnGioKhoiHanh.Name = "columnGioKhoiHanh";
+            this.columnGioKhoiHanh.ReadOnly = true;
+            this.columnGioKhoiHanh.Width = 250;
+            // 
+            // ColumnSoGheTrong
+            // 
+            this.ColumnSoGheTrong.HeaderText = "Số ghế trống";
+            this.ColumnSoGheTrong.MinimumWidth = 6;
+            this.ColumnSoGheTrong.Name = "ColumnSoGheTrong";
+            this.ColumnSoGheTrong.ReadOnly = true;
+            this.ColumnSoGheTrong.Width = 200;
+            // 
+            // ColumnGiaVe
+            // 
+            this.ColumnGiaVe.HeaderText = "Giá vé";
+            this.ColumnGiaVe.MinimumWidth = 6;
+            this.ColumnGiaVe.Name = "ColumnGiaVe";
+            this.ColumnGiaVe.ReadOnly = true;
+            this.ColumnGiaVe.Width = 200;
+            // 
+            // ColumnChon
+            // 
+            this.ColumnChon.HeaderText = "";
+            this.ColumnChon.MinimumWidth = 6;
+            this.ColumnChon.Name = "ColumnChon";
+            this.ColumnChon.ReadOnly = true;
+            this.ColumnChon.Width = 110;
+            // 
             // FormDatChoChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -391,12 +391,6 @@ namespace flightket.Forms_NhanVien
         private System.Windows.Forms.Panel panelDanhSachPhieuDatCho;
         private System.Windows.Forms.Label lb_danhSachChuyenBayPhuHop;
         private System.Windows.Forms.DataGridView dgv_chuyenBayPhuHop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSTT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMaChuyenBay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnGioKhoiHanh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSoGheTrong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGiaVe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnChon;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox cb_hangVe;
         private System.Windows.Forms.Label lb_chonHangVe;
@@ -414,5 +408,11 @@ namespace flightket.Forms_NhanVien
         private System.Windows.Forms.Label lb_title1;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Button btn_home;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSTT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMaChuyenBay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnGioKhoiHanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSoGheTrong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGiaVe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnChon;
     }
 }

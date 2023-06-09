@@ -166,18 +166,7 @@ namespace flightket.Forms_NhanVien
 
         }
 
-        private void cb_ngayKhoiHanh_CheckStateChanged(object sender, EventArgs e)
-        {
-            if (chb_ngayKhoiHanh.Checked)
-            {
-                dp_ngayKhoiHanh.Visible = true;
-                ngayKhoiHanh = dp_ngayKhoiHanh.Value;
-            }
-            else
-            {
-                dp_ngayKhoiHanh.Visible = false;
-            }
-        }
+        
 
         private void dp_ngayKhoiHanh_ValueChanged(object sender, EventArgs e)
         {
@@ -252,6 +241,18 @@ namespace flightket.Forms_NhanVien
             FormHomeNhanVien.instance.Show();
         }
 
+        private void chb_ngayKhoiHanh_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chb_ngayKhoiHanh.Checked)
+            {
+                dp_ngayKhoiHanh.Visible = true;
+                ngayKhoiHanh = dp_ngayKhoiHanh.Value;
+            }
+            else
+            {
+                dp_ngayKhoiHanh.Visible = false;
+            }
+        }
         
     }
 }

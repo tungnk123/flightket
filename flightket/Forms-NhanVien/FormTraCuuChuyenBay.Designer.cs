@@ -34,14 +34,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_title2 = new System.Windows.Forms.Label();
             this.dgv_chuyenBayPhuHop = new System.Windows.Forms.DataGridView();
-            this.column_stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.column_maChuyenBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.column_sanBayDi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.column_sanBayDen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.column_ngayKhoiHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.column_thoiGianBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.column_soGheTrong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.column_soGheDaDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
             this.btn_xuatThongTin = new System.Windows.Forms.Button();
@@ -60,6 +52,14 @@
             this.tb_maChuyenBay = new System.Windows.Forms.TextBox();
             this.lb_sanBayDi = new System.Windows.Forms.Label();
             this.lb_title1 = new System.Windows.Forms.Label();
+            this.column_stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.column_maChuyenBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.column_sanBayDi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.column_sanBayDen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.column_ngayKhoiHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.column_thoiGianBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.column_soGheTrong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.column_soGheDaDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_chuyenBayPhuHop)).BeginInit();
             this.panel4.SuspendLayout();
@@ -129,68 +129,12 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_chuyenBayPhuHop.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_chuyenBayPhuHop.Location = new System.Drawing.Point(193, 570);
+            this.dgv_chuyenBayPhuHop.Location = new System.Drawing.Point(166, 538);
             this.dgv_chuyenBayPhuHop.Name = "dgv_chuyenBayPhuHop";
             this.dgv_chuyenBayPhuHop.RowHeadersWidth = 51;
             this.dgv_chuyenBayPhuHop.RowTemplate.Height = 24;
-            this.dgv_chuyenBayPhuHop.Size = new System.Drawing.Size(1501, 182);
+            this.dgv_chuyenBayPhuHop.Size = new System.Drawing.Size(1474, 200);
             this.dgv_chuyenBayPhuHop.TabIndex = 12;
-            // 
-            // column_stt
-            // 
-            this.column_stt.HeaderText = "STT";
-            this.column_stt.MinimumWidth = 6;
-            this.column_stt.Name = "column_stt";
-            this.column_stt.Width = 60;
-            // 
-            // column_maChuyenBay
-            // 
-            this.column_maChuyenBay.HeaderText = "Mã chuyến bay";
-            this.column_maChuyenBay.MinimumWidth = 6;
-            this.column_maChuyenBay.Name = "column_maChuyenBay";
-            this.column_maChuyenBay.Width = 150;
-            // 
-            // column_sanBayDi
-            // 
-            this.column_sanBayDi.HeaderText = "Sân bay đi";
-            this.column_sanBayDi.MinimumWidth = 6;
-            this.column_sanBayDi.Name = "column_sanBayDi";
-            this.column_sanBayDi.Width = 180;
-            // 
-            // column_sanBayDen
-            // 
-            this.column_sanBayDen.HeaderText = "Sân bay đến";
-            this.column_sanBayDen.MinimumWidth = 6;
-            this.column_sanBayDen.Name = "column_sanBayDen";
-            this.column_sanBayDen.Width = 180;
-            // 
-            // column_ngayKhoiHanh
-            // 
-            this.column_ngayKhoiHanh.HeaderText = "Ngày khởi hành";
-            this.column_ngayKhoiHanh.MinimumWidth = 6;
-            this.column_ngayKhoiHanh.Name = "column_ngayKhoiHanh";
-            this.column_ngayKhoiHanh.Width = 125;
-            // 
-            // column_thoiGianBay
-            // 
-            this.column_thoiGianBay.HeaderText = "Thời gian bay (phút)";
-            this.column_thoiGianBay.MinimumWidth = 6;
-            this.column_thoiGianBay.Name = "column_thoiGianBay";
-            this.column_thoiGianBay.Width = 125;
-            // 
-            // column_soGheTrong
-            // 
-            this.column_soGheTrong.HeaderText = "Số ghế trống";
-            this.column_soGheTrong.MinimumWidth = 6;
-            this.column_soGheTrong.Name = "column_soGheTrong";
-            this.column_soGheTrong.Width = 125;
-            // 
-            // column_soGheDaDat
-            // 
-            this.column_soGheDaDat.HeaderText = "Số ghế đã đặt";
-            this.column_soGheDaDat.MinimumWidth = 6;
-            this.column_soGheDaDat.Name = "column_soGheDaDat";
-            this.column_soGheDaDat.Width = 125;
             // 
             // btn_back
             // 
@@ -279,6 +223,7 @@
             this.chb_ngayKhoiHanh.TabIndex = 2;
             this.chb_ngayKhoiHanh.Text = "Ngày khởi hành";
             this.chb_ngayKhoiHanh.UseVisualStyleBackColor = true;
+            this.chb_ngayKhoiHanh.CheckedChanged += new System.EventHandler(this.chb_ngayKhoiHanh_CheckedChanged);
             // 
             // dp_ngayKhoiHanh
             // 
@@ -328,7 +273,7 @@
             this.lb_danhSachChuyenBayPhuHop.AutoSize = true;
             this.lb_danhSachChuyenBayPhuHop.BackColor = System.Drawing.Color.Transparent;
             this.lb_danhSachChuyenBayPhuHop.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_danhSachChuyenBayPhuHop.Location = new System.Drawing.Point(799, 523);
+            this.lb_danhSachChuyenBayPhuHop.Location = new System.Drawing.Point(776, 490);
             this.lb_danhSachChuyenBayPhuHop.Name = "lb_danhSachChuyenBayPhuHop";
             this.lb_danhSachChuyenBayPhuHop.Size = new System.Drawing.Size(345, 26);
             this.lb_danhSachChuyenBayPhuHop.TabIndex = 19;
@@ -340,7 +285,7 @@
             this.btn_traCuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_traCuu.Image = global::flightket.Properties.Resources.icons8_search_50;
             this.btn_traCuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_traCuu.Location = new System.Drawing.Point(850, 412);
+            this.btn_traCuu.Location = new System.Drawing.Point(827, 379);
             this.btn_traCuu.Name = "btn_traCuu";
             this.btn_traCuu.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_traCuu.Size = new System.Drawing.Size(230, 65);
@@ -391,6 +336,62 @@
             this.lb_title1.TabIndex = 13;
             this.lb_title1.Text = "Tra cứu chuyến bay";
             // 
+            // column_stt
+            // 
+            this.column_stt.HeaderText = "STT";
+            this.column_stt.MinimumWidth = 6;
+            this.column_stt.Name = "column_stt";
+            this.column_stt.Width = 125;
+            // 
+            // column_maChuyenBay
+            // 
+            this.column_maChuyenBay.HeaderText = "Mã chuyến bay";
+            this.column_maChuyenBay.MinimumWidth = 6;
+            this.column_maChuyenBay.Name = "column_maChuyenBay";
+            this.column_maChuyenBay.Width = 200;
+            // 
+            // column_sanBayDi
+            // 
+            this.column_sanBayDi.HeaderText = "Sân bay đi";
+            this.column_sanBayDi.MinimumWidth = 6;
+            this.column_sanBayDi.Name = "column_sanBayDi";
+            this.column_sanBayDi.Width = 220;
+            // 
+            // column_sanBayDen
+            // 
+            this.column_sanBayDen.HeaderText = "Sân bay đến";
+            this.column_sanBayDen.MinimumWidth = 6;
+            this.column_sanBayDen.Name = "column_sanBayDen";
+            this.column_sanBayDen.Width = 220;
+            // 
+            // column_ngayKhoiHanh
+            // 
+            this.column_ngayKhoiHanh.HeaderText = "Ngày khởi hành";
+            this.column_ngayKhoiHanh.MinimumWidth = 6;
+            this.column_ngayKhoiHanh.Name = "column_ngayKhoiHanh";
+            this.column_ngayKhoiHanh.Width = 200;
+            // 
+            // column_thoiGianBay
+            // 
+            this.column_thoiGianBay.HeaderText = "Thời gian bay (phút)";
+            this.column_thoiGianBay.MinimumWidth = 6;
+            this.column_thoiGianBay.Name = "column_thoiGianBay";
+            this.column_thoiGianBay.Width = 200;
+            // 
+            // column_soGheTrong
+            // 
+            this.column_soGheTrong.HeaderText = "Số ghế trống";
+            this.column_soGheTrong.MinimumWidth = 6;
+            this.column_soGheTrong.Name = "column_soGheTrong";
+            this.column_soGheTrong.Width = 128;
+            // 
+            // column_soGheDaDat
+            // 
+            this.column_soGheDaDat.HeaderText = "Số ghế đã đặt";
+            this.column_soGheDaDat.MinimumWidth = 6;
+            this.column_soGheDaDat.Name = "column_soGheDaDat";
+            this.column_soGheDaDat.Width = 128;
+            // 
             // FormTraCuuChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -424,14 +425,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lb_title2;
         private System.Windows.Forms.DataGridView dgv_chuyenBayPhuHop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn column_stt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn column_maChuyenBay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn column_sanBayDi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn column_sanBayDen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn column_ngayKhoiHanh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn column_thoiGianBay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn column_soGheTrong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn column_soGheDaDat;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Button btn_home;
         private System.Windows.Forms.Button btn_xuatThongTin;
@@ -450,5 +443,13 @@
         private System.Windows.Forms.TextBox tb_maChuyenBay;
         private System.Windows.Forms.Label lb_sanBayDi;
         private System.Windows.Forms.Label lb_title1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn column_stt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn column_maChuyenBay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn column_sanBayDi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn column_sanBayDen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn column_ngayKhoiHanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn column_thoiGianBay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn column_soGheTrong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn column_soGheDaDat;
     }
 }

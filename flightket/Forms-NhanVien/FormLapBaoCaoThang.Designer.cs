@@ -35,11 +35,6 @@
             this.lb_tongDoanhThu = new System.Windows.Forms.Label();
             this.lb_doanhThuBanVe = new System.Windows.Forms.Label();
             this.dgv_doanhThuChuyenBay = new System.Windows.Forms.DataGridView();
-            this.ColumnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMaChuyenBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cb_nam = new System.Windows.Forms.ComboBox();
             this.lb_sanBayDen = new System.Windows.Forms.Label();
@@ -51,6 +46,11 @@
             this.lb_title1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
+            this.ColumnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMaChuyenBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_main.SuspendLayout();
             this.panelDanhSachPhieuDatCho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_doanhThuChuyenBay)).BeginInit();
@@ -141,48 +141,8 @@
             this.dgv_doanhThuChuyenBay.ReadOnly = true;
             this.dgv_doanhThuChuyenBay.RowHeadersWidth = 51;
             this.dgv_doanhThuChuyenBay.RowTemplate.Height = 24;
-            this.dgv_doanhThuChuyenBay.Size = new System.Drawing.Size(1177, 228);
+            this.dgv_doanhThuChuyenBay.Size = new System.Drawing.Size(1154, 228);
             this.dgv_doanhThuChuyenBay.TabIndex = 12;
-            // 
-            // ColumnSTT
-            // 
-            this.ColumnSTT.HeaderText = "STT";
-            this.ColumnSTT.MinimumWidth = 6;
-            this.ColumnSTT.Name = "ColumnSTT";
-            this.ColumnSTT.ReadOnly = true;
-            this.ColumnSTT.Width = 70;
-            // 
-            // ColumnMaChuyenBay
-            // 
-            this.ColumnMaChuyenBay.HeaderText = "Mã Chuyến Bay";
-            this.ColumnMaChuyenBay.MinimumWidth = 6;
-            this.ColumnMaChuyenBay.Name = "ColumnMaChuyenBay";
-            this.ColumnMaChuyenBay.ReadOnly = true;
-            this.ColumnMaChuyenBay.Width = 200;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Số vé";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 200;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Doanh thu ( Đồng )";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 210;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tỉ lệ ( % )";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
             // 
             // panel2
             // 
@@ -324,6 +284,45 @@
             this.btn_home.UseVisualStyleBackColor = true;
             this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
+            // ColumnSTT
+            // 
+            this.ColumnSTT.HeaderText = "STT";
+            this.ColumnSTT.MinimumWidth = 6;
+            this.ColumnSTT.Name = "ColumnSTT";
+            this.ColumnSTT.ReadOnly = true;
+            // 
+            // ColumnMaChuyenBay
+            // 
+            this.ColumnMaChuyenBay.HeaderText = "Mã Chuyến Bay";
+            this.ColumnMaChuyenBay.MinimumWidth = 6;
+            this.ColumnMaChuyenBay.Name = "ColumnMaChuyenBay";
+            this.ColumnMaChuyenBay.ReadOnly = true;
+            this.ColumnMaChuyenBay.Width = 300;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Số vé";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 200;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Doanh thu ( Đồng )";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 300;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Tỉ lệ ( % )";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 200;
+            // 
             // FormLapBaoCaoThang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -367,12 +366,12 @@
         private System.Windows.Forms.Label lb_title1;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Button btn_home;
+        private System.Windows.Forms.Label lb_tongDoanhThu;
+        private System.Windows.Forms.Button btn_xuatBaoCao;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSTT;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMaChuyenBay;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.Label lb_tongDoanhThu;
-        private System.Windows.Forms.Button btn_xuatBaoCao;
     }
 }
