@@ -170,6 +170,7 @@
             this.btn_xacNhan.TabIndex = 8;
             this.btn_xacNhan.Text = "Xác nhận";
             this.btn_xacNhan.UseVisualStyleBackColor = false;
+            this.btn_xacNhan.Click += new System.EventHandler(this.btn_xacNhan_Click);
             // 
             // lb_title1
             // 
@@ -192,6 +193,7 @@
             this.btn_back.Size = new System.Drawing.Size(70, 70);
             this.btn_back.TabIndex = 0;
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // btn_home
             // 
@@ -201,6 +203,7 @@
             this.btn_home.Size = new System.Drawing.Size(70, 70);
             this.btn_home.TabIndex = 1;
             this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // FormPhanQuyen
             // 
