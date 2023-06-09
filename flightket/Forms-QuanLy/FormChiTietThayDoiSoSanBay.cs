@@ -22,7 +22,6 @@ namespace flightket.Forms_QuanLy
         public FormChiTietThayDoiSoSanBay(List<SANBAY> sanBaysList)
         {
             InitializeComponent();
-            panel1.BackColor = Color.FromArgb(150, Color.White);
             this.sanBaysBanDauList = new List<SANBAY>();
             this.sanBaysCapNhatList= new List<SANBAY>();
             this.sanBayThem = new List<SANBAY>();

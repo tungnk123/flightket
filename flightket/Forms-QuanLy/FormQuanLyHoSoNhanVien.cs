@@ -145,6 +145,9 @@ namespace flightket.Forms_QuanLy
             lv_danhSachNhanVien.Rows[POSITION_UPDATE].Cells[5].Value = nhanVien.SoDienThoai;
         }
 
-        
+        private void btn_xacNhan_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Đã cập nhập thông tin nhân viên thành công!");
+        }
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCapNhatThongTinNhanVien));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_luuThayDoi = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -41,6 +40,7 @@
             this.tb_diaChi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dp_ngaySinh = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.tb_hoTen = new System.Windows.Forms.TextBox();
@@ -49,7 +49,6 @@
             this.lb_title1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
-            this.dp_ngaySinh = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -191,6 +190,14 @@
             this.panel2.Size = new System.Drawing.Size(268, 100);
             this.panel2.TabIndex = 16;
             // 
+            // dp_ngaySinh
+            // 
+            this.dp_ngaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dp_ngaySinh.Location = new System.Drawing.Point(31, 58);
+            this.dp_ngaySinh.Name = "dp_ngaySinh";
+            this.dp_ngaySinh.Size = new System.Drawing.Size(200, 32);
+            this.dp_ngaySinh.TabIndex = 1;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -256,6 +263,7 @@
             // 
             // btn_back
             // 
+            this.btn_back.Image = global::flightket.Properties.Resources.icon_back_final;
             this.btn_back.Location = new System.Drawing.Point(3, 3);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(70, 70);
@@ -264,19 +272,12 @@
             // 
             // btn_home
             // 
+            this.btn_home.Image = global::flightket.Properties.Resources.icon_home_final;
             this.btn_home.Location = new System.Drawing.Point(79, 3);
             this.btn_home.Name = "btn_home";
             this.btn_home.Size = new System.Drawing.Size(70, 70);
             this.btn_home.TabIndex = 24;
             this.btn_home.UseVisualStyleBackColor = true;
-            // 
-            // dp_ngaySinh
-            // 
-            this.dp_ngaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dp_ngaySinh.Location = new System.Drawing.Point(31, 58);
-            this.dp_ngaySinh.Name = "dp_ngaySinh";
-            this.dp_ngaySinh.Size = new System.Drawing.Size(200, 32);
-            this.dp_ngaySinh.TabIndex = 1;
             // 
             // FormCapNhatThongTinNhanVien
             // 
@@ -287,7 +288,6 @@
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCapNhatThongTinNhanVien";
             this.Text = "FormCapNhatThongTinNhanVien";

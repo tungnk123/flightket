@@ -124,24 +124,24 @@ namespace flightket.Forms_QuanLy
             // 
             // btn_home
             // 
-            this.btn_home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_home.BackgroundImage")));
             this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_home.Image = global::flightket.Properties.Resources.icon_home_final;
             this.btn_home.Location = new System.Drawing.Point(82, 4);
             this.btn_home.Margin = new System.Windows.Forms.Padding(4);
             this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(84, 57);
+            this.btn_home.Size = new System.Drawing.Size(70, 70);
             this.btn_home.TabIndex = 31;
             this.btn_home.UseVisualStyleBackColor = true;
             this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // btn_back
             // 
-            this.btn_back.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_back.BackgroundImage")));
             this.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_back.Image = global::flightket.Properties.Resources.icon_back_final;
             this.btn_back.Location = new System.Drawing.Point(0, 4);
             this.btn_back.Margin = new System.Windows.Forms.Padding(4);
             this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(84, 57);
+            this.btn_back.Size = new System.Drawing.Size(70, 70);
             this.btn_back.TabIndex = 30;
             this.btn_back.UseVisualStyleBackColor = true;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
@@ -534,10 +534,12 @@ namespace flightket.Forms_QuanLy
             this.btn_xuatThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
             this.btn_xuatThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xuatThongTin.ForeColor = System.Drawing.Color.White;
+            this.btn_xuatThongTin.Image = global::flightket.Properties.Resources.icons8_import_csv_40;
             this.btn_xuatThongTin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_xuatThongTin.Location = new System.Drawing.Point(1486, 90);
+            this.btn_xuatThongTin.Location = new System.Drawing.Point(1525, 90);
             this.btn_xuatThongTin.Name = "btn_xuatThongTin";
-            this.btn_xuatThongTin.Size = new System.Drawing.Size(162, 65);
+            this.btn_xuatThongTin.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btn_xuatThongTin.Size = new System.Drawing.Size(317, 65);
             this.btn_xuatThongTin.TabIndex = 22;
             this.btn_xuatThongTin.Text = "Import File";
             this.btn_xuatThongTin.UseVisualStyleBackColor = false;

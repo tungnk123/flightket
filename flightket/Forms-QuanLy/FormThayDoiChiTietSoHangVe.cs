@@ -24,7 +24,6 @@ namespace flightket.Forms_QuanLy
         public FormThayDoiChiTietSoHangVe(List<HANGVE> hangVes)
         {
             InitializeComponent();
-            panel1.BackColor = Color.FromArgb(150, Color.White);
             this.hangVeBanDauList = new List<HANGVE>();
             this.hangVeThayDoiList = new List<HANGVE>();
             this.hangVeThem = new List<HANGVE>();
@@ -354,5 +353,7 @@ namespace flightket.Forms_QuanLy
                 dbContext.SaveChanges();
             }
         }
+
+        
     }
 }
