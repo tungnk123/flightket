@@ -42,6 +42,7 @@ namespace flightket.Forms_NhanVien
             // btn_dangXuat
             // 
             this.btn_dangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dangXuat.Image = global::flightket.Properties.Resources.icons8_log_out_50;
             this.btn_dangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_dangXuat.Location = new System.Drawing.Point(1519, 831);
             this.btn_dangXuat.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
@@ -52,6 +53,7 @@ namespace flightket.Forms_NhanVien
             this.btn_dangXuat.Text = "Đăng xuất";
             this.btn_dangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btn_dangXuat.UseVisualStyleBackColor = true;
+            this.btn_dangXuat.Click += new System.EventHandler(this.btn_dangXuat_Click);
             // 
             // btn_caiDat
             // 
@@ -112,6 +114,7 @@ namespace flightket.Forms_NhanVien
             // btn_kiemTraDatCho
             // 
             this.btn_kiemTraDatCho.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_kiemTraDatCho.Image = global::flightket.Properties.Resources.icons8_confirm_50;
             this.btn_kiemTraDatCho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_kiemTraDatCho.Location = new System.Drawing.Point(895, 336);
             this.btn_kiemTraDatCho.Name = "btn_kiemTraDatCho";

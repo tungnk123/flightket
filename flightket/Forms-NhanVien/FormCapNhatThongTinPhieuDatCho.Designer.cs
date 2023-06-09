@@ -304,7 +304,7 @@
             // 
             // btn_back
             // 
-            this.btn_back.Image = ((System.Drawing.Image)(resources.GetObject("btn_back.Image")));
+            this.btn_back.Image = global::flightket.Properties.Resources.icon_back_final;
             this.btn_back.Location = new System.Drawing.Point(3, 3);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(70, 70);
@@ -314,7 +314,7 @@
             // 
             // btn_home
             // 
-            this.btn_home.Image = ((System.Drawing.Image)(resources.GetObject("btn_home.Image")));
+            this.btn_home.Image = global::flightket.Properties.Resources.icon_home_final;
             this.btn_home.Location = new System.Drawing.Point(79, 3);
             this.btn_home.Name = "btn_home";
             this.btn_home.Size = new System.Drawing.Size(70, 70);

@@ -78,7 +78,7 @@
             this.btn_xuatBaoCao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
             this.btn_xuatBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xuatBaoCao.ForeColor = System.Drawing.Color.White;
-            //this.btn_xuatBaoCao.Image = global::flightket.Properties.Resources.icons8_export_64;
+            this.btn_xuatBaoCao.Image = global::flightket.Properties.Resources.icons8_export_csv_40;
             this.btn_xuatBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_xuatBaoCao.Location = new System.Drawing.Point(1181, 765);
             this.btn_xuatBaoCao.Name = "btn_xuatBaoCao";
@@ -256,7 +256,7 @@
             // 
             // btn_back
             // 
-            this.btn_back.Image = ((System.Drawing.Image)(resources.GetObject("btn_back.Image")));
+            this.btn_back.Image = global::flightket.Properties.Resources.icon_back_final;
             this.btn_back.Location = new System.Drawing.Point(3, 3);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(70, 70);
@@ -266,7 +266,7 @@
             // 
             // btn_home
             // 
-            this.btn_home.Image = ((System.Drawing.Image)(resources.GetObject("btn_home.Image")));
+            this.btn_home.Image = global::flightket.Properties.Resources.icon_home_final;
             this.btn_home.Location = new System.Drawing.Point(79, 3);
             this.btn_home.Name = "btn_home";
             this.btn_home.Size = new System.Drawing.Size(70, 70);
