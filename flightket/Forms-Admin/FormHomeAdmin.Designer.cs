@@ -49,6 +49,7 @@ namespace flightket.Forms_Admin
             this.btn_taoNhomNguoiDung.TabIndex = 0;
             this.btn_taoNhomNguoiDung.Text = "Tạo nhóm người dùng";
             this.btn_taoNhomNguoiDung.UseVisualStyleBackColor = true;
+            this.btn_taoNhomNguoiDung.Click += new System.EventHandler(this.btn_taoNhomNguoiDung_Click);
             // 
             // btn_quanLyTaiKhoan
             // 
@@ -62,6 +63,7 @@ namespace flightket.Forms_Admin
             this.btn_quanLyTaiKhoan.TabIndex = 1;
             this.btn_quanLyTaiKhoan.Text = "Quản lý tài khoản";
             this.btn_quanLyTaiKhoan.UseVisualStyleBackColor = true;
+            this.btn_quanLyTaiKhoan.Click += new System.EventHandler(this.btn_quanLyTaiKhoan_Click);
             // 
             // btn_phanQuyen
             // 
@@ -75,6 +77,7 @@ namespace flightket.Forms_Admin
             this.btn_phanQuyen.TabIndex = 2;
             this.btn_phanQuyen.Text = "Phân quyền";
             this.btn_phanQuyen.UseVisualStyleBackColor = true;
+            this.btn_phanQuyen.Click += new System.EventHandler(this.btn_phanQuyen_Click);
             // 
             // btn_caiDat
             // 
@@ -88,6 +91,7 @@ namespace flightket.Forms_Admin
             this.btn_caiDat.TabIndex = 3;
             this.btn_caiDat.Text = "Cài đặt";
             this.btn_caiDat.UseVisualStyleBackColor = true;
+            this.btn_caiDat.Click += new System.EventHandler(this.btn_caiDat_Click);
             // 
             // btn_dangXuat
             // 
