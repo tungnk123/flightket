@@ -158,6 +158,7 @@
             this.cmb_loaiTaiKhoan.Name = "cmb_loaiTaiKhoan";
             this.cmb_loaiTaiKhoan.Size = new System.Drawing.Size(279, 34);
             this.cmb_loaiTaiKhoan.TabIndex = 9;
+            this.cmb_loaiTaiKhoan.SelectedIndexChanged += new System.EventHandler(this.cmb_loaiTaiKhoan_SelectedIndexChanged);
             // 
             // btn_xacNhan
             // 
@@ -218,6 +219,7 @@
             this.Name = "FormPhanQuyen";
             this.Text = "FormPhanQuyen";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormPhanQuyen_Load);
             this.panel_main.ResumeLayout(false);
             this.panel_main.PerformLayout();
             this.ResumeLayout(false);
