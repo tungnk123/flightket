@@ -143,12 +143,6 @@
     <Compile Include="Forms-QuanLy\FormQuanLyHoSoNhanVien.Designer.cs">
       <DependentUpon>FormQuanLyHoSoNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms-QuanLy\FormTemplate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms-QuanLy\FormTemplate.Designer.cs">
-      <DependentUpon>FormTemplate.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms-QuanLy\FormThayDoiChiTietSoHangVe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,9 +233,6 @@
     <EmbeddedResource Include="Forms-QuanLy\FormQuanLyHoSoNhanVien.resx">
       <DependentUpon>FormQuanLyHoSoNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms-QuanLy\FormTemplate.resx">
-      <DependentUpon>FormTemplate.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\FormThayDoiChiTietSoHangVe.resx">
       <DependentUpon>FormThayDoiChiTietSoHangVe.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,7 +274,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Forms-QuanLy\TextFile1.txt" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
