@@ -72,5 +72,22 @@ namespace flightket
                 MessageBox.Show("Wrong username or password!");
             }
         }
+
+        private void lb_quenMatKhau_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Vui lòng liên hệ Admin để được cấp lại thông tin đăng nhập!");
+        }
+
+        private void cb_hienMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_hienMatKhau.Checked)
+            {
+                tb_password.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                tb_password.UseSystemPasswordChar = false;
+            }
+        }
     }
 }

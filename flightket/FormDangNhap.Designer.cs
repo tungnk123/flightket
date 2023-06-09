@@ -31,6 +31,7 @@ namespace flightket
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDangNhap));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cb_hienMatKhau = new System.Windows.Forms.CheckBox();
             this.btn_dangNhap = new System.Windows.Forms.Button();
             this.tb_password = new System.Windows.Forms.TextBox();
             this.lb_quenMatKhau = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@ namespace flightket
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.cb_hienMatKhau);
             this.panel1.Controls.Add(this.btn_dangNhap);
             this.panel1.Controls.Add(this.tb_password);
             this.panel1.Controls.Add(this.lb_quenMatKhau);
@@ -53,14 +55,26 @@ namespace flightket
             this.panel1.Controls.Add(this.lb_username);
             this.panel1.Location = new System.Drawing.Point(742, 277);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(468, 388);
+            this.panel1.Size = new System.Drawing.Size(468, 458);
             this.panel1.TabIndex = 1;
+            // 
+            // cb_hienMatKhau
+            // 
+            this.cb_hienMatKhau.AutoSize = true;
+            this.cb_hienMatKhau.BackColor = System.Drawing.Color.Transparent;
+            this.cb_hienMatKhau.Location = new System.Drawing.Point(45, 278);
+            this.cb_hienMatKhau.Name = "cb_hienMatKhau";
+            this.cb_hienMatKhau.Size = new System.Drawing.Size(121, 21);
+            this.cb_hienMatKhau.TabIndex = 7;
+            this.cb_hienMatKhau.Text = "Hiện mật khẩu";
+            this.cb_hienMatKhau.UseVisualStyleBackColor = false;
+            this.cb_hienMatKhau.CheckedChanged += new System.EventHandler(this.cb_hienMatKhau_CheckedChanged);
             // 
             // btn_dangNhap
             // 
             this.btn_dangNhap.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_dangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_dangNhap.Location = new System.Drawing.Point(127, 313);
+            this.btn_dangNhap.Location = new System.Drawing.Point(127, 330);
             this.btn_dangNhap.Name = "btn_dangNhap";
             this.btn_dangNhap.Size = new System.Drawing.Size(219, 55);
             this.btn_dangNhap.TabIndex = 6;
@@ -84,11 +98,13 @@ namespace flightket
             this.lb_quenMatKhau.AutoSize = true;
             this.lb_quenMatKhau.BackColor = System.Drawing.Color.Transparent;
             this.lb_quenMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_quenMatKhau.Location = new System.Drawing.Point(161, 280);
+            this.lb_quenMatKhau.ForeColor = System.Drawing.Color.Black;
+            this.lb_quenMatKhau.Location = new System.Drawing.Point(168, 415);
             this.lb_quenMatKhau.Name = "lb_quenMatKhau";
             this.lb_quenMatKhau.Size = new System.Drawing.Size(131, 20);
             this.lb_quenMatKhau.TabIndex = 5;
             this.lb_quenMatKhau.Text = "Quên mật khẩu?";
+            this.lb_quenMatKhau.Click += new System.EventHandler(this.lb_quenMatKhau_Click);
             // 
             // lb_password
             // 
@@ -104,7 +120,7 @@ namespace flightket
             // lb_title
             // 
             this.lb_title.BackColor = System.Drawing.Color.Transparent;
-            this.lb_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_title.Location = new System.Drawing.Point(151, 29);
             this.lb_title.Name = "lb_title";
             this.lb_title.Size = new System.Drawing.Size(167, 34);
@@ -116,7 +132,7 @@ namespace flightket
             // 
             this.tb_username.BackColor = System.Drawing.Color.LightGray;
             this.tb_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_username.Location = new System.Drawing.Point(42, 113);
+            this.tb_username.Location = new System.Drawing.Point(45, 107);
             this.tb_username.Multiline = true;
             this.tb_username.Name = "tb_username";
             this.tb_username.Size = new System.Drawing.Size(378, 38);
@@ -164,6 +180,7 @@ namespace flightket
         private System.Windows.Forms.Label lb_title;
         private System.Windows.Forms.TextBox tb_username;
         private System.Windows.Forms.Label lb_username;
+        private System.Windows.Forms.CheckBox cb_hienMatKhau;
     }
 }
 
