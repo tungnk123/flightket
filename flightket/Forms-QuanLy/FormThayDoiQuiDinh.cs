@@ -27,28 +27,27 @@ namespace flightket.Forms_QuanLy
         {
             FormChiTietThayDoiSoSanBay formChiTietThayDoiSoSanBay = new FormChiTietThayDoiSoSanBay(sanBaysList);
             this.Hide();
-            formChiTietThayDoiSoSanBay.ShowDialog();    
+            formChiTietThayDoiSoSanBay.ShowDialog();
+            this.Show();
+              
         }
 
         private void btn_thayDoiSoLuongHangVeMoi_Click(object sender, EventArgs e)
         {
-            FormThayDoiChiTietSoHangVe formThayDoiChiTietSoHangVe = new FormThayDoiChiTietSoHangVe(hangVesList); 
+            FormThayDoiChiTietSoHangVe formThayDoiChiTietSoHangVe = new FormThayDoiChiTietSoHangVe(hangVesList);
             this.Hide();
             formThayDoiChiTietSoHangVe.ShowDialog();
+            this.Show();
         }
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-            FormHomeQuanLy formHomeQuanLy = new FormHomeQuanLy();
-            this.Hide();
-            formHomeQuanLy.ShowDialog();
+            this.Close();
         }
 
         private void btn_home_Click(object sender, EventArgs e)
         {
-            FormHomeQuanLy formHomeQuanLy = new FormHomeQuanLy();
-            this.Hide();
-            formHomeQuanLy.ShowDialog();
+            this.Close();
         }
 
         private void FormThayDoiQuiDinh_Load(object sender, EventArgs e)
@@ -344,7 +343,5 @@ namespace flightket.Forms_QuanLy
             tb_thoiGianTruocDatVeSlowestMoi.Clear();
             tb_thoiGianTruocHuyVeSlowestMoi.Clear();
         }
-
-       
     }
 }

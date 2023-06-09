@@ -205,13 +205,12 @@ namespace flightket.Forms_QuanLy
             } catch(Exception ex) 
             {
                 MessageBox.Show(ex.Message);
-            }
-            
+            } 
         }
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void btn_home_Click(object sender, EventArgs e)
@@ -220,7 +219,5 @@ namespace flightket.Forms_QuanLy
             FormHomeQuanLy formHomeQuanLy = new FormHomeQuanLy();
             formHomeQuanLy.ShowDialog();    
         }
-
-        
     }
 }

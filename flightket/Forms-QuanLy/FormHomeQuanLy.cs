@@ -33,6 +33,7 @@ namespace flightket.Forms_QuanLy
             FormThayDoiQuiDinh formThayDoiQuiDinh = new FormThayDoiQuiDinh();
             this.Hide();
             formThayDoiQuiDinh.ShowDialog();
+            this.Show();
         }
 
         private void btn_quanLyHoSo_Click(object sender, EventArgs e)
@@ -40,6 +41,28 @@ namespace flightket.Forms_QuanLy
             FormQuanLyHoSoNhanVien formQuanLyHoSoNhanVien = new FormQuanLyHoSoNhanVien();
             this.Hide();
             formQuanLyHoSoNhanVien.ShowDialog();
+            this.Show();
+        }
+
+        private void FormHomeQuanLy_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (this == Application.OpenForms["FormHomeQuanLy"])
+            {
+                // Hiển thị hộp thoại xác nhận
+                DialogResult result = MessageBox.Show("Bạn có muốn đóng ứng dụng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                // Kiểm tra kết quả từ hộp thoại
+                if (result == DialogResult.Yes)
+                {
+                    // Đóng ứng dụng nếu người dùng chọn Yes
+                    Application.Exit();
+                }
+                else
+                {
+                    // Ngăn chặn đóng form nếu người dùng chọn No
+                    e.Cancel = true;
+                }
+            }
         }
     }
 }

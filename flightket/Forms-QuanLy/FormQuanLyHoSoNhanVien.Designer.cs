@@ -60,18 +60,20 @@
             this.panel1.Controls.Add(this.btn_back);
             this.panel1.Controls.Add(this.btn_home);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(72, 110);
+            this.panel1.Location = new System.Drawing.Point(54, 89);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1760, 900);
+            this.panel1.Size = new System.Drawing.Size(1320, 731);
             this.panel1.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(823, 149);
+            this.label1.Location = new System.Drawing.Point(617, 121);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 29);
+            this.label1.Size = new System.Drawing.Size(213, 24);
             this.label1.TabIndex = 33;
             this.label1.Text = "Danh sách nhân viên ";
             // 
@@ -100,13 +102,12 @@
             this.columnSdt,
             this.columnCapNhat});
             this.lv_danhSachNhanVien.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lv_danhSachNhanVien.Location = new System.Drawing.Point(122, 209);
-            this.lv_danhSachNhanVien.Margin = new System.Windows.Forms.Padding(4);
+            this.lv_danhSachNhanVien.Location = new System.Drawing.Point(92, 170);
             this.lv_danhSachNhanVien.Name = "lv_danhSachNhanVien";
             this.lv_danhSachNhanVien.ReadOnly = true;
             this.lv_danhSachNhanVien.RowHeadersVisible = false;
             this.lv_danhSachNhanVien.RowHeadersWidth = 51;
-            this.lv_danhSachNhanVien.Size = new System.Drawing.Size(1677, 400);
+            this.lv_danhSachNhanVien.Size = new System.Drawing.Size(1258, 325);
             this.lv_danhSachNhanVien.TabIndex = 32;
             this.lv_danhSachNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lv_danhSachNhanVien_CellContentClick);
             // 
@@ -174,9 +175,10 @@
             this.btn_xacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xacNhan.ForeColor = System.Drawing.Color.White;
             this.btn_xacNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_xacNhan.Location = new System.Drawing.Point(859, 716);
+            this.btn_xacNhan.Location = new System.Drawing.Point(644, 582);
+            this.btn_xacNhan.Margin = new System.Windows.Forms.Padding(2);
             this.btn_xacNhan.Name = "btn_xacNhan";
-            this.btn_xacNhan.Size = new System.Drawing.Size(253, 65);
+            this.btn_xacNhan.Size = new System.Drawing.Size(190, 53);
             this.btn_xacNhan.TabIndex = 30;
             this.btn_xacNhan.Text = "Lưu thay đổi";
             this.btn_xacNhan.UseVisualStyleBackColor = false;
@@ -188,43 +190,51 @@
             this.lb_title1.AutoSize = true;
             this.lb_title1.BackColor = System.Drawing.Color.Transparent;
             this.lb_title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_title1.Location = new System.Drawing.Point(618, 28);
+            this.lb_title1.Location = new System.Drawing.Point(464, 23);
+            this.lb_title1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_title1.Name = "lb_title1";
-            this.lb_title1.Size = new System.Drawing.Size(692, 69);
+            this.lb_title1.Size = new System.Drawing.Size(565, 55);
             this.lb_title1.TabIndex = 27;
             this.lb_title1.Text = "Quản lý hồ sơ nhân viên";
             // 
             // btn_back
             // 
-            this.btn_back.Location = new System.Drawing.Point(3, 3);
+            this.btn_back.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_back.BackgroundImage")));
+            this.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_back.Location = new System.Drawing.Point(2, 2);
+            this.btn_back.Margin = new System.Windows.Forms.Padding(2);
             this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(70, 70);
+            this.btn_back.Size = new System.Drawing.Size(52, 57);
             this.btn_back.TabIndex = 23;
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // btn_home
             // 
-            this.btn_home.Location = new System.Drawing.Point(79, 3);
+            this.btn_home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_home.BackgroundImage")));
+            this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_home.Location = new System.Drawing.Point(52, 2);
+            this.btn_home.Margin = new System.Windows.Forms.Padding(2);
             this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(70, 70);
+            this.btn_home.Size = new System.Drawing.Size(53, 57);
             this.btn_home.TabIndex = 24;
             this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // FormQuanLyHoSoNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::flightket.Properties.Resources._350361348_206044632301251_2266599988871672436_n;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(1155, 687);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormQuanLyHoSoNhanVien";
             this.Text = "FormQuanLyHoSoNhanVien";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FormQuanLyHoSoNhanVien_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lv_danhSachNhanVien)).EndInit();

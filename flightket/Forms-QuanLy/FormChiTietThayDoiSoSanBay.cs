@@ -34,16 +34,14 @@ namespace flightket.Forms_QuanLy
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-            FormThayDoiQuiDinh formThayDoiQuiDinh = new FormThayDoiQuiDinh();   
-            formThayDoiQuiDinh.ShowDialog();
             this.Hide();
         }
 
         private void btn_home_Click(object sender, EventArgs e)
         {
-            FormHomeQuanLy formHomeQuanLy = new FormHomeQuanLy();
             this.Hide();
-            formHomeQuanLy.ShowDialog();    
+            FormHomeQuanLy form = new FormHomeQuanLy();
+            form.ShowDialog();
         }
 
         private void FormChiTietThayDoiSoSanBay_Load(object sender, EventArgs e)

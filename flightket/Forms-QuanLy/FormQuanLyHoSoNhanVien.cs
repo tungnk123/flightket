@@ -25,21 +25,14 @@ namespace flightket.Forms_QuanLy
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-            FormHomeQuanLy formHomeQuanLy = new FormHomeQuanLy();
-            this.Hide();
-            formHomeQuanLy.ShowDialog();  
+            this.Hide(); 
         }
 
         private void btn_home_Click(object sender, EventArgs e)
         {
-            FormHomeQuanLy formHomeQuanLy = new FormHomeQuanLy();
             this.Hide();
+            FormHomeQuanLy formHomeQuanLy = new FormHomeQuanLy();
             formHomeQuanLy.ShowDialog();
-        }
-
-        private void FormQuanLyHoSoNhanVien_Load(object sender, EventArgs e)
-        {
-
         }
 
         // Format năm sinh
@@ -144,7 +137,5 @@ namespace flightket.Forms_QuanLy
             lv_danhSachNhanVien.Rows[POSITION_UPDATE].Cells[4].Value = nhanVien.DiaChi;
             lv_danhSachNhanVien.Rows[POSITION_UPDATE].Cells[5].Value = nhanVien.SoDienThoai;
         }
-
-        
     }
 }
