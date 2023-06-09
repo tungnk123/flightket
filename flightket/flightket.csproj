@@ -196,6 +196,12 @@
     <Compile Include="Forms-NhanVien\FormLapBaoCaoThang.Designer.cs">
       <DependentUpon>FormLapBaoCaoThang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms-NhanVien\FormTraCuuChuyenBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormTraCuuChuyenBay.Designer.cs">
+      <DependentUpon>FormTraCuuChuyenBay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms-QuanLy\FormCapNhatThongTinNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>

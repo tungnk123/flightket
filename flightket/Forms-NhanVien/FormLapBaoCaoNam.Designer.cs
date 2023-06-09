@@ -78,7 +78,7 @@
             this.btn_xuatBaoCao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
             this.btn_xuatBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xuatBaoCao.ForeColor = System.Drawing.Color.White;
-            this.btn_xuatBaoCao.Image = global::flightket.Properties.Resources.icons8_export_64;
+            //this.btn_xuatBaoCao.Image = global::flightket.Properties.Resources.icons8_export_64;
             this.btn_xuatBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_xuatBaoCao.Location = new System.Drawing.Point(1181, 765);
             this.btn_xuatBaoCao.Name = "btn_xuatBaoCao";

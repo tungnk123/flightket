@@ -13,7 +13,7 @@ namespace flightket.Forms_NhanVien
             this.KeyPreview = true;
             this.KeyDown += FormHomeNhanVien_KeyDown;
             instance = this;
-            InitializeComponent();
+            //InitializeComponent();
             
         }
 
@@ -183,11 +183,21 @@ namespace flightket.Forms_NhanVien
             }
         }
 
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHomeNhanVien));
+            this.SuspendLayout();
+            // 
+            // FormHomeNhanVien
+            // 
+            this.BackgroundImage = global::flightket.Properties.Resources._350361348_206044632301251_2266599988871672436_n;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FormHomeNhanVien";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.ResumeLayout(false);
 
-
-
-
-
-
+        }
     }
 }

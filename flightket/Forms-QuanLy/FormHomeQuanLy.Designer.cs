@@ -42,7 +42,7 @@ namespace flightket.Forms_QuanLy
             // 
             this.btn_nhapLichChuyenBay.BackColor = System.Drawing.Color.White;
             this.btn_nhapLichChuyenBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nhapLichChuyenBay.Image = global::flightket.Properties.Resources.ic_nhapLichChuyenBay;
+            //this.btn_nhapLichChuyenBay.Image = global::flightket.Properties.Resources.ic_nhapLichChuyenBay;
             this.btn_nhapLichChuyenBay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_nhapLichChuyenBay.Location = new System.Drawing.Point(483, 376);
             this.btn_nhapLichChuyenBay.Margin = new System.Windows.Forms.Padding(4);
@@ -105,7 +105,7 @@ namespace flightket.Forms_QuanLy
             // 
             this.btn_quanLyHoSo.BackColor = System.Drawing.Color.White;
             this.btn_quanLyHoSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_quanLyHoSo.Image = global::flightket.Properties.Resources.ic_quanLyHoSo;
+            //this.btn_quanLyHoSo.Image = global::flightket.Properties.Resources.ic_quanLyHoSo;
             this.btn_quanLyHoSo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_quanLyHoSo.Location = new System.Drawing.Point(981, 538);
             this.btn_quanLyHoSo.Margin = new System.Windows.Forms.Padding(4);

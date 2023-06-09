@@ -139,13 +139,13 @@ namespace flightket.Forms_QuanLy
             catch (System.Runtime.InteropServices.COMException ex)
             {
                 Console.WriteLine(ex.Message);
-                CustomDialogForm customDialogForm = new CustomDialogForm("Không tìm thấy tệp tin. Có thể nó đã bị xóa hoặc di chuyển.");
-                customDialogForm.ShowDialog();
+                //CustomDialogForm customDialogForm = new CustomDialogForm("Không tìm thấy tệp tin. Có thể nó đã bị xóa hoặc di chuyển.");
+                //customDialogForm.ShowDialog();
             }
             catch (Exception ex)
             {
-                CustomDialogForm customDialogForm = new CustomDialogForm(ex.Message);
-                customDialogForm.ShowDialog();
+                //CustomDialogForm customDialogForm = new CustomDialogForm(ex.Message);
+                //customDialogForm.ShowDialog();
             }
             finally
             {

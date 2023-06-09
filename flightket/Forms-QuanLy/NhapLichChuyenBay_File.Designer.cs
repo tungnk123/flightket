@@ -144,7 +144,7 @@
             this.llb_chonFile.ActiveLinkColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.llb_chonFile.BackColor = System.Drawing.Color.Transparent;
             this.llb_chonFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llb_chonFile.Image = global::flightket.Properties.Resources.icons8_import_csv_802;
+            //this.llb_chonFile.Image = global::flightket.Properties.Resources.icons8_import_csv_802;
             this.llb_chonFile.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.llb_chonFile.LinkColor = System.Drawing.Color.Black;
             this.llb_chonFile.Location = new System.Drawing.Point(662, 237);
