@@ -20,7 +20,6 @@ namespace flightket.Forms_QuanLy
         public FormThayDoiQuiDinh()
         {
             InitializeComponent();
-            panel1.BackColor = Color.FromArgb(150, Color.White);
             Load_Data_ThamSo();
         }
 
@@ -244,9 +243,9 @@ namespace flightket.Forms_QuanLy
             try
             {
                 short thoiGianChamNhatTruocKhiDatVeShort = short.Parse(thoiGianChamNhatTruocKhiDatVeString);
-                if (thoiGianChamNhatTruocKhiDatVeShort < 24)
+                if (thoiGianChamNhatTruocKhiDatVeShort < 2)
                 {
-                    MessageBox.Show("Thời gian chậm nhất trước khi đặt vé phải là một số nguyên dương >= 24");
+                    MessageBox.Show("Thời gian chậm nhất trước khi đặt vé phải là một số nguyên dương >= 2");
                     tb_thoiGianTruocDatVeSlowestMoi.Clear();
                 }
             }
@@ -345,5 +344,7 @@ namespace flightket.Forms_QuanLy
             tb_thoiGianTruocDatVeSlowestMoi.Clear();
             tb_thoiGianTruocHuyVeSlowestMoi.Clear();
         }
+
+       
     }
 }

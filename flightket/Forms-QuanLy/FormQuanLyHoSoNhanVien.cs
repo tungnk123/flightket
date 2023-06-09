@@ -45,10 +45,12 @@ namespace flightket.Forms_QuanLy
         // Format năm sinh
         private String FormatDob(String dob)
         {
-            String[] namSinh = dob.Split(' ')[0].Split('/');
+            String[] ngayFormat = dob.Split(' ');
+            String[] namSinh = ngayFormat[0].Split('/');
             String temp = namSinh[0];
             namSinh[0] = namSinh[1];
             namSinh[1] = temp;
+            namSinh[2] = namSinh[2].Substring(0, 4);
             return String.Join("/", namSinh);
         }
 
@@ -142,5 +144,7 @@ namespace flightket.Forms_QuanLy
             lv_danhSachNhanVien.Rows[POSITION_UPDATE].Cells[4].Value = nhanVien.DiaChi;
             lv_danhSachNhanVien.Rows[POSITION_UPDATE].Cells[5].Value = nhanVien.SoDienThoai;
         }
+
+        
     }
 }

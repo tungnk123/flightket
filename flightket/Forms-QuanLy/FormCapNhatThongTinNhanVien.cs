@@ -10,6 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace flightket.Forms_QuanLy
 {
@@ -27,8 +28,8 @@ namespace flightket.Forms_QuanLy
 
         private String DobAfterHandle()
         {
-            String dob = nhanVien.NgaySinh.ToString().Split(' ')[0];
-            String[] namSinh = dob.Split('/');
+            String[] dob = nhanVien.NgaySinh.ToString().Split(' ');
+            String[] namSinh = dob[0].Split('/');
             String temp = namSinh[0];
             namSinh[0] = namSinh[1];
             namSinh[1] = temp;
@@ -39,8 +40,8 @@ namespace flightket.Forms_QuanLy
             tb_maNhanVien.Text = nhanVien.MaNhanVien;
             tb_hoTen.Text = nhanVien.HoTen;
             tb_diaChi.Text = nhanVien.DiaChi;
-            tb_namSinh.Text = DobAfterHandle();
             tb_soDienThoai.Text = nhanVien.SoDienThoai;
+            dp_ngaySinh.Value = nhanVien.NgaySinh.Value.Date;
         }
 
         // Kiểm tra chuỗi toàn số
@@ -87,16 +88,6 @@ namespace flightket.Forms_QuanLy
             }
         }
 
-        private void tb_namSinh_Leave(object sender, EventArgs e)
-        {
-            String ngaySinh = FormatDob(tb_namSinh.Text.Trim());
-            DateTime date;
-            if (!DateTime.TryParse(ngaySinh, out date))
-            {
-                MessageBox.Show("Ngày không hợp lệ");
-                tb_namSinh.Text = DobAfterHandle();
-            }
-        }
 
         // Add điều kiện để kiểm tra khi người dùng rời khỏi tb_diaChi
         private void tb_diaChi_Leave(object sender, EventArgs e)
@@ -141,13 +132,27 @@ namespace flightket.Forms_QuanLy
         public delegate void UpdateNhanVien(NHANVIEN nhanvien);
         public event UpdateNhanVien UpdateEvent;
 
-        private void btn_xacNhanCapNhat_Click(object sender, EventArgs e)
+        private void btn_luuThayDoi_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn cập nhật thông tin?", "Confirm", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 if (!ContainTextBoxNullOrEmpty())
                 {
+                    string inputText = tb_soDienThoai.Text;
+                    bool isNumeric = Regex.IsMatch(inputText, @"^\d+$");
+                    if(isNumeric == false)
+                    {
+                        MessageBox.Show("Vui lòng điền số điện thoại ở định dạng số");
+                        return;
+                    }
+                    string inputText1 = tb_hoTen.Text;
+                    bool isAlphabetic1 = Regex.IsMatch(inputText1, @"^[a-zA-Z\s]+$");
+                    if(isAlphabetic1 == false )
+                    {
+                        MessageBox.Show("Vui lòng điền họ tên đúng định dạng");
+                        return;
+                    }
                     UpdateInfoNhanVien();
                     UpdateEvent(this.nhanVien);
                     this.Close();
@@ -163,11 +168,10 @@ namespace flightket.Forms_QuanLy
         {
             String hoTen = tb_hoTen.Text;
             String diaChi = tb_diaChi.Text;
-            String namSinh = tb_namSinh.Text;
             String soDienThoai = tb_soDienThoai.Text;
 
             if (String.IsNullOrEmpty(hoTen) || String.IsNullOrEmpty(diaChi) 
-                || String.IsNullOrEmpty(namSinh) || String.IsNullOrEmpty(soDienThoai))
+                 || String.IsNullOrEmpty(soDienThoai))
             {
                 return true;
             }
@@ -177,11 +181,13 @@ namespace flightket.Forms_QuanLy
         // Định dạng ngày
         private String FormatDob(String ngaySinh)
         {
-            String[] dmy = ngaySinh.Split('/');
-            String temp = dmy[0];
-            dmy[0] = dmy[1];
-            dmy[1] = temp;
-            return String.Join("/", dmy);
+            String[] ngayFormat = ngaySinh.Split(' ');
+            String[] namSinh = ngayFormat[0].Split('/');
+            String temp = namSinh[0];
+            namSinh[0] = namSinh[1];
+            namSinh[1] = temp;
+            namSinh[2] = namSinh[2].Substring(0, 4);
+            return String.Join("/", namSinh);
         }
         // Cập nhật lại thông tin của nhân viên đó
         private void UpdateInfoNhanVien()
@@ -190,12 +196,11 @@ namespace flightket.Forms_QuanLy
             {
                 String hoTen = tb_hoTen.Text;
                 String diaChi = tb_diaChi.Text;
-                DateTime namSinh = DateTime.Parse(FormatDob(tb_namSinh.Text.Trim()));
                 String soDienThoai = tb_soDienThoai.Text;
 
                 this.nhanVien.HoTen = hoTen;
                 this.nhanVien.DiaChi = diaChi;
-                this.nhanVien.NgaySinh = namSinh;
+                this.nhanVien.NgaySinh = dp_ngaySinh.Value.Date;
                 this.nhanVien.SoDienThoai = soDienThoai; 
             } catch(Exception ex) 
             {
@@ -215,5 +220,7 @@ namespace flightket.Forms_QuanLy
             FormHomeQuanLy formHomeQuanLy = new FormHomeQuanLy();
             formHomeQuanLy.ShowDialog();    
         }
+
+        
     }
 }

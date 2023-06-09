@@ -20,5 +20,7 @@ namespace flightket
     
         public virtual CHUYENBAY CHUYENBAY { get; set; }
         public virtual HANGVE HANGVE { get; set; }
+
+
     }
 }
