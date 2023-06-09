@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Windows.Forms;
+using System.Windows.Media;
 
 namespace flightket
 {
@@ -36,6 +37,7 @@ namespace flightket
             cb_scXacNhan.DataSource = scList5;
             cb_scTraCuu.DataSource = scList6;
 
+            cb_amThanh.Checked = Properties.Settings.Default.SoundEnabled;
             // Load shortcut settings
             LoadShortcutSettings();
         }
@@ -149,6 +151,35 @@ namespace flightket
         {
             this.Close();
             
+        }
+
+        private void cb_amThanh_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.SoundEnabled = cb_amThanh.Checked;
+            Properties.Settings.Default.Save();
+            if (!cb_amThanh.Checked)
+            {
+                FormDangNhap.mediaPlayer.Stop();
+            }
+            else
+            {
+                if (FormDangNhap.mediaPlayer == null)
+                {
+                    FormDangNhap.mediaPlayer = new MediaPlayer();
+                    FormDangNhap.mediaPlayer.Open(new Uri("chillin39-20915.mp3", UriKind.Relative));
+                    FormDangNhap.mediaPlayer.MediaEnded += MediaPlayer_MediaEnded;
+                    FormDangNhap.mediaPlayer.Play();
+                }
+                else
+                {
+                    FormDangNhap.mediaPlayer.Play();
+                }
+            }
+        }
+        private void MediaPlayer_MediaEnded(object sender, EventArgs e)
+        {
+            FormDangNhap.mediaPlayer.Position = TimeSpan.Zero;
+            FormDangNhap.mediaPlayer.Play();
         }
     }
 }

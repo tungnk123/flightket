@@ -337,9 +337,9 @@ namespace flightket
             this.cb_nhacNen.AutoSize = true;
             this.cb_nhacNen.Location = new System.Drawing.Point(62, 32);
             this.cb_nhacNen.Name = "cb_nhacNen";
-            this.cb_nhacNen.Size = new System.Drawing.Size(174, 30);
+            this.cb_nhacNen.Size = new System.Drawing.Size(274, 30);
             this.cb_nhacNen.TabIndex = 0;
-            this.cb_nhacNen.Text = "Bật nhạc nền";
+            this.cb_nhacNen.Text = "Bật hiệu ứng âm thanh";
             this.cb_nhacNen.UseVisualStyleBackColor = true;
             // 
             // panel2
@@ -356,10 +356,11 @@ namespace flightket
             this.cb_amThanh.AutoSize = true;
             this.cb_amThanh.Location = new System.Drawing.Point(62, 32);
             this.cb_amThanh.Name = "cb_amThanh";
-            this.cb_amThanh.Size = new System.Drawing.Size(274, 30);
+            this.cb_amThanh.Size = new System.Drawing.Size(174, 30);
             this.cb_amThanh.TabIndex = 0;
-            this.cb_amThanh.Text = "Bật âm thanh hiệu ứng";
+            this.cb_amThanh.Text = "Bật nhạc nền";
             this.cb_amThanh.UseVisualStyleBackColor = true;
+            this.cb_amThanh.CheckedChanged += new System.EventHandler(this.cb_amThanh_CheckedChanged);
             // 
             // btn_xacNhan
             // 

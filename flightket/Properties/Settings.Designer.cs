@@ -166,5 +166,17 @@ namespace flightket.Properties {
                 this["Shortcut6Right"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool SoundEnabled {
+            get {
+                return ((bool)(this["SoundEnabled"]));
+            }
+            set {
+                this["SoundEnabled"] = value;
+            }
+        }
     }
 }

@@ -10,18 +10,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media;
 
 namespace flightket
 {
     public partial class FormDangNhap : Form
     {
         public static FormDangNhap instance;
+        public static MediaPlayer mediaPlayer;
         public FormDangNhap()
         {
             instance = this;
             InitializeComponent();
             //cmt
-            //cmt
+            ////cmt
+            try
+            {
+                if (Properties.Settings.Default.SoundEnabled)
+                {
+                    mediaPlayer = new MediaPlayer();
+                    mediaPlayer.Open(new Uri("chillin39-20915.mp3", UriKind.Relative));
+                    mediaPlayer.MediaEnded += MediaPlayer_MediaEnded;
+                    mediaPlayer.Play();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error when playing background music: " + ex.Message);
+            }
+        }
+        private void MediaPlayer_MediaEnded(object sender, EventArgs e)
+        {
+            mediaPlayer.Position = TimeSpan.Zero;
+            mediaPlayer.Play();
         }
 
         private void btn_dangNhap_Click(object sender, EventArgs e)
