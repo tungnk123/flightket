@@ -11,12 +11,13 @@ namespace flightket
     {
         /// <summary>
         /// The main entry point for the application.
-        /// </summary>
+        ///// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FormSplashScreen());
             Application.Run(new FormDangNhap());
         }
     }
