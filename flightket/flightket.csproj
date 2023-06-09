@@ -252,12 +252,6 @@
       <DependentUpon>NhapLichChuyenBay_File.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms-QuanLy\RandomStringGenerator.cs" />
-    <Compile Include="FormSplashScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormSplashScreen.Designer.cs">
-      <DependentUpon>FormSplashScreen.cs</DependentUpon>
-    </Compile>
     <Compile Include="HANGVE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -383,9 +377,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\NhapLichChuyenBay_File.resx">
       <DependentUpon>NhapLichChuyenBay_File.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormSplashScreen.resx">
-      <DependentUpon>FormSplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
