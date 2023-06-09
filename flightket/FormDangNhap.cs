@@ -61,6 +61,7 @@ namespace flightket
                 this.Hide();
                 FormHomeAdmin formHomeAdmin = new FormHomeAdmin();
                 formHomeAdmin.ShowDialog();
+                FormDangNhap.mediaPlayer.Play();
                 return;
             }
             else if (username == "nhanvien" && password == "nhanvien")
@@ -71,6 +72,7 @@ namespace flightket
                 tb_password.Text = "";
                 FormHomeNhanVien formHomeNhanVien = new FormHomeNhanVien();
                 formHomeNhanVien.ShowDialog();
+                FormDangNhap.mediaPlayer.Play();
                 return;
             }
             else if (username == "quanly" && password == "quanly")
@@ -81,6 +83,7 @@ namespace flightket
                 tb_password.Text = "";
                 FormHomeQuanLy formHomeQuanLy = new FormHomeQuanLy();
                 formHomeQuanLy.ShowDialog();
+                FormDangNhap.mediaPlayer.Play();
                 return;
             }
             using (var db = new FlightKetDBEntities())
@@ -100,6 +103,7 @@ namespace flightket
                                 tb_password.Text = "";
                                 FormHomeNhanVien formHomeNhanVien = new FormHomeNhanVien();
                                 formHomeNhanVien.ShowDialog();
+                                FormDangNhap.mediaPlayer.Play();
                                 return;
                             }
                             else if (result[i].RoleID.Equals("QULY1"))
@@ -110,6 +114,7 @@ namespace flightket
                                 tb_password.Text = "";
                                 FormHomeQuanLy formHomeQuanLy = new FormHomeQuanLy();
                                 formHomeQuanLy.ShowDialog();
+                                FormDangNhap.mediaPlayer.Play();
                                 return;
                             }
                         }
