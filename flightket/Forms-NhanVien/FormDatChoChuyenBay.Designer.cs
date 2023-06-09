@@ -34,6 +34,12 @@ namespace flightket.Forms_NhanVien
             this.panelDanhSachPhieuDatCho = new System.Windows.Forms.Panel();
             this.lb_danhSachChuyenBayPhuHop = new System.Windows.Forms.Label();
             this.dgv_chuyenBayPhuHop = new System.Windows.Forms.DataGridView();
+            this.ColumnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMaChuyenBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnGioKhoiHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSoGheTrong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnGiaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnChon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cb_hangVe = new System.Windows.Forms.ComboBox();
             this.lb_chonHangVe = new System.Windows.Forms.Label();
@@ -51,12 +57,6 @@ namespace flightket.Forms_NhanVien
             this.lb_title1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
-            this.ColumnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMaChuyenBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnGioKhoiHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSoGheTrong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnGiaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnChon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_main.SuspendLayout();
             this.panelDanhSachPhieuDatCho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_chuyenBayPhuHop)).BeginInit();
@@ -127,6 +127,54 @@ namespace flightket.Forms_NhanVien
             this.dgv_chuyenBayPhuHop.TabIndex = 6;
             this.dgv_chuyenBayPhuHop.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_chuyenBayPhuHop_CellDoubleClick_1);
             // 
+            // ColumnSTT
+            // 
+            this.ColumnSTT.HeaderText = "STT";
+            this.ColumnSTT.MinimumWidth = 6;
+            this.ColumnSTT.Name = "ColumnSTT";
+            this.ColumnSTT.ReadOnly = true;
+            this.ColumnSTT.Width = 70;
+            // 
+            // ColumnMaChuyenBay
+            // 
+            this.ColumnMaChuyenBay.HeaderText = "Mã Chuyến Bay";
+            this.ColumnMaChuyenBay.MinimumWidth = 6;
+            this.ColumnMaChuyenBay.Name = "ColumnMaChuyenBay";
+            this.ColumnMaChuyenBay.ReadOnly = true;
+            this.ColumnMaChuyenBay.Width = 300;
+            // 
+            // columnGioKhoiHanh
+            // 
+            this.columnGioKhoiHanh.HeaderText = "Giờ khởi hành";
+            this.columnGioKhoiHanh.MinimumWidth = 6;
+            this.columnGioKhoiHanh.Name = "columnGioKhoiHanh";
+            this.columnGioKhoiHanh.ReadOnly = true;
+            this.columnGioKhoiHanh.Width = 250;
+            // 
+            // ColumnSoGheTrong
+            // 
+            this.ColumnSoGheTrong.HeaderText = "Số ghế trống";
+            this.ColumnSoGheTrong.MinimumWidth = 6;
+            this.ColumnSoGheTrong.Name = "ColumnSoGheTrong";
+            this.ColumnSoGheTrong.ReadOnly = true;
+            this.ColumnSoGheTrong.Width = 200;
+            // 
+            // ColumnGiaVe
+            // 
+            this.ColumnGiaVe.HeaderText = "Giá vé";
+            this.ColumnGiaVe.MinimumWidth = 6;
+            this.ColumnGiaVe.Name = "ColumnGiaVe";
+            this.ColumnGiaVe.ReadOnly = true;
+            this.ColumnGiaVe.Width = 200;
+            // 
+            // ColumnChon
+            // 
+            this.ColumnChon.HeaderText = "";
+            this.ColumnChon.MinimumWidth = 6;
+            this.ColumnChon.Name = "ColumnChon";
+            this.ColumnChon.ReadOnly = true;
+            this.ColumnChon.Width = 110;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
@@ -177,7 +225,7 @@ namespace flightket.Forms_NhanVien
             this.dp_ngayKhoiHanh.Name = "dp_ngayKhoiHanh";
             this.dp_ngayKhoiHanh.Size = new System.Drawing.Size(210, 34);
             this.dp_ngayKhoiHanh.TabIndex = 1;
-            this.dp_ngayKhoiHanh.Value = new System.DateTime(2023, 6, 7, 15, 54, 52, 0);
+            this.dp_ngayKhoiHanh.Value = new System.DateTime(2023, 6, 9, 23, 4, 12, 0);
             // 
             // lb_ngayKhoiHanh
             // 
@@ -306,54 +354,6 @@ namespace flightket.Forms_NhanVien
             this.btn_home.TabIndex = 1;
             this.btn_home.UseVisualStyleBackColor = true;
             this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
-            // 
-            // ColumnSTT
-            // 
-            this.ColumnSTT.HeaderText = "STT";
-            this.ColumnSTT.MinimumWidth = 6;
-            this.ColumnSTT.Name = "ColumnSTT";
-            this.ColumnSTT.ReadOnly = true;
-            this.ColumnSTT.Width = 70;
-            // 
-            // ColumnMaChuyenBay
-            // 
-            this.ColumnMaChuyenBay.HeaderText = "Mã Chuyến Bay";
-            this.ColumnMaChuyenBay.MinimumWidth = 6;
-            this.ColumnMaChuyenBay.Name = "ColumnMaChuyenBay";
-            this.ColumnMaChuyenBay.ReadOnly = true;
-            this.ColumnMaChuyenBay.Width = 300;
-            // 
-            // columnGioKhoiHanh
-            // 
-            this.columnGioKhoiHanh.HeaderText = "Giờ khởi hành";
-            this.columnGioKhoiHanh.MinimumWidth = 6;
-            this.columnGioKhoiHanh.Name = "columnGioKhoiHanh";
-            this.columnGioKhoiHanh.ReadOnly = true;
-            this.columnGioKhoiHanh.Width = 250;
-            // 
-            // ColumnSoGheTrong
-            // 
-            this.ColumnSoGheTrong.HeaderText = "Số ghế trống";
-            this.ColumnSoGheTrong.MinimumWidth = 6;
-            this.ColumnSoGheTrong.Name = "ColumnSoGheTrong";
-            this.ColumnSoGheTrong.ReadOnly = true;
-            this.ColumnSoGheTrong.Width = 200;
-            // 
-            // ColumnGiaVe
-            // 
-            this.ColumnGiaVe.HeaderText = "Giá vé";
-            this.ColumnGiaVe.MinimumWidth = 6;
-            this.ColumnGiaVe.Name = "ColumnGiaVe";
-            this.ColumnGiaVe.ReadOnly = true;
-            this.ColumnGiaVe.Width = 200;
-            // 
-            // ColumnChon
-            // 
-            this.ColumnChon.HeaderText = "";
-            this.ColumnChon.MinimumWidth = 6;
-            this.ColumnChon.Name = "ColumnChon";
-            this.ColumnChon.ReadOnly = true;
-            this.ColumnChon.Width = 110;
             // 
             // FormDatChoChuyenBay
             // 

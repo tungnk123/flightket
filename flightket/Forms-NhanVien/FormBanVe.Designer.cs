@@ -95,15 +95,15 @@
             this.panel7.BackColor = System.Drawing.Color.Transparent;
             this.panel7.Controls.Add(this.tb_giaTien);
             this.panel7.Controls.Add(this.label5);
-            this.panel7.Location = new System.Drawing.Point(1179, 123);
+            this.panel7.Location = new System.Drawing.Point(1148, 134);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(299, 100);
+            this.panel7.Size = new System.Drawing.Size(307, 100);
             this.panel7.TabIndex = 14;
             // 
             // tb_giaTien
             // 
             this.tb_giaTien.BackColor = System.Drawing.Color.Silver;
-            this.tb_giaTien.Location = new System.Drawing.Point(21, 48);
+            this.tb_giaTien.Location = new System.Drawing.Point(31, 48);
             this.tb_giaTien.Multiline = true;
             this.tb_giaTien.Name = "tb_giaTien";
             this.tb_giaTien.ReadOnly = true;
@@ -130,7 +130,7 @@
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(244, 296);
+            this.panel3.Location = new System.Drawing.Point(208, 297);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1320, 440);
             this.panel3.TabIndex = 13;
@@ -317,7 +317,7 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.tb_hangVe);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(750, 123);
+            this.panel2.Location = new System.Drawing.Point(719, 134);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(299, 100);
             this.panel2.TabIndex = 12;
@@ -347,7 +347,7 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.tb_maChuyenBay);
             this.panel1.Controls.Add(this.lb_sanBayDi);
-            this.panel1.Location = new System.Drawing.Point(325, 123);
+            this.panel1.Location = new System.Drawing.Point(294, 134);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(299, 100);
             this.panel1.TabIndex = 11;
@@ -379,7 +379,7 @@
             this.lb_title1.AutoSize = true;
             this.lb_title1.BackColor = System.Drawing.Color.Transparent;
             this.lb_title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_title1.Location = new System.Drawing.Point(797, 4);
+            this.lb_title1.Location = new System.Drawing.Point(756, 20);
             this.lb_title1.Name = "lb_title1";
             this.lb_title1.Size = new System.Drawing.Size(221, 69);
             this.lb_title1.TabIndex = 2;

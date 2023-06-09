@@ -15,7 +15,7 @@ namespace flightket.Forms_NhanVien
         public FormDatChoChuyenBay()
         {
             InitializeComponent();
-
+            dp_ngayKhoiHanh.Value = DateTime.Now;
             using (var db = new FlightKetDBEntities())
             {
                 var querry = db.HANGVEs.ToList();

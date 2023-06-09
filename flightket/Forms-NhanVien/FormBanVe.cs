@@ -60,7 +60,7 @@ namespace flightket.Forms_NhanVien
 
                     db.VECHUYENBAYs.Add(new VECHUYENBAY() { MaHanhKhach = result.FirstOrDefault().MaHanhKhach, MaChuyenBay = this.maChuyenBay, MaHangVe = maHangVe, GiaTien = this.giaVe });
                     db.SaveChanges();
-                    MessageBox.Show("Đặt chỗ thành công");
+                    MessageBox.Show("Bán vé thành công!");
                     tb_hoVaTen.Text = "";
                     tb_CMND.Text = "";
                     tb_soDienThoai.Text = "";

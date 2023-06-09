@@ -38,7 +38,7 @@
             this.tb_CMND = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dp_ngaySinh = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tb_soDienThoai = new System.Windows.Forms.TextBox();
@@ -162,20 +162,20 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.dateTimePicker1);
+            this.panel3.Controls.Add(this.dp_ngaySinh);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(985, 410);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(297, 100);
             this.panel3.TabIndex = 8;
             // 
-            // dateTimePicker1
+            // dp_ngaySinh
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(24, 53);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(185, 32);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dp_ngaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dp_ngaySinh.Location = new System.Drawing.Point(24, 53);
+            this.dp_ngaySinh.Name = "dp_ngaySinh";
+            this.dp_ngaySinh.Size = new System.Drawing.Size(185, 32);
+            this.dp_ngaySinh.TabIndex = 1;
             // 
             // label3
             // 
@@ -373,7 +373,7 @@
         private System.Windows.Forms.TextBox tb_CMND;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dp_ngaySinh;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox tb_soDienThoai;

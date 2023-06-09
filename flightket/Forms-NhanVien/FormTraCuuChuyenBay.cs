@@ -20,6 +20,7 @@ namespace flightket.Forms_NhanVien
         {
             instance = this;
             InitializeComponent();
+            dp_ngayKhoiHanh.Value = DateTime.Now;
             using (var db = new FlightKetDBEntities())
             {
                 var sanBayQuery = from sanbaydi in db.SANBAYs

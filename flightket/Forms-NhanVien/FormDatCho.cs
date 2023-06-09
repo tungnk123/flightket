@@ -28,9 +28,35 @@ namespace flightket.Forms_NhanVien
             tb_giaTien.Text = giaVe.ToString();
             tb_hangVe.Text = tenHangVe;
         }
+        private bool KiemTraSo(string so)
+        {
+            foreach (char c in so)
+            {
+                if (!Char.IsDigit(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        private bool KiemTraHoTen(string hoTen)
+        {
+            foreach (char c in hoTen)
+            {
+                if (!Char.IsLetter(c) && c != ' ')
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
 
         private void btn_xacNhanDatCho_Click(object sender, EventArgs e)
         {
+            string hoTen = tb_hoVaTen.Text;
+            string cmnd = tb_CMND.Text;
+            string soDienThoai = tb_soDienThoai.Text;
+
             if (tb_hoVaTen.Text.Length == 0 || tb_CMND.Text.Length == 0 || tb_soDienThoai.Text.Length == 0 || cb_gioiTinh.Text.Length == 0)
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin khách hàng");
@@ -39,6 +65,11 @@ namespace flightket.Forms_NhanVien
             if (dp_ngaySinh.Value.Date > DateTime.Now)
             {
                 MessageBox.Show("Vui lòng chọn ngày sinh hợp lệ");
+                return;
+            }
+            if (!KiemTraHoTen(hoTen) || !KiemTraSo(cmnd) || !KiemTraSo(soDienThoai))
+            {
+                MessageBox.Show("Thông tin không hợp lệ! Vui lòng nhập lại");
                 return;
             }
             using (var db = new FlightKetDBEntities())

@@ -100,7 +100,7 @@
             this.panelDanhSachPhieuDatCho.Controls.Add(this.lb_tongDoanhThu);
             this.panelDanhSachPhieuDatCho.Controls.Add(this.lb_doanhThuBanVe);
             this.panelDanhSachPhieuDatCho.Controls.Add(this.dgv_doanhThuChuyenBay);
-            this.panelDanhSachPhieuDatCho.Location = new System.Drawing.Point(259, 347);
+            this.panelDanhSachPhieuDatCho.Location = new System.Drawing.Point(191, 338);
             this.panelDanhSachPhieuDatCho.Name = "panelDanhSachPhieuDatCho";
             this.panelDanhSachPhieuDatCho.Size = new System.Drawing.Size(1373, 383);
             this.panelDanhSachPhieuDatCho.TabIndex = 14;
@@ -136,12 +136,12 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgv_doanhThuChuyenBay.Location = new System.Drawing.Point(121, 61);
+            this.dgv_doanhThuChuyenBay.Location = new System.Drawing.Point(113, 61);
             this.dgv_doanhThuChuyenBay.Name = "dgv_doanhThuChuyenBay";
             this.dgv_doanhThuChuyenBay.ReadOnly = true;
             this.dgv_doanhThuChuyenBay.RowHeadersWidth = 51;
             this.dgv_doanhThuChuyenBay.RowTemplate.Height = 24;
-            this.dgv_doanhThuChuyenBay.Size = new System.Drawing.Size(1154, 228);
+            this.dgv_doanhThuChuyenBay.Size = new System.Drawing.Size(1158, 228);
             this.dgv_doanhThuChuyenBay.TabIndex = 12;
             // 
             // panel2
@@ -290,6 +290,7 @@
             this.ColumnSTT.MinimumWidth = 6;
             this.ColumnSTT.Name = "ColumnSTT";
             this.ColumnSTT.ReadOnly = true;
+            this.ColumnSTT.Width = 125;
             // 
             // ColumnMaChuyenBay
             // 
@@ -313,7 +314,7 @@
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 300;
+            this.Column2.Width = 280;
             // 
             // Column3
             // 

@@ -40,7 +40,7 @@ namespace flightket.Forms_NhanVien
                 tb_soDienThoai.Text = hANHKHACH.SDT;
                 tb_CMND.Text = hANHKHACH.CMND;
                 cb_gioiTinh.Text = hANHKHACH.GioiTinh;
-                dateTimePicker1.Value = hANHKHACH.NgaySinh.Value;
+                dp_ngaySinh.Value = hANHKHACH.NgaySinh.Value;
 
                 var querry = from cb in db.CHUYENBAYs
                              from hv in db.HANGVEs
@@ -58,9 +58,48 @@ namespace flightket.Forms_NhanVien
             }
 
         }
-
+        private bool KiemTraSo(string so)
+        {
+            foreach (char c in so)
+            {
+                if (!Char.IsDigit(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        private bool KiemTraHoTen(string hoTen)
+        {
+            foreach (char c in hoTen)
+            {
+                if (!Char.IsLetter(c) && c != ' ')
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
         private void btn_capNhat_Click(object sender, EventArgs e)
         {
+            string hoTen = tb_hoVaTen.Text;
+            string cmnd = tb_CMND.Text;
+            string soDienThoai = tb_soDienThoai.Text;
+            if (tb_hoVaTen.Text.Length == 0 || tb_CMND.Text.Length == 0 || tb_soDienThoai.Text.Length == 0 || cb_gioiTinh.Text.Length == 0)
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin khách hàng");
+                return;
+            }
+            if (dp_ngaySinh.Value.Date > DateTime.Now)
+            {
+                MessageBox.Show("Vui lòng chọn ngày sinh hợp lệ");
+                return;
+            }
+            if (!KiemTraHoTen(hoTen) || !KiemTraSo(cmnd) || !KiemTraSo(soDienThoai))
+            {
+                MessageBox.Show("Thông tin không hợp lệ! Vui lòng nhập lại");
+                return;
+            }
             DialogResult dialog = MessageBox.Show("Xác nhận cập nhật", "FlightKet - Cập nhật thông tin khách hàng", MessageBoxButtons.OKCancel);
             if (dialog == DialogResult.OK)
             {
@@ -72,7 +111,7 @@ namespace flightket.Forms_NhanVien
 
                     hANHKHACH1.TenHanhKhach = tb_hoVaTen.Text;
                     hANHKHACH1.CMND = tb_CMND.Text;
-                    hANHKHACH1.NgaySinh = dateTimePicker1.Value;
+                    hANHKHACH1.NgaySinh = dp_ngaySinh.Value;
                     hANHKHACH1.SDT = tb_soDienThoai.Text;
 
                     //var querry = from pdc in db.PHIEUDATCHOes

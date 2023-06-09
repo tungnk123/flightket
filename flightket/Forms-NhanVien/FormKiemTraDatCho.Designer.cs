@@ -496,7 +496,7 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.tb_soDienThoai);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(1199, 183);
+            this.panel2.Location = new System.Drawing.Point(1156, 185);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(303, 100);
             this.panel2.TabIndex = 7;
@@ -525,7 +525,7 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.tb_CMND);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(780, 183);
+            this.panel1.Location = new System.Drawing.Point(737, 185);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(321, 100);
             this.panel1.TabIndex = 6;
@@ -555,7 +555,7 @@
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.tb_hoVaTen);
             this.panel4.Controls.Add(this.lb_chonHangGhe);
-            this.panel4.Location = new System.Drawing.Point(356, 183);
+            this.panel4.Location = new System.Drawing.Point(313, 185);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(297, 100);
             this.panel4.TabIndex = 5;
@@ -583,7 +583,7 @@
             // 
             this.btn_kiemTra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(235)))), ((int)(((byte)(144)))));
             this.btn_kiemTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_kiemTra.Location = new System.Drawing.Point(847, 333);
+            this.btn_kiemTra.Location = new System.Drawing.Point(804, 335);
             this.btn_kiemTra.Name = "btn_kiemTra";
             this.btn_kiemTra.Size = new System.Drawing.Size(184, 62);
             this.btn_kiemTra.TabIndex = 8;

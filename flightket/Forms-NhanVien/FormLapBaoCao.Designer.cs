@@ -59,7 +59,7 @@
             // 
             this.btn_baoCaoNam.BackColor = System.Drawing.Color.SpringGreen;
             this.btn_baoCaoNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_baoCaoNam.Location = new System.Drawing.Point(762, 183);
+            this.btn_baoCaoNam.Location = new System.Drawing.Point(691, 187);
             this.btn_baoCaoNam.Name = "btn_baoCaoNam";
             this.btn_baoCaoNam.Size = new System.Drawing.Size(224, 156);
             this.btn_baoCaoNam.TabIndex = 8;
@@ -72,7 +72,7 @@
             this.btn_baoCaoThang.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btn_baoCaoThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_baoCaoThang.ForeColor = System.Drawing.Color.White;
-            this.btn_baoCaoThang.Location = new System.Drawing.Point(382, 183);
+            this.btn_baoCaoThang.Location = new System.Drawing.Point(311, 187);
             this.btn_baoCaoThang.Name = "btn_baoCaoThang";
             this.btn_baoCaoThang.Size = new System.Drawing.Size(224, 156);
             this.btn_baoCaoThang.TabIndex = 7;
@@ -87,7 +87,7 @@
             this.lb_title1.AutoSize = true;
             this.lb_title1.BackColor = System.Drawing.Color.Transparent;
             this.lb_title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_title1.Location = new System.Drawing.Point(502, 56);
+            this.lb_title1.Location = new System.Drawing.Point(431, 60);
             this.lb_title1.Name = "lb_title1";
             this.lb_title1.Size = new System.Drawing.Size(367, 69);
             this.lb_title1.TabIndex = 2;

@@ -60,7 +60,7 @@ namespace flightket.Forms_NhanVien
             this.btn_caiDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_caiDat.Image = global::flightket.Properties.Resources.icons8_settings_50;
             this.btn_caiDat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_caiDat.Location = new System.Drawing.Point(1384, 507);
+            this.btn_caiDat.Location = new System.Drawing.Point(1323, 519);
             this.btn_caiDat.Name = "btn_caiDat";
             this.btn_caiDat.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_caiDat.Size = new System.Drawing.Size(261, 103);
@@ -74,7 +74,7 @@ namespace flightket.Forms_NhanVien
             this.btn_banVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_banVe.Image = global::flightket.Properties.Resources.icons8_ticket_50;
             this.btn_banVe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_banVe.Location = new System.Drawing.Point(1384, 336);
+            this.btn_banVe.Location = new System.Drawing.Point(1323, 348);
             this.btn_banVe.Name = "btn_banVe";
             this.btn_banVe.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_banVe.Size = new System.Drawing.Size(261, 103);
@@ -88,7 +88,7 @@ namespace flightket.Forms_NhanVien
             this.btn_lapBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_lapBaoCao.Image = global::flightket.Properties.Resources.icons8_report_50;
             this.btn_lapBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_lapBaoCao.Location = new System.Drawing.Point(895, 507);
+            this.btn_lapBaoCao.Location = new System.Drawing.Point(834, 519);
             this.btn_lapBaoCao.Name = "btn_lapBaoCao";
             this.btn_lapBaoCao.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_lapBaoCao.Size = new System.Drawing.Size(446, 103);
@@ -102,7 +102,7 @@ namespace flightket.Forms_NhanVien
             this.btn_traCuuChuyenBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_traCuuChuyenBay.Image = global::flightket.Properties.Resources.icons8_search_50;
             this.btn_traCuuChuyenBay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_traCuuChuyenBay.Location = new System.Drawing.Point(403, 507);
+            this.btn_traCuuChuyenBay.Location = new System.Drawing.Point(342, 519);
             this.btn_traCuuChuyenBay.Name = "btn_traCuuChuyenBay";
             this.btn_traCuuChuyenBay.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_traCuuChuyenBay.Size = new System.Drawing.Size(446, 103);
@@ -116,7 +116,7 @@ namespace flightket.Forms_NhanVien
             this.btn_kiemTraDatCho.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_kiemTraDatCho.Image = global::flightket.Properties.Resources.icons8_confirm_50;
             this.btn_kiemTraDatCho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_kiemTraDatCho.Location = new System.Drawing.Point(895, 336);
+            this.btn_kiemTraDatCho.Location = new System.Drawing.Point(834, 348);
             this.btn_kiemTraDatCho.Name = "btn_kiemTraDatCho";
             this.btn_kiemTraDatCho.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_kiemTraDatCho.Size = new System.Drawing.Size(446, 103);
@@ -130,7 +130,7 @@ namespace flightket.Forms_NhanVien
             this.btn_datChoChuyenBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_datChoChuyenBay.Image = global::flightket.Properties.Resources.icons8_flight_seat_50;
             this.btn_datChoChuyenBay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_datChoChuyenBay.Location = new System.Drawing.Point(403, 336);
+            this.btn_datChoChuyenBay.Location = new System.Drawing.Point(342, 348);
             this.btn_datChoChuyenBay.Name = "btn_datChoChuyenBay";
             this.btn_datChoChuyenBay.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_datChoChuyenBay.Size = new System.Drawing.Size(446, 103);
