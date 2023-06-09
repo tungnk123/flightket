@@ -31,8 +31,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThayDoiChiTietSoHangVe));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tb_tiLe = new System.Windows.Forms.TextBox();
+            this.tb_tenHangVe = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_luu = new System.Windows.Forms.Button();
             this.lb_title1 = new System.Windows.Forms.Label();
             this.btn_themHangGhe = new System.Windows.Forms.Button();
             this.lv_danhSachHangVe = new System.Windows.Forms.DataGridView();
@@ -41,8 +43,6 @@
             this.columnQuocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnXoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btn_luuThayDoi = new System.Windows.Forms.Button();
-            this.tb_tiLe = new System.Windows.Forms.TextBox();
-            this.tb_tenHangVe = new System.Windows.Forms.TextBox();
             this.tb_giaTriMoi = new System.Windows.Forms.TextBox();
             this.tb_giaTriCu = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -61,14 +61,14 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.tb_tiLe);
+            this.panel1.Controls.Add(this.tb_tenHangVe);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_luu);
             this.panel1.Controls.Add(this.lb_title1);
             this.panel1.Controls.Add(this.btn_themHangGhe);
             this.panel1.Controls.Add(this.lv_danhSachHangVe);
             this.panel1.Controls.Add(this.btn_luuThayDoi);
-            this.panel1.Controls.Add(this.tb_tiLe);
-            this.panel1.Controls.Add(this.tb_tenHangVe);
             this.panel1.Controls.Add(this.tb_giaTriMoi);
             this.panel1.Controls.Add(this.tb_giaTriCu);
             this.panel1.Controls.Add(this.label8);
@@ -84,6 +84,24 @@
             this.panel1.Size = new System.Drawing.Size(1760, 900);
             this.panel1.TabIndex = 9;
             // 
+            // tb_tiLe
+            // 
+            this.tb_tiLe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_tiLe.Location = new System.Drawing.Point(901, 333);
+            this.tb_tiLe.Multiline = true;
+            this.tb_tiLe.Name = "tb_tiLe";
+            this.tb_tiLe.Size = new System.Drawing.Size(216, 37);
+            this.tb_tiLe.TabIndex = 58;
+            // 
+            // tb_tenHangVe
+            // 
+            this.tb_tenHangVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_tenHangVe.Location = new System.Drawing.Point(505, 333);
+            this.tb_tenHangVe.Multiline = true;
+            this.tb_tenHangVe.Name = "tb_tenHangVe";
+            this.tb_tenHangVe.Size = new System.Drawing.Size(216, 37);
+            this.tb_tenHangVe.TabIndex = 57;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -96,18 +114,19 @@
             this.label1.TabIndex = 53;
             this.label1.Text = "Danh sách các hạng vé";
             // 
-            // button1
+            // btn_luu
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(805, 766);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(300, 65);
-            this.button1.TabIndex = 52;
-            this.button1.Text = "Lưu thay đổi";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_luu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+            this.btn_luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_luu.ForeColor = System.Drawing.Color.White;
+            this.btn_luu.Location = new System.Drawing.Point(805, 766);
+            this.btn_luu.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_luu.Name = "btn_luu";
+            this.btn_luu.Size = new System.Drawing.Size(300, 65);
+            this.btn_luu.TabIndex = 52;
+            this.btn_luu.Text = "Lưu thay đổi";
+            this.btn_luu.UseVisualStyleBackColor = false;
+            this.btn_luu.Click += new System.EventHandler(this.btn_luu_Click);
             // 
             // lb_title1
             // 
@@ -133,6 +152,7 @@
             this.btn_themHangGhe.TabIndex = 50;
             this.btn_themHangGhe.Text = "Thêm";
             this.btn_themHangGhe.UseVisualStyleBackColor = false;
+            this.btn_themHangGhe.Click += new System.EventHandler(this.btn_themHangGhe_Click);
             // 
             // lv_danhSachHangVe
             // 
@@ -164,6 +184,7 @@
             this.lv_danhSachHangVe.RowHeadersWidth = 51;
             this.lv_danhSachHangVe.Size = new System.Drawing.Size(1368, 295);
             this.lv_danhSachHangVe.TabIndex = 45;
+            this.lv_danhSachHangVe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lv_danhSachHangVe_CellContentClick);
             // 
             // columnSTT
             // 
@@ -209,32 +230,6 @@
             this.btn_luuThayDoi.TabIndex = 44;
             this.btn_luuThayDoi.Text = "Lưu thay đổi";
             this.btn_luuThayDoi.UseVisualStyleBackColor = false;
-            // 
-            // tb_tiLe
-            // 
-            this.tb_tiLe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.tb_tiLe.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_tiLe.ForeColor = System.Drawing.Color.Black;
-            this.tb_tiLe.Location = new System.Drawing.Point(898, 338);
-            this.tb_tiLe.Margin = new System.Windows.Forms.Padding(4);
-            this.tb_tiLe.Multiline = true;
-            this.tb_tiLe.Name = "tb_tiLe";
-            this.tb_tiLe.Size = new System.Drawing.Size(275, 32);
-            this.tb_tiLe.TabIndex = 41;
-            this.tb_tiLe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tb_tenHangVe
-            // 
-            this.tb_tenHangVe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.tb_tenHangVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_tenHangVe.ForeColor = System.Drawing.Color.Black;
-            this.tb_tenHangVe.Location = new System.Drawing.Point(505, 338);
-            this.tb_tenHangVe.Margin = new System.Windows.Forms.Padding(4);
-            this.tb_tenHangVe.Multiline = true;
-            this.tb_tenHangVe.Name = "tb_tenHangVe";
-            this.tb_tenHangVe.Size = new System.Drawing.Size(250, 32);
-            this.tb_tenHangVe.TabIndex = 40;
-            this.tb_tenHangVe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_giaTriMoi
             // 
@@ -378,8 +373,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnQuocGia;
         private System.Windows.Forms.DataGridViewButtonColumn columnXoa;
         private System.Windows.Forms.Button btn_luuThayDoi;
-        private System.Windows.Forms.TextBox tb_tiLe;
-        private System.Windows.Forms.TextBox tb_tenHangVe;
         private System.Windows.Forms.TextBox tb_giaTriMoi;
         private System.Windows.Forms.TextBox tb_giaTriCu;
         private System.Windows.Forms.Label label8;
@@ -391,7 +384,9 @@
         private System.Windows.Forms.Button btn_home;
         private System.Windows.Forms.Button btn_themHangGhe;
         private System.Windows.Forms.Label lb_title1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_luu;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tb_tiLe;
+        private System.Windows.Forms.TextBox tb_tenHangVe;
     }
 }

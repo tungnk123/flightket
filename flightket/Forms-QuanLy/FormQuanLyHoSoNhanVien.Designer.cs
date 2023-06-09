@@ -60,16 +60,16 @@
             this.panel1.Controls.Add(this.btn_back);
             this.panel1.Controls.Add(this.btn_home);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(72, 110);
+            this.panel1.Location = new System.Drawing.Point(82, 110);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1760, 900);
+            this.panel1.Size = new System.Drawing.Size(1736, 900);
             this.panel1.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(823, 149);
+            this.label1.Location = new System.Drawing.Point(792, 162);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(259, 29);
             this.label1.TabIndex = 33;
@@ -100,13 +100,13 @@
             this.columnSdt,
             this.columnCapNhat});
             this.lv_danhSachNhanVien.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lv_danhSachNhanVien.Location = new System.Drawing.Point(122, 209);
+            this.lv_danhSachNhanVien.Location = new System.Drawing.Point(79, 213);
             this.lv_danhSachNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.lv_danhSachNhanVien.Name = "lv_danhSachNhanVien";
             this.lv_danhSachNhanVien.ReadOnly = true;
             this.lv_danhSachNhanVien.RowHeadersVisible = false;
             this.lv_danhSachNhanVien.RowHeadersWidth = 51;
-            this.lv_danhSachNhanVien.Size = new System.Drawing.Size(1677, 400);
+            this.lv_danhSachNhanVien.Size = new System.Drawing.Size(1614, 400);
             this.lv_danhSachNhanVien.TabIndex = 32;
             this.lv_danhSachNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lv_danhSachNhanVien_CellContentClick);
             // 
@@ -174,7 +174,7 @@
             this.btn_xacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xacNhan.ForeColor = System.Drawing.Color.White;
             this.btn_xacNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_xacNhan.Location = new System.Drawing.Point(859, 716);
+            this.btn_xacNhan.Location = new System.Drawing.Point(771, 712);
             this.btn_xacNhan.Name = "btn_xacNhan";
             this.btn_xacNhan.Size = new System.Drawing.Size(253, 65);
             this.btn_xacNhan.TabIndex = 30;
@@ -227,7 +227,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormQuanLyHoSoNhanVien";
-            this.Text = "FormQuanLyHoSoNhanVien";
+            this.Text = "Flightket - Quản lý hồ sơ nhân viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormQuanLyHoSoNhanVien_Load);
             this.panel1.ResumeLayout(false);

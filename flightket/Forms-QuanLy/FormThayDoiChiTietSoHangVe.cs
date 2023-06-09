@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Migrations;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Text.RegularExpressions;
-using System.Data.Entity.Migrations;
-using System.Data.Entity;
-using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace flightket.Forms_QuanLy
 {
@@ -65,7 +61,7 @@ namespace flightket.Forms_QuanLy
                 MessageBox.Show("Không tồn tại hạng vé nào trong danh sách hạng vé");
                 return;
             }
-            for (int i = 0; i < hangVeBanDauList.Count; i ++)
+            for (int i = 0; i < hangVeBanDauList.Count; i++)
             {
                 lv_danhSachHangVe.Rows[i].Cells[0].Value = (i + 1).ToString();
                 lv_danhSachHangVe.Rows[i].Cells[1].Value = hangVeBanDauList[i].TenHangVe.ToString();
@@ -86,20 +82,23 @@ namespace flightket.Forms_QuanLy
             if (e.ColumnIndex == lv_danhSachHangVe.Columns[3].Index && e.RowIndex >= 0)
             {
                 DialogResult result = MessageBox.Show("Bạn có chắn chắn muốn xóa hạng vé này không?", "Xóa", MessageBoxButtons.YesNo);
-                if (result.Equals(DialogResult.Yes)) 
+                if (result.Equals(DialogResult.Yes))
                 {
                     String maHangVe = hangVeThayDoiList[e.RowIndex].MaHangVe.ToString();
                     if (HasRecordForeignKeyInPhieuDatCho(maHangVe))
                     {
                         MessageBox.Show("Hạng vé đã được sử dụng trong PHIEUDATCHO nên không thể xóa");
-                    } else if (HasRecordForeignKeyInVeChuyenBay(maHangVe))
+                    }
+                    else if (HasRecordForeignKeyInVeChuyenBay(maHangVe))
                     {
                         MessageBox.Show("Hạng vé đã được sử dụng trong VECHUYENBAY nên không thể xóa");
-                    } else if (HasRecordForeignKeyInCT_HANGVE(maHangVe))
+                    }
+                    else if (HasRecordForeignKeyInCT_HANGVE(maHangVe))
                     {
                         MessageBox.Show("Hạng vé đã được sử dụng trong CT_CHUYENBAY nên không thể xóa");
                     }
-                    else {
+                    else
+                    {
                         lv_danhSachHangVe.Rows.RemoveAt(e.RowIndex);
                         hangVeXoa.Add(hangVeThayDoiList[e.RowIndex]);
                         hangVeThayDoiList.RemoveAt(e.RowIndex);
@@ -107,7 +106,7 @@ namespace flightket.Forms_QuanLy
                         tb_giaTriMoi.Text = hangVeThayDoiList.Count().ToString();
                         Update_DataGridView();
                         MessageBox.Show("Xóa hạng vé thành công");
-                    }                
+                    }
                 }
             }
         }
@@ -130,7 +129,7 @@ namespace flightket.Forms_QuanLy
         {
             using (var dbContext = new FlightKetDBEntities())
             {
-                var hangVeInPhieuDatCho = dbContext.PHIEUDATCHOes.Where(phieuDatCho => phieuDatCho.MaHangVe== maHangVe).ToList();   
+                var hangVeInPhieuDatCho = dbContext.PHIEUDATCHOes.Where(phieuDatCho => phieuDatCho.MaHangVe == maHangVe).ToList();
                 if (hangVeInPhieuDatCho.Any())
                 {
                     return true;
@@ -198,11 +197,13 @@ namespace flightket.Forms_QuanLy
             {
                 tb_tenHangVe.Clear();
                 return;
-            } else if (IsNumeric(tb_tenHangVe.Text)) 
+            }
+            else if (IsNumeric(tb_tenHangVe.Text))
             {
                 tb_tenHangVe.Clear();
                 MessageBox.Show("Tên hạng vé không được chỉ toàn số");
-            } else if (ContainsSpecialCharacters(tb_tenHangVe.Text))
+            }
+            else if (ContainsSpecialCharacters(tb_tenHangVe.Text))
             {
                 tb_tenHangVe.Clear();
                 MessageBox.Show("Tên hạng vé không được chứa kí tự đặc biệt");
@@ -222,41 +223,25 @@ namespace flightket.Forms_QuanLy
             {
                 tb_tiLe.Clear();
                 return;
-            } else if (ContainsSpecialCharacters(tb_tiLe.Text))
+            }
+            else if (ContainsSpecialCharacters(tb_tiLe.Text))
             {
                 tb_tiLe.Clear();
                 MessageBox.Show("Tỉ lệ không được chứa kí tự đặc biệt");
-            } else if (!IsParseDouble(tb_tiLe.Text))
+            }
+            else if (!IsParseDouble(tb_tiLe.Text))
             {
                 tb_tiLe.Clear();
                 MessageBox.Show("Tỉ lệ phải là một số hợp lệ");
             }
         }
 
-        private void btn_them_Click(object sender, EventArgs e)
-        {
-            if (tb_tenHangVe.Text.Trim() == null)
-            {
-                MessageBox.Show("Không được để trống tên hạng vé");
-            } else if (tb_tiLe.Text.Trim() == null)
-            {
-                MessageBox.Show("Không được để trống tỉ lệ");
-            } else
-            {
-                try
-                {
-                    Add_Rows();
-                } catch(Exception ex) 
-                {
-                    MessageBox.Show("Thêm hàng thất bại" + ex.Message);
-                }
-            }
-        }
-        
+
+
         // Kiểm tra hạng vé đã tồn tại trong hangVeThayDoiList
         private bool ContainMaHangVe(String maHangVeNew)
         {
-            foreach(var hangVe in hangVeThayDoiList)
+            foreach (var hangVe in hangVeThayDoiList)
             {
                 if (hangVe.MaHangVe.Trim() == maHangVeNew)
                 {
@@ -278,12 +263,12 @@ namespace flightket.Forms_QuanLy
                 maHangVe = (soHangVe < 10) ? ("HV0" + soHangVe.ToString()) : ("HV" + soHangVe);
 
             } while (ContainMaHangVe(maHangVe));
-            
+
             String tenHangVe = tb_tenHangVe.Text;
             byte tiLe = Byte.Parse(tb_tiLe.Text);
-            
+
             // Add đối tượng vào List các hạng vé thay đổi
-            HANGVE hangVeNew = new HANGVE { MaHangVe = maHangVe , TenHangVe =  tenHangVe, TiLeDonGia = tiLe};
+            HANGVE hangVeNew = new HANGVE { MaHangVe = maHangVe, TenHangVe = tenHangVe, TiLeDonGia = tiLe };
             hangVeThayDoiList.Add(hangVeNew);
             hangVeThem.Add(hangVeNew);
             int soLuongHangVe = hangVeThayDoiList.Count();
@@ -306,10 +291,10 @@ namespace flightket.Forms_QuanLy
             tb_tiLe.Clear();
         }
 
-        private void btn_luuThayDoi_Click(object sender, EventArgs e)
+        private void btn_luu_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có chắc muốn cập nhật những thay đổi ở trên không?", "Confirm", MessageBoxButtons.YesNo);
-            if (result.Equals(DialogResult.Yes)) 
+            if (result.Equals(DialogResult.Yes))
             {
                 try
                 {
@@ -317,10 +302,11 @@ namespace flightket.Forms_QuanLy
                     MessageBox.Show("Cập nhật hạng vé thành công!");
                     tb_giaTriCu.Text = hangVeThayDoiList.Count().ToString();
                     tb_giaTriMoi.Clear();
-                } catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
-                }   
+                }
             }
         }
 
@@ -334,7 +320,7 @@ namespace flightket.Forms_QuanLy
                 // Xác định điều kiện xóa
                 var maHangVeXoa = hangVeXoa.Select(h => h.MaHangVe).ToList(); // Lấy danh sách mã hạng vé cần xóa
 
-                foreach(var maHangVe in maHangVeXoa)
+                foreach (var maHangVe in maHangVeXoa)
                 {
                     var sql = "DELETE FROM HANGVE WHERE MaHangVe = @MaHangVe";
                     object[] parameters =
@@ -345,12 +331,35 @@ namespace flightket.Forms_QuanLy
                 }
 
                 // -- Thêm hạng vé --//
-                foreach(var hangVe in hangVeThem)
+                foreach (var hangVe in hangVeThem)
                 {
                     hangVes.AddOrUpdate(hangVe);
                 }
 
                 dbContext.SaveChanges();
+            }
+        }
+
+        private void btn_themHangGhe_Click(object sender, EventArgs e)
+        {
+            if (tb_tenHangVe.Text.Trim() == null)
+            {
+                MessageBox.Show("Không được để trống tên hạng vé");
+            }
+            else if (tb_tiLe.Text.Trim() == null)
+            {
+                MessageBox.Show("Không được để trống tỉ lệ");
+            }
+            else
+            {
+                try
+                {
+                    Add_Rows();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Thêm hàng thất bại" + ex.Message);
+                }
             }
         }
 

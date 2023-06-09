@@ -28,6 +28,7 @@ namespace flightket.Forms_QuanLy
         public FormNhapLichChuyenBay()
         {
             InitializeComponent();
+            dp_ngayKhoiHanh.Value = DateTime.Now;
             loadData();
         }
 
@@ -160,6 +161,9 @@ namespace flightket.Forms_QuanLy
                 lv_sanBayTrungGian.Items.Add(lvi);
 
             }
+            cb_tenSanBayTrungGian.Text = "";
+            tb_thoiGianDung.Text = "";
+            tb_ghiChu.Text = "";
         }
 
         private void btn_xacNhan_Click(object sender, EventArgs e)

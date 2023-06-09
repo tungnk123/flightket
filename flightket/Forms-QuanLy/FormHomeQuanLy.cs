@@ -17,7 +17,7 @@ namespace flightket.Forms_QuanLy
 
         private void btn_nhapLichChuyenBay_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
             FormNhapLichChuyenBay nhapLichChuyenBay_I = new FormNhapLichChuyenBay();
             nhapLichChuyenBay_I.ShowDialog();
             this.Hide();

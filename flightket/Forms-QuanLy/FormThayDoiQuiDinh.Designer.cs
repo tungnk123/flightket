@@ -598,7 +598,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormThayDoiQuiDinh";
-            this.Text = "FormThayDoiQuiDinh";
+            this.Text = "Flightket - Thay đổi quy định";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormThayDoiQuiDinh_Load);
             this.panel1.ResumeLayout(false);

@@ -226,7 +226,7 @@ namespace flightket.Forms_QuanLy
             this.btn_Them.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(235)))), ((int)(((byte)(144)))));
             this.btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Them.Location = new System.Drawing.Point(1256, 54);
+            this.btn_Them.Location = new System.Drawing.Point(1278, 53);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(95, 37);
             this.btn_Them.TabIndex = 28;
@@ -385,8 +385,8 @@ namespace flightket.Forms_QuanLy
             this.tb_giaVe.Location = new System.Drawing.Point(31, 58);
             this.tb_giaVe.Multiline = true;
             this.tb_giaVe.Name = "tb_giaVe";
-            this.tb_giaVe.Size = new System.Drawing.Size(196, 32);
-            this.tb_giaVe.TabIndex = 1;
+            this.tb_giaVe.Size = new System.Drawing.Size(173, 37);
+            this.tb_giaVe.TabIndex = 28;
             // 
             // label4
             // 
@@ -536,7 +536,7 @@ namespace flightket.Forms_QuanLy
             this.btn_xuatThongTin.ForeColor = System.Drawing.Color.White;
             this.btn_xuatThongTin.Image = global::flightket.Properties.Resources.icons8_import_csv_40;
             this.btn_xuatThongTin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_xuatThongTin.Location = new System.Drawing.Point(1525, 90);
+            this.btn_xuatThongTin.Location = new System.Drawing.Point(1382, 90);
             this.btn_xuatThongTin.Name = "btn_xuatThongTin";
             this.btn_xuatThongTin.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.btn_xuatThongTin.Size = new System.Drawing.Size(317, 65);
@@ -720,7 +720,7 @@ namespace flightket.Forms_QuanLy
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNhapLichChuyenBay";
-            this.Text = "FormNhapLichChuyenBay";
+            this.Text = "Flightket - Nhập lịch chuyến bay";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -779,7 +779,6 @@ namespace flightket.Forms_QuanLy
         private System.Windows.Forms.ComboBox cb_hangVe;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox tb_giaVe;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox chb_dungOSanBayTrungGian;
@@ -803,5 +802,6 @@ namespace flightket.Forms_QuanLy
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tb_giaVe;
     }
 }

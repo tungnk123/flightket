@@ -47,13 +47,13 @@
             this.columnQuocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnXoa = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.tb_tenSanBay = new System.Windows.Forms.TextBox();
-            this.tb_tenQuocGia = new System.Windows.Forms.TextBox();
-            this.tb_diaChi = new System.Windows.Forms.TextBox();
             this.btn_themHangGhe = new System.Windows.Forms.Button();
             this.lb_title1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.tb_tenSanBay = new System.Windows.Forms.TextBox();
+            this.tb_tenQuocGia = new System.Windows.Forms.TextBox();
+            this.tb_diaChi = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.lv_danhSachSanBay)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -268,39 +268,12 @@
             this.columnXoa.Name = "columnXoa";
             this.columnXoa.ReadOnly = true;
             // 
-            // tb_tenSanBay
-            // 
-            this.tb_tenSanBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_tenSanBay.Location = new System.Drawing.Point(266, 339);
-            this.tb_tenSanBay.Multiline = true;
-            this.tb_tenSanBay.Name = "tb_tenSanBay";
-            this.tb_tenSanBay.Size = new System.Drawing.Size(196, 32);
-            this.tb_tenSanBay.TabIndex = 46;
-            // 
-            // tb_tenQuocGia
-            // 
-            this.tb_tenQuocGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_tenQuocGia.Location = new System.Drawing.Point(659, 339);
-            this.tb_tenQuocGia.Multiline = true;
-            this.tb_tenQuocGia.Name = "tb_tenQuocGia";
-            this.tb_tenQuocGia.Size = new System.Drawing.Size(196, 32);
-            this.tb_tenQuocGia.TabIndex = 47;
-            // 
-            // tb_diaChi
-            // 
-            this.tb_diaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_diaChi.Location = new System.Drawing.Point(1018, 330);
-            this.tb_diaChi.Multiline = true;
-            this.tb_diaChi.Name = "tb_diaChi";
-            this.tb_diaChi.Size = new System.Drawing.Size(345, 32);
-            this.tb_diaChi.TabIndex = 48;
-            // 
             // btn_themHangGhe
             // 
             this.btn_themHangGhe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(235)))), ((int)(((byte)(144)))));
             this.btn_themHangGhe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_themHangGhe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_themHangGhe.Location = new System.Drawing.Point(1517, 325);
+            this.btn_themHangGhe.Location = new System.Drawing.Point(1354, 334);
             this.btn_themHangGhe.Name = "btn_themHangGhe";
             this.btn_themHangGhe.Size = new System.Drawing.Size(95, 37);
             this.btn_themHangGhe.TabIndex = 49;
@@ -326,12 +299,12 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.lb_title1);
-            this.panel1.Controls.Add(this.btn_themHangGhe);
             this.panel1.Controls.Add(this.tb_diaChi);
             this.panel1.Controls.Add(this.tb_tenQuocGia);
             this.panel1.Controls.Add(this.tb_tenSanBay);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lb_title1);
+            this.panel1.Controls.Add(this.btn_themHangGhe);
             this.panel1.Controls.Add(this.lv_danhSachSanBay);
             this.panel1.Controls.Add(this.btn_luuThayDoi);
             this.panel1.Controls.Add(this.tb_soLuongSanBayMoi);
@@ -361,6 +334,33 @@
             this.label1.Size = new System.Drawing.Size(277, 29);
             this.label1.TabIndex = 54;
             this.label1.Text = "Danh sách các sân bay";
+            // 
+            // tb_tenSanBay
+            // 
+            this.tb_tenSanBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_tenSanBay.Location = new System.Drawing.Point(266, 334);
+            this.tb_tenSanBay.Multiline = true;
+            this.tb_tenSanBay.Name = "tb_tenSanBay";
+            this.tb_tenSanBay.Size = new System.Drawing.Size(216, 37);
+            this.tb_tenSanBay.TabIndex = 55;
+            // 
+            // tb_tenQuocGia
+            // 
+            this.tb_tenQuocGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_tenQuocGia.Location = new System.Drawing.Point(659, 334);
+            this.tb_tenQuocGia.Multiline = true;
+            this.tb_tenQuocGia.Name = "tb_tenQuocGia";
+            this.tb_tenQuocGia.Size = new System.Drawing.Size(216, 37);
+            this.tb_tenQuocGia.TabIndex = 56;
+            // 
+            // tb_diaChi
+            // 
+            this.tb_diaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_diaChi.Location = new System.Drawing.Point(1018, 334);
+            this.tb_diaChi.Multiline = true;
+            this.tb_diaChi.Name = "tb_diaChi";
+            this.tb_diaChi.Size = new System.Drawing.Size(216, 37);
+            this.tb_diaChi.TabIndex = 57;
             // 
             // FormChiTietThayDoiSoSanBay
             // 
@@ -403,12 +403,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnQuocGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn columDiaChi;
         private System.Windows.Forms.DataGridViewButtonColumn columnXoa;
-        private System.Windows.Forms.TextBox tb_tenSanBay;
-        private System.Windows.Forms.TextBox tb_tenQuocGia;
-        private System.Windows.Forms.TextBox tb_diaChi;
         private System.Windows.Forms.Button btn_themHangGhe;
         private System.Windows.Forms.Label lb_title1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tb_diaChi;
+        private System.Windows.Forms.TextBox tb_tenQuocGia;
+        private System.Windows.Forms.TextBox tb_tenSanBay;
     }
 }
