@@ -90,12 +90,12 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dgv_danhSachTaiKhoan.Location = new System.Drawing.Point(392, 385);
+            this.dgv_danhSachTaiKhoan.Location = new System.Drawing.Point(175, 361);
             this.dgv_danhSachTaiKhoan.Name = "dgv_danhSachTaiKhoan";
             this.dgv_danhSachTaiKhoan.ReadOnly = true;
             this.dgv_danhSachTaiKhoan.RowHeadersWidth = 51;
             this.dgv_danhSachTaiKhoan.RowTemplate.Height = 24;
-            this.dgv_danhSachTaiKhoan.Size = new System.Drawing.Size(1158, 208);
+            this.dgv_danhSachTaiKhoan.Size = new System.Drawing.Size(1536, 335);
             this.dgv_danhSachTaiKhoan.TabIndex = 13;
             this.dgv_danhSachTaiKhoan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_danhSachTaiKhoan_CellDoubleClick);
             // 
