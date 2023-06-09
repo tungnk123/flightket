@@ -30,13 +30,6 @@ namespace flightket.Forms_NhanVien
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHomeNhanVien));
-            this.btn_datChoChuyenBay = new System.Windows.Forms.Button();
-            this.btn_kiemTraDatCho = new System.Windows.Forms.Button();
-            this.btn_traCuuChuyenBay = new System.Windows.Forms.Button();
-            this.btn_lapBaoCao = new System.Windows.Forms.Button();
-            this.btn_banVe = new System.Windows.Forms.Button();
-            this.btn_caiDat = new System.Windows.Forms.Button();
-            this.btn_dangXuat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_datChoChuyenBay
@@ -143,20 +136,13 @@ namespace flightket.Forms_NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::flightket.Properties.Resources._350361348_206044632301251_2266599988871672436_n;
+            this.BackgroundImage = global::flightket.Properties.Resources._350248398_786598096329880_2111811280162483567_n__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
-            this.Controls.Add(this.btn_dangXuat);
-            this.Controls.Add(this.btn_caiDat);
-            this.Controls.Add(this.btn_banVe);
-            this.Controls.Add(this.btn_lapBaoCao);
-            this.Controls.Add(this.btn_traCuuChuyenBay);
-            this.Controls.Add(this.btn_kiemTraDatCho);
-            this.Controls.Add(this.btn_datChoChuyenBay);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormHomeNhanVien";
-            this.Text = " Flightket - Home Nhân viên";
+            this.Text = "Flightket - Home Nhân viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormHomeNhanVien_FormClosed);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormHomeNhanVien_KeyDown);
@@ -165,13 +151,5 @@ namespace flightket.Forms_NhanVien
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_datChoChuyenBay;
-        private System.Windows.Forms.Button btn_kiemTraDatCho;
-        private System.Windows.Forms.Button btn_traCuuChuyenBay;
-        private System.Windows.Forms.Button btn_lapBaoCao;
-        private System.Windows.Forms.Button btn_banVe;
-        private System.Windows.Forms.Button btn_caiDat;
-        private System.Windows.Forms.Button btn_dangXuat;
     }
 }

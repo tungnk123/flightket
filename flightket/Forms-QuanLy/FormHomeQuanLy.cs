@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace flightket.Forms_QuanLy
@@ -15,6 +8,38 @@ namespace flightket.Forms_QuanLy
         public FormHomeQuanLy()
         {
             InitializeComponent();
+        }
+
+        private void btn_nhapLichChuyenBay_Click(object sender, EventArgs e)
+        {
+
+            FormNhapLichChuyenBay nhapLichChuyenBay_I = new FormNhapLichChuyenBay();
+            nhapLichChuyenBay_I.ShowDialog();
+            this.Hide();
+            if(nhapLichChuyenBay_I.IsAccessible == false)
+            {
+                this.Show();
+            }
+        }
+
+        private void btn_lapBaoCao_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void btn_thayDoiQuiDinh_Click(object sender, EventArgs e)
+        {
+            FormThayDoiQuiDinh formThayDoiQuiDinh = new FormThayDoiQuiDinh();
+            this.Hide();
+            formThayDoiQuiDinh.ShowDialog();
+        }
+
+        private void btn_quanLyHoSo_Click(object sender, EventArgs e)
+        {
+            FormQuanLyHoSoNhanVien formQuanLyHoSoNhanVien = new FormQuanLyHoSoNhanVien();
+            this.Hide();
+            formQuanLyHoSoNhanVien.ShowDialog();
         }
     }
 }

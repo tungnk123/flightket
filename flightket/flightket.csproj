@@ -39,12 +39,26 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="EPPlus, Version=6.2.4.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.6.2.4\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.1.1.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.6.1.1\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.6.1.1\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -182,11 +196,17 @@
     <Compile Include="Forms-NhanVien\FormLapBaoCaoThang.Designer.cs">
       <DependentUpon>FormLapBaoCaoThang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms-NhanVien\FormTraCuuChuyenBay.cs">
+    <Compile Include="Forms-QuanLy\FormCapNhatThongTinNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms-NhanVien\FormTraCuuChuyenBay.Designer.cs">
-      <DependentUpon>FormTraCuuChuyenBay.cs</DependentUpon>
+    <Compile Include="Forms-QuanLy\FormCapNhatThongTinNhanVien.Designer.cs">
+      <DependentUpon>FormCapNhatThongTinNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormChiTietThayDoiSoSanBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormChiTietThayDoiSoSanBay.Designer.cs">
+      <DependentUpon>FormChiTietThayDoiSoSanBay.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms-QuanLy\FormHomeQuanLy.cs">
       <SubType>Form</SubType>
@@ -194,6 +214,37 @@
     <Compile Include="Forms-QuanLy\FormHomeQuanLy.Designer.cs">
       <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms-QuanLy\FormNhapLichChuyenBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormNhapLichChuyenBay.Designer.cs">
+      <DependentUpon>FormNhapLichChuyenBay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormQuanLyHoSoNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormQuanLyHoSoNhanVien.Designer.cs">
+      <DependentUpon>FormQuanLyHoSoNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormThayDoiChiTietSoHangVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormThayDoiChiTietSoHangVe.Designer.cs">
+      <DependentUpon>FormThayDoiChiTietSoHangVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormThayDoiQuiDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormThayDoiQuiDinh.Designer.cs">
+      <DependentUpon>FormThayDoiQuiDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\NhapLichChuyenBay_File.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\NhapLichChuyenBay_File.Designer.cs">
+      <DependentUpon>NhapLichChuyenBay_File.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\RandomStringGenerator.cs" />
     <Compile Include="HANGVE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -293,11 +344,26 @@
     <EmbeddedResource Include="Forms-NhanVien\FormLapBaoCaoThang.resx">
       <DependentUpon>FormLapBaoCaoThang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms-NhanVien\FormTraCuuChuyenBay.resx">
-      <DependentUpon>FormTraCuuChuyenBay.cs</DependentUpon>
+    <EmbeddedResource Include="Forms-QuanLy\FormChiTietThayDoiSoSanBay.resx">
+      <DependentUpon>FormChiTietThayDoiSoSanBay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\FormHomeQuanLy.resx">
       <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormNhapLichChuyenBay.resx">
+      <DependentUpon>FormNhapLichChuyenBay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormQuanLyHoSoNhanVien.resx">
+      <DependentUpon>FormQuanLyHoSoNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormThayDoiChiTietSoHangVe.resx">
+      <DependentUpon>FormThayDoiChiTietSoHangVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormThayDoiQuiDinh.resx">
+      <DependentUpon>FormThayDoiQuiDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\NhapLichChuyenBay_File.resx">
+      <DependentUpon>NhapLichChuyenBay_File.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
