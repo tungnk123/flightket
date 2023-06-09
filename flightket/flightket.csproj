@@ -416,6 +416,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8-log-out-501.png" />
+    <None Include="Resources\icon_back_final.png" />
+    <None Include="Resources\icon_home_final.png" />
     <None Include="Resources\permission.png" />
     <None Include="Resources\2172839.png" />
     <None Include="Resources\icons8-account-66.png" />

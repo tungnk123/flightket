@@ -142,13 +142,13 @@ namespace flightket
         private void btn_back_Click(object sender, EventArgs e)
         {
             this.Close();
-            FormHomeNhanVien.instance.Show();
+            
         }
 
         private void btn_home_Click(object sender, EventArgs e)
         {
             this.Close();
-            FormHomeNhanVien.instance.Show();
+            
         }
     }
 }

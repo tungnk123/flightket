@@ -188,7 +188,7 @@
             // 
             // btn_back
             // 
-            //this.btn_back.Image = global::flightket.Properties.Resources.icons8_back_64;
+            this.btn_back.Image = global::flightket.Properties.Resources.icon_back_final;
             this.btn_back.Location = new System.Drawing.Point(3, 3);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(70, 70);
@@ -198,7 +198,7 @@
             // 
             // btn_home
             // 
-            //this.btn_home.Image = global::flightket.Properties.Resources.icons8_home_50;
+            this.btn_home.Image = global::flightket.Properties.Resources.icon_home_final;
             this.btn_home.Location = new System.Drawing.Point(79, 3);
             this.btn_home.Name = "btn_home";
             this.btn_home.Size = new System.Drawing.Size(70, 70);
@@ -217,7 +217,7 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPhanQuyen";
-            this.Text = "FormPhanQuyen";
+            this.Text = "Flightket - Phân quyền";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormPhanQuyen_Load);
             this.panel_main.ResumeLayout(false);

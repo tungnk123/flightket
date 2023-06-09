@@ -188,7 +188,7 @@ namespace flightket.Forms_QuanLy
                     MessageBox.Show("Thêm sân bay thành công!");
                 } catch (Exception ex)
                 {
-                    MessageBox.Show("Thêm sân bay thất bại!");
+                    MessageBox.Show("Thêm sân bay thất bại! " + ex.Message);
                 }
             }
         }
@@ -333,7 +333,7 @@ namespace flightket.Forms_QuanLy
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Cập nhật thất bại!");
+                    MessageBox.Show("Cập nhật thất bại!" + ex.Message);
                 }
             }
         }

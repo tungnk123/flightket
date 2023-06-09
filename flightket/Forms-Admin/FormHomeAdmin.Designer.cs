@@ -96,7 +96,7 @@ namespace flightket.Forms_Admin
             // btn_dangXuat
             // 
             this.btn_dangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            //this.btn_dangXuat.Image = global::flightket.Properties.Resources.icons8_log_out_50;
+            this.btn_dangXuat.Image = global::flightket.Properties.Resources.icons8_log_out_50;
             this.btn_dangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_dangXuat.Location = new System.Drawing.Point(1487, 834);
             this.btn_dangXuat.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);

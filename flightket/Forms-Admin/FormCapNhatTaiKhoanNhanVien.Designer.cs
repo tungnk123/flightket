@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCapNhatTaiKhoanNhanVien));
             this.panel_main = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.btn_timChuyenBay = new System.Windows.Forms.Button();
             this.tb_matKhau = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,8 +47,6 @@
             this.lb_title1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel_main.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,27 @@
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(1760, 850);
             this.panel_main.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(1111, 662);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(267, 62);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Xóa tài khoản";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(457, 747);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 26);
+            this.label6.TabIndex = 20;
             // 
             // btn_timChuyenBay
             // 
@@ -220,7 +241,7 @@
             // 
             // btn_back
             // 
-            //this.btn_back.Image = global::flightket.Properties.Resources.icons8_back_64;
+            this.btn_back.Image = global::flightket.Properties.Resources.icon_back_final;
             this.btn_back.Location = new System.Drawing.Point(3, 3);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(70, 70);
@@ -230,34 +251,13 @@
             // 
             // btn_home
             // 
-            //this.btn_home.Image = global::flightket.Properties.Resources.icons8_home_50;
+            this.btn_home.Image = global::flightket.Properties.Resources.icon_home_final;
             this.btn_home.Location = new System.Drawing.Point(79, 3);
             this.btn_home.Name = "btn_home";
             this.btn_home.Size = new System.Drawing.Size(70, 70);
             this.btn_home.TabIndex = 1;
             this.btn_home.UseVisualStyleBackColor = true;
             this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(457, 747);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 26);
-            this.label6.TabIndex = 20;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(1111, 662);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(267, 62);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Xóa tài khoản";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormCapNhatTaiKhoanNhanVien
             // 

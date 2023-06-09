@@ -42,7 +42,8 @@ namespace flightket.Forms_Admin
 
         private void btn_caiDat_Click(object sender, EventArgs e)
         {
-
+            FormCaiDat formCaiDat = new FormCaiDat();
+            formCaiDat.Show();
         }
 
         private void FormHomeAdmin_FormClosed(object sender, FormClosedEventArgs e)

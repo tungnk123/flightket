@@ -183,6 +183,26 @@ namespace flightket.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_back_final {
+            get {
+                object obj = ResourceManager.GetObject("icon_back_final", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_home_final {
+            get {
+                object obj = ResourceManager.GetObject("icon_home_final", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_account_66 {
             get {
                 object obj = ResourceManager.GetObject("icons8-account-66", resourceCulture);
@@ -226,6 +246,16 @@ namespace flightket.Properties {
         internal static System.Drawing.Bitmap icons8_import_csv_801 {
             get {
                 object obj = ResourceManager.GetObject("icons8-import-csv-801", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_log_out_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-log-out-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

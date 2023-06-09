@@ -249,7 +249,7 @@ namespace flightket.Forms_QuanLy
                     Add_Rows();
                 } catch(Exception ex) 
                 {
-                    MessageBox.Show("Thêm hàng thất bại");
+                    MessageBox.Show("Thêm hàng thất bại" + ex.Message);
                 }
             }
         }

@@ -132,7 +132,7 @@ namespace flightket.Forms_QuanLy
                 }
             } catch (Exception ex)
             {
-                MessageBox.Show("Thời gian bay tối thiểu phải là một số nguyên dương");
+                MessageBox.Show("Thời gian bay tối thiểu phải là một số nguyên dương!" + ex.Message);
                 tb_thoiGianBayMinMoi.Clear();
             }
         }
@@ -162,7 +162,7 @@ namespace flightket.Forms_QuanLy
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Số sân bay trung chuyển tối đa phải là một số nguyên dương");
+                MessageBox.Show("Số sân bay trung chuyển tối đa phải là một số nguyên dương!" + ex.Message);
                 tb_sanBayTrungChuyenMaxMoi.Clear();
             }
         }
@@ -191,7 +191,7 @@ namespace flightket.Forms_QuanLy
                 }
             } catch(Exception ex)
             {
-                MessageBox.Show("Thời gian dừng tối thiểu phải là một số nguyên dương");
+                MessageBox.Show("Thời gian dừng tối thiểu phải là một số nguyên dương!" + ex.Message);
                 tb_thoiGianDungMinMoi.Clear();
             }
         }
@@ -221,7 +221,7 @@ namespace flightket.Forms_QuanLy
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Thời gian dừng tối đa phải là một số nguyên dương");
+                MessageBox.Show("Thời gian dừng tối đa phải là một số nguyên dương!" + ex.Message);
                 tb_thoiGianDungMaxMoi.Clear();
             }
         }
@@ -251,7 +251,7 @@ namespace flightket.Forms_QuanLy
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Thời gian chậm nhất trước khi đặt vé phải là một số nguyên dương");
+                MessageBox.Show("Thời gian chậm nhất trước khi đặt vé phải là một số nguyên dương !" + ex.Message);
                 tb_thoiGianTruocDatVeSlowestMoi.Clear();
             }
         }
@@ -281,7 +281,7 @@ namespace flightket.Forms_QuanLy
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Thời gian chậm nhất trước khi hủy vé phải là một số nguyên dương");
+                MessageBox.Show("Thời gian chậm nhất trước khi hủy vé phải là một số nguyên dương" + ex.Message);
                 tb_thoiGianTruocHuyVeSlowestMoi.Clear();
             }
         }
@@ -298,7 +298,7 @@ namespace flightket.Forms_QuanLy
                     MessageBox.Show("Cập nhật thành công!");
                 } catch (Exception ex)
                 {
-                    MessageBox.Show("Cập nhật thất bại!");
+                    MessageBox.Show("Cập nhật thất bại!" + ex.Message);
                 }
                 
             }
