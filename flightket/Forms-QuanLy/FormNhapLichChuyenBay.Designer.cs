@@ -667,11 +667,12 @@ namespace flightket.Forms_QuanLy
             // 
             // pic_rndMaChuyenBay
             // 
-            this.pic_rndMaChuyenBay.Location = new System.Drawing.Point(204, 58);
+            this.pic_rndMaChuyenBay.BackgroundImage = global::flightket.Properties.Resources.icons8_reset_50;
+            this.pic_rndMaChuyenBay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_rndMaChuyenBay.Location = new System.Drawing.Point(204, 55);
             this.pic_rndMaChuyenBay.Name = "pic_rndMaChuyenBay";
-            this.pic_rndMaChuyenBay.Size = new System.Drawing.Size(41, 32);
+            this.pic_rndMaChuyenBay.Size = new System.Drawing.Size(40, 40);
             this.pic_rndMaChuyenBay.TabIndex = 2;
-            this.pic_rndMaChuyenBay.Text = "rese";
             this.pic_rndMaChuyenBay.UseVisualStyleBackColor = true;
             this.pic_rndMaChuyenBay.Click += new System.EventHandler(this.pic_rndMaChuyenBay_Click);
             // 

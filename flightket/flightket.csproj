@@ -423,6 +423,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8-reset-50.png" />
     <None Include="Resources\icons8-form-50.png" />
     <None Include="Resources\icons8-employee-profile-50.png" />
     <None Include="Resources\icons8-import-csv-40.png" />
