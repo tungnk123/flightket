@@ -153,7 +153,7 @@ namespace flightket.Forms_NhanVien
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormHomeNhanVien";
-            this.Text = "FormHomeNhanVien";
+            this.Text = "Flightket - Home Nhân viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 

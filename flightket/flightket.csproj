@@ -350,6 +350,9 @@
     <EmbeddedResource Include="Forms-NhanVien\FormLapBaoCaoThang.resx">
       <DependentUpon>FormLapBaoCaoThang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms-NhanVien\FormTraCuuChuyenBay.resx">
+      <DependentUpon>FormTraCuuChuyenBay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\FormChiTietThayDoiSoSanBay.resx">
       <DependentUpon>FormChiTietThayDoiSoSanBay.cs</DependentUpon>
     </EmbeddedResource>
