@@ -97,6 +97,7 @@
             this.dgv_danhSachTaiKhoan.RowTemplate.Height = 24;
             this.dgv_danhSachTaiKhoan.Size = new System.Drawing.Size(1536, 335);
             this.dgv_danhSachTaiKhoan.TabIndex = 13;
+            this.dgv_danhSachTaiKhoan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_danhSachTaiKhoan_CellDoubleClick);
             // 
             // Column1
             // 
@@ -171,6 +172,7 @@
             this.cb_loaiTaiKhoan.Name = "cb_loaiTaiKhoan";
             this.cb_loaiTaiKhoan.Size = new System.Drawing.Size(236, 37);
             this.cb_loaiTaiKhoan.TabIndex = 11;
+            this.cb_loaiTaiKhoan.SelectedIndexChanged += new System.EventHandler(this.cb_loaiTaiKhoan_SelectedIndexChanged);
             // 
             // lb_title2
             // 

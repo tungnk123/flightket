@@ -92,16 +92,23 @@ namespace flightket.Forms_Admin
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void cb_loaiTaiKhoan_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cb_loaiTaiKhoan.Text == "Nhân viên sân bay")
             {
                 loadNhanVien();
             }
-            else
+            else if (cb_loaiTaiKhoan.Text == "Quản lý")
             {
                 loadQuanLy();
             }
+            else
+            {
+                MessageBox.Show("Không có thông tin tài khoản!");
+                dgv_danhSachTaiKhoan.DataSource = null;
+                return;
+            }
+
         }
 
         private void dgv_danhSachTaiKhoan_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -149,11 +156,15 @@ namespace flightket.Forms_Admin
         private void btn_back_Click(object sender, EventArgs e)
         {
             this.Close();
+            FormHomeAdmin formHomeAdmin = new FormHomeAdmin();
+            formHomeAdmin.Show();
         }
 
         private void btn_home_Click(object sender, EventArgs e)
         {
             this.Close();
+            FormHomeAdmin formHomeAdmin = new FormHomeAdmin();
+            formHomeAdmin.Show();
         }
 
         private void FormQuanLyTaiKhoan_FormClosed(object sender, FormClosedEventArgs e)
@@ -162,6 +173,6 @@ namespace flightket.Forms_Admin
             formHomeAdmin.Show();
         }
 
-        
+      
     }
 }
