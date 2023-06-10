@@ -39,11 +39,26 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="EPPlus, Version=6.2.4.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.6.2.4\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.1.1.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.6.1.1\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.6.1.1\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +68,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BAOCAONAM.cs">
@@ -73,17 +89,77 @@
     <Compile Include="CT_HANGVE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="FormCaiDat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCaiDat.Designer.cs">
+      <DependentUpon>FormCaiDat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormDangNhap.Designer.cs">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms-Admin\FormCapNhatTaiKhoanNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-Admin\FormCapNhatTaiKhoanNhanVien.Designer.cs">
+      <DependentUpon>FormCapNhatTaiKhoanNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms-Admin\FormHomeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms-Admin\FormHomeAdmin.Designer.cs">
       <DependentUpon>FormHomeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-Admin\FormPhanQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-Admin\FormPhanQuyen.Designer.cs">
+      <DependentUpon>FormPhanQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-Admin\FormQuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-Admin\FormQuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>FormQuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-Admin\FormTaoNhomNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-Admin\FormTaoNhomNguoiDung.Designer.cs">
+      <DependentUpon>FormTaoNhomNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormBanVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormBanVe.Designer.cs">
+      <DependentUpon>FormBanVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormBanVeChuyenBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormBanVeChuyenBay.Designer.cs">
+      <DependentUpon>FormBanVeChuyenBay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormCapNhatThongTinPhieuDatCho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormCapNhatThongTinPhieuDatCho.Designer.cs">
+      <DependentUpon>FormCapNhatThongTinPhieuDatCho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormDatCho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormDatCho.Designer.cs">
+      <DependentUpon>FormDatCho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-Admin\FormThemTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-Admin\FormThemTaiKhoan.Designer.cs">
+      <DependentUpon>FormThemTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms-NhanVien\FormDatChoChuyenBay.cs">
       <SubType>Form</SubType>
@@ -97,11 +173,29 @@
     <Compile Include="Forms-NhanVien\FormHomeNhanVien.Designer.cs">
       <DependentUpon>FormHomeNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms-NhanVien\FormNhapThongTinKhachHang.cs">
+    <Compile Include="Forms-NhanVien\FormKiemTraDatCho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms-NhanVien\FormNhapThongTinKhachHang.Designer.cs">
-      <DependentUpon>FormNhapThongTinKhachHang.cs</DependentUpon>
+    <Compile Include="Forms-NhanVien\FormKiemTraDatCho.Designer.cs">
+      <DependentUpon>FormKiemTraDatCho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormLapBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormLapBaoCao.Designer.cs">
+      <DependentUpon>FormLapBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormLapBaoCaoNam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormLapBaoCaoNam.Designer.cs">
+      <DependentUpon>FormLapBaoCaoNam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormLapBaoCaoThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-NhanVien\FormLapBaoCaoThang.Designer.cs">
+      <DependentUpon>FormLapBaoCaoThang.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms-NhanVien\FormTraCuuChuyenBay.cs">
       <SubType>Form</SubType>
@@ -109,12 +203,55 @@
     <Compile Include="Forms-NhanVien\FormTraCuuChuyenBay.Designer.cs">
       <DependentUpon>FormTraCuuChuyenBay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms-QuanLy\FormCapNhatThongTinNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormCapNhatThongTinNhanVien.Designer.cs">
+      <DependentUpon>FormCapNhatThongTinNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormChiTietThayDoiSoSanBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormChiTietThayDoiSoSanBay.Designer.cs">
+      <DependentUpon>FormChiTietThayDoiSoSanBay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms-QuanLy\FormHomeQuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms-QuanLy\FormHomeQuanLy.Designer.cs">
       <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms-QuanLy\FormNhapLichChuyenBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormNhapLichChuyenBay.Designer.cs">
+      <DependentUpon>FormNhapLichChuyenBay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormQuanLyHoSoNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormQuanLyHoSoNhanVien.Designer.cs">
+      <DependentUpon>FormQuanLyHoSoNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormThayDoiChiTietSoHangVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormThayDoiChiTietSoHangVe.Designer.cs">
+      <DependentUpon>FormThayDoiChiTietSoHangVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormThayDoiQuiDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\FormThayDoiQuiDinh.Designer.cs">
+      <DependentUpon>FormThayDoiQuiDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\NhapLichChuyenBay_File.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms-QuanLy\NhapLichChuyenBay_File.Designer.cs">
+      <DependentUpon>NhapLichChuyenBay_File.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms-QuanLy\RandomStringGenerator.cs" />
     <Compile Include="HANGVE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -136,6 +273,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="MyShortCut.cs" />
     <Compile Include="NHANVIEN.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -159,11 +297,41 @@
     <Compile Include="VECHUYENBAY.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormCaiDat.resx">
+      <DependentUpon>FormCaiDat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms-Admin\FormCapNhatTaiKhoanNhanVien.resx">
+      <DependentUpon>FormCapNhatTaiKhoanNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms-Admin\FormHomeAdmin.resx">
       <DependentUpon>FormHomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-Admin\FormPhanQuyen.resx">
+      <DependentUpon>FormPhanQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-Admin\FormQuanLyTaiKhoan.resx">
+      <DependentUpon>FormQuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-Admin\FormTaoNhomNguoiDung.resx">
+      <DependentUpon>FormTaoNhomNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-NhanVien\FormBanVe.resx">
+      <DependentUpon>FormBanVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-NhanVien\FormBanVeChuyenBay.resx">
+      <DependentUpon>FormBanVeChuyenBay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-NhanVien\FormCapNhatThongTinPhieuDatCho.resx">
+      <DependentUpon>FormCapNhatThongTinPhieuDatCho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-NhanVien\FormDatCho.resx">
+      <DependentUpon>FormDatCho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-Admin\FormThemTaiKhoan.resx">
+      <DependentUpon>FormThemTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-NhanVien\FormDatChoChuyenBay.resx">
       <DependentUpon>FormDatChoChuyenBay.cs</DependentUpon>
@@ -171,14 +339,44 @@
     <EmbeddedResource Include="Forms-NhanVien\FormHomeNhanVien.resx">
       <DependentUpon>FormHomeNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms-NhanVien\FormNhapThongTinKhachHang.resx">
-      <DependentUpon>FormNhapThongTinKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="Forms-NhanVien\FormKiemTraDatCho.resx">
+      <DependentUpon>FormKiemTraDatCho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-NhanVien\FormLapBaoCao.resx">
+      <DependentUpon>FormLapBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-NhanVien\FormLapBaoCaoNam.resx">
+      <DependentUpon>FormLapBaoCaoNam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-NhanVien\FormLapBaoCaoThang.resx">
+      <DependentUpon>FormLapBaoCaoThang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms-NhanVien\FormTraCuuChuyenBay.resx">
       <DependentUpon>FormTraCuuChuyenBay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormCapNhatThongTinNhanVien.resx">
+      <DependentUpon>FormCapNhatThongTinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormChiTietThayDoiSoSanBay.resx">
+      <DependentUpon>FormChiTietThayDoiSoSanBay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms-QuanLy\FormHomeQuanLy.resx">
       <DependentUpon>FormHomeQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormNhapLichChuyenBay.resx">
+      <DependentUpon>FormNhapLichChuyenBay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormQuanLyHoSoNhanVien.resx">
+      <DependentUpon>FormQuanLyHoSoNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormThayDoiChiTietSoHangVe.resx">
+      <DependentUpon>FormThayDoiChiTietSoHangVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\FormThayDoiQuiDinh.resx">
+      <DependentUpon>FormThayDoiQuiDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms-QuanLy\NhapLichChuyenBay_File.resx">
+      <DependentUpon>NhapLichChuyenBay_File.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -212,6 +410,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="chillin39-20915.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -222,6 +423,21 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\splash-screen.png" />
+    <None Include="Resources\icons8-reset-50.png" />
+    <None Include="Resources\icons8-form-50.png" />
+    <None Include="Resources\icons8-employee-profile-50.png" />
+    <None Include="Resources\icons8-import-csv-40.png" />
+    <None Include="Resources\icons8-export-csv-40.png" />
+    <None Include="Resources\icons8-export-csv-80.png" />
+    <None Include="Resources\icons8-confirm-501.png" />
+    <None Include="Resources\icons8-log-out-501.png" />
+    <None Include="Resources\icon_back_final.png" />
+    <None Include="Resources\icon_home_final.png" />
+    <None Include="Resources\permission.png" />
+    <None Include="Resources\2172839.png" />
+    <None Include="Resources\icons8-account-66.png" />
+    <None Include="Resources\icons8-add-male-user-group-50.png" />
     <None Include="Resources\icons8-export-64.png" />
     <None Include="Resources\icons8-home-50.png" />
     <None Include="Resources\icons8-back-64.png" />
@@ -246,6 +462,35 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
