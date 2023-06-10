@@ -332,7 +332,7 @@ namespace flightket.Forms_QuanLy
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Cập nhật thất bại!" + ex.Message);
+                    MessageBox.Show("Cập nhật thất bại! " + ex.Message);
                 }
             }
         }
