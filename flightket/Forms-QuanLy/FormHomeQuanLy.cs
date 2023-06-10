@@ -67,6 +67,7 @@ namespace flightket.Forms_QuanLy
                 this.Close();
                 FormDangNhap.instance.Show();
             }
+            FormDangNhap.mediaPlayer.Stop();
         }
         private void FormHomeNhanVien_KeyDown(object sender, KeyEventArgs e)
         {

@@ -57,9 +57,9 @@ namespace flightket.Forms_Admin
             DialogResult dialogResult = MessageBox.Show("Bạn có muốn đăng xuất hay không?", "Xác nhận đăng xuất", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.OK) {
                 this.Close();
-                FormDangNhap formDangNhap = new FormDangNhap();
-                formDangNhap.Show();
+                FormDangNhap.instance.Show();
             }
+            FormDangNhap.mediaPlayer.Stop();
         }
 
         

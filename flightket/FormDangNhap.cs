@@ -54,18 +54,21 @@ namespace flightket
                 this.Hide();
                 FormHomeAdmin formHomeAdmin = new FormHomeAdmin();
                 formHomeAdmin.ShowDialog();
+                FormDangNhap.mediaPlayer.Play();
             }
             else if (username == "nhanvien" && password == "nhanvien")
             {
                 this.Hide();
                 FormHomeNhanVien formHomeNhanVien = new FormHomeNhanVien();
                 formHomeNhanVien.ShowDialog();
+                FormDangNhap.mediaPlayer.Play();
             }
             else if (username == "" && password == "")
             {
                 this.Hide();
                 FormHomeQuanLy formHomeQuanLy = new FormHomeQuanLy();
                 formHomeQuanLy.ShowDialog();
+                FormDangNhap.mediaPlayer.Play();
             }
             else
             {
