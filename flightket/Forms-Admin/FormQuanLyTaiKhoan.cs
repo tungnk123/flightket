@@ -14,7 +14,7 @@ namespace flightket.Forms_Admin
         {
             instance = this;
             InitializeComponent();
-            cb_loaiTaiKhoan.Text = "Nhân viên sân bay";
+            
             using (var db = new FlightKetDBEntities())
             {
                 var result = from role in db.ROLEs
@@ -33,10 +33,14 @@ namespace flightket.Forms_Admin
                     }
                 }
                 cb_loaiTaiKhoan.DataSource = roleNameList;
+                
 
             }
-
-            loadNhanVien();
+            
+            if (cb_loaiTaiKhoan.Text == "Nhân viên sân bay")
+            {
+                loadNhanVien();
+            }
         }
 
         private void loadNhanVien()

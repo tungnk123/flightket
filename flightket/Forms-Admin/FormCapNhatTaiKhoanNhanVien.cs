@@ -26,7 +26,7 @@ namespace flightket.Forms_Admin
                 tb_hoTen.Text = nHANVIEN.HoTen;
                 tb_tenDangNhap.Text = nHANVIEN.UserName;
                 tb_matKhau.Text = nHANVIEN.PassWord;
-                
+
                 var result = from role in db.ROLEs
                              select role.RoleName;
                 var resultList = result.ToList();
@@ -46,16 +46,49 @@ namespace flightket.Forms_Admin
                 cb_loaiTaiKhoan.Text = nHANVIEN.RoleID.Equals("NVSB1") ? "Nhân viên sân bay" : "Quản lý";
             }
         }
-
+        private bool KiemTraSo(string so)
+        {
+            foreach (char c in so)
+            {
+                if (!Char.IsDigit(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        private bool KiemTraHoTen(string hoTen)
+        {
+            foreach (char c in hoTen)
+            {
+                if (!Char.IsLetter(c) && c != ' ')
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
         private void btn_timChuyenBay_Click(object sender, EventArgs e)
         {
+            string maNhanvien = this.maNhanVien;
+            string hoTen = tb_hoTen.Text;
+            string tenDangNhap = tb_tenDangNhap.Text;
+            string matKhau = tb_matKhau.Text;
+            string vaiTro;
+            if (tb_hoTen.Text.Length == 0 || tb_tenDangNhap.Text.Length == 0 || tb_matKhau.Text.Length == 0)
+            {
+                MessageBox.Show("Vui lòng nhập lại đầy đủ thông tin trước khi cập nhật");
+                return;
+            }
+            if (!KiemTraHoTen(hoTen))
+            {
+                MessageBox.Show("Họ tên không hợp lệ! Vui lòng thử lại");
+                return;
+            }
+
             using (var db = new FlightKetDBEntities())
             {
-                string maNhanvien = this.maNhanVien;
-                string hoTen = tb_hoTen.Text;
-                string tenDangNhap = tb_tenDangNhap.Text;
-                string matKhau = tb_matKhau.Text;
-                string vaiTro;
+
                 NHANVIEN nHANVIEN = db.NHANVIENs.Find(maNhanvien);
                 if (cb_loaiTaiKhoan.Text == "Nhân viên sân bay")
                 {
@@ -65,11 +98,7 @@ namespace flightket.Forms_Admin
                 {
                     vaiTro = "QULY1";
                 }
-                if (tb_hoTen.Text.Length == 0 || tb_tenDangNhap.Text.Length == 0 || tb_matKhau.Text.Length == 0)
-                {
-                    MessageBox.Show("Vui lòng nhập lại đầy đủ thông tin trước khi cập nhật");
-                    return;
-                }
+
                 var querry = db.NHANVIENs.Where(a => a.UserName.Equals(tb_tenDangNhap.Text));
                 if (querry.ToList().Count() > 0)
                 {
