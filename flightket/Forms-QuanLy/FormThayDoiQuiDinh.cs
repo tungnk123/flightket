@@ -1,13 +1,6 @@
 ﻿using System;
-using System.CodeDom;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace flightket.Forms_QuanLy
@@ -27,12 +20,12 @@ namespace flightket.Forms_QuanLy
         {
             FormChiTietThayDoiSoSanBay formChiTietThayDoiSoSanBay = new FormChiTietThayDoiSoSanBay(sanBaysList);
             this.Hide();
-            formChiTietThayDoiSoSanBay.ShowDialog();    
+            formChiTietThayDoiSoSanBay.ShowDialog();
         }
 
         private void btn_thayDoiSoLuongHangVeMoi_Click(object sender, EventArgs e)
         {
-            FormThayDoiChiTietSoHangVe formThayDoiChiTietSoHangVe = new FormThayDoiChiTietSoHangVe(hangVesList); 
+            FormThayDoiChiTietSoHangVe formThayDoiChiTietSoHangVe = new FormThayDoiChiTietSoHangVe(hangVesList);
             this.Hide();
             formThayDoiChiTietSoHangVe.ShowDialog();
         }
@@ -90,7 +83,7 @@ namespace flightket.Forms_QuanLy
                     tb_thoiGianTruocDatVeSlowestCu.Text = thamSo.SoGioDatVeTruocKhoiHanh.ToString();
                     tb_thoiGianTruocHuyVeSlowestCu.Text = thamSo.SoGioHuyPhieuTruocKhoiHanh.ToString();
                 }
-                
+
                 var sanBays = dbContext.SANBAYs.ToList();
                 foreach (var sanBay in sanBays)
                 {
@@ -116,12 +109,12 @@ namespace flightket.Forms_QuanLy
                 tb_thoiGianBayMinMoi.Clear();
                 return;
             }
-            if (!IsNumeric(thoiGianBayMinMoi))
+            if (!IsNumeric(thoiGianBayMinMoi) || Int32.Parse(thoiGianBayMinMoi) <= 0)
             {
                 MessageBox.Show("Thời gian bay tối thiểu phải là một số nguyên dương");
                 tb_thoiGianBayMinMoi.Clear();
                 return;
-            } 
+            }
             try
             {
                 short thoiGianBayToiThieu = short.Parse(thoiGianBayMinMoi);
@@ -130,7 +123,8 @@ namespace flightket.Forms_QuanLy
                     MessageBox.Show("Thời gian bay tối thiểu phải lớn hơn 30");
                     tb_thoiGianBayMinMoi.Clear();
                 }
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Thời gian bay tối thiểu phải là một số nguyên dương!" + ex.Message);
                 tb_thoiGianBayMinMoi.Clear();
@@ -140,12 +134,12 @@ namespace flightket.Forms_QuanLy
         private void tb_sanBayTrungChuyenMaxMoi_Leave(object sender, EventArgs e)
         {
             String soSanBayToiDa = tb_sanBayTrungChuyenMaxMoi.Text;
-            if  (soSanBayToiDa.Trim() == "")
+            if (soSanBayToiDa.Trim() == "")
             {
                 tb_sanBayTrungChuyenMaxMoi.Clear();
                 return;
             }
-            if (!IsNumeric(soSanBayToiDa))
+            if (!IsNumeric(soSanBayToiDa) || Int32.Parse(soSanBayToiDa) < 0)
             {
                 MessageBox.Show("Số sân bay trung chuyển tối đa phải là một số nguyên dương");
                 tb_sanBayTrungChuyenMaxMoi.Clear();
@@ -170,12 +164,12 @@ namespace flightket.Forms_QuanLy
         private void tb_thoiGianDungMinMoi_Leave(object sender, EventArgs e)
         {
             String thoiGianDungMinMoi = tb_thoiGianDungMinMoi.Text;
-            if(thoiGianDungMinMoi.Trim() =="")
+            if (thoiGianDungMinMoi.Trim() == "")
             {
                 tb_thoiGianDungMinMoi.Clear();
                 return;
-            } 
-            if (!IsNumeric(thoiGianDungMinMoi))
+            }
+            if (!IsNumeric(thoiGianDungMinMoi) || Int32.Parse(thoiGianDungMinMoi) < 0)
             {
                 MessageBox.Show("Thời gian dừng tối thiểu phải là một số nguyên dương");
                 tb_thoiGianDungMinMoi.Clear();
@@ -189,7 +183,8 @@ namespace flightket.Forms_QuanLy
                     MessageBox.Show("Thời gian dừng tối thiểu phải là một số nguyên dương >= 10");
                     tb_thoiGianDungMinMoi.Clear();
                 }
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Thời gian dừng tối thiểu phải là một số nguyên dương!" + ex.Message);
                 tb_thoiGianDungMinMoi.Clear();
@@ -204,7 +199,7 @@ namespace flightket.Forms_QuanLy
                 tb_thoiGianDungMaxMoi.Clear();
                 return;
             }
-            if (!IsNumeric(thoiGianDungMaxMoi))
+            if (!IsNumeric(thoiGianDungMaxMoi) || Int32.Parse(thoiGianDungMaxMoi) < 0)
             {
                 MessageBox.Show("Thời gian dừng tối đa phải là một số nguyên dương");
                 tb_thoiGianDungMaxMoi.Clear();
@@ -234,7 +229,7 @@ namespace flightket.Forms_QuanLy
                 tb_thoiGianTruocDatVeSlowestMoi.Clear();
                 return;
             }
-            if (!IsNumeric(thoiGianChamNhatTruocKhiDatVeString))
+            if (!IsNumeric(thoiGianChamNhatTruocKhiDatVeString) || Int32.Parse(thoiGianChamNhatTruocKhiDatVeString) < 0)
             {
                 MessageBox.Show("Thời gian chậm nhất trước khi đặt vé phải là một số nguyên dương");
                 tb_thoiGianTruocDatVeSlowestMoi.Clear();
@@ -264,7 +259,7 @@ namespace flightket.Forms_QuanLy
                 tb_thoiGianTruocHuyVeSlowestMoi.Clear();
                 return;
             }
-            if (!IsNumeric(thoiGianChamNhatTruocKhiHuyVeString))
+            if (!IsNumeric(thoiGianChamNhatTruocKhiHuyVeString) || Int32.Parse(thoiGianChamNhatTruocKhiHuyVeString) < 0)
             {
                 MessageBox.Show("Thời gian chậm nhất trước khi hủy vé phải là một số nguyên dương");
                 tb_thoiGianTruocHuyVeSlowestMoi.Clear();
@@ -288,6 +283,73 @@ namespace flightket.Forms_QuanLy
 
         private void btn_luuThayDoi_Click(object sender, EventArgs e)
         {
+            int thoiGianBayMinMoi = -1;
+            int thoiGianDungMinMoi = -1;
+            int thoiGianDungMaxMoi = -1;
+            int thoiGianTruocDatVeSlowestMoi = -1;
+            int thoiGianTruocHuyVeSlowestMoi = -1;
+            int sanBayTrungChuyenMaxMoi = -1;
+
+            bool validInput = true;
+
+            if (!string.IsNullOrEmpty(tb_thoiGianBayMinMoi.Text))
+            {
+                if (!Int32.TryParse(tb_thoiGianBayMinMoi.Text, out thoiGianBayMinMoi) || thoiGianBayMinMoi <= 0)
+                {
+                    validInput = false;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(tb_thoiGianDungMinMoi.Text))
+            {
+                if (!Int32.TryParse(tb_thoiGianDungMinMoi.Text, out thoiGianDungMinMoi) || thoiGianDungMinMoi <= 0)
+                {
+                    validInput = false;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(tb_thoiGianDungMaxMoi.Text))
+            {
+                if (!Int32.TryParse(tb_thoiGianDungMaxMoi.Text, out thoiGianDungMaxMoi) || thoiGianDungMaxMoi <= 0)
+                {
+                    validInput = false;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(tb_thoiGianTruocDatVeSlowestMoi.Text))
+            {
+                if (!Int32.TryParse(tb_thoiGianTruocDatVeSlowestMoi.Text, out thoiGianTruocDatVeSlowestMoi) || thoiGianTruocDatVeSlowestMoi <= 0)
+                {
+                    validInput = false;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(tb_thoiGianTruocHuyVeSlowestMoi.Text))
+            {
+                if (!Int32.TryParse(tb_thoiGianTruocHuyVeSlowestMoi.Text, out thoiGianTruocHuyVeSlowestMoi) || thoiGianTruocHuyVeSlowestMoi <= 0)
+                {
+                    validInput = false;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(tb_sanBayTrungChuyenMaxMoi.Text))
+            {
+                if (!Int32.TryParse(tb_sanBayTrungChuyenMaxMoi.Text, out sanBayTrungChuyenMaxMoi) || sanBayTrungChuyenMaxMoi <= 0)
+                {
+                    validInput = false;
+                }
+            }
+
+            if (!validInput)
+            {
+                MessageBox.Show("Giá trị thay đổi không hợp lệ! Vui lòng thử lại");
+                return;
+            }
+
+
+
+
+
             DialogResult result = MessageBox.Show("Bạn có chắc muốn lưu thay đổi?", "Confirm", MessageBoxButtons.YesNo);
             if (result.Equals(DialogResult.Yes))
             {
@@ -296,11 +358,12 @@ namespace flightket.Forms_QuanLy
                     Update_Data_From_New_To_Old();
                     Update_Data_From_Database();
                     MessageBox.Show("Cập nhật thành công!");
-                } catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show("Cập nhật thất bại!" + ex.Message);
                 }
-                
+
             }
         }
 
@@ -345,6 +408,6 @@ namespace flightket.Forms_QuanLy
             tb_thoiGianTruocHuyVeSlowestMoi.Clear();
         }
 
-        
+
     }
 }
