@@ -61,11 +61,6 @@
             this.panelDanhSachPhieuDatCho = new System.Windows.Forms.Panel();
             this.lb_danhSachChuyenBayPhuHop = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMaChuyenBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnMaDatCho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnHangVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnChon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tb_soDienThoai = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -80,6 +75,11 @@
             this.lb_title1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
+            this.ColumnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMaChuyenBay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnMaDatCho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnHangVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnChon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_main.SuspendLayout();
             this.panelChiTietPhieuDatCho.SuspendLayout();
             this.panelDanhSachPhieuDatCho.SuspendLayout();
@@ -140,7 +140,7 @@
             this.panelChiTietPhieuDatCho.Controls.Add(this.label5);
             this.panelChiTietPhieuDatCho.Controls.Add(this.lb_maDatCho);
             this.panelChiTietPhieuDatCho.Controls.Add(this.label3);
-            this.panelChiTietPhieuDatCho.Location = new System.Drawing.Point(258, 448);
+            this.panelChiTietPhieuDatCho.Location = new System.Drawing.Point(236, 477);
             this.panelChiTietPhieuDatCho.Name = "panelChiTietPhieuDatCho";
             this.panelChiTietPhieuDatCho.Size = new System.Drawing.Size(1329, 330);
             this.panelChiTietPhieuDatCho.TabIndex = 14;
@@ -416,7 +416,7 @@
             this.panelDanhSachPhieuDatCho.BackColor = System.Drawing.Color.Transparent;
             this.panelDanhSachPhieuDatCho.Controls.Add(this.lb_danhSachChuyenBayPhuHop);
             this.panelDanhSachPhieuDatCho.Controls.Add(this.dataGridView1);
-            this.panelDanhSachPhieuDatCho.Location = new System.Drawing.Point(235, 461);
+            this.panelDanhSachPhieuDatCho.Location = new System.Drawing.Point(209, 487);
             this.panelDanhSachPhieuDatCho.Name = "panelDanhSachPhieuDatCho";
             this.panelDanhSachPhieuDatCho.Size = new System.Drawing.Size(1373, 224);
             this.panelDanhSachPhieuDatCho.TabIndex = 13;
@@ -447,49 +447,9 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1271, 154);
+            this.dataGridView1.Size = new System.Drawing.Size(1213, 154);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // ColumnSTT
-            // 
-            this.ColumnSTT.HeaderText = "STT";
-            this.ColumnSTT.MinimumWidth = 6;
-            this.ColumnSTT.Name = "ColumnSTT";
-            this.ColumnSTT.ReadOnly = true;
-            this.ColumnSTT.Width = 50;
-            // 
-            // ColumnMaChuyenBay
-            // 
-            this.ColumnMaChuyenBay.HeaderText = "Mã Chuyến Bay";
-            this.ColumnMaChuyenBay.MinimumWidth = 6;
-            this.ColumnMaChuyenBay.Name = "ColumnMaChuyenBay";
-            this.ColumnMaChuyenBay.ReadOnly = true;
-            this.ColumnMaChuyenBay.Width = 250;
-            // 
-            // columnMaDatCho
-            // 
-            this.columnMaDatCho.HeaderText = "Mã Đặt Chỗ";
-            this.columnMaDatCho.MinimumWidth = 6;
-            this.columnMaDatCho.Name = "columnMaDatCho";
-            this.columnMaDatCho.ReadOnly = true;
-            this.columnMaDatCho.Width = 150;
-            // 
-            // ColumnHangVe
-            // 
-            this.ColumnHangVe.HeaderText = "Hạng Vé";
-            this.ColumnHangVe.MinimumWidth = 6;
-            this.ColumnHangVe.Name = "ColumnHangVe";
-            this.ColumnHangVe.ReadOnly = true;
-            this.ColumnHangVe.Width = 300;
-            // 
-            // ColumnChon
-            // 
-            this.ColumnChon.HeaderText = "";
-            this.ColumnChon.MinimumWidth = 6;
-            this.ColumnChon.Name = "ColumnChon";
-            this.ColumnChon.ReadOnly = true;
-            this.ColumnChon.Width = 150;
             // 
             // panel2
             // 
@@ -635,6 +595,45 @@
             this.btn_home.UseVisualStyleBackColor = true;
             this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
+            // ColumnSTT
+            // 
+            this.ColumnSTT.HeaderText = "STT";
+            this.ColumnSTT.MinimumWidth = 6;
+            this.ColumnSTT.Name = "ColumnSTT";
+            this.ColumnSTT.ReadOnly = true;
+            // 
+            // ColumnMaChuyenBay
+            // 
+            this.ColumnMaChuyenBay.HeaderText = "Mã Chuyến Bay";
+            this.ColumnMaChuyenBay.MinimumWidth = 6;
+            this.ColumnMaChuyenBay.Name = "ColumnMaChuyenBay";
+            this.ColumnMaChuyenBay.ReadOnly = true;
+            this.ColumnMaChuyenBay.Width = 300;
+            // 
+            // columnMaDatCho
+            // 
+            this.columnMaDatCho.HeaderText = "Mã Đặt Chỗ";
+            this.columnMaDatCho.MinimumWidth = 6;
+            this.columnMaDatCho.Name = "columnMaDatCho";
+            this.columnMaDatCho.ReadOnly = true;
+            this.columnMaDatCho.Width = 300;
+            // 
+            // ColumnHangVe
+            // 
+            this.ColumnHangVe.HeaderText = "Hạng Vé";
+            this.ColumnHangVe.MinimumWidth = 6;
+            this.ColumnHangVe.Name = "ColumnHangVe";
+            this.ColumnHangVe.ReadOnly = true;
+            this.ColumnHangVe.Width = 260;
+            // 
+            // ColumnChon
+            // 
+            this.ColumnChon.HeaderText = "";
+            this.ColumnChon.MinimumWidth = 6;
+            this.ColumnChon.Name = "ColumnChon";
+            this.ColumnChon.ReadOnly = true;
+            this.ColumnChon.Width = 200;
+            // 
             // FormKiemTraDatCho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -684,11 +683,6 @@
         private System.Windows.Forms.TextBox tb_CMND;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSTT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMaChuyenBay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnMaDatCho;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnHangVe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnChon;
         private System.Windows.Forms.Panel panelDanhSachPhieuDatCho;
         private System.Windows.Forms.Panel panelChiTietPhieuDatCho;
         private System.Windows.Forms.Label lb_hangVe;
@@ -718,5 +712,10 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lb_maChuyenBay;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSTT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMaChuyenBay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnMaDatCho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnHangVe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnChon;
     }
 }

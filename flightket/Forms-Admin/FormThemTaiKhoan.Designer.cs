@@ -205,7 +205,7 @@ namespace flightket.Forms_Admin
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 26);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Đại chỉ";
+            this.label6.Text = "Địa chỉ";
             // 
             // panel5
             // 

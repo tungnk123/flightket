@@ -81,7 +81,7 @@ namespace flightket.Forms_NhanVien
                     VECHUYENBAY vECHUYENBAY = new VECHUYENBAY() { MaChuyenBay = maChuyenBay, MaHanhKhach = maHanhkhach, MaHangVe = maHangVe, GiaTien = Convert.ToDouble(tb_giaTien.Text) };
                     db.VECHUYENBAYs.Add(vECHUYENBAY);
                     db.SaveChanges();
-                    MessageBox.Show("Đặt chỗ thành công");
+                    MessageBox.Show("Bán vé thành công");
                     tb_hoVaTen.Text = "";
                     tb_CMND.Text = "";
                     tb_soDienThoai.Text = "";
