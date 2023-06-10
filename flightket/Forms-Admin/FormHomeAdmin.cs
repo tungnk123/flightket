@@ -59,7 +59,10 @@ namespace flightket.Forms_Admin
                 this.Close();
                 FormDangNhap.instance.Show();
             }
-            FormDangNhap.mediaPlayer.Stop();
+            if (Properties.Settings.Default.SoundEnabled)
+            {
+                FormDangNhap.mediaPlayer.Stop();
+            }
         }
 
         

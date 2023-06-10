@@ -41,8 +41,12 @@ namespace flightket
         }
         private void MediaPlayer_MediaEnded(object sender, EventArgs e)
         {
-            mediaPlayer.Position = TimeSpan.Zero;
-            mediaPlayer.Play();
+           
+            if (Properties.Settings.Default.SoundEnabled)
+            {
+                mediaPlayer.Position = TimeSpan.Zero;
+                mediaPlayer.Play();
+            }
         }
 
         private void btn_dangNhap_Click(object sender, EventArgs e)
@@ -54,21 +58,33 @@ namespace flightket
                 this.Hide();
                 FormHomeAdmin formHomeAdmin = new FormHomeAdmin();
                 formHomeAdmin.ShowDialog();
-                FormDangNhap.mediaPlayer.Play();
+                if (Properties.Settings.Default.SoundEnabled)
+                {
+                    mediaPlayer.Position = TimeSpan.Zero;
+                    mediaPlayer.Play();
+                }
             }
             else if (username == "nhanvien" && password == "nhanvien")
             {
                 this.Hide();
                 FormHomeNhanVien formHomeNhanVien = new FormHomeNhanVien();
                 formHomeNhanVien.ShowDialog();
-                FormDangNhap.mediaPlayer.Play();
+                if (Properties.Settings.Default.SoundEnabled)
+                {
+                    mediaPlayer.Position = TimeSpan.Zero;
+                    mediaPlayer.Play();
+                }
             }
             else if (username == "" && password == "")
             {
                 this.Hide();
                 FormHomeQuanLy formHomeQuanLy = new FormHomeQuanLy();
                 formHomeQuanLy.ShowDialog();
-                FormDangNhap.mediaPlayer.Play();
+                if (Properties.Settings.Default.SoundEnabled)
+                {
+                    mediaPlayer.Position = TimeSpan.Zero;
+                    mediaPlayer.Play();
+                }
             }
             else
             {
