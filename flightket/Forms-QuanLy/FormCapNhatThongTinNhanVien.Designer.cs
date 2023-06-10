@@ -84,7 +84,7 @@
             this.btn_luuThayDoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_luuThayDoi.ForeColor = System.Drawing.Color.White;
             this.btn_luuThayDoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_luuThayDoi.Location = new System.Drawing.Point(859, 690);
+            this.btn_luuThayDoi.Location = new System.Drawing.Point(754, 659);
             this.btn_luuThayDoi.Name = "btn_luuThayDoi";
             this.btn_luuThayDoi.Size = new System.Drawing.Size(253, 65);
             this.btn_luuThayDoi.TabIndex = 30;
@@ -97,7 +97,7 @@
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.tb_maNhanVien);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(775, 215);
+            this.panel5.Location = new System.Drawing.Point(723, 225);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(444, 100);
             this.panel5.TabIndex = 17;
@@ -127,7 +127,7 @@
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.tb_soDienThoai);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(1409, 435);
+            this.panel4.Location = new System.Drawing.Point(1313, 442);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(268, 100);
             this.panel4.TabIndex = 16;
@@ -156,7 +156,7 @@
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.tb_diaChi);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(1056, 435);
+            this.panel3.Location = new System.Drawing.Point(960, 442);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(268, 100);
             this.panel3.TabIndex = 16;
@@ -185,7 +185,7 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.dp_ngaySinh);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(662, 435);
+            this.panel2.Location = new System.Drawing.Point(566, 442);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(268, 100);
             this.panel2.TabIndex = 16;
@@ -213,7 +213,7 @@
             this.panel8.BackColor = System.Drawing.Color.Transparent;
             this.panel8.Controls.Add(this.tb_hoTen);
             this.panel8.Controls.Add(this.label4);
-            this.panel8.Location = new System.Drawing.Point(274, 435);
+            this.panel8.Location = new System.Drawing.Point(178, 442);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(268, 100);
             this.panel8.TabIndex = 29;
@@ -242,7 +242,7 @@
             this.lb_title2.AutoSize = true;
             this.lb_title2.BackColor = System.Drawing.Color.Transparent;
             this.lb_title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_title2.Location = new System.Drawing.Point(675, 121);
+            this.lb_title2.Location = new System.Drawing.Point(624, 121);
             this.lb_title2.Name = "lb_title2";
             this.lb_title2.Size = new System.Drawing.Size(624, 38);
             this.lb_title2.TabIndex = 28;
@@ -255,7 +255,7 @@
             this.lb_title1.AutoSize = true;
             this.lb_title1.BackColor = System.Drawing.Color.Transparent;
             this.lb_title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_title1.Location = new System.Drawing.Point(593, 28);
+            this.lb_title1.Location = new System.Drawing.Point(542, 28);
             this.lb_title1.Name = "lb_title1";
             this.lb_title1.Size = new System.Drawing.Size(832, 69);
             this.lb_title1.TabIndex = 27;
