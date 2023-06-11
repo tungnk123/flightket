@@ -75,7 +75,7 @@
             this.cb_thayDoiQuiDinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_thayDoiQuiDinh.Location = new System.Drawing.Point(1152, 522);
             this.cb_thayDoiQuiDinh.Name = "cb_thayDoiQuiDinh";
-            this.cb_thayDoiQuiDinh.Size = new System.Drawing.Size(278, 36);
+            this.cb_thayDoiQuiDinh.Size = new System.Drawing.Size(277, 36);
             this.cb_thayDoiQuiDinh.TabIndex = 16;
             this.cb_thayDoiQuiDinh.Text = "Thay đổi quy định";
             this.cb_thayDoiQuiDinh.UseVisualStyleBackColor = false;
@@ -87,7 +87,7 @@
             this.cb_ghiNhanDatVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_ghiNhanDatVe.Location = new System.Drawing.Point(412, 522);
             this.cb_ghiNhanDatVe.Name = "cb_ghiNhanDatVe";
-            this.cb_ghiNhanDatVe.Size = new System.Drawing.Size(252, 36);
+            this.cb_ghiNhanDatVe.Size = new System.Drawing.Size(251, 36);
             this.cb_ghiNhanDatVe.TabIndex = 15;
             this.cb_ghiNhanDatVe.Text = "Ghi nhận đặt vé";
             this.cb_ghiNhanDatVe.UseVisualStyleBackColor = false;
@@ -99,7 +99,7 @@
             this.cb_lapBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_lapBaoCao.Location = new System.Drawing.Point(1152, 390);
             this.cb_lapBaoCao.Name = "cb_lapBaoCao";
-            this.cb_lapBaoCao.Size = new System.Drawing.Size(204, 36);
+            this.cb_lapBaoCao.Size = new System.Drawing.Size(203, 36);
             this.cb_lapBaoCao.TabIndex = 14;
             this.cb_lapBaoCao.Text = "Lập báo cáo";
             this.cb_lapBaoCao.UseVisualStyleBackColor = false;
@@ -111,7 +111,7 @@
             this.cb_banVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_banVe.Location = new System.Drawing.Point(412, 390);
             this.cb_banVe.Name = "cb_banVe";
-            this.cb_banVe.Size = new System.Drawing.Size(131, 36);
+            this.cb_banVe.Size = new System.Drawing.Size(130, 36);
             this.cb_banVe.TabIndex = 13;
             this.cb_banVe.Text = "Bán vé";
             this.cb_banVe.UseVisualStyleBackColor = false;
@@ -123,7 +123,7 @@
             this.cb_traCuuChuyenBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_traCuuChuyenBay.Location = new System.Drawing.Point(1152, 271);
             this.cb_traCuuChuyenBay.Name = "cb_traCuuChuyenBay";
-            this.cb_traCuuChuyenBay.Size = new System.Drawing.Size(302, 36);
+            this.cb_traCuuChuyenBay.Size = new System.Drawing.Size(301, 36);
             this.cb_traCuuChuyenBay.TabIndex = 12;
             this.cb_traCuuChuyenBay.Text = "Tra cứu chuyến bay";
             this.cb_traCuuChuyenBay.UseVisualStyleBackColor = false;
@@ -135,7 +135,7 @@
             this.cb_nhapLichChuyenBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_nhapLichChuyenBay.Location = new System.Drawing.Point(412, 271);
             this.cb_nhapLichChuyenBay.Name = "cb_nhapLichChuyenBay";
-            this.cb_nhapLichChuyenBay.Size = new System.Drawing.Size(328, 36);
+            this.cb_nhapLichChuyenBay.Size = new System.Drawing.Size(327, 36);
             this.cb_nhapLichChuyenBay.TabIndex = 11;
             this.cb_nhapLichChuyenBay.Text = "Nhập lịch chuyến nay";
             this.cb_nhapLichChuyenBay.UseVisualStyleBackColor = false;
@@ -153,6 +153,7 @@
             // cmb_loaiTaiKhoan
             // 
             this.cmb_loaiTaiKhoan.BackColor = System.Drawing.Color.Silver;
+            this.cmb_loaiTaiKhoan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_loaiTaiKhoan.FormattingEnabled = true;
             this.cmb_loaiTaiKhoan.Location = new System.Drawing.Point(967, 122);
             this.cmb_loaiTaiKhoan.Name = "cmb_loaiTaiKhoan";
