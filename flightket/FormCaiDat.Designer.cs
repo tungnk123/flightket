@@ -135,6 +135,7 @@ namespace flightket
             // 
             // cb_scTraCuu
             // 
+            this.cb_scTraCuu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_scTraCuu.FormattingEnabled = true;
             this.cb_scTraCuu.Location = new System.Drawing.Point(503, 233);
             this.cb_scTraCuu.Name = "cb_scTraCuu";
@@ -143,6 +144,7 @@ namespace flightket
             // 
             // cb_scKiemTra
             // 
+            this.cb_scKiemTra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_scKiemTra.FormattingEnabled = true;
             this.cb_scKiemTra.Location = new System.Drawing.Point(503, 185);
             this.cb_scKiemTra.Name = "cb_scKiemTra";
@@ -151,6 +153,7 @@ namespace flightket
             // 
             // cb_scXacNhan
             // 
+            this.cb_scXacNhan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_scXacNhan.FormattingEnabled = true;
             this.cb_scXacNhan.Location = new System.Drawing.Point(503, 136);
             this.cb_scXacNhan.Name = "cb_scXacNhan";
@@ -159,6 +162,7 @@ namespace flightket
             // 
             // cb_scBanVe
             // 
+            this.cb_scBanVe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_scBanVe.FormattingEnabled = true;
             this.cb_scBanVe.Location = new System.Drawing.Point(503, 89);
             this.cb_scBanVe.Name = "cb_scBanVe";
@@ -167,6 +171,7 @@ namespace flightket
             // 
             // cb_scNhapLieu
             // 
+            this.cb_scNhapLieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_scNhapLieu.FormattingEnabled = true;
             this.cb_scNhapLieu.Location = new System.Drawing.Point(503, 41);
             this.cb_scNhapLieu.Name = "cb_scNhapLieu";
