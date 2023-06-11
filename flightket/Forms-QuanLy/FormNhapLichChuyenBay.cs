@@ -110,6 +110,7 @@ namespace flightket.Forms_QuanLy
             {
                 THAMSO thamso = db.THAMSOes.FirstOrDefault();
                 int soSanBayTrungGianToiDa = (int)thamso.SoSanBayTrungGianToiDa;
+                int thoiGianDungToiDa = (int)thamso.ThoiGianDungToiDa;
                 int thoiGianDungToiThieu = (int)thamso.ThoiGianDungToiThieu;
                 if (cb_tenSanBayTrungGian.Text.Length == 0 || tb_thoiGianDung.Text.Length == 0)
                 {
@@ -132,6 +133,11 @@ namespace flightket.Forms_QuanLy
                     if (thoiGianDung < thoiGianDungToiThieu)
                     {
                         MessageBox.Show("Thời gian dừng phải lớn hơn " + thoiGianDungToiThieu + " phút");
+                        return;
+                    }
+                    if(thoiGianDung > thoiGianDungToiDa)
+                    {
+                        MessageBox.Show("Thời gian dừng phải nhỏ hơn " + thoiGianDungToiDa + " phút");
                         return;
                     }
                 }
@@ -170,8 +176,17 @@ namespace flightket.Forms_QuanLy
         {
             using (var db = new FlightKetDBEntities())
             {
+                if(tb_maChuyenBay.Text.Length == 0)
+                {
+                    MessageBox.Show("Vui lòng điền mã chuyến bay");
+                    return;
+                }
                 CHUYENBAY cHUYENBAY = db.CHUYENBAYs.Find(tb_maChuyenBay.Text);
-                if (cHUYENBAY != null) return;
+                if (cHUYENBAY != null)
+                {
+                    MessageBox.Show("Mã chuyến bay đã tồn tại");
+                    return;
+                }
                 if (cb_sanBayDi.Text.Length == 0 || cb_sanBayDen.Text.Length == 0 || cb_gioKhoiHanh.Text.Length == 0 || cb_phutKhoiHanh.Text.Length == 0 || tb_giaVe.Text.Length == 0 || cb_ThoiGianBay.Text.Length == 0)
                 {
                     MessageBox.Show("Vui lòng điền đẩy đủ tất cả thông tin về chuyến bay");
@@ -299,7 +314,7 @@ namespace flightket.Forms_QuanLy
 
                 }
                 MessageBox.Show("Lên lịch chuyến bay thành công");
-
+                this.Close();
             }
         }
 
