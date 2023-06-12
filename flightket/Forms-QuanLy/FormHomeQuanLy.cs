@@ -167,6 +167,17 @@ namespace flightket.Forms_QuanLy
 
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormTraCuuChuyenBayQuanLi formTraCuuChuyenBayQuanLi = new FormTraCuuChuyenBayQuanLi();
+            formTraCuuChuyenBayQuanLi.ShowDialog();
+
+            if (formTraCuuChuyenBayQuanLi.IsAccessible == false)
+            {
+                this.Show();
+            }
+
+        }
     }
 }

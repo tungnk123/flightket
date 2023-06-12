@@ -36,6 +36,7 @@ namespace flightket.Forms_QuanLy
             this.btn_quanLyHoSo = new System.Windows.Forms.Button();
             this.btn_nhapLichChuyenBay = new System.Windows.Forms.Button();
             this.btn_thayDoiQuyDinh = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_dangXuat
@@ -59,10 +60,10 @@ namespace flightket.Forms_QuanLy
             this.btn_caiDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_caiDat.Image = global::flightket.Properties.Resources.icons8_settings_50;
             this.btn_caiDat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_caiDat.Location = new System.Drawing.Point(1326, 414);
+            this.btn_caiDat.Location = new System.Drawing.Point(1280, 476);
             this.btn_caiDat.Name = "btn_caiDat";
             this.btn_caiDat.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btn_caiDat.Size = new System.Drawing.Size(261, 103);
+            this.btn_caiDat.Size = new System.Drawing.Size(294, 103);
             this.btn_caiDat.TabIndex = 19;
             this.btn_caiDat.Text = "Cài đặt";
             this.btn_caiDat.UseVisualStyleBackColor = true;
@@ -73,10 +74,10 @@ namespace flightket.Forms_QuanLy
             this.btn_lapBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_lapBaoCao.Image = global::flightket.Properties.Resources.icons8_report_50;
             this.btn_lapBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_lapBaoCao.Location = new System.Drawing.Point(838, 349);
+            this.btn_lapBaoCao.Location = new System.Drawing.Point(1280, 349);
             this.btn_lapBaoCao.Name = "btn_lapBaoCao";
             this.btn_lapBaoCao.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btn_lapBaoCao.Size = new System.Drawing.Size(446, 103);
+            this.btn_lapBaoCao.Size = new System.Drawing.Size(294, 103);
             this.btn_lapBaoCao.TabIndex = 17;
             this.btn_lapBaoCao.Text = "Lập báo cáo";
             this.btn_lapBaoCao.UseVisualStyleBackColor = true;
@@ -118,11 +119,25 @@ namespace flightket.Forms_QuanLy
             this.btn_thayDoiQuyDinh.Location = new System.Drawing.Point(838, 476);
             this.btn_thayDoiQuyDinh.Name = "btn_thayDoiQuyDinh";
             this.btn_thayDoiQuyDinh.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btn_thayDoiQuyDinh.Size = new System.Drawing.Size(446, 103);
+            this.btn_thayDoiQuyDinh.Size = new System.Drawing.Size(403, 103);
             this.btn_thayDoiQuyDinh.TabIndex = 21;
             this.btn_thayDoiQuyDinh.Text = "Thay đổi quy định";
             this.btn_thayDoiQuyDinh.UseVisualStyleBackColor = true;
             this.btn_thayDoiQuyDinh.Click += new System.EventHandler(this.btn_thayDoiQuiDinh_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::flightket.Properties.Resources.icons8_search_50;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(838, 349);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(403, 103);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Tra cứu chuyến bay";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormHomeQuanLy
             // 
@@ -131,6 +146,7 @@ namespace flightket.Forms_QuanLy
             this.BackgroundImage = global::flightket.Properties.Resources._350361348_206044632301251_2266599988871672436_n;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_thayDoiQuyDinh);
             this.Controls.Add(this.btn_dangXuat);
             this.Controls.Add(this.btn_caiDat);
@@ -156,5 +172,6 @@ namespace flightket.Forms_QuanLy
         private System.Windows.Forms.Button btn_quanLyHoSo;
         private System.Windows.Forms.Button btn_nhapLichChuyenBay;
         private System.Windows.Forms.Button btn_thayDoiQuyDinh;
+        private System.Windows.Forms.Button button1;
     }
 }
