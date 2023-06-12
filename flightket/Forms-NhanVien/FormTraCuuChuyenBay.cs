@@ -152,6 +152,7 @@ namespace flightket.Forms_NhanVien
                         dgv_chuyenBayPhuHop.Rows[i].Cells[6].Value = listSoGheTrong[i].ToString();
                         dgv_chuyenBayPhuHop.Rows[i].Cells[7].Value = listSoGheDaDat[i].ToString();
                     }
+                    MessageBox.Show("Tìm kiếm thành công!");
                 }
                 else
                 {
@@ -163,6 +164,8 @@ namespace flightket.Forms_NhanVien
 
 
             }
+
+            
 
 
         }
@@ -254,6 +257,6 @@ namespace flightket.Forms_NhanVien
                 dp_ngayKhoiHanh.Visible = false;
             }
         }
-        
+
     }
 }

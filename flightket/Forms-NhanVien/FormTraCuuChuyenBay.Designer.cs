@@ -292,6 +292,7 @@
             this.dp_ngayKhoiHanh.TabIndex = 1;
             this.dp_ngayKhoiHanh.Value = new System.DateTime(2023, 6, 7, 15, 53, 6, 0);
             this.dp_ngayKhoiHanh.Visible = false;
+            this.dp_ngayKhoiHanh.ValueChanged += new System.EventHandler(this.dp_ngayKhoiHanh_ValueChanged);
             // 
             // panel2
             // 
