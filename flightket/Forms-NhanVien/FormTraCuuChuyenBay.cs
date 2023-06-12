@@ -132,8 +132,8 @@ namespace flightket.Forms_NhanVien
                         int soGheDaDatPDC = querry_soGheDaDatPDC.ToList().First();
                         int soGheDaDatVe = query_soGheDaDatVe.ToList().First();
                         listSoGheDaDat[i] = soGheDaDatPDC + soGheDaDatVe;
-
-                        listSoGheTrong[i] = listTongSoGhe[i] - listSoGheDaDat[i];
+                        int soGheTrong = listTongSoGhe[i] - listSoGheDaDat[i];
+                        listSoGheTrong[i] = soGheTrong > 0 ? soGheTrong : 0;
 
                         //listSoGheTrong.Add(tongSoGhe - soGheDaBan - soGheDaDat);
                     }
